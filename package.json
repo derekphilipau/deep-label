@@ -1,0 +1,23 @@
+{
+  "name": "labeling",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@ai-sdk/google": "^2.0.46",
+    "ai": "^5.0.112",
+    "dotenv": "^17.2.3",
+    "sharp": "^0.34.5",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
