@@ -25,62 +25,82 @@ Once it has a massive list of verified facts, it passes that list to a "Writer" 
 
 ```mermaid
 graph TD
-    %% Nodes
     Input(Input Image)
-    subgraph Phase 1: The Detective
-    Agent[Labeling Agent]
-    Verify{No-new threshold met?}
-    Update[Update Context: Include labeled instances (box+label)]
-    JSON[Master JSON Payload]
-    end
-    
-    subgraph Phase 2: The Writer
-    Prompt[Description Prompt]
-    Describer[Description Agent]
+
+    subgraph Phase 1: Discovery
+    Kinds[Discover Object Kinds]
     end
 
-    subgraph Phase 3: Visualization
-    Annotate[Annotate Image (sharp + SVG)]
+    subgraph Phase 2: Detect + Verify
+    Detect[Detect Instances]
+    Overlay[Overlay Boxes on Image]
+    Verify[Verify & Correct]
+    Tile{High count?}
+    TileProcess[Split into Tiles]
     end
-    
-    Output(Final Output: JSON + Descriptions + Annotated Image)
 
-    %% Flow
-    Input --> Agent
-    Agent --> Verify
-    Verify -- Yes --> Update
-    Update --> Agent
-    Verify -- No --> JSON
-    
-    JSON --> Prompt
-    Input --> Prompt
-    Prompt --> Describer
-    Describer --> Annotate
-    Input --> Annotate
+    subgraph Phase 3: Post-Processing
+    Dedupe[Global Deduplication]
+    Score[Importance Scoring]
+    end
+
+    subgraph Phase 4: Output
+    Describe[Generate Descriptions]
+    Cutouts[Generate Cutouts]
+    Annotate[Annotate Image]
+    end
+
+    Output(JSON + Cutouts + Annotated Image)
+
+    Input --> Kinds
+    Kinds --> Tile
+    Tile -- No --> Detect
+    Tile -- Yes --> TileProcess
+    TileProcess --> Detect
+    Detect --> Overlay
+    Overlay --> Verify
+    Verify --> Dedupe
+    Dedupe --> Score
+    Score --> Describe
+    Score --> Cutouts
+    Score --> Annotate
+    Describe --> Output
+    Cutouts --> Output
     Annotate --> Output
 
-    %% Styling
     style Input fill:#f9f,stroke:#333,stroke-width:2px
     style Output fill:#9f9,stroke:#333,stroke-width:2px
-    style JSON fill:#ff9,stroke:#333,stroke-width:2px
 ```
 
 ---
 
 ## ⚙️ How It Works
 
-### Phase 1: Recursive Detection (The Agent)
-Written in TypeScript using the **Vercel AI SDK**, the agent queries a multimodal LLM (Google Gemini).
-1.  **Normalization:** The image space is normalized to a `[0-1000]` integer coordinate system.
-2.  **Schema Enforcement:** The model is forced to output structured JSON, preventing conversational fluff.
-3.  **Context Injection:** In every loop, the script injects a list of already-labeled instances (label + bounding box) and instructs the model to find additional instances (including more people/dogs) without duplicating existing boxes.
-4.  **Stopping Rule:** The run stops after a configurable number of consecutive “no new objects” iterations, then optionally runs extra verification passes to catch remaining misses.
+### Phase 1: Kind Discovery
+The agent first asks Gemini to list the unique **kinds** of objects visible in the artwork (e.g., "Hound", "Stag", "Hunter", "Castle"), along with estimated counts.
 
-### Phase 2: Grounded Description (The Describer)
-Once the exhaustive list is complete, the system generates accessibility text.
-*   **Fact Checking:** The detected object list acts as a guardrail against hallucinations.
-*   **Spatial Accuracy:** The `0-1000` coordinates allow the system to accurately describe "foreground," "background," "left," and "right" without guessing.
-*   **Accessibility Standards:** The output follows strict museum standards for Alt Text (10-18 words) and Long Descriptions (150-200 words).
+### Phase 2: Detect + Verify (per kind)
+For each discovered kind:
+1. **Detection:** Find all instances of that kind with bounding boxes
+2. **Verification:** Show the model its own boxes overlaid on the image and ask it to:
+   - Remove incorrect boxes
+   - Correct misaligned boxes
+   - Add any missed instances
+3. **Tiled detection:** For high-count kinds (e.g., 50+ hounds), the image is split into overlapping tiles and each tile is processed independently, then merged with deduplication
+
+All coordinates are normalized to `[0-1000]` integers. Schema enforcement via Zod ensures structured JSON output.
+
+### Phase 3: Global Deduplication & Scoring
+After all kinds are processed:
+- Geometry-based deduplication merges overlapping boxes (alternate labels preserved as `aliases`)
+- Importance scoring ranks objects by size, centrality, and rarity
+
+### Phase 4: Description Generation
+The verified object list is passed to a "Writer" agent that generates:
+- **Alt text** (10-18 words): concise scene summary
+- **Long description** (150-200 words): detailed spatial walkthrough
+
+Because the writer has a verified list of facts, it doesn't hallucinate—it knows exactly how many dogs are in the pack and where they're standing.
 
 ---
 
@@ -97,78 +117,109 @@ Once the exhaustive list is complete, the system generates accessibility text.
 ## 🚀 Getting Started
 
 ### 1. Installation
-Clone the repo and install dependencies:
 ```bash
 npm install
 ```
 
 ### 2. Environment Setup
-Create a `.env` file in the root directory:
+Create a `.env` file:
 ```env
 GOOGLE_GENERATIVE_AI_API_KEY=your_api_key_here
 ```
 
-### 3. Usage
-Place your target image in the root folder (e.g., `artwork.jpg`).
-
-Run the agent:
+### 3. Process an Artwork
+Create an artwork directory and add your image:
 ```bash
-npx tsx agent.ts --image artwork.jpg --output detected_objects.json
+mkdir -p public/artworks/my-painting
+cp path/to/image.jpg public/artworks/my-painting/
 ```
 
-For more exhaustive detection on dense scenes, increase passes and require multiple “no new objects” loops before stopping:
+Run the detection agent:
 ```bash
-npx tsx agent.ts --image artwork.jpg --output detected_objects.json --max-iterations 16 --no-new-threshold 3 --verify-passes 2
+npx tsx scripts/agent.ts my-painting
 ```
 
-### 4. Output
-The system produces:
-*   `detected_objects.json`: full output payload including the exhaustive object list and final accessibility descriptions.
-*   `annotated_painting.png` (or your chosen `--annotated-output`): an image with bounding boxes drawn.
+This generates all outputs in the artwork directory:
+- `detected_objects.json` - detection payload with objects and descriptions
+- `cutouts/` - cropped images for each detected object
+- `cutouts.json` - cutout index
+- `annotated.png` - image with bounding box overlays
 
-Annotated image generation is done in TypeScript using `sharp` + an SVG overlay. No Python is required.
+### 4. View Results
+Start the web viewer:
+```bash
+npm run dev
+```
+Open http://localhost:3000 to browse artworks with an interactive zoomable viewer.
+
+### CLI Options
+```
+npx tsx scripts/agent.ts <slug> [options]
+
+Options:
+  --force                  Overwrite existing outputs
+  --max-kinds <n>          Max object kinds to discover (default: 50)
+  --verify-rounds <n>      Verification rounds per kind (default: 2)
+  --tile-threshold <n>     Use tiled detection above this count (default: 12)
+  --kind-concurrency <n>   Parallel kind processing (default: 3)
+  --cutouts-padding <pct>  Padding around cutouts (default: 0.10)
+  --no-cutouts             Disable cutout generation
+  --model <name>           Override detection model
+  -h, --help               Show all options
+```
 
 ---
 
 ## 📊 Data Format
 
-The output file is a single JSON object. The primary fields you’ll use are `objects` and `descriptions`:
+The output `detected_objects.json` contains:
 
 ```json
 {
-  "image_path": "painting.jpg",
+  "strategy": "hybrid-detect-verify",
+  "image_path": "public/artworks/my-painting/image.jpg",
   "model_name": "gemini-3-pro-preview",
-  "description_model_name": "gemini-3-pro-preview",
-  "no_new_threshold": 2,
-  "verify_passes": 1,
+  "kinds": [
+    { "kind": "Hound", "type": "animal", "estimated_count": "many" }
+  ],
   "objects": [
     {
-      "label": "Crossbowman in Blue Doublet",
-      "type": "person",
-      "box_2d": [80, 640, 155, 780]
+      "label": "Hound",
+      "type": "animal",
+      "box_2d": [80, 640, 155, 780],
+      "importance": 0.42,
+      "importance_rank": 5
     }
   ],
   "descriptions": {
-    "alt_text": "…",
-    "long_description": "…"
+    "alt_text": "A hunting party with riders and hounds chases a stag...",
+    "long_description": "..."
   }
 }
 ```
 
-Each object’s `box_2d` is normalized to `[0, 1000]` as `[xmin, ymin, xmax, ymax]`.
+**Coordinates:** `box_2d` is `[xmin, ymin, xmax, ymax]` normalized to `[0, 1000]`.
+
+**Per-object fields:**
+* `importance`: 0–1 score based on size, centrality, and rarity
+* `importance_rank`: 1 = most important
+* `aliases`: alternate labels merged during deduplication
 
 ---
 
-## Notes (Before You Rename / Next Session)
+## Project Structure
 
-*   **Model IDs change:** If Gemini model names change again, override via `--model`, `--description-model`, or env vars `MODEL_NAME` / `DESCRIPTION_MODEL_NAME`.
-*   **Density vs. duplicates:** High density is expected and useful; expect some near-duplicates due to label variation. Post-processing (clustering by IoU, grouping by type) is a good next step before UI work.
-*   **Prompt context limit:** Only a subset of labeled instances is injected per iteration to keep prompts bounded. If you want even deeper recall, raise `CONTEXT_OBJECT_LIMIT` via env var.
-*   **Cost/latency:** Dense runs (many iterations + verification passes) can be expensive; treat `--max-iterations`, `--no-new-threshold`, and `--verify-passes` as “quality knobs”.
-*   **Web app direction:** The `objects` list + normalized coords are already a good substrate for a zoomable viewer; a common next step is tiling the image and running targeted passes per tile for small/distant details.
-*   **Renaming the folder:** After you rename the directory/repo, consider also updating the `package.json` `"name"` field if you plan to publish or install it as a package.
+```
+scripts/           # CLI tools
+  agent.ts         # detection agent
+  annotator.ts     # image annotation helper
+src/               # Next.js web viewer
+public/artworks/   # artwork data (per-slug directories)
+```
 
-## 🔮 Future Roadmap
-*   **Visualization Improvements:** Improve label layout, collision handling, and interactive web previews.
-*   **Model Agnosticism:** Add support for GPT-4o and Claude 3.5 Sonnet via Vercel AI SDK.
-*   **Batch Processing:** Run the agent across an entire folder of museum assets.
+## Notes
+
+* **Model overrides:** Use `--model <name>` or `MODEL_NAME` env var if Gemini model names change.
+* **Tiled detection:** For dense scenes (many instances of a kind), the agent automatically splits the image into tiles for better coverage.
+* **Importance scoring:** Objects are ranked by geometric importance (size, centrality, rarity) for UI prioritization.
+* **Cutout padding:** Configurable via `--cutouts-padding` (default 10%) to include context around detected objects.
