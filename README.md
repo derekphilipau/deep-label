@@ -134,6 +134,11 @@ mkdir -p public/artworks/my-painting
 cp path/to/image.jpg public/artworks/my-painting/
 ```
 
+Optionally add metadata (`artwork.json`):
+```json
+{"title": "My Painting", "artist": "Jane Doe", "date": "1850", "medium": "Oil on canvas"}
+```
+
 Run the detection agent:
 ```bash
 npx tsx scripts/agent.ts my-painting

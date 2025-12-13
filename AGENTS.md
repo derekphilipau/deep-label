@@ -24,7 +24,8 @@ public/artworks/   # artwork data (per-slug directories)
 
 ### Web Application
 - Next.js app in `src/` for browsing detection results
-- Artworks stored in `public/artworks/{slug}/`:
+- Artworks auto-discovered from `public/artworks/{slug}/`:
+  - `artwork.json` - metadata (title, artist, date, medium)
   - `image.jpg` - the artwork image
   - `detected_objects.json` - detection payload
   - `cutouts/` - cutout images (full/ and thumb/)
@@ -39,7 +40,8 @@ public/artworks/   # artwork data (per-slug directories)
 
 1. Create a directory: `public/artworks/<slug>/`
 2. Add an image file (named `image.jpg`, `image.png`, or any `.jpg`/`.png`)
-3. Run the agent:
+3. (Optional) Add metadata: `artwork.json` with `{"title": "...", "artist": "...", "date": "..."}`
+4. Run the agent:
    ```
    npx tsx scripts/agent.ts <slug>
    ```

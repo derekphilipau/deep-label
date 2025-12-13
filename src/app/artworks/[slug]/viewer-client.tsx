@@ -1,6 +1,8 @@
 'use client';
 
 import * as React from 'react';
+import { ZoomIn, ZoomOut, Home, Maximize, Minimize } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import type { DetectedObject } from '@/lib/types';
 import type OpenSeadragonType from 'openseadragon';
 
@@ -52,6 +54,7 @@ export default function ViewerClient({
   const [showNavigator, setShowNavigator] = React.useState(false);
   const [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null);
   const [osdLoaded, setOsdLoaded] = React.useState(false);
+  const [isFullscreen, setIsFullscreen] = React.useState(false);
 
   const requestDrawRef = React.useRef<number | null>(null);
   const drawOverlayRef = React.useRef<() => void>(() => {});
@@ -199,7 +202,7 @@ export default function ViewerClient({
         url: imageSrc,
       },
       crossOriginPolicy: 'Anonymous',
-      showNavigationControl: true,
+      showNavigationControl: false,
       showNavigator,
       zoomPerScroll: 1.2,
       minZoomLevel: 0.8,
@@ -281,11 +284,47 @@ export default function ViewerClient({
     };
   }, []);
 
-  const reset = () => {
+  const zoomIn = () => {
+    const viewer = viewerRef.current;
+    if (!viewer) return;
+    viewer.viewport.zoomBy(1.5);
+    viewer.viewport.applyConstraints();
+  };
+
+  const zoomOut = () => {
+    const viewer = viewerRef.current;
+    if (!viewer) return;
+    viewer.viewport.zoomBy(0.67);
+    viewer.viewport.applyConstraints();
+  };
+
+  const goHome = () => {
     const viewer = viewerRef.current;
     if (!viewer) return;
     viewer.viewport.goHome(true);
   };
+
+  const toggleFullscreen = () => {
+    const viewer = viewerRef.current;
+    if (!viewer) return;
+    viewer.setFullScreen(!isFullscreen);
+    setIsFullscreen(!isFullscreen);
+  };
+
+  // Sync fullscreen state with actual fullscreen changes
+  React.useEffect(() => {
+    const viewer = viewerRef.current;
+    if (!viewer) return;
+
+    const handleFullScreen = (event: { fullScreen: boolean }) => {
+      setIsFullscreen(event.fullScreen);
+    };
+
+    viewer.addHandler('full-screen', handleFullScreen);
+    return () => {
+      viewer.removeHandler('full-screen', handleFullScreen);
+    };
+  }, [osdLoaded]);
 
   return (
     <div className="flex flex-col">
@@ -318,13 +357,6 @@ export default function ViewerClient({
             />
             Navigator
           </label>
-          <button
-            className="rounded-md border px-2 py-1 text-xs hover:bg-accent"
-            onClick={reset}
-            type="button"
-          >
-            Reset
-          </button>
         </div>
       </div>
 
@@ -337,6 +369,50 @@ export default function ViewerClient({
           ref={canvasRef}
           className="pointer-events-none absolute inset-0"
         />
+
+        {/* Zoom Controls */}
+        <div className="absolute bottom-4 right-4 flex flex-col gap-1 z-10">
+          <Button
+            variant="secondary"
+            size="icon"
+            onClick={zoomIn}
+            title="Zoom in"
+            className="h-9 w-9 shadow-md"
+          >
+            <ZoomIn className="h-4 w-4" />
+          </Button>
+          <Button
+            variant="secondary"
+            size="icon"
+            onClick={zoomOut}
+            title="Zoom out"
+            className="h-9 w-9 shadow-md"
+          >
+            <ZoomOut className="h-4 w-4" />
+          </Button>
+          <Button
+            variant="secondary"
+            size="icon"
+            onClick={goHome}
+            title="Reset view"
+            className="h-9 w-9 shadow-md"
+          >
+            <Home className="h-4 w-4" />
+          </Button>
+          <Button
+            variant="secondary"
+            size="icon"
+            onClick={toggleFullscreen}
+            title={isFullscreen ? 'Exit fullscreen' : 'Fullscreen'}
+            className="h-9 w-9 shadow-md"
+          >
+            {isFullscreen ? (
+              <Minimize className="h-4 w-4" />
+            ) : (
+              <Maximize className="h-4 w-4" />
+            )}
+          </Button>
+        </div>
       </div>
     </div>
   );

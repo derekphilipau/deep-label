@@ -86,6 +86,16 @@ export default async function ArtworkPage({
             ← Back
           </Link>
           <div className="flex items-center gap-2">
+            {artwork.sourceUrl ? (
+              <a
+                className="text-sm text-muted-foreground hover:underline"
+                href={artwork.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View source ↗
+              </a>
+            ) : null}
             <a
               className="text-sm text-muted-foreground hover:underline"
               href={artwork.jsonSrc}
