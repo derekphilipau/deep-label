@@ -54,9 +54,9 @@ function boxAreaNorm(box: number[]) {
 export default async function ArtworkPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const { slug } = params;
+  const { slug } = await params;
   const artwork = ARTWORKS.find((a) => a.slug === slug);
   if (!artwork) return notFound();
 
