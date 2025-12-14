@@ -21,14 +21,11 @@ export default async function HomePage() {
   return (
     <main className="min-h-dvh">
       <div className="container py-10">
-        <div className="flex items-end justify-between gap-6">
-          <div>
-            <h1 className="text-3xl font-bold tracking-tight">deep-label</h1>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Browse artworks and explore high-density bounding boxes.
-            </p>
-          </div>
-          <Badge variant="outline">Read-only viewer</Badge>
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight">deep-label</h1>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Browse artworks and explore high-density bounding boxes.
+          </p>
         </div>
 
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

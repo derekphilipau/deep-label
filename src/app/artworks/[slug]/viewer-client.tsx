@@ -327,27 +327,30 @@ export default function ViewerClient({
     viewer.viewport.goHome(true);
   };
 
-  const toggleFullscreen = () => {
-    const viewer = viewerRef.current;
-    if (!viewer) return;
-    viewer.setFullScreen(!isFullscreen);
-    setIsFullscreen(!isFullscreen);
+  const toggleFullscreen = async () => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    if (!document.fullscreenElement) {
+      await container.requestFullscreen();
+    } else {
+      await document.exitFullscreen();
+    }
   };
 
   // Sync fullscreen state with actual fullscreen changes
   React.useEffect(() => {
-    const viewer = viewerRef.current;
-    if (!viewer) return;
-
-    const handleFullScreen = (event: { fullScreen: boolean }) => {
-      setIsFullscreen(event.fullScreen);
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+      // Trigger redraw when fullscreen changes
+      scheduleDraw();
     };
 
-    viewer.addHandler('full-screen', handleFullScreen);
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
     return () => {
-      viewer.removeHandler('full-screen', handleFullScreen);
+      document.removeEventListener('fullscreenchange', handleFullscreenChange);
     };
-  }, [osdLoaded]);
+  }, [scheduleDraw]);
 
   return (
     <div className="flex flex-col">
@@ -385,7 +388,7 @@ export default function ViewerClient({
 
       <div
         ref={containerRef}
-        className="relative h-[70vh] w-full overflow-hidden bg-black/5"
+        className={`relative w-full overflow-hidden ${isFullscreen ? 'h-screen bg-black' : 'h-[70vh] bg-black/5'}`}
       >
         <div ref={hostRef} className="absolute inset-0" />
         <canvas

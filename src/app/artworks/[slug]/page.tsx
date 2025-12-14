@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
 import fs from 'fs/promises';
 import path from 'path';
+import { ExternalLink, FileJson, ImageDown } from 'lucide-react';
 import { ARTWORKS } from '@/lib/artworks';
 import { loadArtworkPayloadFromPublic } from '@/lib/load-artwork';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -81,39 +81,7 @@ export default async function ArtworkPage({
   return (
     <main className="min-h-dvh">
       <div className="container py-6">
-        <div className="flex items-center justify-between gap-4">
-          <Link href="/" className="text-sm text-muted-foreground hover:underline">
-            ← Back
-          </Link>
-          <div className="flex items-center gap-2">
-            {artwork.sourceUrl ? (
-              <a
-                className="text-sm text-muted-foreground hover:underline"
-                href={artwork.sourceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View source ↗
-              </a>
-            ) : null}
-            <a
-              className="text-sm text-muted-foreground hover:underline"
-              href={artwork.jsonSrc}
-              download
-            >
-              Download JSON
-            </a>
-            <a
-              className="text-sm text-muted-foreground hover:underline"
-              href={artwork.imageSrc}
-              download
-            >
-              Download image
-            </a>
-          </div>
-        </div>
-
-        <div className="mt-4 grid gap-6 lg:grid-cols-[1fr_360px]">
+        <div className="grid gap-6 lg:grid-cols-[1fr_360px]">
           <div className="rounded-lg border bg-card">
             <ViewerClient imageSrc={artwork.imageSrc} objects={payload.objects} />
           </div>
@@ -134,6 +102,35 @@ export default async function ArtworkPage({
                 {payload.cutouts?.enabled ? (
                   <Badge variant="outline">{payload.cutouts.count} cutouts</Badge>
                 ) : null}
+              </div>
+              <div className="flex flex-wrap gap-2 pt-2">
+                {artwork.sourceUrl ? (
+                  <a
+                    href={artwork.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex h-8 items-center gap-1.5 rounded-md border border-input bg-background px-3 text-xs font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
+                  >
+                    <ExternalLink className="h-3.5 w-3.5" />
+                    View source
+                  </a>
+                ) : null}
+                <a
+                  href={artwork.jsonSrc}
+                  download
+                  className="inline-flex h-8 items-center gap-1.5 rounded-md border border-input bg-background px-3 text-xs font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
+                >
+                  <FileJson className="h-3.5 w-3.5" />
+                  Download JSON
+                </a>
+                <a
+                  href={artwork.imageSrc}
+                  download
+                  className="inline-flex h-8 items-center gap-1.5 rounded-md border border-input bg-background px-3 text-xs font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
+                >
+                  <ImageDown className="h-3.5 w-3.5" />
+                  Download image
+                </a>
               </div>
             </CardHeader>
             <CardContent className="space-y-4">

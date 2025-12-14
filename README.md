@@ -2,15 +2,17 @@
 
 ## Introduction
 
-**Derek: I've been dreaming of an IIIIF, "Intelligent IIIF" framework, one which can deeply analyze and describe images at various scales. This Opus 4.5 vibe-coded proof-of-concept is a step in that direction. `src/lib/detector.ts` was iterated upon many times, it should be refactored into an elegant, generalized algorithm for recursive, multi-scale discovery & verification with "attention" passing spatially-attributed context at smaller scales.  _Ideally, each step would include not only object type identification and object segmentation but also visual description generation._**
+**Derek: I've been dreaming of an IIIIF, "Intelligent IIIF" framework, one which can deeply analyze and describe images at various scales. This Opus 4.5 vibe-coded proof-of-concept is a step in that direction. `src/lib/detector.ts` was iterated upon many times, it should be refactored into an elegant, generalized algorithm for recursive, multi-scale discovery & verification with "attention" passing spatially-attributed context at smaller scales.  _Ideally, each step would include not only object type identification and object segmentation but also visual description generation._ One of my sub-goals is to find all "cats" in all artworks. The object "cutouts" could be used as part of a search UI, or even to train models.**
 
-Opus 4.5 Note: Currently the code is 2-level (full → quadrants). A truly recursive version would:
+Opus 4.5: Currently the code is 2-level (full → quadrants). A truly recursive version would:
   - Subdivide adaptively based on object density/size
   - Pass context downward (what the parent scale saw)
   - Bubble findings upward with spatial attribution
   - Allow N levels deep, not just 2
 
-![deep-label segmentation of Hunting near Hartenfels Castle](docs/images/hunting-scene.jpg)
+![Deep-label segmentation of "Hunting near Hartenfels Castle"](docs/images/hunting-scene.jpg)
+
+![Example of cutouts for "The Fall of the Magician"](docs/images/cutouts.jpg)
 
 ---
 
