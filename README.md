@@ -1,6 +1,21 @@
 # deep-label
 
-**deep-label** is an intelligent, agentic computer vision pipeline designed to analyze complex artwork with "obnoxiously exhaustive" detail.
+## Introduction
+
+**Derek: I've been dreaming of an IIIIF, "Intelligent IIIF" framework, one which can deeply analyze and describe images at various scales. This Opus 4.5 vibe-coded proof-of-concept is a step in that direction. `src/lib/detector.ts` was iterated upon many times, it should be refactored into an elegant, generalized algorithm for recursive, multi-scale discovery & verification with "attention" passing spatially-attributed context at smaller scales.  _Ideally, each step would include not only object type identification and object segmentation but also visual description generation._**
+
+Opus 4.5 Note: Currently the code is 2-level (full → quadrants). A truly recursive version would:
+  - Subdivide adaptively based on object density/size
+  - Pass context downward (what the parent scale saw)
+  - Bubble findings upward with spatial attribution
+  - Allow N levels deep, not just 2
+
+![deep-label segmentation of Hunting near Hartenfels Castle](docs/images/hunting-scene.jpg)
+
+---
+
+
+**deep-label** is an intelligent, agentic computer vision pipeline designed to analyze complex artwork with exhaustive detail.
 
 Unlike standard object detection models that only find the most obvious elements (e.g., "person," "dog"), this system uses a **multi-scale discovery** and **reconciliation** approach to force Large Language Models (LLMs) to look deeper, identifying specific background details, individual crowd members, and subtle narrative elements.
 
