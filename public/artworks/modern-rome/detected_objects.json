@@ -1,0 +1,3174 @@
+{
+  "strategy": "hybrid-detect-verify",
+  "image_path": "public/artworks/modern-rome/image.jpg",
+  "model_name": "gemini-3-pro-preview",
+  "description_model_name": "gemini-3-pro-preview",
+  "max_kinds": 50,
+  "verify_rounds": 2,
+  "tile_threshold": 12,
+  "cutouts": {
+    "enabled": true,
+    "format": "webp",
+    "thumb_size": 256,
+    "max": null,
+    "concurrency": 8,
+    "index_path": "cutouts.json",
+    "directory_path": "cutouts",
+    "count": 230
+  },
+  "kinds": [
+    {
+      "kind": "painting",
+      "type": "object",
+      "estimated_count": "very_many",
+      "estimated_size": "medium",
+      "segmentation": "individual",
+      "importance": "primary"
+    },
+    {
+      "kind": "person",
+      "type": "person",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "primary"
+    },
+    {
+      "kind": "statue",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "medium",
+      "segmentation": "individual",
+      "importance": "primary"
+    },
+    {
+      "kind": "column",
+      "type": "architecture",
+      "estimated_count": "few",
+      "estimated_size": "large",
+      "segmentation": "individual",
+      "importance": "primary"
+    },
+    {
+      "kind": "curtain",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "large",
+      "segmentation": "region",
+      "importance": "secondary"
+    },
+    {
+      "kind": "lion sculpture",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "fresco",
+      "type": "painting",
+      "estimated_count": "few",
+      "estimated_size": "medium",
+      "segmentation": "region",
+      "importance": "secondary"
+    },
+    {
+      "kind": "stucco figure",
+      "type": "sculpture",
+      "estimated_count": "moderate",
+      "estimated_size": "tiny",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "arch",
+      "type": "architecture",
+      "estimated_count": "few",
+      "estimated_size": "giant",
+      "segmentation": "region",
+      "importance": "background"
+    },
+    {
+      "kind": "portfolio",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "book",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "tiny",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "vase",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "tiny",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "flower",
+      "type": "plant",
+      "estimated_count": "few",
+      "estimated_size": "tiny",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "console table",
+      "type": "furniture",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "chair",
+      "type": "furniture",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "building",
+      "type": "architecture",
+      "estimated_count": "many",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "background"
+    },
+    {
+      "kind": "fountain",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "tiny",
+      "segmentation": "individual",
+      "importance": "background"
+    },
+    {
+      "kind": "obelisk",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "tiny",
+      "segmentation": "individual",
+      "importance": "background"
+    }
+  ],
+  "objects": [
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        91,
+        107,
+        238,
+        231
+      ],
+      "importance_geom": 0.2024,
+      "importance": 0.2024,
+      "importance_rank": 223
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        260,
+        82,
+        307,
+        230
+      ],
+      "importance_geom": 0.2079,
+      "importance": 0.2079,
+      "importance_rank": 220
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        95,
+        287,
+        242,
+        428
+      ],
+      "importance_geom": 0.2724,
+      "importance": 0.2724,
+      "importance_rank": 187
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        98,
+        434,
+        243,
+        550
+      ],
+      "importance_geom": 0.2994,
+      "importance": 0.2994,
+      "importance_rank": 163
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        62,
+        267,
+        92,
+        382
+      ],
+      "importance_geom": 0.2076,
+      "importance": 0.2076,
+      "importance_rank": 221
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        33,
+        385,
+        93,
+        550
+      ],
+      "importance_geom": 0.2482,
+      "importance": 0.2482,
+      "importance_rank": 204
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        520,
+        509,
+        550,
+        550
+      ],
+      "importance_geom": 0.377,
+      "importance": 0.377,
+      "importance_rank": 50
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        283,
+        267,
+        308,
+        308
+      ],
+      "importance_geom": 0.2517,
+      "importance": 0.2517,
+      "importance_rank": 202
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        450,
+        48,
+        571,
+        217
+      ],
+      "importance_geom": 0.236,
+      "importance": 0.236,
+      "importance_rank": 208
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        689,
+        77,
+        736,
+        232
+      ],
+      "importance_geom": 0.2086,
+      "importance": 0.2086,
+      "importance_rank": 219
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        689,
+        236,
+        731,
+        415
+      ],
+      "importance_geom": 0.2815,
+      "importance": 0.2815,
+      "importance_rank": 177
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        689,
+        421,
+        731,
+        528
+      ],
+      "importance_geom": 0.3197,
+      "importance": 0.3197,
+      "importance_rank": 137
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        692,
+        531,
+        731,
+        550
+      ],
+      "importance_geom": 0.3163,
+      "importance": 0.3163,
+      "importance_rank": 143
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        761,
+        52,
+        893,
+        234
+      ],
+      "importance_geom": 0.2,
+      "importance": 0.2,
+      "importance_rank": 224
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        751,
+        280,
+        893,
+        421
+      ],
+      "importance_geom": 0.2727,
+      "importance": 0.2727,
+      "importance_rank": 184
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        752,
+        426,
+        893,
+        550
+      ],
+      "importance_geom": 0.302,
+      "importance": 0.302,
+      "importance_rank": 160
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        895,
+        16,
+        986,
+        198
+      ],
+      "importance_geom": 0.1491,
+      "importance": 0.1491,
+      "importance_rank": 230
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        895,
+        209,
+        981,
+        410
+      ],
+      "importance_geom": 0.2202,
+      "importance": 0.2202,
+      "importance_rank": 215
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        895,
+        415,
+        981,
+        550
+      ],
+      "importance_geom": 0.2529,
+      "importance": 0.2529,
+      "importance_rank": 201
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        576,
+        305,
+        653,
+        429
+      ],
+      "importance_geom": 0.3255,
+      "importance": 0.3255,
+      "importance_rank": 128
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        576,
+        467,
+        652,
+        542
+      ],
+      "importance_geom": 0.3612,
+      "importance": 0.3612,
+      "importance_rank": 78
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        541,
+        333,
+        568,
+        429
+      ],
+      "importance_geom": 0.3293,
+      "importance": 0.3293,
+      "importance_rank": 125
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        541,
+        487,
+        568,
+        550
+      ],
+      "importance_geom": 0.373,
+      "importance": 0.373,
+      "importance_rank": 56
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        508,
+        520,
+        526,
+        550
+      ],
+      "importance_geom": 0.3767,
+      "importance": 0.3767,
+      "importance_rank": 51
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        475,
+        451,
+        493,
+        514
+      ],
+      "importance_geom": 0.3773,
+      "importance": 0.3773,
+      "importance_rank": 49
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        506,
+        332,
+        526,
+        428
+      ],
+      "importance_geom": 0.3305,
+      "importance": 0.3305,
+      "importance_rank": 124
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        30,
+        450,
+        246,
+        564
+      ],
+      "importance_geom": 0.2983,
+      "importance": 0.2983,
+      "importance_rank": 164
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        32,
+        566,
+        153,
+        924
+      ],
+      "importance_geom": 0.3093,
+      "importance": 0.3093,
+      "importance_rank": 150
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        147,
+        548,
+        268,
+        686
+      ],
+      "importance_geom": 0.3231,
+      "importance": 0.3231,
+      "importance_rank": 133
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        169,
+        684,
+        272,
+        824
+      ],
+      "importance_geom": 0.3188,
+      "importance": 0.3188,
+      "importance_rank": 139
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        139,
+        758,
+        223,
+        945
+      ],
+      "importance_geom": 0.3007,
+      "importance": 0.3007,
+      "importance_rank": 161
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        493,
+        519,
+        519,
+        554
+      ],
+      "importance_geom": 0.3796,
+      "importance": 0.3796,
+      "importance_rank": 45
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        493,
+        558,
+        519,
+        593
+      ],
+      "importance_geom": 0.3718,
+      "importance": 0.3718,
+      "importance_rank": 58
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        493,
+        596,
+        519,
+        631
+      ],
+      "importance_geom": 0.3641,
+      "importance": 0.3641,
+      "importance_rank": 72
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        493,
+        635,
+        519,
+        670
+      ],
+      "importance_geom": 0.3562,
+      "importance": 0.3562,
+      "importance_rank": 91
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        469,
+        571,
+        488,
+        604
+      ],
+      "importance_geom": 0.367,
+      "importance": 0.367,
+      "importance_rank": 66
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        469,
+        609,
+        488,
+        642
+      ],
+      "importance_geom": 0.3595,
+      "importance": 0.3595,
+      "importance_rank": 81
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        469,
+        648,
+        488,
+        681
+      ],
+      "importance_geom": 0.3517,
+      "importance": 0.3517,
+      "importance_rank": 99
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        440,
+        593,
+        459,
+        623
+      ],
+      "importance_geom": 0.3594,
+      "importance": 0.3594,
+      "importance_rank": 82
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        440,
+        626,
+        459,
+        656
+      ],
+      "importance_geom": 0.3536,
+      "importance": 0.3536,
+      "importance_rank": 98
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        440,
+        571,
+        459,
+        593
+      ],
+      "importance_geom": 0.3626,
+      "importance": 0.3626,
+      "importance_rank": 73
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        440,
+        645,
+        459,
+        667
+      ],
+      "importance_geom": 0.3498,
+      "importance": 0.3498,
+      "importance_rank": 102
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        467,
+        670,
+        487,
+        692
+      ],
+      "importance_geom": 0.3471,
+      "importance": 0.3471,
+      "importance_rank": 107
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        899,
+        450,
+        981,
+        582
+      ],
+      "importance_geom": 0.2561,
+      "importance": 0.2561,
+      "importance_rank": 199
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        691,
+        450,
+        731,
+        530
+      ],
+      "importance_geom": 0.319,
+      "importance": 0.319,
+      "importance_rank": 138
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        541,
+        517,
+        565,
+        555
+      ],
+      "importance_geom": 0.37,
+      "importance": 0.37,
+      "importance_rank": 61
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        509,
+        537,
+        526,
+        564
+      ],
+      "importance_geom": 0.3733,
+      "importance": 0.3733,
+      "importance_rank": 54
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        477,
+        560,
+        491,
+        587
+      ],
+      "importance_geom": 0.3685,
+      "importance": 0.3685,
+      "importance_rank": 63
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        691,
+        532,
+        731,
+        648
+      ],
+      "aliases": [
+        "fountain"
+      ],
+      "importance_geom": 0.331,
+      "importance": 0.331,
+      "importance_rank": 123
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        577,
+        548,
+        652,
+        614
+      ],
+      "importance_geom": 0.3619,
+      "importance": 0.3619,
+      "importance_rank": 76
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        541,
+        557,
+        565,
+        590
+      ],
+      "importance_geom": 0.3656,
+      "importance": 0.3656,
+      "importance_rank": 68
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        509,
+        565,
+        526,
+        593
+      ],
+      "importance_geom": 0.368,
+      "importance": 0.368,
+      "importance_rank": 65
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        477,
+        590,
+        491,
+        618
+      ],
+      "importance_geom": 0.3625,
+      "importance": 0.3625,
+      "importance_rank": 74
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        758,
+        559,
+        890,
+        675
+      ],
+      "importance_geom": 0.3111,
+      "importance": 0.3111,
+      "importance_rank": 149
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        887,
+        585,
+        981,
+        799
+      ],
+      "importance_geom": 0.2818,
+      "importance": 0.2818,
+      "importance_rank": 175
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        577,
+        616,
+        652,
+        669
+      ],
+      "importance_geom": 0.3539,
+      "importance": 0.3539,
+      "importance_rank": 97
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        541,
+        592,
+        565,
+        627
+      ],
+      "importance_geom": 0.3603,
+      "importance": 0.3603,
+      "importance_rank": 80
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        509,
+        594,
+        526,
+        621
+      ],
+      "importance_geom": 0.3622,
+      "importance": 0.3622,
+      "importance_rank": 75
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        477,
+        620,
+        491,
+        648
+      ],
+      "importance_geom": 0.3565,
+      "importance": 0.3565,
+      "importance_rank": 87
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        719,
+        631,
+        784,
+        807
+      ],
+      "importance_geom": 0.3252,
+      "importance": 0.3252,
+      "importance_rank": 129
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        691,
+        651,
+        728,
+        739
+      ],
+      "importance_geom": 0.3234,
+      "importance": 0.3234,
+      "importance_rank": 132
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        541,
+        629,
+        565,
+        667
+      ],
+      "importance_geom": 0.3539,
+      "importance": 0.3539,
+      "importance_rank": 96
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        509,
+        623,
+        526,
+        651
+      ],
+      "importance_geom": 0.3565,
+      "importance": 0.3565,
+      "importance_rank": 89
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        477,
+        651,
+        491,
+        678
+      ],
+      "importance_geom": 0.3503,
+      "importance": 0.3503,
+      "importance_rank": 101
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        577,
+        672,
+        652,
+        770
+      ],
+      "importance_geom": 0.3491,
+      "importance": 0.3491,
+      "importance_rank": 103
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        780,
+        679,
+        887,
+        794
+      ],
+      "importance_geom": 0.3024,
+      "importance": 0.3024,
+      "importance_rank": 159
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        541,
+        669,
+        565,
+        709
+      ],
+      "importance_geom": 0.3464,
+      "importance": 0.3464,
+      "importance_rank": 108
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        509,
+        652,
+        526,
+        680
+      ],
+      "importance_geom": 0.3506,
+      "importance": 0.3506,
+      "importance_rank": 100
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        477,
+        681,
+        491,
+        708
+      ],
+      "importance_geom": 0.3442,
+      "importance": 0.3442,
+      "importance_rank": 111
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        541,
+        711,
+        565,
+        755
+      ],
+      "importance_geom": 0.3384,
+      "importance": 0.3384,
+      "importance_rank": 117
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        509,
+        681,
+        526,
+        708
+      ],
+      "importance_geom": 0.3448,
+      "importance": 0.3448,
+      "importance_rank": 110
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        691,
+        740,
+        722,
+        805
+      ],
+      "importance_geom": 0.3117,
+      "importance": 0.3117,
+      "importance_rank": 148
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        530,
+        772,
+        564,
+        854
+      ],
+      "importance_geom": 0.3291,
+      "importance": 0.3291,
+      "importance_rank": 126
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        773,
+        784,
+        941,
+        960
+      ],
+      "importance_geom": 0.3033,
+      "importance": 0.3033,
+      "importance_rank": 156
+    },
+    {
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        652,
+        805,
+        775,
+        953
+      ],
+      "importance_geom": 0.3217,
+      "importance": 0.3217,
+      "importance_rank": 134
+    },
+    {
+      "label": "person",
+      "type": "person",
+      "box_2d": [
+        211,
+        834,
+        304,
+        980
+      ],
+      "importance_geom": 0.4389,
+      "importance": 0.4389,
+      "importance_rank": 25
+    },
+    {
+      "label": "person",
+      "type": "person",
+      "box_2d": [
+        257,
+        820,
+        300,
+        882
+      ],
+      "importance_geom": 0.4318,
+      "importance": 0.4318,
+      "importance_rank": 28
+    },
+    {
+      "label": "person",
+      "type": "person",
+      "box_2d": [
+        282,
+        737,
+        351,
+        893
+      ],
+      "importance_geom": 0.4599,
+      "importance": 0.4599,
+      "importance_rank": 16
+    },
+    {
+      "label": "person",
+      "type": "person",
+      "box_2d": [
+        337,
+        718,
+        370,
+        835
+      ],
+      "importance_geom": 0.4599,
+      "importance": 0.4599,
+      "importance_rank": 17
+    },
+    {
+      "label": "person",
+      "type": "person",
+      "box_2d": [
+        342,
+        722,
+        397,
+        893
+      ],
+      "importance_geom": 0.4675,
+      "importance": 0.4675,
+      "importance_rank": 11
+    },
+    {
+      "label": "person",
+      "type": "person",
+      "box_2d": [
+        392,
+        818,
+        469,
+        930
+      ],
+      "importance_geom": 0.4598,
+      "importance": 0.4598,
+      "importance_rank": 18
+    },
+    {
+      "label": "person",
+      "type": "person",
+      "box_2d": [
+        322,
+        722,
+        349,
+        807
+      ],
+      "importance_geom": 0.4543,
+      "importance": 0.4543,
+      "importance_rank": 22
+    },
+    {
+      "label": "statue",
+      "type": "object",
+      "box_2d": [
+        464,
+        653,
+        532,
+        815
+      ],
+      "importance_geom": 0.4621,
+      "importance": 0.4621,
+      "importance_rank": 15
+    },
+    {
+      "label": "statue",
+      "type": "object",
+      "box_2d": [
+        563,
+        824,
+        656,
+        924
+      ],
+      "importance_geom": 0.4254,
+      "importance": 0.4254,
+      "importance_rank": 30
+    },
+    {
+      "label": "statue",
+      "type": "object",
+      "box_2d": [
+        417,
+        668,
+        452,
+        765
+      ],
+      "importance_geom": 0.4482,
+      "importance": 0.4482,
+      "importance_rank": 23
+    },
+    {
+      "label": "statue",
+      "type": "object",
+      "box_2d": [
+        378,
+        660,
+        408,
+        715
+      ],
+      "importance_geom": 0.4422,
+      "importance": 0.4422,
+      "importance_rank": 24
+    },
+    {
+      "label": "column",
+      "type": "architecture",
+      "box_2d": [
+        638,
+        318,
+        695,
+        795
+      ],
+      "importance_geom": 0.4788,
+      "importance": 0.4788,
+      "importance_rank": 10
+    },
+    {
+      "label": "column",
+      "type": "architecture",
+      "box_2d": [
+        298,
+        315,
+        355,
+        680
+      ],
+      "importance_geom": 0.4645,
+      "importance": 0.4645,
+      "importance_rank": 13
+    },
+    {
+      "label": "column",
+      "type": "architecture",
+      "box_2d": [
+        518,
+        485,
+        552,
+        740
+      ],
+      "importance_geom": 0.4861,
+      "importance": 0.4861,
+      "importance_rank": 8
+    },
+    {
+      "label": "column",
+      "type": "architecture",
+      "box_2d": [
+        418,
+        490,
+        452,
+        660
+      ],
+      "importance_geom": 0.4819,
+      "importance": 0.4819,
+      "importance_rank": 9
+    },
+    {
+      "label": "curtain",
+      "type": "object",
+      "box_2d": [
+        0,
+        0,
+        130,
+        995
+      ],
+      "importance_geom": 0.4196,
+      "importance": 0.4196,
+      "importance_rank": 32
+    },
+    {
+      "label": "curtain",
+      "type": "object",
+      "box_2d": [
+        0,
+        0,
+        360,
+        140
+      ],
+      "importance_geom": 0.2792,
+      "importance": 0.2792,
+      "importance_rank": 178
+    },
+    {
+      "label": "curtain",
+      "type": "object",
+      "box_2d": [
+        345,
+        48,
+        625,
+        215
+      ],
+      "importance_geom": 0.345,
+      "importance": 0.345,
+      "importance_rank": 109
+    },
+    {
+      "label": "curtain",
+      "type": "object",
+      "box_2d": [
+        263,
+        338,
+        345,
+        730
+      ],
+      "importance_geom": 0.4544,
+      "importance": 0.4544,
+      "importance_rank": 21
+    },
+    {
+      "label": "curtain",
+      "type": "object",
+      "box_2d": [
+        368,
+        448,
+        442,
+        475
+      ],
+      "importance_geom": 0.4372,
+      "importance": 0.4372,
+      "importance_rank": 26
+    },
+    {
+      "label": "curtain",
+      "type": "object",
+      "box_2d": [
+        780,
+        808,
+        992,
+        992
+      ],
+      "importance_geom": 0.3886,
+      "importance": 0.3886,
+      "importance_rank": 41
+    },
+    {
+      "label": "lion sculpture",
+      "type": "object",
+      "box_2d": [
+        566,
+        827,
+        667,
+        928
+      ],
+      "importance_geom": 0.4591,
+      "importance": 0.4591,
+      "importance_rank": 19
+    },
+    {
+      "label": "fresco",
+      "type": "painting",
+      "box_2d": [
+        353,
+        63,
+        588,
+        220
+      ],
+      "importance_geom": 0.4635,
+      "importance": 0.4635,
+      "importance_rank": 14
+    },
+    {
+      "label": "stucco figure",
+      "type": "sculpture",
+      "box_2d": [
+        234,
+        87,
+        262,
+        154
+      ],
+      "importance_geom": 0.2786,
+      "importance": 0.2786,
+      "importance_rank": 180
+    },
+    {
+      "label": "stucco figure",
+      "type": "sculpture",
+      "box_2d": [
+        304,
+        80,
+        333,
+        151
+      ],
+      "importance_geom": 0.2892,
+      "importance": 0.2892,
+      "importance_rank": 172
+    },
+    {
+      "label": "stucco figure",
+      "type": "sculpture",
+      "box_2d": [
+        392,
+        234,
+        431,
+        279
+      ],
+      "importance_geom": 0.3681,
+      "importance": 0.3681,
+      "importance_rank": 64
+    },
+    {
+      "label": "stucco figure",
+      "type": "sculpture",
+      "box_2d": [
+        431,
+        234,
+        469,
+        279
+      ],
+      "importance_geom": 0.3716,
+      "importance": 0.3716,
+      "importance_rank": 60
+    },
+    {
+      "label": "stucco figure",
+      "type": "sculpture",
+      "box_2d": [
+        511,
+        264,
+        549,
+        368
+      ],
+      "importance_geom": 0.409,
+      "importance": 0.409,
+      "importance_rank": 34
+    },
+    {
+      "label": "stucco figure",
+      "type": "sculpture",
+      "box_2d": [
+        310,
+        315,
+        335,
+        348
+      ],
+      "importance_geom": 0.3804,
+      "importance": 0.3804,
+      "importance_rank": 44
+    },
+    {
+      "label": "stucco figure",
+      "type": "sculpture",
+      "box_2d": [
+        383,
+        387,
+        407,
+        425
+      ],
+      "importance_geom": 0.4287,
+      "importance": 0.4287,
+      "importance_rank": 29
+    },
+    {
+      "label": "stucco figure",
+      "type": "sculpture",
+      "box_2d": [
+        407,
+        387,
+        431,
+        425
+      ],
+      "importance_geom": 0.4347,
+      "importance": 0.4347,
+      "importance_rank": 27
+    },
+    {
+      "label": "stucco figure",
+      "type": "sculpture",
+      "box_2d": [
+        460,
+        414,
+        480,
+        460
+      ],
+      "importance_geom": 0.4586,
+      "importance": 0.4586,
+      "importance_rank": 20
+    },
+    {
+      "label": "stucco figure",
+      "type": "sculpture",
+      "box_2d": [
+        643,
+        14,
+        695,
+        236
+      ],
+      "importance_geom": 0.3142,
+      "importance": 0.3142,
+      "importance_rank": 145
+    },
+    {
+      "label": "stucco figure",
+      "type": "sculpture",
+      "box_2d": [
+        719,
+        14,
+        766,
+        236
+      ],
+      "importance_geom": 0.3001,
+      "importance": 0.3001,
+      "importance_rank": 162
+    },
+    {
+      "label": "stucco figure",
+      "type": "sculpture",
+      "box_2d": [
+        559,
+        258,
+        597,
+        371
+      ],
+      "importance_geom": 0.4043,
+      "importance": 0.4043,
+      "importance_rank": 37
+    },
+    {
+      "label": "arch",
+      "type": "architecture",
+      "box_2d": [
+        0,
+        0,
+        1000,
+        360
+      ],
+      "importance_geom": 0.5018,
+      "importance": 0.5018,
+      "importance_rank": 7
+    },
+    {
+      "label": "arch",
+      "type": "architecture",
+      "box_2d": [
+        0,
+        150,
+        350,
+        1000
+      ],
+      "importance_geom": 0.5399,
+      "importance": 0.5399,
+      "importance_rank": 3
+    },
+    {
+      "label": "arch",
+      "type": "architecture",
+      "box_2d": [
+        640,
+        150,
+        1000,
+        1000
+      ],
+      "importance_geom": 0.544,
+      "importance": 0.544,
+      "importance_rank": 2
+    },
+    {
+      "label": "arch",
+      "type": "architecture",
+      "box_2d": [
+        350,
+        250,
+        640,
+        800
+      ],
+      "importance_geom": 0.5975,
+      "importance": 0.5975,
+      "importance_rank": 1
+    },
+    {
+      "label": "portfolio",
+      "type": "object",
+      "box_2d": [
+        360,
+        788,
+        388,
+        818
+      ],
+      "importance_geom": 0.404,
+      "importance": 0.404,
+      "importance_rank": 38
+    },
+    {
+      "label": "portfolio",
+      "type": "object",
+      "box_2d": [
+        452,
+        855,
+        543,
+        981
+      ],
+      "aliases": [
+        "book"
+      ],
+      "importance_geom": 0.4129,
+      "importance": 0.4129,
+      "importance_rank": 33
+    },
+    {
+      "label": "portfolio",
+      "type": "object",
+      "box_2d": [
+        303,
+        930,
+        365,
+        963
+      ],
+      "importance_geom": 0.378,
+      "importance": 0.378,
+      "importance_rank": 46
+    },
+    {
+      "label": "portfolio",
+      "type": "object",
+      "box_2d": [
+        301,
+        949,
+        373,
+        980
+      ],
+      "importance_geom": 0.3756,
+      "importance": 0.3756,
+      "importance_rank": 53
+    },
+    {
+      "label": "portfolio",
+      "type": "object",
+      "box_2d": [
+        146,
+        936,
+        214,
+        986
+      ],
+      "aliases": [
+        "book"
+      ],
+      "importance_geom": 0.3541,
+      "importance": 0.3541,
+      "importance_rank": 94
+    },
+    {
+      "label": "portfolio",
+      "type": "object",
+      "box_2d": [
+        261,
+        882,
+        308,
+        920
+      ],
+      "aliases": [
+        "book"
+      ],
+      "importance_geom": 0.3777,
+      "importance": 0.3777,
+      "importance_rank": 47
+    },
+    {
+      "label": "book",
+      "type": "object",
+      "box_2d": [
+        316,
+        928,
+        360,
+        958
+      ],
+      "importance_geom": 0.4076,
+      "importance": 0.4076,
+      "importance_rank": 35
+    },
+    {
+      "label": "book",
+      "type": "object",
+      "box_2d": [
+        319,
+        958,
+        373,
+        978
+      ],
+      "importance_geom": 0.4028,
+      "importance": 0.4028,
+      "importance_rank": 39
+    },
+    {
+      "label": "vase",
+      "type": "object",
+      "box_2d": [
+        572,
+        732,
+        598,
+        761
+      ],
+      "importance_geom": 0.4649,
+      "importance": 0.4649,
+      "importance_rank": 12
+    },
+    {
+      "label": "flower",
+      "type": "plant",
+      "box_2d": [
+        580,
+        733,
+        591,
+        744
+      ],
+      "importance_geom": 0.5363,
+      "importance": 0.5363,
+      "importance_rank": 4
+    },
+    {
+      "label": "console table",
+      "type": "furniture",
+      "box_2d": [
+        561,
+        771,
+        651,
+        851
+      ],
+      "importance_geom": 0.5353,
+      "importance": 0.5353,
+      "importance_rank": 5
+    },
+    {
+      "label": "chair",
+      "type": "furniture",
+      "box_2d": [
+        268,
+        711,
+        351,
+        883
+      ],
+      "importance_geom": 0.535,
+      "importance": 0.535,
+      "importance_rank": 6
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        117,
+        112,
+        234,
+        223
+      ],
+      "importance_geom": 0.1998,
+      "importance": 0.1998,
+      "importance_rank": 225
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        136,
+        300,
+        233,
+        412
+      ],
+      "importance_geom": 0.2668,
+      "importance": 0.2668,
+      "importance_rank": 190
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        139,
+        467,
+        186,
+        528
+      ],
+      "importance_geom": 0.2761,
+      "importance": 0.2761,
+      "importance_rank": 181
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        186,
+        488,
+        235,
+        531
+      ],
+      "importance_geom": 0.2925,
+      "importance": 0.2925,
+      "importance_rank": 171
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        263,
+        85,
+        302,
+        223
+      ],
+      "importance_geom": 0.2053,
+      "importance": 0.2053,
+      "importance_rank": 222
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        63,
+        275,
+        92,
+        379
+      ],
+      "importance_geom": 0.2088,
+      "importance": 0.2088,
+      "importance_rank": 218
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        63,
+        379,
+        92,
+        473
+      ],
+      "importance_geom": 0.2326,
+      "importance": 0.2326,
+      "importance_rank": 212
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        63,
+        478,
+        92,
+        544
+      ],
+      "importance_geom": 0.2451,
+      "importance": 0.2451,
+      "importance_rank": 205
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        102,
+        484,
+        139,
+        522
+      ],
+      "importance_geom": 0.2573,
+      "importance": 0.2573,
+      "importance_rank": 196
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        104,
+        173,
+        126,
+        217
+      ],
+      "importance_geom": 0.1697,
+      "importance": 0.1697,
+      "importance_rank": 228
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        129,
+        338,
+        151,
+        388
+      ],
+      "importance_geom": 0.2329,
+      "importance": 0.2329,
+      "importance_rank": 211
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        717,
+        118,
+        731,
+        217
+      ],
+      "importance_geom": 0.1993,
+      "importance": 0.1993,
+      "importance_rank": 226
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        692,
+        181,
+        717,
+        214
+      ],
+      "importance_geom": 0.2139,
+      "importance": 0.2139,
+      "importance_rank": 216
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        787,
+        297,
+        873,
+        407
+      ],
+      "importance_geom": 0.2588,
+      "importance": 0.2588,
+      "importance_rank": 194
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        873,
+        294,
+        890,
+        412
+      ],
+      "importance_geom": 0.2266,
+      "importance": 0.2266,
+      "importance_rank": 214
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        760,
+        432,
+        832,
+        531
+      ],
+      "importance_geom": 0.2974,
+      "importance": 0.2974,
+      "importance_rank": 165
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        908,
+        231,
+        975,
+        525
+      ],
+      "importance_geom": 0.2416,
+      "importance": 0.2416,
+      "importance_rank": 207
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        903,
+        418,
+        975,
+        547
+      ],
+      "importance_geom": 0.2507,
+      "importance": 0.2507,
+      "importance_rank": 203
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        587,
+        330,
+        651,
+        423
+      ],
+      "importance_geom": 0.3237,
+      "importance": 0.3237,
+      "importance_rank": 131
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        629,
+        484,
+        652,
+        536
+      ],
+      "importance_geom": 0.3418,
+      "importance": 0.3418,
+      "importance_rank": 115
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        582,
+        500,
+        631,
+        536
+      ],
+      "importance_geom": 0.3568,
+      "importance": 0.3568,
+      "importance_rank": 86
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        686,
+        341,
+        730,
+        426
+      ],
+      "importance_geom": 0.2963,
+      "importance": 0.2963,
+      "importance_rank": 168
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        697,
+        440,
+        730,
+        522
+      ],
+      "importance_geom": 0.3167,
+      "importance": 0.3167,
+      "importance_rank": 141
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        541,
+        495,
+        565,
+        544
+      ],
+      "importance_geom": 0.373,
+      "importance": 0.373,
+      "importance_rank": 57
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        868,
+        484,
+        884,
+        522
+      ],
+      "importance_geom": 0.2546,
+      "importance": 0.2546,
+      "importance_rank": 200
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        539,
+        357,
+        564,
+        429
+      ],
+      "importance_geom": 0.3344,
+      "importance": 0.3344,
+      "importance_rank": 121
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        539,
+        451,
+        564,
+        495
+      ],
+      "importance_geom": 0.3651,
+      "importance": 0.3651,
+      "importance_rank": 70
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        475,
+        357,
+        516,
+        429
+      ],
+      "importance_geom": 0.3421,
+      "importance": 0.3421,
+      "importance_rank": 112
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        477,
+        506,
+        521,
+        550
+      ],
+      "importance_geom": 0.3872,
+      "importance": 0.3872,
+      "importance_rank": 42
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        827,
+        146,
+        854,
+        168
+      ],
+      "importance_geom": 0.1647,
+      "importance": 0.1647,
+      "importance_rank": 229
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        895,
+        302,
+        906,
+        385
+      ],
+      "importance_geom": 0.2133,
+      "importance": 0.2133,
+      "importance_rank": 217
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        752,
+        357,
+        785,
+        412
+      ],
+      "importance_geom": 0.2718,
+      "importance": 0.2718,
+      "importance_rank": 188
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        139,
+        473,
+        184,
+        532
+      ],
+      "importance_geom": 0.2759,
+      "importance": 0.2759,
+      "importance_rank": 182
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        184,
+        491,
+        236,
+        535
+      ],
+      "importance_geom": 0.2934,
+      "importance": 0.2934,
+      "importance_rank": 169
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        38,
+        605,
+        117,
+        774
+      ],
+      "importance_geom": 0.2791,
+      "importance": 0.2791,
+      "importance_rank": 179
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        99,
+        620,
+        121,
+        780
+      ],
+      "importance_geom": 0.2726,
+      "importance": 0.2726,
+      "importance_rank": 186
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        121,
+        681,
+        148,
+        758
+      ],
+      "importance_geom": 0.2756,
+      "importance": 0.2756,
+      "importance_rank": 183
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        158,
+        566,
+        249,
+        663
+      ],
+      "importance_geom": 0.3127,
+      "importance": 0.3127,
+      "importance_rank": 147
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        187,
+        695,
+        214,
+        747
+      ],
+      "importance_geom": 0.2925,
+      "importance": 0.2925,
+      "importance_rank": 170
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        173,
+        719,
+        192,
+        758
+      ],
+      "importance_geom": 0.2833,
+      "importance": 0.2833,
+      "importance_rank": 174
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        242,
+        719,
+        264,
+        758
+      ],
+      "importance_geom": 0.3029,
+      "importance": 0.3029,
+      "importance_rank": 157
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        349,
+        461,
+        456,
+        714
+      ],
+      "importance_geom": 0.3959,
+      "importance": 0.3959,
+      "importance_rank": 40
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        0,
+        475,
+        52,
+        557
+      ],
+      "importance_geom": 0.234,
+      "importance": 0.234,
+      "importance_rank": 210
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        102,
+        483,
+        135,
+        552
+      ],
+      "importance_geom": 0.2616,
+      "importance": 0.2616,
+      "importance_rank": 192
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        154,
+        450,
+        247,
+        554
+      ],
+      "importance_geom": 0.3036,
+      "importance": 0.3036,
+      "importance_rank": 154
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        154,
+        763,
+        214,
+        807
+      ],
+      "importance_geom": 0.2874,
+      "importance": 0.2874,
+      "importance_rank": 173
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        55,
+        802,
+        132,
+        862
+      ],
+      "importance_geom": 0.2644,
+      "importance": 0.2644,
+      "importance_rank": 191
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        275,
+        714,
+        341,
+        769
+      ],
+      "importance_geom": 0.325,
+      "importance": 0.325,
+      "importance_rank": 130
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        256,
+        560,
+        267,
+        659
+      ],
+      "importance_geom": 0.3133,
+      "importance": 0.3133,
+      "importance_rank": 146
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        901,
+        461,
+        978,
+        582
+      ],
+      "importance_geom": 0.2563,
+      "importance": 0.2563,
+      "importance_rank": 198
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        758,
+        472,
+        835,
+        538
+      ],
+      "importance_geom": 0.297,
+      "importance": 0.297,
+      "importance_rank": 166
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        857,
+        494,
+        887,
+        535
+      ],
+      "importance_geom": 0.2608,
+      "importance": 0.2608,
+      "importance_rank": 193
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        761,
+        565,
+        796,
+        662
+      ],
+      "importance_geom": 0.3079,
+      "importance": 0.3079,
+      "importance_rank": 152
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        835,
+        598,
+        884,
+        667
+      ],
+      "importance_geom": 0.2816,
+      "importance": 0.2816,
+      "importance_rank": 176
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        893,
+        648,
+        978,
+        785
+      ],
+      "importance_geom": 0.2726,
+      "importance": 0.2726,
+      "importance_rank": 185
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        783,
+        796,
+        923,
+        937
+      ],
+      "importance_geom": 0.2969,
+      "importance": 0.2969,
+      "importance_rank": 167
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        662,
+        818,
+        769,
+        906
+      ],
+      "importance_geom": 0.3142,
+      "importance": 0.3142,
+      "importance_rank": 144
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        585,
+        499,
+        651,
+        538
+      ],
+      "importance_geom": 0.3555,
+      "importance": 0.3555,
+      "importance_rank": 92
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        585,
+        563,
+        651,
+        607
+      ],
+      "importance_geom": 0.3572,
+      "importance": 0.3572,
+      "importance_rank": 85
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        590,
+        623,
+        648,
+        656
+      ],
+      "importance_geom": 0.349,
+      "importance": 0.349,
+      "importance_rank": 104
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        596,
+        681,
+        645,
+        747
+      ],
+      "importance_geom": 0.3421,
+      "importance": 0.3421,
+      "importance_rank": 113
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        519,
+        510,
+        571,
+        535
+      ],
+      "importance_geom": 0.3761,
+      "importance": 0.3761,
+      "importance_rank": 52
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        521,
+        541,
+        568,
+        565
+      ],
+      "importance_geom": 0.3733,
+      "importance": 0.3733,
+      "importance_rank": 55
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        521,
+        571,
+        568,
+        596
+      ],
+      "importance_geom": 0.3691,
+      "importance": 0.3691,
+      "importance_rank": 62
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        477,
+        510,
+        516,
+        535
+      ],
+      "importance_geom": 0.3844,
+      "importance": 0.3844,
+      "importance_rank": 43
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        480,
+        541,
+        513,
+        565
+      ],
+      "importance_geom": 0.3773,
+      "importance": 0.3773,
+      "importance_rank": 48
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        574,
+        510,
+        626,
+        535
+      ],
+      "importance_geom": 0.3577,
+      "importance": 0.3577,
+      "importance_rank": 84
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        576,
+        541,
+        623,
+        565
+      ],
+      "importance_geom": 0.3579,
+      "importance": 0.3579,
+      "importance_rank": 83
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        629,
+        510,
+        708,
+        535
+      ],
+      "importance_geom": 0.3363,
+      "importance": 0.3363,
+      "importance_rank": 119
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        631,
+        543,
+        703,
+        565
+      ],
+      "importance_geom": 0.3377,
+      "importance": 0.3377,
+      "importance_rank": 118
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        695,
+        461,
+        752,
+        538
+      ],
+      "importance_geom": 0.3205,
+      "importance": 0.3205,
+      "importance_rank": 136
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        695,
+        543,
+        752,
+        615
+      ],
+      "importance_geom": 0.327,
+      "importance": 0.327,
+      "importance_rank": 127
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        695,
+        659,
+        730,
+        725
+      ],
+      "importance_geom": 0.3217,
+      "importance": 0.3217,
+      "importance_rank": 135
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        521,
+        697,
+        576,
+        752
+      ],
+      "importance_geom": 0.3487,
+      "importance": 0.3487,
+      "importance_rank": 105
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        695,
+        725,
+        760,
+        791
+      ],
+      "importance_geom": 0.3165,
+      "importance": 0.3165,
+      "importance_rank": 142
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        783,
+        667,
+        887,
+        791
+      ],
+      "importance_geom": 0.3047,
+      "importance": 0.3047,
+      "importance_rank": 153
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        539,
+        648,
+        576,
+        696
+      ],
+      "importance_geom": 0.3541,
+      "importance": 0.3541,
+      "importance_rank": 95
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        834,
+        493,
+        856,
+        537
+      ],
+      "importance_geom": 0.2692,
+      "importance": 0.2692,
+      "importance_rank": 189
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        578,
+        689,
+        595,
+        744
+      ],
+      "importance_geom": 0.339,
+      "importance": 0.339,
+      "importance_rank": 116
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        579,
+        626,
+        589,
+        659
+      ],
+      "importance_geom": 0.3481,
+      "importance": 0.3481,
+      "importance_rank": 106
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        574,
+        571,
+        583,
+        604
+      ],
+      "importance_geom": 0.3565,
+      "importance": 0.3565,
+      "importance_rank": 88
+    },
+    {
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        524,
+        752,
+        563,
+        807
+      ],
+      "importance_geom": 0.3355,
+      "importance": 0.3355,
+      "importance_rank": 120
+    },
+    {
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        129,
+        154,
+        158,
+        218
+      ],
+      "importance_geom": 0.227,
+      "importance": 0.227,
+      "importance_rank": 213
+    },
+    {
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        205,
+        511,
+        215,
+        525
+      ],
+      "importance_geom": 0.3327,
+      "importance": 0.3327,
+      "importance_rank": 122
+    },
+    {
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        131,
+        510,
+        144,
+        527
+      ],
+      "importance_geom": 0.308,
+      "importance": 0.308,
+      "importance_rank": 151
+    },
+    {
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        294,
+        397,
+        303,
+        422
+      ],
+      "importance_geom": 0.342,
+      "importance": 0.342,
+      "importance_rank": 114
+    },
+    {
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        793,
+        178,
+        854,
+        218
+      ],
+      "importance_geom": 0.2422,
+      "importance": 0.2422,
+      "importance_rank": 206
+    },
+    {
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        912,
+        88,
+        961,
+        165
+      ],
+      "importance_geom": 0.1884,
+      "importance": 0.1884,
+      "importance_rank": 227
+    },
+    {
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        703,
+        484,
+        725,
+        517
+      ],
+      "importance_geom": 0.3616,
+      "importance": 0.3616,
+      "importance_rank": 77
+    },
+    {
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        593,
+        344,
+        637,
+        404
+      ],
+      "importance_geom": 0.3653,
+      "importance": 0.3653,
+      "importance_rank": 69
+    },
+    {
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        908,
+        245,
+        926,
+        294
+      ],
+      "importance_geom": 0.235,
+      "importance": 0.235,
+      "importance_rank": 209
+    },
+    {
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        478,
+        461,
+        489,
+        500
+      ],
+      "importance_geom": 0.4234,
+      "importance": 0.4234,
+      "importance_rank": 31
+    },
+    {
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        867,
+        514,
+        878,
+        521
+      ],
+      "importance_geom": 0.3026,
+      "importance": 0.3026,
+      "importance_rank": 158
+    },
+    {
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        937,
+        400,
+        949,
+        409
+      ],
+      "importance_geom": 0.2577,
+      "importance": 0.2577,
+      "importance_rank": 195
+    },
+    {
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        645,
+        815,
+        656,
+        828
+      ],
+      "importance_geom": 0.3554,
+      "importance": 0.3554,
+      "importance_rank": 93
+    },
+    {
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        722,
+        729,
+        796,
+        773
+      ],
+      "importance_geom": 0.3564,
+      "importance": 0.3564,
+      "importance_rank": 90
+    },
+    {
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        903,
+        476,
+        975,
+        579
+      ],
+      "importance_geom": 0.3036,
+      "importance": 0.3036,
+      "importance_rank": 155
+    },
+    {
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        698,
+        460,
+        722,
+        521
+      ],
+      "importance_geom": 0.3649,
+      "importance": 0.3649,
+      "importance_rank": 71
+    },
+    {
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        689,
+        747,
+        717,
+        791
+      ],
+      "importance_geom": 0.3609,
+      "importance": 0.3609,
+      "importance_rank": 79
+    },
+    {
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        609,
+        755,
+        632,
+        768
+      ],
+      "importance_geom": 0.3718,
+      "importance": 0.3718,
+      "importance_rank": 59
+    },
+    {
+      "label": "obelisk",
+      "type": "object",
+      "box_2d": [
+        37,
+        392,
+        51,
+        492
+      ],
+      "importance_geom": 0.3182,
+      "importance": 0.3182,
+      "importance_rank": 140
+    },
+    {
+      "label": "obelisk",
+      "type": "object",
+      "box_2d": [
+        166,
+        476,
+        170,
+        531
+      ],
+      "importance_geom": 0.3658,
+      "importance": 0.3658,
+      "importance_rank": 67
+    },
+    {
+      "label": "obelisk",
+      "type": "object",
+      "box_2d": [
+        140,
+        129,
+        145,
+        184
+      ],
+      "importance_geom": 0.2564,
+      "importance": 0.2564,
+      "importance_rank": 197
+    },
+    {
+      "label": "obelisk",
+      "type": "object",
+      "box_2d": [
+        707,
+        448,
+        713,
+        503
+      ],
+      "importance_geom": 0.4052,
+      "importance": 0.4052,
+      "importance_rank": 36
+    }
+  ],
+  "descriptions": {
+    "alt_text": "A grand gallery filled with framed paintings of Roman landmarks, statues, and figures examining art portfolios",
+    "long_description": "This painting depicts a monumental, imaginary gallery with soaring architecture, filled floor-to-ceiling with framed artworks. In the foreground, a group of well-dressed men gathers near the bottom left. One sits on the floor examining a large open book, while others stand or sit nearby, intently discussing the art. To their right, in the center, stands a white marble statue of a seated male figure in classical robes, and beside it, a sculpted lion rests a paw on a sphere. Large portfolios and books lie scattered on the floor.\n\nThe gallery space is defined by tall, reddish marble columns topped with ornate capitals that support high arches. Heavy red curtains drape from the upper corners and across the top arches. Every available wall surface is crowded with framed paintings of varying sizes. These artworks depict detailed views of city architecture, including grand buildings with domes and columns, bustling piazzas, spraying fountains, and tall obelisks. Through a central archway, the gallery extends into the distance, revealing more statues and sunlit architectural details under a vaulted ceiling adorned with frescoes and white stucco figures."
+  },
+  "generated_at": "2025-12-14T16:04:36.549Z"
+}

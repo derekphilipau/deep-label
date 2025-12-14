@@ -1,0 +1,415 @@
+{
+  "strategy": "hybrid-detect-verify",
+  "image_path": "public/artworks/the-harbor/image.jpg",
+  "model_name": "gemini-3-pro-preview",
+  "description_model_name": "gemini-3-pro-preview",
+  "max_kinds": 50,
+  "verify_rounds": 2,
+  "tile_threshold": 12,
+  "cutouts": {
+    "enabled": true,
+    "format": "webp",
+    "thumb_size": 256,
+    "max": null,
+    "concurrency": 8,
+    "index_path": "cutouts.json",
+    "directory_path": "cutouts",
+    "count": 23
+  },
+  "kinds": [
+    {
+      "kind": "bridge",
+      "type": "structure",
+      "estimated_count": "few",
+      "estimated_size": "giant",
+      "segmentation": "individual",
+      "importance": "primary"
+    },
+    {
+      "kind": "funnel",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "large",
+      "segmentation": "individual",
+      "importance": "primary"
+    },
+    {
+      "kind": "crane",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "large",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "ship",
+      "type": "vehicle",
+      "estimated_count": "few",
+      "estimated_size": "giant",
+      "segmentation": "region",
+      "importance": "primary"
+    },
+    {
+      "kind": "smoke",
+      "type": "element",
+      "estimated_count": "moderate",
+      "estimated_size": "medium",
+      "segmentation": "region",
+      "importance": "background"
+    },
+    {
+      "kind": "ventilator",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "rigging",
+      "type": "object",
+      "estimated_count": "many",
+      "estimated_size": "medium",
+      "segmentation": "region",
+      "importance": "secondary"
+    },
+    {
+      "kind": "industrial structure",
+      "type": "structure",
+      "estimated_count": "many",
+      "estimated_size": "medium",
+      "segmentation": "region",
+      "importance": "background"
+    },
+    {
+      "kind": "water",
+      "type": "landscape",
+      "estimated_count": "few",
+      "estimated_size": "medium",
+      "segmentation": "region",
+      "importance": "background"
+    },
+    {
+      "kind": "stairway",
+      "type": "structure",
+      "estimated_count": "few",
+      "estimated_size": "tiny",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "rope",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "secondary"
+    }
+  ],
+  "objects": [
+    {
+      "label": "bridge",
+      "type": "structure",
+      "box_2d": [
+        162,
+        442,
+        692,
+        835
+      ],
+      "importance_geom": 0.5891,
+      "importance": 0.5891,
+      "importance_rank": 1
+    },
+    {
+      "label": "bridge",
+      "type": "structure",
+      "box_2d": [
+        0,
+        325,
+        295,
+        445
+      ],
+      "importance_geom": 0.3948,
+      "importance": 0.3948,
+      "importance_rank": 19
+    },
+    {
+      "label": "funnel",
+      "type": "object",
+      "box_2d": [
+        436,
+        118,
+        518,
+        422
+      ],
+      "importance_geom": 0.4146,
+      "importance": 0.4146,
+      "importance_rank": 14
+    },
+    {
+      "label": "funnel",
+      "type": "object",
+      "box_2d": [
+        815,
+        142,
+        915,
+        310
+      ],
+      "importance_geom": 0.3198,
+      "importance": 0.3198,
+      "importance_rank": 22
+    },
+    {
+      "label": "crane",
+      "type": "object",
+      "box_2d": [
+        175,
+        80,
+        425,
+        365
+      ],
+      "importance_geom": 0.4009,
+      "importance": 0.4009,
+      "importance_rank": 17
+    },
+    {
+      "label": "crane",
+      "type": "object",
+      "box_2d": [
+        765,
+        135,
+        815,
+        350
+      ],
+      "importance_geom": 0.3388,
+      "importance": 0.3388,
+      "importance_rank": 21
+    },
+    {
+      "label": "ship",
+      "type": "vehicle",
+      "box_2d": [
+        350,
+        88,
+        600,
+        530
+      ],
+      "importance_geom": 0.5243,
+      "importance": 0.5243,
+      "importance_rank": 3
+    },
+    {
+      "label": "ship",
+      "type": "vehicle",
+      "box_2d": [
+        600,
+        30,
+        850,
+        500
+      ],
+      "importance_geom": 0.4739,
+      "importance": 0.4739,
+      "importance_rank": 5
+    },
+    {
+      "label": "smoke",
+      "type": "element",
+      "box_2d": [
+        480,
+        85,
+        675,
+        380
+      ],
+      "importance_geom": 0.4547,
+      "importance": 0.4547,
+      "importance_rank": 6
+    },
+    {
+      "label": "smoke",
+      "type": "element",
+      "box_2d": [
+        710,
+        10,
+        990,
+        210
+      ],
+      "importance_geom": 0.3485,
+      "importance": 0.3485,
+      "importance_rank": 20
+    },
+    {
+      "label": "ventilator",
+      "type": "object",
+      "box_2d": [
+        508,
+        334,
+        547,
+        423
+      ],
+      "importance_geom": 0.4388,
+      "importance": 0.4388,
+      "importance_rank": 11
+    },
+    {
+      "label": "ventilator",
+      "type": "object",
+      "box_2d": [
+        505,
+        317,
+        548,
+        431
+      ],
+      "importance_geom": 0.44,
+      "importance": 0.44,
+      "importance_rank": 10
+    },
+    {
+      "label": "rigging",
+      "type": "object",
+      "box_2d": [
+        550,
+        25,
+        920,
+        370
+      ],
+      "importance_geom": 0.4098,
+      "importance": 0.4098,
+      "importance_rank": 15
+    },
+    {
+      "label": "rigging",
+      "type": "object",
+      "box_2d": [
+        30,
+        30,
+        170,
+        260
+      ],
+      "importance_geom": 0.2949,
+      "importance": 0.2949,
+      "importance_rank": 23
+    },
+    {
+      "label": "industrial structure",
+      "type": "structure",
+      "box_2d": [
+        130,
+        430,
+        710,
+        960
+      ],
+      "importance_geom": 0.5642,
+      "importance": 0.5642,
+      "importance_rank": 2
+    },
+    {
+      "label": "industrial structure",
+      "type": "structure",
+      "box_2d": [
+        10,
+        30,
+        430,
+        450
+      ],
+      "importance_geom": 0.395,
+      "importance": 0.395,
+      "importance_rank": 18
+    },
+    {
+      "label": "industrial structure",
+      "type": "structure",
+      "box_2d": [
+        430,
+        80,
+        640,
+        550
+      ],
+      "importance_geom": 0.443,
+      "importance": 0.443,
+      "importance_rank": 7
+    },
+    {
+      "label": "industrial structure",
+      "type": "structure",
+      "box_2d": [
+        600,
+        20,
+        960,
+        500
+      ],
+      "importance_geom": 0.4014,
+      "importance": 0.4014,
+      "importance_rank": 16
+    },
+    {
+      "label": "industrial structure",
+      "type": "structure",
+      "box_2d": [
+        720,
+        450,
+        990,
+        960
+      ],
+      "importance_geom": 0.4402,
+      "importance": 0.4402,
+      "importance_rank": 9
+    },
+    {
+      "label": "water",
+      "type": "landscape",
+      "box_2d": [
+        670,
+        520,
+        890,
+        675
+      ],
+      "importance_geom": 0.4865,
+      "importance": 0.4865,
+      "importance_rank": 4
+    },
+    {
+      "label": "water",
+      "type": "landscape",
+      "box_2d": [
+        30,
+        635,
+        160,
+        740
+      ],
+      "importance_geom": 0.4267,
+      "importance": 0.4267,
+      "importance_rank": 13
+    },
+    {
+      "label": "stairway",
+      "type": "structure",
+      "box_2d": [
+        751,
+        500,
+        806,
+        566
+      ],
+      "importance_geom": 0.4361,
+      "importance": 0.4361,
+      "importance_rank": 12
+    },
+    {
+      "label": "rope",
+      "type": "object",
+      "box_2d": [
+        217,
+        766,
+        319,
+        813
+      ],
+      "importance_geom": 0.442,
+      "importance": 0.442,
+      "importance_rank": 8
+    }
+  ],
+  "descriptions": {
+    "alt_text": "Fragmented industrial scene featuring an arched bridge, steamship funnels, and yellow cranes in a harbor",
+    "long_description": "This painting depicts a chaotic, densely packed industrial harbor scene rendered in fragmented, geometric shapes and bold colors. In the foreground, thick ropes coil near dark, murky water on the left. A heavy, dark industrial structure anchors the bottom center and right, composed of angular planes in browns, deep blues, and greens that suggest a dock or pier. \n\nMoving to the midground, a prominent arched bridge spans the center. Its dark, curved supports frame a wooden deck that appears to tilt upward, distorting perspective. Behind the bridge, curved white ventilators rise like periscopes. To the right, a stairway descends toward patches of lighter, yellowish water.\n\nThe background is crowded with towering maritime machinery. On the upper left, a bright yellow lattice crane angles sharply against dark red and blue industrial structures. In the center, a large white ship funnel with blue stripes tilts slightly, billowing dark smoke into the sky. To the right, the dark hull of another ship looms, topped with a yellow funnel and a web of thin rigging lines that crisscross the upper canvas. Additional yellow cranes and swirling smoke fill the upper right corner, creating a sense of dense, mechanical activity."
+  },
+  "generated_at": "2025-12-14T13:45:44.142Z"
+}

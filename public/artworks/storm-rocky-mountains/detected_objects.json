@@ -1,0 +1,2098 @@
+{
+  "strategy": "hybrid-detect-verify",
+  "image_path": "public/artworks/storm-rocky-mountains/image.jpg",
+  "model_name": "gemini-3-pro-preview",
+  "description_model_name": "gemini-3-pro-preview",
+  "max_kinds": 50,
+  "verify_rounds": 2,
+  "tile_threshold": 12,
+  "cutouts": {
+    "enabled": true,
+    "format": "webp",
+    "thumb_size": 256,
+    "max": null,
+    "concurrency": 8,
+    "index_path": "cutouts.json",
+    "directory_path": "cutouts",
+    "count": 147
+  },
+  "kinds": [
+    {
+      "kind": "mountain",
+      "type": "landscape",
+      "estimated_count": "few",
+      "estimated_size": "giant",
+      "segmentation": "region",
+      "importance": "primary"
+    },
+    {
+      "kind": "cloud",
+      "type": "landscape",
+      "estimated_count": "many",
+      "estimated_size": "giant",
+      "segmentation": "region",
+      "importance": "primary"
+    },
+    {
+      "kind": "lake",
+      "type": "landscape",
+      "estimated_count": "few",
+      "estimated_size": "medium",
+      "segmentation": "region",
+      "importance": "secondary"
+    },
+    {
+      "kind": "cliff",
+      "type": "landscape",
+      "estimated_count": "few",
+      "estimated_size": "large",
+      "segmentation": "region",
+      "importance": "secondary"
+    },
+    {
+      "kind": "tree",
+      "type": "plant",
+      "estimated_count": "very_many",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "forest",
+      "type": "plant",
+      "estimated_count": "few",
+      "estimated_size": "large",
+      "segmentation": "region",
+      "importance": "secondary"
+    },
+    {
+      "kind": "dead tree",
+      "type": "plant",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "rider",
+      "type": "person",
+      "estimated_count": "few",
+      "estimated_size": "tiny",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "horse",
+      "type": "animal",
+      "estimated_count": "few",
+      "estimated_size": "tiny",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "deer",
+      "type": "animal",
+      "estimated_count": "few",
+      "estimated_size": "tiny",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "bird",
+      "type": "animal",
+      "estimated_count": "few",
+      "estimated_size": "tiny",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "teepee",
+      "type": "object",
+      "estimated_count": "moderate",
+      "estimated_size": "tiny",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "waterfall",
+      "type": "landscape",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "stream",
+      "type": "landscape",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "region",
+      "importance": "background"
+    },
+    {
+      "kind": "pool",
+      "type": "landscape",
+      "estimated_count": "few",
+      "estimated_size": "medium",
+      "segmentation": "region",
+      "importance": "secondary"
+    },
+    {
+      "kind": "rock",
+      "type": "landscape",
+      "estimated_count": "many",
+      "estimated_size": "tiny",
+      "segmentation": "individual",
+      "importance": "background"
+    },
+    {
+      "kind": "log",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "background"
+    },
+    {
+      "kind": "mist",
+      "type": "landscape",
+      "estimated_count": "few",
+      "estimated_size": "medium",
+      "segmentation": "region",
+      "importance": "background"
+    },
+    {
+      "kind": "sky",
+      "type": "landscape",
+      "estimated_count": "few",
+      "estimated_size": "medium",
+      "segmentation": "region",
+      "importance": "background"
+    }
+  ],
+  "objects": [
+    {
+      "label": "mountain",
+      "type": "landscape",
+      "box_2d": [
+        615,
+        0,
+        1000,
+        700
+      ],
+      "importance_geom": 0.4942,
+      "importance": 0.4942,
+      "importance_rank": 7
+    },
+    {
+      "label": "mountain",
+      "type": "landscape",
+      "box_2d": [
+        250,
+        415,
+        620,
+        640
+      ],
+      "importance_geom": 0.5476,
+      "importance": 0.5476,
+      "importance_rank": 4
+    },
+    {
+      "label": "mountain",
+      "type": "landscape",
+      "box_2d": [
+        0,
+        290,
+        180,
+        720
+      ],
+      "importance_geom": 0.4212,
+      "importance": 0.4212,
+      "importance_rank": 25
+    },
+    {
+      "label": "mountain",
+      "type": "landscape",
+      "box_2d": [
+        225,
+        90,
+        315,
+        200
+      ],
+      "importance_geom": 0.309,
+      "importance": 0.309,
+      "importance_rank": 85
+    },
+    {
+      "label": "cloud",
+      "type": "landscape",
+      "box_2d": [
+        0,
+        0,
+        765,
+        560
+      ],
+      "aliases": [
+        "mist",
+        "sky"
+      ],
+      "importance_geom": 0.5938,
+      "importance": 0.5938,
+      "importance_rank": 1
+    },
+    {
+      "label": "lake",
+      "type": "landscape",
+      "box_2d": [
+        100,
+        735,
+        515,
+        795
+      ],
+      "aliases": [
+        "pool"
+      ],
+      "importance_geom": 0.4899,
+      "importance": 0.4899,
+      "importance_rank": 9
+    },
+    {
+      "label": "cliff",
+      "type": "landscape",
+      "box_2d": [
+        295,
+        0,
+        725,
+        185
+      ],
+      "importance_geom": 0.3702,
+      "importance": 0.3702,
+      "importance_rank": 39
+    },
+    {
+      "label": "cliff",
+      "type": "landscape",
+      "box_2d": [
+        30,
+        625,
+        550,
+        1000
+      ],
+      "importance_geom": 0.5371,
+      "importance": 0.5371,
+      "importance_rank": 5
+    },
+    {
+      "label": "cliff",
+      "type": "landscape",
+      "box_2d": [
+        420,
+        380,
+        700,
+        630
+      ],
+      "importance_geom": 0.5497,
+      "importance": 0.5497,
+      "importance_rank": 3
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        0,
+        300,
+        41,
+        352
+      ],
+      "importance_geom": 0.1697,
+      "importance": 0.1697,
+      "importance_rank": 147
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        0,
+        352,
+        88,
+        523
+      ],
+      "importance_geom": 0.2269,
+      "importance": 0.2269,
+      "importance_rank": 136
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        479,
+        446,
+        545,
+        484
+      ],
+      "importance_geom": 0.3589,
+      "importance": 0.3589,
+      "importance_rank": 46
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        652,
+        309,
+        658,
+        318
+      ],
+      "importance_geom": 0.2507,
+      "importance": 0.2507,
+      "importance_rank": 118
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        658,
+        305,
+        663,
+        314
+      ],
+      "importance_geom": 0.2476,
+      "importance": 0.2476,
+      "importance_rank": 120
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        666,
+        303,
+        671,
+        311
+      ],
+      "importance_geom": 0.2446,
+      "importance": 0.2446,
+      "importance_rank": 123
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        674,
+        300,
+        680,
+        308
+      ],
+      "importance_geom": 0.2416,
+      "importance": 0.2416,
+      "importance_rank": 124
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        680,
+        297,
+        685,
+        305
+      ],
+      "importance_geom": 0.2388,
+      "importance": 0.2388,
+      "importance_rank": 128
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        685,
+        294,
+        691,
+        303
+      ],
+      "importance_geom": 0.2368,
+      "importance": 0.2368,
+      "importance_rank": 129
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        707,
+        228,
+        713,
+        239
+      ],
+      "importance_geom": 0.2048,
+      "importance": 0.2048,
+      "importance_rank": 143
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        970,
+        308,
+        997,
+        451
+      ],
+      "importance_geom": 0.1866,
+      "importance": 0.1866,
+      "importance_rank": 146
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        937,
+        330,
+        967,
+        473
+      ],
+      "importance_geom": 0.2036,
+      "importance": 0.2036,
+      "importance_rank": 144
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        906,
+        341,
+        934,
+        484
+      ],
+      "importance_geom": 0.2164,
+      "importance": 0.2164,
+      "importance_rank": 139
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        868,
+        358,
+        895,
+        495
+      ],
+      "importance_geom": 0.2321,
+      "importance": 0.2321,
+      "importance_rank": 133
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        835,
+        374,
+        862,
+        506
+      ],
+      "importance_geom": 0.2461,
+      "importance": 0.2461,
+      "importance_rank": 122
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        796,
+        394,
+        810,
+        522
+      ],
+      "importance_geom": 0.2605,
+      "importance": 0.2605,
+      "importance_rank": 115
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        706,
+        487,
+        744,
+        547
+      ],
+      "importance_geom": 0.2993,
+      "importance": 0.2993,
+      "importance_rank": 93
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        755,
+        498,
+        783,
+        547
+      ],
+      "importance_geom": 0.2813,
+      "importance": 0.2813,
+      "importance_rank": 104
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        901,
+        484,
+        956,
+        545
+      ],
+      "importance_geom": 0.2302,
+      "importance": 0.2302,
+      "importance_rank": 135
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        956,
+        479,
+        1000,
+        545
+      ],
+      "importance_geom": 0.2112,
+      "importance": 0.2112,
+      "importance_rank": 141
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        689,
+        490,
+        703,
+        528
+      ],
+      "importance_geom": 0.3011,
+      "importance": 0.3011,
+      "importance_rank": 91
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        777,
+        413,
+        791,
+        520
+      ],
+      "importance_geom": 0.2677,
+      "importance": 0.2677,
+      "importance_rank": 111
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        696,
+        281,
+        706,
+        300
+      ],
+      "importance_geom": 0.2323,
+      "importance": 0.2323,
+      "importance_rank": 132
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        702,
+        253,
+        711,
+        275
+      ],
+      "importance_geom": 0.2202,
+      "importance": 0.2202,
+      "importance_rank": 138
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        711,
+        204,
+        722,
+        226
+      ],
+      "importance_geom": 0.1976,
+      "importance": 0.1976,
+      "importance_rank": 145
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        897,
+        347,
+        905,
+        440
+      ],
+      "importance_geom": 0.2078,
+      "importance": 0.2078,
+      "importance_rank": 142
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        348,
+        692,
+        363,
+        772
+      ],
+      "importance_geom": 0.3108,
+      "importance": 0.3108,
+      "importance_rank": 81
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        365,
+        707,
+        389,
+        772
+      ],
+      "importance_geom": 0.3148,
+      "importance": 0.3148,
+      "importance_rank": 76
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        381,
+        684,
+        408,
+        771
+      ],
+      "importance_geom": 0.3223,
+      "importance": 0.3223,
+      "importance_rank": 63
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        446,
+        730,
+        462,
+        780
+      ],
+      "importance_geom": 0.3174,
+      "importance": 0.3174,
+      "importance_rank": 72
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        459,
+        714,
+        481,
+        774
+      ],
+      "importance_geom": 0.3228,
+      "importance": 0.3228,
+      "importance_rank": 60
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        483,
+        722,
+        512,
+        846
+      ],
+      "importance_geom": 0.3224,
+      "importance": 0.3224,
+      "importance_rank": 61
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        319,
+        780,
+        336,
+        802
+      ],
+      "importance_geom": 0.2921,
+      "importance": 0.2921,
+      "importance_rank": 96
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        252,
+        871,
+        283,
+        989
+      ],
+      "importance_geom": 0.2721,
+      "importance": 0.2721,
+      "importance_rank": 108
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        286,
+        840,
+        300,
+        879
+      ],
+      "importance_geom": 0.2765,
+      "importance": 0.2765,
+      "importance_rank": 106
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        304,
+        801,
+        319,
+        917
+      ],
+      "importance_geom": 0.2853,
+      "importance": 0.2853,
+      "importance_rank": 101
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        182,
+        862,
+        209,
+        895
+      ],
+      "importance_geom": 0.2562,
+      "importance": 0.2562,
+      "importance_rank": 117
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        209,
+        862,
+        237,
+        895
+      ],
+      "importance_geom": 0.2623,
+      "importance": 0.2623,
+      "importance_rank": 112
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        160,
+        868,
+        176,
+        890
+      ],
+      "importance_geom": 0.2466,
+      "importance": 0.2466,
+      "importance_rank": 121
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        121,
+        873,
+        143,
+        901
+      ],
+      "importance_geom": 0.2389,
+      "importance": 0.2389,
+      "importance_rank": 127
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        94,
+        879,
+        110,
+        917
+      ],
+      "importance_geom": 0.2303,
+      "importance": 0.2303,
+      "importance_rank": 134
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        143,
+        939,
+        154,
+        978
+      ],
+      "importance_geom": 0.233,
+      "importance": 0.233,
+      "importance_rank": 130
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        0,
+        835,
+        28,
+        890
+      ],
+      "importance_geom": 0.214,
+      "importance": 0.214,
+      "importance_rank": 140
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        330,
+        780,
+        347,
+        796
+      ],
+      "importance_geom": 0.2937,
+      "importance": 0.2937,
+      "importance_rank": 95
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        308,
+        780,
+        325,
+        796
+      ],
+      "importance_geom": 0.2897,
+      "importance": 0.2897,
+      "importance_rank": 98
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        286,
+        780,
+        297,
+        796
+      ],
+      "importance_geom": 0.2837,
+      "importance": 0.2837,
+      "importance_rank": 103
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        107,
+        868,
+        118,
+        901
+      ],
+      "importance_geom": 0.2326,
+      "importance": 0.2326,
+      "importance_rank": 131
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        237,
+        879,
+        248,
+        923
+      ],
+      "importance_geom": 0.2605,
+      "importance": 0.2605,
+      "importance_rank": 114
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        146,
+        868,
+        154,
+        890
+      ],
+      "importance_geom": 0.2407,
+      "importance": 0.2407,
+      "importance_rank": 126
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        70,
+        876,
+        91,
+        915
+      ],
+      "importance_geom": 0.2263,
+      "importance": 0.2263,
+      "importance_rank": 137
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        162,
+        939,
+        184,
+        981
+      ],
+      "importance_geom": 0.2408,
+      "importance": 0.2408,
+      "importance_rank": 125
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        201,
+        939,
+        228,
+        992
+      ],
+      "importance_geom": 0.2504,
+      "importance": 0.2504,
+      "importance_rank": 119
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        239,
+        882,
+        250,
+        909
+      ],
+      "importance_geom": 0.2603,
+      "importance": 0.2603,
+      "importance_rank": 116
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        286,
+        862,
+        300,
+        890
+      ],
+      "importance_geom": 0.2728,
+      "importance": 0.2728,
+      "importance_rank": 107
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        453,
+        725,
+        466,
+        824
+      ],
+      "importance_geom": 0.3161,
+      "importance": 0.3161,
+      "importance_rank": 73
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        466,
+        736,
+        480,
+        818
+      ],
+      "importance_geom": 0.3156,
+      "importance": 0.3156,
+      "importance_rank": 74
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        480,
+        752,
+        516,
+        824
+      ],
+      "importance_geom": 0.3189,
+      "importance": 0.3189,
+      "importance_rank": 71
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        571,
+        703,
+        615,
+        791
+      ],
+      "importance_geom": 0.3247,
+      "importance": 0.3247,
+      "importance_rank": 58
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        549,
+        708,
+        571,
+        769
+      ],
+      "importance_geom": 0.3221,
+      "importance": 0.3221,
+      "importance_rank": 65
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        620,
+        684,
+        631,
+        769
+      ],
+      "importance_geom": 0.3138,
+      "importance": 0.3138,
+      "importance_rank": 77
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        634,
+        678,
+        648,
+        741
+      ],
+      "importance_geom": 0.3133,
+      "importance": 0.3133,
+      "importance_rank": 79
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        659,
+        673,
+        675,
+        733
+      ],
+      "importance_geom": 0.3091,
+      "importance": 0.3091,
+      "importance_rank": 84
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        664,
+        689,
+        681,
+        725
+      ],
+      "importance_geom": 0.3055,
+      "importance": 0.3055,
+      "importance_rank": 88
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        681,
+        557,
+        719,
+        728
+      ],
+      "importance_geom": 0.321,
+      "importance": 0.321,
+      "importance_rank": 68
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        730,
+        559,
+        778,
+        780
+      ],
+      "importance_geom": 0.3106,
+      "importance": 0.3106,
+      "importance_rank": 82
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        697,
+        492,
+        768,
+        750
+      ],
+      "importance_geom": 0.3283,
+      "importance": 0.3283,
+      "importance_rank": 55
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        769,
+        450,
+        818,
+        774
+      ],
+      "importance_geom": 0.3058,
+      "importance": 0.3058,
+      "importance_rank": 87
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        900,
+        483,
+        1000,
+        780
+      ],
+      "importance_geom": 0.2679,
+      "importance": 0.2679,
+      "importance_rank": 110
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        818,
+        560,
+        873,
+        697
+      ],
+      "importance_geom": 0.2772,
+      "importance": 0.2772,
+      "importance_rank": 105
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        530,
+        706,
+        546,
+        769
+      ],
+      "importance_geom": 0.3224,
+      "importance": 0.3224,
+      "importance_rank": 62
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        574,
+        692,
+        587,
+        758
+      ],
+      "importance_geom": 0.3203,
+      "importance": 0.3203,
+      "importance_rank": 69
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        611,
+        684,
+        619,
+        741
+      ],
+      "importance_geom": 0.3151,
+      "importance": 0.3151,
+      "importance_rank": 75
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        497,
+        714,
+        510,
+        752
+      ],
+      "importance_geom": 0.3215,
+      "importance": 0.3215,
+      "importance_rank": 66
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        513,
+        708,
+        527,
+        769
+      ],
+      "importance_geom": 0.3222,
+      "importance": 0.3222,
+      "importance_rank": 64
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        549,
+        642,
+        565,
+        697
+      ],
+      "importance_geom": 0.3333,
+      "importance": 0.3333,
+      "importance_rank": 53
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        670,
+        642,
+        686,
+        697
+      ],
+      "importance_geom": 0.3097,
+      "importance": 0.3097,
+      "importance_rank": 83
+    },
+    {
+      "label": "forest",
+      "type": "plant",
+      "box_2d": [
+        0,
+        580,
+        330,
+        1000
+      ],
+      "importance_geom": 0.4791,
+      "importance": 0.4791,
+      "importance_rank": 10
+    },
+    {
+      "label": "forest",
+      "type": "plant",
+      "box_2d": [
+        530,
+        250,
+        1000,
+        950
+      ],
+      "importance_geom": 0.5675,
+      "importance": 0.5675,
+      "importance_rank": 2
+    },
+    {
+      "label": "forest",
+      "type": "plant",
+      "box_2d": [
+        345,
+        680,
+        515,
+        860
+      ],
+      "importance_geom": 0.475,
+      "importance": 0.475,
+      "importance_rank": 13
+    },
+    {
+      "label": "dead tree",
+      "type": "plant",
+      "box_2d": [
+        553,
+        678,
+        716,
+        689
+      ],
+      "importance_geom": 0.4242,
+      "importance": 0.4242,
+      "importance_rank": 22
+    },
+    {
+      "label": "dead tree",
+      "type": "plant",
+      "box_2d": [
+        706,
+        508,
+        758,
+        730
+      ],
+      "importance_geom": 0.4223,
+      "importance": 0.4223,
+      "importance_rank": 23
+    },
+    {
+      "label": "dead tree",
+      "type": "plant",
+      "box_2d": [
+        744,
+        596,
+        805,
+        722
+      ],
+      "importance_geom": 0.4024,
+      "importance": 0.4024,
+      "importance_rank": 29
+    },
+    {
+      "label": "dead tree",
+      "type": "plant",
+      "box_2d": [
+        862,
+        450,
+        978,
+        615
+      ],
+      "importance_geom": 0.3618,
+      "importance": 0.3618,
+      "importance_rank": 42
+    },
+    {
+      "label": "dead tree",
+      "type": "plant",
+      "box_2d": [
+        647,
+        629,
+        655,
+        673
+      ],
+      "importance_geom": 0.4172,
+      "importance": 0.4172,
+      "importance_rank": 27
+    },
+    {
+      "label": "rider",
+      "type": "person",
+      "box_2d": [
+        518,
+        906,
+        528,
+        927
+      ],
+      "importance_geom": 0.4784,
+      "importance": 0.4784,
+      "importance_rank": 11
+    },
+    {
+      "label": "rider",
+      "type": "person",
+      "box_2d": [
+        503,
+        908,
+        512,
+        930
+      ],
+      "importance_geom": 0.478,
+      "importance": 0.478,
+      "importance_rank": 12
+    },
+    {
+      "label": "horse",
+      "type": "animal",
+      "box_2d": [
+        512,
+        917,
+        535,
+        942
+      ],
+      "importance_geom": 0.4948,
+      "importance": 0.4948,
+      "importance_rank": 6
+    },
+    {
+      "label": "bird",
+      "type": "animal",
+      "box_2d": [
+        577,
+        271,
+        585,
+        276
+      ],
+      "importance_geom": 0.4582,
+      "importance": 0.4582,
+      "importance_rank": 16
+    },
+    {
+      "label": "teepee",
+      "type": "object",
+      "box_2d": [
+        146,
+        850,
+        151,
+        858
+      ],
+      "importance_geom": 0.3696,
+      "importance": 0.3696,
+      "importance_rank": 40
+    },
+    {
+      "label": "teepee",
+      "type": "object",
+      "box_2d": [
+        151,
+        849,
+        156,
+        857
+      ],
+      "importance_geom": 0.3709,
+      "importance": 0.3709,
+      "importance_rank": 38
+    },
+    {
+      "label": "teepee",
+      "type": "object",
+      "box_2d": [
+        157,
+        848,
+        162,
+        856
+      ],
+      "importance_geom": 0.3725,
+      "importance": 0.3725,
+      "importance_rank": 37
+    },
+    {
+      "label": "teepee",
+      "type": "object",
+      "box_2d": [
+        163,
+        847,
+        168,
+        855
+      ],
+      "importance_geom": 0.3741,
+      "importance": 0.3741,
+      "importance_rank": 36
+    },
+    {
+      "label": "teepee",
+      "type": "object",
+      "box_2d": [
+        169,
+        846,
+        174,
+        854
+      ],
+      "importance_geom": 0.3757,
+      "importance": 0.3757,
+      "importance_rank": 35
+    },
+    {
+      "label": "teepee",
+      "type": "object",
+      "box_2d": [
+        174,
+        845,
+        179,
+        853
+      ],
+      "importance_geom": 0.377,
+      "importance": 0.377,
+      "importance_rank": 34
+    },
+    {
+      "label": "teepee",
+      "type": "object",
+      "box_2d": [
+        180,
+        845,
+        185,
+        853
+      ],
+      "importance_geom": 0.3784,
+      "importance": 0.3784,
+      "importance_rank": 33
+    },
+    {
+      "label": "teepee",
+      "type": "object",
+      "box_2d": [
+        185,
+        845,
+        190,
+        853
+      ],
+      "importance_geom": 0.3796,
+      "importance": 0.3796,
+      "importance_rank": 32
+    },
+    {
+      "label": "waterfall",
+      "type": "landscape",
+      "box_2d": [
+        21,
+        412,
+        26,
+        418
+      ],
+      "importance_geom": 0.2681,
+      "importance": 0.2681,
+      "importance_rank": 109
+    },
+    {
+      "label": "waterfall",
+      "type": "landscape",
+      "box_2d": [
+        44,
+        461,
+        50,
+        474
+      ],
+      "importance_geom": 0.2876,
+      "importance": 0.2876,
+      "importance_rank": 99
+    },
+    {
+      "label": "waterfall",
+      "type": "landscape",
+      "box_2d": [
+        30,
+        429,
+        47,
+        459
+      ],
+      "importance_geom": 0.2844,
+      "importance": 0.2844,
+      "importance_rank": 102
+    },
+    {
+      "label": "waterfall",
+      "type": "landscape",
+      "box_2d": [
+        85,
+        579,
+        97,
+        664
+      ],
+      "importance_geom": 0.3273,
+      "importance": 0.3273,
+      "importance_rank": 56
+    },
+    {
+      "label": "waterfall",
+      "type": "landscape",
+      "box_2d": [
+        498,
+        502,
+        509,
+        557
+      ],
+      "importance_geom": 0.4517,
+      "importance": 0.4517,
+      "importance_rank": 18
+    },
+    {
+      "label": "waterfall",
+      "type": "landscape",
+      "box_2d": [
+        485,
+        601,
+        494,
+        620
+      ],
+      "importance_geom": 0.4316,
+      "importance": 0.4316,
+      "importance_rank": 21
+    },
+    {
+      "label": "waterfall",
+      "type": "landscape",
+      "box_2d": [
+        541,
+        615,
+        607,
+        695
+      ],
+      "importance_geom": 0.4347,
+      "importance": 0.4347,
+      "importance_rank": 20
+    },
+    {
+      "label": "waterfall",
+      "type": "landscape",
+      "box_2d": [
+        838,
+        796,
+        846,
+        854
+      ],
+      "importance_geom": 0.3388,
+      "importance": 0.3388,
+      "importance_rank": 51
+    },
+    {
+      "label": "waterfall",
+      "type": "landscape",
+      "box_2d": [
+        607,
+        579,
+        651,
+        618
+      ],
+      "importance_geom": 0.4202,
+      "importance": 0.4202,
+      "importance_rank": 26
+    },
+    {
+      "label": "waterfall",
+      "type": "landscape",
+      "box_2d": [
+        502,
+        503,
+        512,
+        548
+      ],
+      "importance_geom": 0.4512,
+      "importance": 0.4512,
+      "importance_rank": 19
+    },
+    {
+      "label": "stream",
+      "type": "landscape",
+      "box_2d": [
+        88,
+        842,
+        275,
+        915
+      ],
+      "importance_geom": 0.4078,
+      "importance": 0.4078,
+      "importance_rank": 28
+    },
+    {
+      "label": "stream",
+      "type": "landscape",
+      "box_2d": [
+        568,
+        598,
+        632,
+        672
+      ],
+      "importance_geom": 0.4723,
+      "importance": 0.4723,
+      "importance_rank": 14
+    },
+    {
+      "label": "stream",
+      "type": "landscape",
+      "box_2d": [
+        780,
+        860,
+        995,
+        995
+      ],
+      "importance_geom": 0.4021,
+      "importance": 0.4021,
+      "importance_rank": 30
+    },
+    {
+      "label": "pool",
+      "type": "landscape",
+      "box_2d": [
+        788,
+        848,
+        915,
+        930
+      ],
+      "importance_geom": 0.4222,
+      "importance": 0.4222,
+      "importance_rank": 24
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        0,
+        450,
+        220,
+        747
+      ],
+      "importance_geom": 0.3637,
+      "importance": 0.3637,
+      "importance_rank": 41
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        303,
+        450,
+        550,
+        752
+      ],
+      "importance_geom": 0.4673,
+      "importance": 0.4673,
+      "importance_rank": 15
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        193,
+        576,
+        374,
+        725
+      ],
+      "importance_geom": 0.393,
+      "importance": 0.393,
+      "importance_rank": 31
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        88,
+        703,
+        204,
+        741
+      ],
+      "importance_geom": 0.3199,
+      "importance": 0.3199,
+      "importance_rank": 70
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        146,
+        744,
+        166,
+        765
+      ],
+      "importance_geom": 0.3074,
+      "importance": 0.3074,
+      "importance_rank": 86
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        168,
+        769,
+        195,
+        791
+      ],
+      "importance_geom": 0.3138,
+      "importance": 0.3138,
+      "importance_rank": 78
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        420,
+        755,
+        433,
+        770
+      ],
+      "importance_geom": 0.3616,
+      "importance": 0.3616,
+      "importance_rank": 43
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        514,
+        796,
+        542,
+        849
+      ],
+      "importance_geom": 0.3599,
+      "importance": 0.3599,
+      "importance_rank": 44
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        283,
+        893,
+        355,
+        970
+      ],
+      "importance_geom": 0.336,
+      "importance": 0.336,
+      "importance_rank": 52
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        204,
+        717,
+        248,
+        739
+      ],
+      "importance_geom": 0.3319,
+      "importance": 0.3319,
+      "importance_rank": 54
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        472,
+        820,
+        488,
+        836
+      ],
+      "importance_geom": 0.3522,
+      "importance": 0.3522,
+      "importance_rank": 47
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        124,
+        873,
+        143,
+        890
+      ],
+      "importance_geom": 0.29,
+      "importance": 0.29,
+      "importance_rank": 97
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        517,
+        797,
+        545,
+        856
+      ],
+      "importance_geom": 0.3596,
+      "importance": 0.3596,
+      "importance_rank": 45
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        564,
+        965,
+        600,
+        996
+      ],
+      "importance_geom": 0.3242,
+      "importance": 0.3242,
+      "importance_rank": 59
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        685,
+        927,
+        756,
+        969
+      ],
+      "importance_geom": 0.3215,
+      "importance": 0.3215,
+      "importance_rank": 67
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        760,
+        945,
+        782,
+        969
+      ],
+      "importance_geom": 0.302,
+      "importance": 0.302,
+      "importance_rank": 89
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        793,
+        927,
+        849,
+        974
+      ],
+      "importance_geom": 0.3018,
+      "importance": 0.3018,
+      "importance_rank": 90
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        743,
+        757,
+        859,
+        853
+      ],
+      "importance_geom": 0.3403,
+      "importance": 0.3403,
+      "importance_rank": 50
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        886,
+        815,
+        974,
+        914
+      ],
+      "importance_geom": 0.2978,
+      "importance": 0.2978,
+      "importance_rank": 94
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        978,
+        868,
+        1000,
+        906
+      ],
+      "importance_geom": 0.2607,
+      "importance": 0.2607,
+      "importance_rank": 113
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        550,
+        831,
+        560,
+        840
+      ],
+      "importance_geom": 0.3474,
+      "importance": 0.3474,
+      "importance_rank": 49
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        689,
+        970,
+        752,
+        1000
+      ],
+      "importance_geom": 0.3118,
+      "importance": 0.3118,
+      "importance_rank": 80
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        524,
+        964,
+        557,
+        992
+      ],
+      "importance_geom": 0.3256,
+      "importance": 0.3256,
+      "importance_rank": 57
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        772,
+        934,
+        794,
+        953
+      ],
+      "importance_geom": 0.3011,
+      "importance": 0.3011,
+      "importance_rank": 92
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        851,
+        934,
+        887,
+        961
+      ],
+      "importance_geom": 0.2858,
+      "importance": 0.2858,
+      "importance_rank": 100
+    },
+    {
+      "label": "rock",
+      "type": "landscape",
+      "box_2d": [
+        703,
+        675,
+        736,
+        714
+      ],
+      "importance_geom": 0.3507,
+      "importance": 0.3507,
+      "importance_rank": 48
+    },
+    {
+      "label": "log",
+      "type": "object",
+      "box_2d": [
+        505,
+        876,
+        601,
+        972
+      ],
+      "importance_geom": 0.4925,
+      "importance": 0.4925,
+      "importance_rank": 8
+    },
+    {
+      "label": "mist",
+      "type": "landscape",
+      "box_2d": [
+        530,
+        0,
+        780,
+        420
+      ],
+      "importance_geom": 0.456,
+      "importance": 0.456,
+      "importance_rank": 17
+    }
+  ],
+  "descriptions": {
+    "alt_text": "Dramatic mountain valley with storm clouds, sunlight, a lake, waterfalls, and small figures in the foreground",
+    "long_description": "A dramatic landscape painting depicts a vast mountain valley where dark storm clouds contrast with brilliant shafts of sunlight. In the grassy foreground, the valley floor is lush and green. On the left, a small encampment of teepees sits near the edge of a dense forest. In the center, a rider on a horse gallops across the terrain, passing a weathered log and scattered rocks. To the right, the ground rises into a rocky, forested slope where a small stream flows into a pool, framed by standing and fallen dead trees.\n\nIdeally situated in the midground, a calm lake stretches along the left side of the valley base. Rugged cliffs rise steeply on either side, with multiple thin waterfalls cascading down their rock faces. Bright sunlight breaks through the gloom to illuminate the central mountain slopes and the mist rising from the wet rock.\n\nIn the background, towering granite peaks pierce the sky. Heavy, dark clouds roil in the upper left and center, casting shadows over much of the scene, while a distant, snow-capped summit glows under a patch of clear sky. A single bird flies high against the turbulent gray clouds, emphasizing the scale of the towering cliffs and atmospheric sky."
+  },
+  "generated_at": "2025-12-14T02:09:00.237Z"
+}

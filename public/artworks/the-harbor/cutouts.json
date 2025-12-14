@@ -1,0 +1,493 @@
+{
+  "version": 1,
+  "image_path": "public/artworks/the-harbor/image.jpg",
+  "image_width": 3811,
+  "image_height": 2526,
+  "generated_at": "2025-12-14T13:45:20.416Z",
+  "count": 23,
+  "entries": [
+    {
+      "index": 0,
+      "label": "bridge",
+      "type": "structure",
+      "box_2d": [
+        162,
+        442,
+        692,
+        835
+      ],
+      "importance_geom": 0.5891,
+      "importance_rank": 1,
+      "cutout_path": "cutouts/full/00000-bridge.webp",
+      "thumb_path": "cutouts/thumb/00000-bridge.webp",
+      "crop_px": {
+        "left": 415,
+        "top": 1017,
+        "width": 2425,
+        "height": 1192
+      }
+    },
+    {
+      "index": 1,
+      "label": "bridge",
+      "type": "structure",
+      "box_2d": [
+        0,
+        325,
+        295,
+        445
+      ],
+      "importance_geom": 0.3948,
+      "importance_rank": 19,
+      "cutout_path": "cutouts/full/00001-bridge.webp",
+      "thumb_path": "cutouts/thumb/00001-bridge.webp",
+      "crop_px": {
+        "left": 0,
+        "top": 789,
+        "width": 1238,
+        "height": 367
+      }
+    },
+    {
+      "index": 2,
+      "label": "funnel",
+      "type": "object",
+      "box_2d": [
+        436,
+        118,
+        518,
+        422
+      ],
+      "importance_geom": 0.4146,
+      "importance_rank": 14,
+      "cutout_path": "cutouts/full/00002-funnel.webp",
+      "thumb_path": "cutouts/thumb/00002-funnel.webp",
+      "crop_px": {
+        "left": 1630,
+        "top": 221,
+        "width": 376,
+        "height": 922
+      }
+    },
+    {
+      "index": 3,
+      "label": "funnel",
+      "type": "object",
+      "box_2d": [
+        815,
+        142,
+        915,
+        310
+      ],
+      "importance_geom": 0.3198,
+      "importance_rank": 22,
+      "cutout_path": "cutouts/full/00003-funnel.webp",
+      "thumb_path": "cutouts/thumb/00003-funnel.webp",
+      "crop_px": {
+        "left": 3067,
+        "top": 315,
+        "width": 459,
+        "height": 512
+      }
+    },
+    {
+      "index": 4,
+      "label": "crane",
+      "type": "object",
+      "box_2d": [
+        175,
+        80,
+        425,
+        365
+      ],
+      "importance_geom": 0.4009,
+      "importance_rank": 17,
+      "cutout_path": "cutouts/full/00004-crane.webp",
+      "thumb_path": "cutouts/thumb/00004-crane.webp",
+      "crop_px": {
+        "left": 571,
+        "top": 130,
+        "width": 1144,
+        "height": 864
+      }
+    },
+    {
+      "index": 5,
+      "label": "crane",
+      "type": "object",
+      "box_2d": [
+        765,
+        135,
+        815,
+        350
+      ],
+      "importance_geom": 0.3388,
+      "importance_rank": 21,
+      "cutout_path": "cutouts/full/00005-crane.webp",
+      "thumb_path": "cutouts/thumb/00005-crane.webp",
+      "crop_px": {
+        "left": 2896,
+        "top": 287,
+        "width": 229,
+        "height": 652
+      }
+    },
+    {
+      "index": 6,
+      "label": "ship",
+      "type": "vehicle",
+      "box_2d": [
+        350,
+        88,
+        600,
+        530
+      ],
+      "importance_geom": 0.5243,
+      "importance_rank": 3,
+      "cutout_path": "cutouts/full/00006-ship.webp",
+      "thumb_path": "cutouts/thumb/00006-ship.webp",
+      "crop_px": {
+        "left": 1238,
+        "top": 110,
+        "width": 1144,
+        "height": 1341
+      }
+    },
+    {
+      "index": 7,
+      "label": "ship",
+      "type": "vehicle",
+      "box_2d": [
+        600,
+        30,
+        850,
+        500
+      ],
+      "importance_geom": 0.4739,
+      "importance_rank": 5,
+      "cutout_path": "cutouts/full/00007-ship.webp",
+      "thumb_path": "cutouts/thumb/00007-ship.webp",
+      "crop_px": {
+        "left": 2191,
+        "top": 0,
+        "width": 1144,
+        "height": 1382
+      }
+    },
+    {
+      "index": 8,
+      "label": "smoke",
+      "type": "element",
+      "box_2d": [
+        480,
+        85,
+        675,
+        380
+      ],
+      "importance_geom": 0.4547,
+      "importance_rank": 6,
+      "cutout_path": "cutouts/full/00008-smoke.webp",
+      "thumb_path": "cutouts/thumb/00008-smoke.webp",
+      "crop_px": {
+        "left": 1755,
+        "top": 139,
+        "width": 892,
+        "height": 896
+      }
+    },
+    {
+      "index": 9,
+      "label": "smoke",
+      "type": "element",
+      "box_2d": [
+        710,
+        10,
+        990,
+        210
+      ],
+      "importance_geom": 0.3485,
+      "importance_rank": 20,
+      "cutout_path": "cutouts/full/00009-smoke.webp",
+      "thumb_path": "cutouts/thumb/00009-smoke.webp",
+      "crop_px": {
+        "left": 2598,
+        "top": 0,
+        "width": 1213,
+        "height": 582
+      }
+    },
+    {
+      "index": 10,
+      "label": "ventilator",
+      "type": "object",
+      "box_2d": [
+        508,
+        334,
+        547,
+        423
+      ],
+      "importance_geom": 0.4388,
+      "importance_rank": 11,
+      "cutout_path": "cutouts/full/00010-ventilator.webp",
+      "thumb_path": "cutouts/thumb/00010-ventilator.webp",
+      "crop_px": {
+        "left": 1920,
+        "top": 820,
+        "width": 180,
+        "height": 272
+      }
+    },
+    {
+      "index": 11,
+      "label": "ventilator",
+      "type": "object",
+      "box_2d": [
+        505,
+        317,
+        548,
+        431
+      ],
+      "importance_geom": 0.44,
+      "importance_rank": 10,
+      "cutout_path": "cutouts/full/00011-ventilator.webp",
+      "thumb_path": "cutouts/thumb/00011-ventilator.webp",
+      "crop_px": {
+        "left": 1907,
+        "top": 771,
+        "width": 199,
+        "height": 347
+      }
+    },
+    {
+      "index": 12,
+      "label": "rigging",
+      "type": "object",
+      "box_2d": [
+        550,
+        25,
+        920,
+        370
+      ],
+      "importance_geom": 0.4098,
+      "importance_rank": 15,
+      "cutout_path": "cutouts/full/00012-rigging.webp",
+      "thumb_path": "cutouts/thumb/00012-rigging.webp",
+      "crop_px": {
+        "left": 1955,
+        "top": 0,
+        "width": 1693,
+        "height": 1022
+      }
+    },
+    {
+      "index": 13,
+      "label": "rigging",
+      "type": "object",
+      "box_2d": [
+        30,
+        30,
+        170,
+        260
+      ],
+      "importance_geom": 0.2949,
+      "importance_rank": 23,
+      "cutout_path": "cutouts/full/00013-rigging.webp",
+      "thumb_path": "cutouts/thumb/00013-rigging.webp",
+      "crop_px": {
+        "left": 61,
+        "top": 17,
+        "width": 640,
+        "height": 698
+      }
+    },
+    {
+      "index": 14,
+      "label": "industrial structure",
+      "type": "structure",
+      "box_2d": [
+        130,
+        430,
+        710,
+        960
+      ],
+      "importance_geom": 0.5642,
+      "importance_rank": 2,
+      "cutout_path": "cutouts/full/00014-industrial-structure.webp",
+      "thumb_path": "cutouts/thumb/00014-industrial-structure.webp",
+      "crop_px": {
+        "left": 274,
+        "top": 952,
+        "width": 2653,
+        "height": 1574
+      }
+    },
+    {
+      "index": 15,
+      "label": "industrial structure",
+      "type": "structure",
+      "box_2d": [
+        10,
+        30,
+        430,
+        450
+      ],
+      "importance_geom": 0.395,
+      "importance_rank": 18,
+      "cutout_path": "cutouts/full/00015-industrial-structure.webp",
+      "thumb_path": "cutouts/thumb/00015-industrial-structure.webp",
+      "crop_px": {
+        "left": 0,
+        "top": 0,
+        "width": 1799,
+        "height": 1243
+      }
+    },
+    {
+      "index": 16,
+      "label": "industrial structure",
+      "type": "structure",
+      "box_2d": [
+        430,
+        80,
+        640,
+        550
+      ],
+      "importance_geom": 0.443,
+      "importance_rank": 7,
+      "cutout_path": "cutouts/full/00016-industrial-structure.webp",
+      "thumb_path": "cutouts/thumb/00016-industrial-structure.webp",
+      "crop_px": {
+        "left": 1558,
+        "top": 83,
+        "width": 962,
+        "height": 1426
+      }
+    },
+    {
+      "index": 17,
+      "label": "industrial structure",
+      "type": "structure",
+      "box_2d": [
+        600,
+        20,
+        960,
+        500
+      ],
+      "importance_geom": 0.4014,
+      "importance_rank": 16,
+      "cutout_path": "cutouts/full/00017-industrial-structure.webp",
+      "thumb_path": "cutouts/thumb/00017-industrial-structure.webp",
+      "crop_px": {
+        "left": 2149,
+        "top": 0,
+        "width": 1647,
+        "height": 1384
+      }
+    },
+    {
+      "index": 18,
+      "label": "industrial structure",
+      "type": "structure",
+      "box_2d": [
+        720,
+        450,
+        990,
+        960
+      ],
+      "importance_geom": 0.4402,
+      "importance_rank": 9,
+      "cutout_path": "cutouts/full/00018-industrial-structure.webp",
+      "thumb_path": "cutouts/thumb/00018-industrial-structure.webp",
+      "crop_px": {
+        "left": 2640,
+        "top": 1007,
+        "width": 1171,
+        "height": 1519
+      }
+    },
+    {
+      "index": 19,
+      "label": "water",
+      "type": "landscape",
+      "box_2d": [
+        670,
+        520,
+        890,
+        675
+      ],
+      "importance_geom": 0.4865,
+      "importance_rank": 4,
+      "cutout_path": "cutouts/full/00019-water.webp",
+      "thumb_path": "cutouts/thumb/00019-water.webp",
+      "crop_px": {
+        "left": 2469,
+        "top": 1274,
+        "width": 1007,
+        "height": 471
+      }
+    },
+    {
+      "index": 20,
+      "label": "water",
+      "type": "landscape",
+      "box_2d": [
+        30,
+        635,
+        160,
+        740
+      ],
+      "importance_geom": 0.4267,
+      "importance_rank": 13,
+      "cutout_path": "cutouts/full/00020-water.webp",
+      "thumb_path": "cutouts/thumb/00020-water.webp",
+      "crop_px": {
+        "left": 64,
+        "top": 1577,
+        "width": 596,
+        "height": 320
+      }
+    },
+    {
+      "index": 21,
+      "label": "stairway",
+      "type": "structure",
+      "box_2d": [
+        751,
+        500,
+        806,
+        566
+      ],
+      "importance_geom": 0.4361,
+      "importance_rank": 12,
+      "cutout_path": "cutouts/full/00021-stairway.webp",
+      "thumb_path": "cutouts/thumb/00021-stairway.webp",
+      "crop_px": {
+        "left": 2841,
+        "top": 1246,
+        "width": 252,
+        "height": 201
+      }
+    },
+    {
+      "index": 22,
+      "label": "rope",
+      "type": "object",
+      "box_2d": [
+        217,
+        766,
+        319,
+        813
+      ],
+      "importance_geom": 0.442,
+      "importance_rank": 8,
+      "cutout_path": "cutouts/full/00022-rope.webp",
+      "thumb_path": "cutouts/thumb/00022-rope.webp",
+      "crop_px": {
+        "left": 787,
+        "top": 1922,
+        "width": 468,
+        "height": 144
+      }
+    }
+  ]
+}

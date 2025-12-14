@@ -125,23 +125,45 @@ Create a `.env` file:
 GOOGLE_GENERATIVE_AI_API_KEY=your_api_key_here
 ```
 
-### 3. Process an Artwork
-Create an artwork directory and add your image:
+### 3. Add a New Artwork
+
+**Step 1:** Create a directory using a URL-friendly slug:
 ```bash
 mkdir -p public/artworks/my-painting
-cp path/to/image.jpg public/artworks/my-painting/image.jpg
 ```
 
-Run detection:
+**Step 2:** Add your image (must be named `image.jpg`, `image.jpeg`, or `image.png`):
+```bash
+cp path/to/your-image.jpg public/artworks/my-painting/image.jpg
+```
+
+**Step 3 (optional):** Add metadata in `artwork.json`:
+```bash
+cat > public/artworks/my-painting/artwork.json << 'EOF'
+{
+  "title": "My Painting Title",
+  "artist": "Artist Name",
+  "date": "1850",
+  "medium": "Oil on canvas",
+  "url": "https://museum.org/artwork/12345"
+}
+EOF
+```
+
+If omitted, the title defaults to the slug (e.g., "my-painting" → "My Painting").
+
+**Step 4:** Run the detector:
 ```bash
 npx tsx scripts/detect.ts my-painting
 ```
 
-Outputs in the artwork directory:
-- `detected_objects.json` - full detection payload
-- `cutouts/` - cropped images per object
-- `cutouts.json` - cutout index
-- `annotated.png` - visualization with boxes
+This generates in the artwork directory:
+- `detected_objects.json` — full detection payload
+- `cutouts/` — cropped images per object
+- `cutouts.json` — cutout index
+- `annotated.png` — visualization with boxes
+
+Use `--force` to overwrite existing outputs.
 
 ### 4. View Results
 ```bash

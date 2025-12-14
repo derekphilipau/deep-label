@@ -1,0 +1,1456 @@
+{
+  "strategy": "hybrid-detect-verify",
+  "image_path": "public/artworks/the-fall-of-the-magician/image.jpg",
+  "model_name": "gemini-3-pro-preview",
+  "description_model_name": "gemini-3-pro-preview",
+  "max_kinds": 50,
+  "verify_rounds": 2,
+  "tile_threshold": 12,
+  "cutouts": {
+    "enabled": true,
+    "format": "webp",
+    "thumb_size": 256,
+    "max": null,
+    "concurrency": 8,
+    "index_path": "cutouts.json",
+    "directory_path": "cutouts",
+    "count": 93
+  },
+  "kinds": [
+    {
+      "kind": "demon",
+      "type": "creature",
+      "estimated_count": "very_many",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "primary"
+    },
+    {
+      "kind": "saint",
+      "type": "person",
+      "estimated_count": "few",
+      "estimated_size": "large",
+      "segmentation": "individual",
+      "importance": "primary"
+    },
+    {
+      "kind": "conjurer",
+      "type": "person",
+      "estimated_count": "few",
+      "estimated_size": "medium",
+      "segmentation": "individual",
+      "importance": "primary"
+    },
+    {
+      "kind": "falling man",
+      "type": "person",
+      "estimated_count": "few",
+      "estimated_size": "medium",
+      "segmentation": "individual",
+      "importance": "primary"
+    },
+    {
+      "kind": "acrobat",
+      "type": "person",
+      "estimated_count": "few",
+      "estimated_size": "medium",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "drummer",
+      "type": "person",
+      "estimated_count": "few",
+      "estimated_size": "medium",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "bystander",
+      "type": "person",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "ladder",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "large",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "banner",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "medium",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "table",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "medium",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "severed head",
+      "type": "body_part",
+      "estimated_count": "few",
+      "estimated_size": "tiny",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "platter",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "knife",
+      "type": "object",
+      "estimated_count": "moderate",
+      "estimated_size": "tiny",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "drum",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "trumpet",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "broom",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "hoop",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "tiny",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "mitre",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "staff",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "large",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "pole",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "large",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "cup",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "tiny",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "halo",
+      "type": "symbol",
+      "estimated_count": "few",
+      "estimated_size": "tiny",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "smoke",
+      "type": "element",
+      "estimated_count": "few",
+      "estimated_size": "medium",
+      "segmentation": "region",
+      "importance": "background"
+    },
+    {
+      "kind": "insect",
+      "type": "animal",
+      "estimated_count": "many",
+      "estimated_size": "tiny",
+      "segmentation": "individual",
+      "importance": "background"
+    },
+    {
+      "kind": "archway",
+      "type": "building",
+      "estimated_count": "few",
+      "estimated_size": "large",
+      "segmentation": "region",
+      "importance": "background"
+    },
+    {
+      "kind": "window",
+      "type": "building",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "background"
+    },
+    {
+      "kind": "text",
+      "type": "symbol",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "region",
+      "importance": "background"
+    }
+  ],
+  "objects": [
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        98,
+        128,
+        239,
+        299
+      ],
+      "importance_geom": 0.2238,
+      "importance": 0.2238,
+      "importance_rank": 92
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        191,
+        348,
+        249,
+        459
+      ],
+      "importance_geom": 0.28,
+      "importance": 0.28,
+      "importance_rank": 85
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        404,
+        304,
+        501,
+        415
+      ],
+      "importance_geom": 0.3327,
+      "importance": 0.3327,
+      "importance_rank": 59
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        457,
+        138,
+        550,
+        363
+      ],
+      "importance_geom": 0.2929,
+      "importance": 0.2929,
+      "importance_rank": 82
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        390,
+        120,
+        447,
+        249
+      ],
+      "importance_geom": 0.2383,
+      "importance": 0.2383,
+      "importance_rank": 90
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        114,
+        422,
+        187,
+        520
+      ],
+      "importance_geom": 0.2722,
+      "importance": 0.2722,
+      "importance_rank": 87
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        417,
+        450,
+        501,
+        550
+      ],
+      "importance_geom": 0.3881,
+      "importance": 0.3881,
+      "importance_rank": 33
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        314,
+        393,
+        413,
+        547
+      ],
+      "importance_geom": 0.3583,
+      "importance": 0.3583,
+      "importance_rank": 46
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        360,
+        336,
+        440,
+        429
+      ],
+      "importance_geom": 0.3288,
+      "importance": 0.3288,
+      "importance_rank": 63
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        766,
+        47,
+        873,
+        231
+      ],
+      "importance_geom": 0.1926,
+      "importance": 0.1926,
+      "importance_rank": 93
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        498,
+        153,
+        642,
+        358
+      ],
+      "importance_geom": 0.3001,
+      "importance": 0.3001,
+      "importance_rank": 79
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        466,
+        179,
+        549,
+        347
+      ],
+      "importance_geom": 0.2912,
+      "importance": 0.2912,
+      "importance_rank": 83
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        626,
+        201,
+        706,
+        380
+      ],
+      "importance_geom": 0.2851,
+      "importance": 0.2851,
+      "importance_rank": 84
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        664,
+        253,
+        796,
+        429
+      ],
+      "importance_geom": 0.2981,
+      "importance": 0.2981,
+      "importance_rank": 80
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        629,
+        391,
+        758,
+        495
+      ],
+      "importance_geom": 0.33,
+      "importance": 0.33,
+      "importance_rank": 61
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        609,
+        435,
+        681,
+        545
+      ],
+      "importance_geom": 0.3489,
+      "importance": 0.3489,
+      "importance_rank": 51
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        450,
+        308,
+        499,
+        363
+      ],
+      "importance_geom": 0.3072,
+      "importance": 0.3072,
+      "importance_rank": 75
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        450,
+        264,
+        483,
+        308
+      ],
+      "importance_geom": 0.2779,
+      "importance": 0.2779,
+      "importance_rank": 86
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        450,
+        448,
+        497,
+        528
+      ],
+      "importance_geom": 0.3814,
+      "importance": 0.3814,
+      "importance_rank": 37
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        697,
+        509,
+        755,
+        550
+      ],
+      "importance_geom": 0.3136,
+      "importance": 0.3136,
+      "importance_rank": 72
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        101,
+        487,
+        240,
+        737
+      ],
+      "aliases": [
+        "drummer"
+      ],
+      "importance_geom": 0.3248,
+      "importance": 0.3248,
+      "importance_rank": 67
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        106,
+        622,
+        145,
+        688
+      ],
+      "importance_geom": 0.2703,
+      "importance": 0.2703,
+      "importance_rank": 88
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        129,
+        450,
+        171,
+        487
+      ],
+      "importance_geom": 0.258,
+      "importance": 0.258,
+      "importance_rank": 89
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        234,
+        652,
+        300,
+        776
+      ],
+      "importance_geom": 0.3225,
+      "importance": 0.3225,
+      "importance_rank": 69
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        256,
+        504,
+        347,
+        706
+      ],
+      "importance_geom": 0.3522,
+      "importance": 0.3522,
+      "importance_rank": 49
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        311,
+        618,
+        391,
+        711
+      ],
+      "importance_geom": 0.3472,
+      "importance": 0.3472,
+      "importance_rank": 54
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        311,
+        451,
+        410,
+        579
+      ],
+      "importance_geom": 0.3615,
+      "importance": 0.3615,
+      "importance_rank": 44
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        495,
+        582,
+        550,
+        714
+      ],
+      "importance_geom": 0.37,
+      "importance": 0.37,
+      "importance_rank": 42
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        399,
+        677,
+        525,
+        882
+      ],
+      "importance_geom": 0.3655,
+      "importance": 0.3655,
+      "importance_rank": 43
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        294,
+        728,
+        415,
+        876
+      ],
+      "importance_geom": 0.3421,
+      "importance": 0.3421,
+      "importance_rank": 57
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        129,
+        777,
+        311,
+        920
+      ],
+      "importance_geom": 0.3177,
+      "importance": 0.3177,
+      "importance_rank": 70
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        531,
+        733,
+        550,
+        829
+      ],
+      "importance_geom": 0.3297,
+      "importance": 0.3297,
+      "importance_rank": 62
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        346,
+        455,
+        517,
+        714
+      ],
+      "importance_geom": 0.4125,
+      "importance": 0.4125,
+      "importance_rank": 24
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        544,
+        497,
+        678,
+        674
+      ],
+      "importance_geom": 0.3846,
+      "importance": 0.3846,
+      "importance_rank": 35
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        674,
+        513,
+        766,
+        686
+      ],
+      "importance_geom": 0.3425,
+      "importance": 0.3425,
+      "importance_rank": 56
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        531,
+        718,
+        748,
+        895
+      ],
+      "importance_geom": 0.3608,
+      "importance": 0.3608,
+      "importance_rank": 45
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        756,
+        754,
+        851,
+        916
+      ],
+      "importance_geom": 0.3028,
+      "importance": 0.3028,
+      "importance_rank": 77
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        607,
+        450,
+        758,
+        549
+      ],
+      "importance_geom": 0.3472,
+      "importance": 0.3472,
+      "importance_rank": 53
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        476,
+        585,
+        573,
+        659
+      ],
+      "importance_geom": 0.3748,
+      "importance": 0.3748,
+      "importance_rank": 40
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        450,
+        677,
+        526,
+        849
+      ],
+      "importance_geom": 0.3558,
+      "importance": 0.3558,
+      "importance_rank": 47
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        642,
+        686,
+        769,
+        741
+      ],
+      "importance_geom": 0.3275,
+      "importance": 0.3275,
+      "importance_rank": 64
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        532,
+        659,
+        642,
+        714
+      ],
+      "importance_geom": 0.3537,
+      "importance": 0.3537,
+      "importance_rank": 48
+    },
+    {
+      "label": "demon",
+      "type": "creature",
+      "box_2d": [
+        450,
+        450,
+        510,
+        576
+      ],
+      "importance_geom": 0.3947,
+      "importance": 0.3947,
+      "importance_rank": 30
+    },
+    {
+      "label": "saint",
+      "type": "person",
+      "box_2d": [
+        773,
+        418,
+        888,
+        805
+      ],
+      "importance_geom": 0.4947,
+      "importance": 0.4947,
+      "importance_rank": 5
+    },
+    {
+      "label": "conjurer",
+      "type": "person",
+      "box_2d": [
+        233,
+        318,
+        410,
+        545
+      ],
+      "importance_geom": 0.5203,
+      "importance": 0.5203,
+      "importance_rank": 3
+    },
+    {
+      "label": "falling man",
+      "type": "person",
+      "box_2d": [
+        468,
+        240,
+        681,
+        690
+      ],
+      "importance_geom": 0.5966,
+      "importance": 0.5966,
+      "importance_rank": 1
+    },
+    {
+      "label": "acrobat",
+      "type": "person",
+      "box_2d": [
+        28,
+        44,
+        96,
+        335
+      ],
+      "importance_geom": 0.3133,
+      "importance": 0.3133,
+      "importance_rank": 74
+    },
+    {
+      "label": "acrobat",
+      "type": "person",
+      "box_2d": [
+        610,
+        720,
+        750,
+        890
+      ],
+      "importance_geom": 0.4743,
+      "importance": 0.4743,
+      "importance_rank": 9
+    },
+    {
+      "label": "acrobat",
+      "type": "person",
+      "box_2d": [
+        395,
+        670,
+        520,
+        880
+      ],
+      "importance_geom": 0.499,
+      "importance": 0.499,
+      "importance_rank": 4
+    },
+    {
+      "label": "bystander",
+      "type": "person",
+      "box_2d": [
+        887,
+        388,
+        911,
+        421
+      ],
+      "importance_geom": 0.3319,
+      "importance": 0.3319,
+      "importance_rank": 60
+    },
+    {
+      "label": "bystander",
+      "type": "person",
+      "box_2d": [
+        912,
+        399,
+        937,
+        432
+      ],
+      "importance_geom": 0.3258,
+      "importance": 0.3258,
+      "importance_rank": 65
+    },
+    {
+      "label": "bystander",
+      "type": "person",
+      "box_2d": [
+        876,
+        426,
+        908,
+        473
+      ],
+      "importance_geom": 0.3472,
+      "importance": 0.3472,
+      "importance_rank": 55
+    },
+    {
+      "label": "bystander",
+      "type": "person",
+      "box_2d": [
+        904,
+        435,
+        942,
+        495
+      ],
+      "importance_geom": 0.3419,
+      "importance": 0.3419,
+      "importance_rank": 58
+    },
+    {
+      "label": "bystander",
+      "type": "person",
+      "box_2d": [
+        758,
+        450,
+        897,
+        813
+      ],
+      "importance_geom": 0.4452,
+      "importance": 0.4452,
+      "importance_rank": 14
+    },
+    {
+      "label": "bystander",
+      "type": "person",
+      "box_2d": [
+        886,
+        460,
+        949,
+        776
+      ],
+      "importance_geom": 0.3895,
+      "importance": 0.3895,
+      "importance_rank": 32
+    },
+    {
+      "label": "ladder",
+      "type": "object",
+      "box_2d": [
+        28,
+        335,
+        98,
+        665
+      ],
+      "importance_geom": 0.3929,
+      "importance": 0.3929,
+      "importance_rank": 31
+    },
+    {
+      "label": "ladder",
+      "type": "object",
+      "box_2d": [
+        450,
+        445,
+        540,
+        620
+      ],
+      "importance_geom": 0.5327,
+      "importance": 0.5327,
+      "importance_rank": 2
+    },
+    {
+      "label": "banner",
+      "type": "object",
+      "box_2d": [
+        248,
+        45,
+        382,
+        245
+      ],
+      "importance_geom": 0.374,
+      "importance": 0.374,
+      "importance_rank": 41
+    },
+    {
+      "label": "table",
+      "type": "object",
+      "box_2d": [
+        175,
+        460,
+        295,
+        600
+      ],
+      "importance_geom": 0.4509,
+      "importance": 0.4509,
+      "importance_rank": 12
+    },
+    {
+      "label": "table",
+      "type": "object",
+      "box_2d": [
+        25,
+        720,
+        185,
+        925
+      ],
+      "importance_geom": 0.4242,
+      "importance": 0.4242,
+      "importance_rank": 19
+    },
+    {
+      "label": "severed head",
+      "type": "body_part",
+      "box_2d": [
+        98,
+        733,
+        141,
+        772
+      ],
+      "importance_geom": 0.4679,
+      "importance": 0.4679,
+      "importance_rank": 11
+    },
+    {
+      "label": "platter",
+      "type": "object",
+      "box_2d": [
+        73,
+        728,
+        158,
+        783
+      ],
+      "importance_geom": 0.4152,
+      "importance": 0.4152,
+      "importance_rank": 23
+    },
+    {
+      "label": "knife",
+      "type": "object",
+      "box_2d": [
+        146,
+        795,
+        161,
+        888
+      ],
+      "importance_geom": 0.3795,
+      "importance": 0.3795,
+      "importance_rank": 38
+    },
+    {
+      "label": "knife",
+      "type": "object",
+      "box_2d": [
+        647,
+        803,
+        684,
+        882
+      ],
+      "importance_geom": 0.4222,
+      "importance": 0.4222,
+      "importance_rank": 20
+    },
+    {
+      "label": "knife",
+      "type": "object",
+      "box_2d": [
+        700,
+        810,
+        735,
+        868
+      ],
+      "importance_geom": 0.4111,
+      "importance": 0.4111,
+      "importance_rank": 25
+    },
+    {
+      "label": "drum",
+      "type": "object",
+      "box_2d": [
+        359,
+        337,
+        437,
+        389
+      ],
+      "importance_geom": 0.4273,
+      "importance": 0.4273,
+      "importance_rank": 17
+    },
+    {
+      "label": "drum",
+      "type": "object",
+      "box_2d": [
+        102,
+        516,
+        162,
+        550
+      ],
+      "importance_geom": 0.377,
+      "importance": 0.377,
+      "importance_rank": 39
+    },
+    {
+      "label": "drum",
+      "type": "object",
+      "box_2d": [
+        100,
+        530,
+        208,
+        634
+      ],
+      "importance_geom": 0.4075,
+      "importance": 0.4075,
+      "importance_rank": 26
+    },
+    {
+      "label": "trumpet",
+      "type": "object",
+      "box_2d": [
+        450,
+        41,
+        548,
+        70
+      ],
+      "importance_geom": 0.2939,
+      "importance": 0.2939,
+      "importance_rank": 81
+    },
+    {
+      "label": "trumpet",
+      "type": "object",
+      "box_2d": [
+        450,
+        59,
+        560,
+        113
+      ],
+      "importance_geom": 0.3164,
+      "importance": 0.3164,
+      "importance_rank": 71
+    },
+    {
+      "label": "broom",
+      "type": "object",
+      "box_2d": [
+        755,
+        278,
+        887,
+        476
+      ],
+      "importance_geom": 0.4281,
+      "importance": 0.4281,
+      "importance_rank": 16
+    },
+    {
+      "label": "hoop",
+      "type": "object",
+      "box_2d": [
+        403,
+        699,
+        478,
+        777
+      ],
+      "importance_geom": 0.4915,
+      "importance": 0.4915,
+      "importance_rank": 6
+    },
+    {
+      "label": "mitre",
+      "type": "object",
+      "box_2d": [
+        832,
+        450,
+        876,
+        494
+      ],
+      "importance_geom": 0.4031,
+      "importance": 0.4031,
+      "importance_rank": 28
+    },
+    {
+      "label": "staff",
+      "type": "object",
+      "box_2d": [
+        763,
+        463,
+        778,
+        806
+      ],
+      "importance_geom": 0.4367,
+      "importance": 0.4367,
+      "importance_rank": 15
+    },
+    {
+      "label": "staff",
+      "type": "object",
+      "box_2d": [
+        165,
+        185,
+        285,
+        255
+      ],
+      "importance_geom": 0.3485,
+      "importance": 0.3485,
+      "importance_rank": 52
+    },
+    {
+      "label": "pole",
+      "type": "object",
+      "box_2d": [
+        26,
+        333,
+        45,
+        625
+      ],
+      "importance_geom": 0.3134,
+      "importance": 0.3134,
+      "importance_rank": 73
+    },
+    {
+      "label": "pole",
+      "type": "object",
+      "box_2d": [
+        58,
+        338,
+        76,
+        628
+      ],
+      "importance_geom": 0.3245,
+      "importance": 0.3245,
+      "importance_rank": 68
+    },
+    {
+      "label": "pole",
+      "type": "object",
+      "box_2d": [
+        85,
+        175,
+        315,
+        290
+      ],
+      "importance_geom": 0.3252,
+      "importance": 0.3252,
+      "importance_rank": 66
+    },
+    {
+      "label": "pole",
+      "type": "object",
+      "box_2d": [
+        190,
+        30,
+        380,
+        50
+      ],
+      "importance_geom": 0.2286,
+      "importance": 0.2286,
+      "importance_rank": 91
+    },
+    {
+      "label": "pole",
+      "type": "object",
+      "box_2d": [
+        480,
+        470,
+        555,
+        630
+      ],
+      "importance_geom": 0.4802,
+      "importance": 0.4802,
+      "importance_rank": 8
+    },
+    {
+      "label": "pole",
+      "type": "object",
+      "box_2d": [
+        765,
+        365,
+        815,
+        425
+      ],
+      "importance_geom": 0.3502,
+      "importance": 0.3502,
+      "importance_rank": 50
+    },
+    {
+      "label": "pole",
+      "type": "object",
+      "box_2d": [
+        756,
+        465,
+        807,
+        770
+      ],
+      "importance_geom": 0.4058,
+      "importance": 0.4058,
+      "importance_rank": 27
+    },
+    {
+      "label": "cup",
+      "type": "object",
+      "box_2d": [
+        227,
+        426,
+        253,
+        470
+      ],
+      "importance_geom": 0.3977,
+      "importance": 0.3977,
+      "importance_rank": 29
+    },
+    {
+      "label": "cup",
+      "type": "object",
+      "box_2d": [
+        254,
+        462,
+        283,
+        506
+      ],
+      "importance_geom": 0.4154,
+      "importance": 0.4154,
+      "importance_rank": 22
+    },
+    {
+      "label": "cup",
+      "type": "object",
+      "box_2d": [
+        252,
+        471,
+        285,
+        514
+      ],
+      "importance_geom": 0.4174,
+      "importance": 0.4174,
+      "importance_rank": 21
+    },
+    {
+      "label": "smoke",
+      "type": "element",
+      "box_2d": [
+        460,
+        35,
+        635,
+        175
+      ],
+      "importance_geom": 0.4263,
+      "importance": 0.4263,
+      "importance_rank": 18
+    },
+    {
+      "label": "archway",
+      "type": "building",
+      "box_2d": [
+        863,
+        223,
+        951,
+        760
+      ],
+      "importance_geom": 0.484,
+      "importance": 0.484,
+      "importance_rank": 7
+    },
+    {
+      "label": "window",
+      "type": "building",
+      "box_2d": [
+        95,
+        25,
+        167,
+        101
+      ],
+      "importance_geom": 0.3006,
+      "importance": 0.3006,
+      "importance_rank": 78
+    },
+    {
+      "label": "window",
+      "type": "building",
+      "box_2d": [
+        880,
+        23,
+        944,
+        144
+      ],
+      "importance_geom": 0.3029,
+      "importance": 0.3029,
+      "importance_rank": 76
+    },
+    {
+      "label": "text",
+      "type": "symbol",
+      "box_2d": [
+        105,
+        935,
+        925,
+        960
+      ],
+      "importance_geom": 0.4705,
+      "importance": 0.4705,
+      "importance_rank": 10
+    },
+    {
+      "label": "text",
+      "type": "symbol",
+      "box_2d": [
+        328,
+        898,
+        495,
+        920
+      ],
+      "importance_geom": 0.4503,
+      "importance": 0.4503,
+      "importance_rank": 13
+    },
+    {
+      "label": "text",
+      "type": "symbol",
+      "box_2d": [
+        880,
+        908,
+        975,
+        928
+      ],
+      "importance_geom": 0.3831,
+      "importance": 0.3831,
+      "importance_rank": 36
+    },
+    {
+      "label": "text",
+      "type": "symbol",
+      "box_2d": [
+        58,
+        788,
+        82,
+        812
+      ],
+      "importance_geom": 0.3856,
+      "importance": 0.3856,
+      "importance_rank": 34
+    }
+  ],
+  "descriptions": {
+    "alt_text": "Grotesque demons swarm a falling magician and conjurer while a saint stands calmly at right",
+    "long_description": "This dense engraving depicts a chaotic scene where a swarm of grotesque demons torments a conjurer and a falling man, watched by a saint. In the lower left, a low table holds a platter with a severed head, while a round-bodied demon nearby wields a knife. Just behind this, a conjurer sits at a table covered with cups and balls, surrounded by harassing creatures. A demon beats a drum, and an acrobat climbs a ladder on the far left edge. Above the table, a banner displays animal illustrations. In the center, a man falls headfirst from a collapsing structure of ladders and poles, besieged by a dense cloud of demons with animalistic features, including snouts, scales, and claws. Below him, small distorted creatures perform acrobatics, one balancing a hoop. High above, winged demons blow trumpets amidst billowing smoke. To the right, a bearded saint with a halo and staff stands calmly, gesturing toward the falling man. A group of bystanders watches from within an arched doorway behind the saint. Latin text runs along the bottom margin."
+  },
+  "generated_at": "2025-12-14T05:26:02.995Z"
+}

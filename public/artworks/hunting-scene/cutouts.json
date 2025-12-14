@@ -1,0 +1,3685 @@
+{
+  "version": 1,
+  "image_path": "public/artworks/hunting-scene/image.jpg",
+  "image_width": 3400,
+  "image_height": 2332,
+  "generated_at": "2025-12-14T06:03:07.956Z",
+  "count": 175,
+  "entries": [
+    {
+      "index": 0,
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        618,
+        382,
+        692,
+        473
+      ],
+      "importance_geom": 0.3873,
+      "importance_rank": 30,
+      "cutout_path": "cutouts/full/00000-stag.webp",
+      "thumb_path": "cutouts/thumb/00000-stag.webp",
+      "crop_px": {
+        "left": 2076,
+        "top": 869,
+        "width": 302,
+        "height": 256
+      }
+    },
+    {
+      "index": 1,
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        190,
+        481,
+        292,
+        574
+      ],
+      "importance_geom": 0.3753,
+      "importance_rank": 35,
+      "cutout_path": "cutouts/full/00001-stag.webp",
+      "thumb_path": "cutouts/thumb/00001-stag.webp",
+      "crop_px": {
+        "left": 611,
+        "top": 1099,
+        "width": 417,
+        "height": 262
+      }
+    },
+    {
+      "index": 2,
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        272,
+        524,
+        371,
+        623
+      ],
+      "importance_geom": 0.4065,
+      "importance_rank": 23,
+      "cutout_path": "cutouts/full/00002-stag.webp",
+      "thumb_path": "cutouts/thumb/00002-stag.webp",
+      "crop_px": {
+        "left": 890,
+        "top": 1198,
+        "width": 406,
+        "height": 278
+      }
+    },
+    {
+      "index": 3,
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        355,
+        499,
+        437,
+        670
+      ],
+      "importance_geom": 0.4349,
+      "importance_rank": 12,
+      "cutout_path": "cutouts/full/00003-stag.webp",
+      "thumb_path": "cutouts/thumb/00003-stag.webp",
+      "crop_px": {
+        "left": 1179,
+        "top": 1123,
+        "width": 335,
+        "height": 480
+      }
+    },
+    {
+      "index": 4,
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        241,
+        538,
+        298,
+        660
+      ],
+      "importance_geom": 0.3852,
+      "importance_rank": 32,
+      "cutout_path": "cutouts/full/00004-stag.webp",
+      "thumb_path": "cutouts/thumb/00004-stag.webp",
+      "crop_px": {
+        "left": 799,
+        "top": 1225,
+        "width": 235,
+        "height": 344
+      }
+    },
+    {
+      "index": 5,
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        385,
+        604,
+        451,
+        741
+      ],
+      "importance_geom": 0.4209,
+      "importance_rank": 19,
+      "cutout_path": "cutouts/full/00005-stag.webp",
+      "thumb_path": "cutouts/thumb/00005-stag.webp",
+      "crop_px": {
+        "left": 1286,
+        "top": 1376,
+        "width": 271,
+        "height": 385
+      }
+    },
+    {
+      "index": 6,
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        440,
+        604,
+        501,
+        736
+      ],
+      "importance_geom": 0.4255,
+      "importance_rank": 17,
+      "cutout_path": "cutouts/full/00006-stag.webp",
+      "thumb_path": "cutouts/thumb/00006-stag.webp",
+      "crop_px": {
+        "left": 1475,
+        "top": 1377,
+        "width": 250,
+        "height": 371
+      }
+    },
+    {
+      "index": 7,
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        479,
+        538,
+        550,
+        626
+      ],
+      "importance_geom": 0.4406,
+      "importance_rank": 11,
+      "cutout_path": "cutouts/full/00007-stag.webp",
+      "thumb_path": "cutouts/thumb/00007-stag.webp",
+      "crop_px": {
+        "left": 1604,
+        "top": 1233,
+        "width": 291,
+        "height": 248
+      }
+    },
+    {
+      "index": 8,
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        10,
+        747,
+        88,
+        890
+      ],
+      "importance_geom": 0.3183,
+      "importance_rank": 89,
+      "cutout_path": "cutouts/full/00008-stag.webp",
+      "thumb_path": "cutouts/thumb/00008-stag.webp",
+      "crop_px": {
+        "left": 7,
+        "top": 1709,
+        "width": 320,
+        "height": 400
+      }
+    },
+    {
+      "index": 9,
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        478,
+        521,
+        626,
+        620
+      ],
+      "importance_geom": 0.45,
+      "importance_rank": 10,
+      "cutout_path": "cutouts/full/00009-stag.webp",
+      "thumb_path": "cutouts/thumb/00009-stag.webp",
+      "crop_px": {
+        "left": 1575,
+        "top": 1191,
+        "width": 604,
+        "height": 278
+      }
+    },
+    {
+      "index": 10,
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        648,
+        538,
+        758,
+        642
+      ],
+      "importance_geom": 0.4011,
+      "importance_rank": 25,
+      "cutout_path": "cutouts/full/00010-stag.webp",
+      "thumb_path": "cutouts/thumb/00010-stag.webp",
+      "crop_px": {
+        "left": 2165,
+        "top": 1230,
+        "width": 451,
+        "height": 292
+      }
+    },
+    {
+      "index": 11,
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        450,
+        642,
+        491,
+        733
+      ],
+      "importance_geom": 0.4134,
+      "importance_rank": 22,
+      "cutout_path": "cutouts/full/00011-stag.webp",
+      "thumb_path": "cutouts/thumb/00011-stag.webp",
+      "crop_px": {
+        "left": 1516,
+        "top": 1476,
+        "width": 168,
+        "height": 255
+      }
+    },
+    {
+      "index": 12,
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        674,
+        659,
+        786,
+        769
+      ],
+      "importance_geom": 0.3884,
+      "importance_rank": 29,
+      "cutout_path": "cutouts/full/00012-stag.webp",
+      "thumb_path": "cutouts/thumb/00012-stag.webp",
+      "crop_px": {
+        "left": 2253,
+        "top": 1510,
+        "width": 458,
+        "height": 310
+      }
+    },
+    {
+      "index": 13,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        15,
+        191,
+        45,
+        214
+      ],
+      "importance_geom": 0.1347,
+      "importance_rank": 175,
+      "cutout_path": "cutouts/full/00013-hound.webp",
+      "thumb_path": "cutouts/thumb/00013-hound.webp",
+      "crop_px": {
+        "left": 41,
+        "top": 439,
+        "width": 122,
+        "height": 67
+      }
+    },
+    {
+      "index": 14,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        58,
+        226,
+        96,
+        254
+      ],
+      "importance_geom": 0.1633,
+      "importance_rank": 169,
+      "cutout_path": "cutouts/full/00014-hound.webp",
+      "thumb_path": "cutouts/thumb/00014-hound.webp",
+      "crop_px": {
+        "left": 184,
+        "top": 520,
+        "width": 156,
+        "height": 80
+      }
+    },
+    {
+      "index": 15,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        67,
+        264,
+        91,
+        307
+      ],
+      "importance_geom": 0.1785,
+      "importance_rank": 166,
+      "cutout_path": "cutouts/full/00015-hound.webp",
+      "thumb_path": "cutouts/thumb/00015-hound.webp",
+      "crop_px": {
+        "left": 219,
+        "top": 605,
+        "width": 99,
+        "height": 121
+      }
+    },
+    {
+      "index": 16,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        87,
+        258,
+        115,
+        302
+      ],
+      "importance_geom": 0.1845,
+      "importance_rank": 165,
+      "cutout_path": "cutouts/full/00016-hound.webp",
+      "thumb_path": "cutouts/thumb/00016-hound.webp",
+      "crop_px": {
+        "left": 285,
+        "top": 591,
+        "width": 116,
+        "height": 124
+      }
+    },
+    {
+      "index": 17,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        146,
+        270,
+        180,
+        311
+      ],
+      "importance_geom": 0.2076,
+      "importance_rank": 157,
+      "cutout_path": "cutouts/full/00017-hound.webp",
+      "thumb_path": "cutouts/thumb/00017-hound.webp",
+      "crop_px": {
+        "left": 484,
+        "top": 619,
+        "width": 140,
+        "height": 117
+      }
+    },
+    {
+      "index": 18,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        173,
+        278,
+        217,
+        313
+      ],
+      "importance_geom": 0.2194,
+      "importance_rank": 155,
+      "cutout_path": "cutouts/full/00018-hound.webp",
+      "thumb_path": "cutouts/thumb/00018-hound.webp",
+      "crop_px": {
+        "left": 573,
+        "top": 640,
+        "width": 180,
+        "height": 98
+      }
+    },
+    {
+      "index": 19,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        150,
+        209,
+        188,
+        245
+      ],
+      "importance_geom": 0.1866,
+      "importance_rank": 164,
+      "cutout_path": "cutouts/full/00019-hound.webp",
+      "thumb_path": "cutouts/thumb/00019-hound.webp",
+      "crop_px": {
+        "left": 497,
+        "top": 478,
+        "width": 156,
+        "height": 103
+      }
+    },
+    {
+      "index": 20,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        197,
+        225,
+        239,
+        253
+      ],
+      "importance_geom": 0.2034,
+      "importance_rank": 159,
+      "cutout_path": "cutouts/full/00020-hound.webp",
+      "thumb_path": "cutouts/thumb/00020-hound.webp",
+      "crop_px": {
+        "left": 655,
+        "top": 517,
+        "width": 172,
+        "height": 80
+      }
+    },
+    {
+      "index": 21,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        225,
+        267,
+        269,
+        300
+      ],
+      "importance_geom": 0.2293,
+      "importance_rank": 151,
+      "cutout_path": "cutouts/full/00021-hound.webp",
+      "thumb_path": "cutouts/thumb/00021-hound.webp",
+      "crop_px": {
+        "left": 750,
+        "top": 614,
+        "width": 180,
+        "height": 94
+      }
+    },
+    {
+      "index": 22,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        267,
+        247,
+        298,
+        275
+      ],
+      "importance_geom": 0.2268,
+      "importance_rank": 152,
+      "cutout_path": "cutouts/full/00022-hound.webp",
+      "thumb_path": "cutouts/thumb/00022-hound.webp",
+      "crop_px": {
+        "left": 896,
+        "top": 569,
+        "width": 129,
+        "height": 80
+      }
+    },
+    {
+      "index": 23,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        149,
+        446,
+        166,
+        490
+      ],
+      "importance_geom": 0.2499,
+      "importance_rank": 144,
+      "cutout_path": "cutouts/full/00023-hound.webp",
+      "thumb_path": "cutouts/thumb/00023-hound.webp",
+      "crop_px": {
+        "left": 500,
+        "top": 1030,
+        "width": 71,
+        "height": 123
+      }
+    },
+    {
+      "index": 24,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        294,
+        451,
+        344,
+        517
+      ],
+      "importance_geom": 0.3187,
+      "importance_rank": 88,
+      "cutout_path": "cutouts/full/00024-hound.webp",
+      "thumb_path": "cutouts/thumb/00024-hound.webp",
+      "crop_px": {
+        "left": 982,
+        "top": 1035,
+        "width": 205,
+        "height": 187
+      }
+    },
+    {
+      "index": 25,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        318,
+        470,
+        378,
+        522
+      ],
+      "importance_geom": 0.3305,
+      "importance_rank": 77,
+      "cutout_path": "cutouts/full/00025-hound.webp",
+      "thumb_path": "cutouts/thumb/00025-hound.webp",
+      "crop_px": {
+        "left": 1060,
+        "top": 1084,
+        "width": 247,
+        "height": 146
+      }
+    },
+    {
+      "index": 26,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        355,
+        503,
+        413,
+        545
+      ],
+      "importance_geom": 0.3446,
+      "importance_rank": 66,
+      "cutout_path": "cutouts/full/00026-hound.webp",
+      "thumb_path": "cutouts/thumb/00026-hound.webp",
+      "crop_px": {
+        "left": 1187,
+        "top": 1162,
+        "width": 238,
+        "height": 119
+      }
+    },
+    {
+      "index": 27,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        430,
+        509,
+        483,
+        547
+      ],
+      "importance_geom": 0.3675,
+      "importance_rank": 39,
+      "cutout_path": "cutouts/full/00027-hound.webp",
+      "thumb_path": "cutouts/thumb/00027-hound.webp",
+      "crop_px": {
+        "left": 1444,
+        "top": 1177,
+        "width": 217,
+        "height": 108
+      }
+    },
+    {
+      "index": 28,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        439,
+        461,
+        491,
+        509
+      ],
+      "importance_geom": 0.3674,
+      "importance_rank": 40,
+      "cutout_path": "cutouts/full/00028-hound.webp",
+      "thumb_path": "cutouts/thumb/00028-hound.webp",
+      "crop_px": {
+        "left": 1474,
+        "top": 1064,
+        "width": 214,
+        "height": 134
+      }
+    },
+    {
+      "index": 29,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        520,
+        415,
+        550,
+        450
+      ],
+      "importance_geom": 0.3408,
+      "importance_rank": 71,
+      "cutout_path": "cutouts/full/00029-hound.webp",
+      "thumb_path": "cutouts/thumb/00029-hound.webp",
+      "crop_px": {
+        "left": 1758,
+        "top": 959,
+        "width": 123,
+        "height": 99
+      }
+    },
+    {
+      "index": 30,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        523,
+        371,
+        550,
+        391
+      ],
+      "importance_geom": 0.3132,
+      "importance_rank": 93,
+      "cutout_path": "cutouts/full/00030-hound.webp",
+      "thumb_path": "cutouts/thumb/00030-hound.webp",
+      "crop_px": {
+        "left": 1769,
+        "top": 860,
+        "width": 111,
+        "height": 57
+      }
+    },
+    {
+      "index": 31,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        571,
+        445,
+        643,
+        478
+      ],
+      "importance_geom": 0.3367,
+      "importance_rank": 74,
+      "cutout_path": "cutouts/full/00031-hound.webp",
+      "thumb_path": "cutouts/thumb/00031-hound.webp",
+      "crop_px": {
+        "left": 1916,
+        "top": 1029,
+        "width": 296,
+        "height": 94
+      }
+    },
+    {
+      "index": 32,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        643,
+        423,
+        698,
+        462
+      ],
+      "importance_geom": 0.3098,
+      "importance_rank": 100,
+      "cutout_path": "cutouts/full/00032-hound.webp",
+      "thumb_path": "cutouts/thumb/00032-hound.webp",
+      "crop_px": {
+        "left": 2167,
+        "top": 977,
+        "width": 226,
+        "height": 110
+      }
+    },
+    {
+      "index": 33,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        643,
+        374,
+        703,
+        418
+      ],
+      "importance_geom": 0.2966,
+      "importance_rank": 110,
+      "cutout_path": "cutouts/full/00033-hound.webp",
+      "thumb_path": "cutouts/thumb/00033-hound.webp",
+      "crop_px": {
+        "left": 2165,
+        "top": 862,
+        "width": 247,
+        "height": 123
+      }
+    },
+    {
+      "index": 34,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        681,
+        346,
+        714,
+        401
+      ],
+      "importance_geom": 0.279,
+      "importance_rank": 120,
+      "cutout_path": "cutouts/full/00034-hound.webp",
+      "thumb_path": "cutouts/thumb/00034-hound.webp",
+      "crop_px": {
+        "left": 2304,
+        "top": 793,
+        "width": 135,
+        "height": 156
+      }
+    },
+    {
+      "index": 35,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        648,
+        173,
+        681,
+        198
+      ],
+      "importance_geom": 0.2041,
+      "importance_rank": 158,
+      "cutout_path": "cutouts/full/00035-hound.webp",
+      "thumb_path": "cutouts/thumb/00035-hound.webp",
+      "crop_px": {
+        "left": 2192,
+        "top": 397,
+        "width": 135,
+        "height": 71
+      }
+    },
+    {
+      "index": 36,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        665,
+        231,
+        698,
+        269
+      ],
+      "importance_geom": 0.232,
+      "importance_rank": 150,
+      "cutout_path": "cutouts/full/00036-hound.webp",
+      "thumb_path": "cutouts/thumb/00036-hound.webp",
+      "crop_px": {
+        "left": 2250,
+        "top": 529,
+        "width": 135,
+        "height": 108
+      }
+    },
+    {
+      "index": 37,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        692,
+        220,
+        736,
+        242
+      ],
+      "importance_geom": 0.2156,
+      "importance_rank": 156,
+      "cutout_path": "cutouts/full/00037-hound.webp",
+      "thumb_path": "cutouts/thumb/00037-hound.webp",
+      "crop_px": {
+        "left": 2337,
+        "top": 508,
+        "width": 181,
+        "height": 62
+      }
+    },
+    {
+      "index": 38,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        797,
+        225,
+        851,
+        269
+      ],
+      "importance_geom": 0.1994,
+      "importance_rank": 160,
+      "cutout_path": "cutouts/full/00038-hound.webp",
+      "thumb_path": "cutouts/thumb/00038-hound.webp",
+      "crop_px": {
+        "left": 2690,
+        "top": 514,
+        "width": 223,
+        "height": 124
+      }
+    },
+    {
+      "index": 39,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        835,
+        198,
+        868,
+        231
+      ],
+      "importance_geom": 0.1751,
+      "importance_rank": 167,
+      "cutout_path": "cutouts/full/00039-hound.webp",
+      "thumb_path": "cutouts/thumb/00039-hound.webp",
+      "crop_px": {
+        "left": 2828,
+        "top": 453,
+        "width": 135,
+        "height": 94
+      }
+    },
+    {
+      "index": 40,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        879,
+        159,
+        923,
+        187
+      ],
+      "importance_geom": 0.1466,
+      "importance_rank": 172,
+      "cutout_path": "cutouts/full/00040-hound.webp",
+      "thumb_path": "cutouts/thumb/00040-hound.webp",
+      "crop_px": {
+        "left": 2973,
+        "top": 363,
+        "width": 181,
+        "height": 81
+      }
+    },
+    {
+      "index": 41,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        890,
+        126,
+        934,
+        165
+      ],
+      "importance_geom": 0.1352,
+      "importance_rank": 174,
+      "cutout_path": "cutouts/full/00041-hound.webp",
+      "thumb_path": "cutouts/thumb/00041-hound.webp",
+      "crop_px": {
+        "left": 3011,
+        "top": 284,
+        "width": 180,
+        "height": 110
+      }
+    },
+    {
+      "index": 42,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        901,
+        198,
+        940,
+        225
+      ],
+      "importance_geom": 0.1543,
+      "importance_rank": 171,
+      "cutout_path": "cutouts/full/00042-hound.webp",
+      "thumb_path": "cutouts/thumb/00042-hound.webp",
+      "crop_px": {
+        "left": 3050,
+        "top": 455,
+        "width": 159,
+        "height": 76
+      }
+    },
+    {
+      "index": 43,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        520,
+        414,
+        567,
+        449
+      ],
+      "importance_geom": 0.3413,
+      "importance_rank": 69,
+      "cutout_path": "cutouts/full/00043-hound.webp",
+      "thumb_path": "cutouts/thumb/00043-hound.webp",
+      "crop_px": {
+        "left": 1752,
+        "top": 957,
+        "width": 192,
+        "height": 99
+      }
+    },
+    {
+      "index": 44,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        450,
+        509,
+        492,
+        541
+      ],
+      "importance_geom": 0.3693,
+      "importance_rank": 38,
+      "cutout_path": "cutouts/full/00044-hound.webp",
+      "thumb_path": "cutouts/thumb/00044-hound.webp",
+      "crop_px": {
+        "left": 1516,
+        "top": 1178,
+        "width": 171,
+        "height": 92
+      }
+    },
+    {
+      "index": 45,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        603,
+        203,
+        634,
+        231
+      ],
+      "importance_geom": 0.226,
+      "importance_rank": 153,
+      "cutout_path": "cutouts/full/00045-hound.webp",
+      "thumb_path": "cutouts/thumb/00045-hound.webp",
+      "crop_px": {
+        "left": 2039,
+        "top": 466,
+        "width": 128,
+        "height": 80
+      }
+    },
+    {
+      "index": 46,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        733,
+        388,
+        780,
+        412
+      ],
+      "importance_geom": 0.2658,
+      "importance_rank": 130,
+      "cutout_path": "cutouts/full/00046-hound.webp",
+      "thumb_path": "cutouts/thumb/00046-hound.webp",
+      "crop_px": {
+        "left": 2476,
+        "top": 898,
+        "width": 192,
+        "height": 69
+      }
+    },
+    {
+      "index": 47,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        717,
+        437,
+        766,
+        470
+      ],
+      "importance_geom": 0.2862,
+      "importance_rank": 116,
+      "cutout_path": "cutouts/full/00047-hound.webp",
+      "thumb_path": "cutouts/thumb/00047-hound.webp",
+      "crop_px": {
+        "left": 2420,
+        "top": 1011,
+        "width": 202,
+        "height": 94
+      }
+    },
+    {
+      "index": 48,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        794,
+        407,
+        835,
+        440
+      ],
+      "importance_geom": 0.2532,
+      "importance_rank": 141,
+      "cutout_path": "cutouts/full/00048-hound.webp",
+      "thumb_path": "cutouts/thumb/00048-hound.webp",
+      "crop_px": {
+        "left": 2685,
+        "top": 941,
+        "width": 168,
+        "height": 94
+      }
+    },
+    {
+      "index": 49,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        838,
+        448,
+        885,
+        489
+      ],
+      "importance_geom": 0.2483,
+      "importance_rank": 146,
+      "cutout_path": "cutouts/full/00049-hound.webp",
+      "thumb_path": "cutouts/thumb/00049-hound.webp",
+      "crop_px": {
+        "left": 2833,
+        "top": 1034,
+        "width": 192,
+        "height": 117
+      }
+    },
+    {
+      "index": 50,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        758,
+        121,
+        791,
+        143
+      ],
+      "importance_geom": 0.1587,
+      "importance_rank": 170,
+      "cutout_path": "cutouts/full/00050-hound.webp",
+      "thumb_path": "cutouts/thumb/00050-hound.webp",
+      "crop_px": {
+        "left": 2566,
+        "top": 277,
+        "width": 135,
+        "height": 62
+      }
+    },
+    {
+      "index": 51,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        816,
+        121,
+        849,
+        143
+      ],
+      "importance_geom": 0.1456,
+      "importance_rank": 173,
+      "cutout_path": "cutouts/full/00051-hound.webp",
+      "thumb_path": "cutouts/thumb/00051-hound.webp",
+      "crop_px": {
+        "left": 2763,
+        "top": 277,
+        "width": 135,
+        "height": 62
+      }
+    },
+    {
+      "index": 52,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        918,
+        247,
+        959,
+        275
+      ],
+      "importance_geom": 0.1659,
+      "importance_rank": 168,
+      "cutout_path": "cutouts/full/00052-hound.webp",
+      "thumb_path": "cutouts/thumb/00052-hound.webp",
+      "crop_px": {
+        "left": 3107,
+        "top": 569,
+        "width": 168,
+        "height": 80
+      }
+    },
+    {
+      "index": 53,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        124,
+        461,
+        149,
+        498
+      ],
+      "importance_geom": 0.2454,
+      "importance_rank": 147,
+      "cutout_path": "cutouts/full/00053-hound.webp",
+      "thumb_path": "cutouts/thumb/00053-hound.webp",
+      "crop_px": {
+        "left": 412,
+        "top": 1066,
+        "width": 104,
+        "height": 105
+      }
+    },
+    {
+      "index": 54,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        147,
+        450,
+        165,
+        492
+      ],
+      "importance_geom": 0.2499,
+      "importance_rank": 143,
+      "cutout_path": "cutouts/full/00054-hound.webp",
+      "thumb_path": "cutouts/thumb/00054-hound.webp",
+      "crop_px": {
+        "left": 493,
+        "top": 1039,
+        "width": 74,
+        "height": 119
+      }
+    },
+    {
+      "index": 55,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        293,
+        469,
+        330,
+        517
+      ],
+      "importance_geom": 0.313,
+      "importance_rank": 95,
+      "cutout_path": "cutouts/full/00055-hound.webp",
+      "thumb_path": "cutouts/thumb/00055-hound.webp",
+      "crop_px": {
+        "left": 983,
+        "top": 1082,
+        "width": 152,
+        "height": 135
+      }
+    },
+    {
+      "index": 56,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        316,
+        477,
+        377,
+        524
+      ],
+      "importance_geom": 0.33,
+      "importance_rank": 78,
+      "cutout_path": "cutouts/full/00056-hound.webp",
+      "thumb_path": "cutouts/thumb/00056-hound.webp",
+      "crop_px": {
+        "left": 1053,
+        "top": 1101,
+        "width": 250,
+        "height": 132
+      }
+    },
+    {
+      "index": 57,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        353,
+        514,
+        409,
+        544
+      ],
+      "importance_geom": 0.3414,
+      "importance_rank": 68,
+      "cutout_path": "cutouts/full/00057-hound.webp",
+      "thumb_path": "cutouts/thumb/00057-hound.webp",
+      "crop_px": {
+        "left": 1181,
+        "top": 1191,
+        "width": 229,
+        "height": 85
+      }
+    },
+    {
+      "index": 58,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        438,
+        466,
+        493,
+        514
+      ],
+      "importance_geom": 0.3693,
+      "importance_rank": 37,
+      "cutout_path": "cutouts/full/00058-hound.webp",
+      "thumb_path": "cutouts/thumb/00058-hound.webp",
+      "crop_px": {
+        "left": 1470,
+        "top": 1075,
+        "width": 226,
+        "height": 135
+      }
+    },
+    {
+      "index": 59,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        439,
+        570,
+        483,
+        615
+      ],
+      "importance_geom": 0.3598,
+      "importance_rank": 48,
+      "cutout_path": "cutouts/full/00059-hound.webp",
+      "thumb_path": "cutouts/thumb/00059-hound.webp",
+      "crop_px": {
+        "left": 1477,
+        "top": 1318,
+        "width": 181,
+        "height": 128
+      }
+    },
+    {
+      "index": 60,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        492,
+        574,
+        545,
+        620
+      ],
+      "importance_geom": 0.3626,
+      "importance_rank": 45,
+      "cutout_path": "cutouts/full/00060-hound.webp",
+      "thumb_path": "cutouts/thumb/00060-hound.webp",
+      "crop_px": {
+        "left": 1654,
+        "top": 1327,
+        "width": 218,
+        "height": 130
+      }
+    },
+    {
+      "index": 61,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        204,
+        591,
+        235,
+        623
+      ],
+      "importance_geom": 0.2875,
+      "importance_rank": 114,
+      "cutout_path": "cutouts/full/00061-hound.webp",
+      "thumb_path": "cutouts/thumb/00061-hound.webp",
+      "crop_px": {
+        "left": 682,
+        "top": 1370,
+        "width": 128,
+        "height": 91
+      }
+    },
+    {
+      "index": 62,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        389,
+        679,
+        420,
+        706
+      ],
+      "importance_geom": 0.3297,
+      "importance_rank": 79,
+      "cutout_path": "cutouts/full/00062-hound.webp",
+      "thumb_path": "cutouts/thumb/00062-hound.webp",
+      "crop_px": {
+        "left": 1311,
+        "top": 1577,
+        "width": 128,
+        "height": 76
+      }
+    },
+    {
+      "index": 63,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        387,
+        713,
+        415,
+        747
+      ],
+      "importance_geom": 0.3233,
+      "importance_rank": 84,
+      "cutout_path": "cutouts/full/00063-hound.webp",
+      "thumb_path": "cutouts/thumb/00063-hound.webp",
+      "crop_px": {
+        "left": 1305,
+        "top": 1654,
+        "width": 116,
+        "height": 97
+      }
+    },
+    {
+      "index": 64,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        417,
+        800,
+        444,
+        837
+      ],
+      "importance_geom": 0.3101,
+      "importance_rank": 99,
+      "cutout_path": "cutouts/full/00064-hound.webp",
+      "thumb_path": "cutouts/thumb/00064-hound.webp",
+      "crop_px": {
+        "left": 1408,
+        "top": 1856,
+        "width": 111,
+        "height": 105
+      }
+    },
+    {
+      "index": 65,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        173,
+        916,
+        213,
+        977
+      ],
+      "importance_geom": 0.2583,
+      "importance_rank": 138,
+      "cutout_path": "cutouts/full/00065-hound.webp",
+      "thumb_path": "cutouts/thumb/00065-hound.webp",
+      "crop_px": {
+        "left": 574,
+        "top": 2122,
+        "width": 165,
+        "height": 171
+      }
+    },
+    {
+      "index": 66,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        456,
+        576,
+        492,
+        612
+      ],
+      "importance_geom": 0.3585,
+      "importance_rank": 50,
+      "cutout_path": "cutouts/full/00066-hound.webp",
+      "thumb_path": "cutouts/thumb/00066-hound.webp",
+      "crop_px": {
+        "left": 1538,
+        "top": 1334,
+        "width": 147,
+        "height": 103
+      }
+    },
+    {
+      "index": 67,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        450,
+        455,
+        487,
+        509
+      ],
+      "importance_geom": 0.366,
+      "importance_rank": 43,
+      "cutout_path": "cutouts/full/00067-hound.webp",
+      "thumb_path": "cutouts/thumb/00067-hound.webp",
+      "crop_px": {
+        "left": 1517,
+        "top": 1048,
+        "width": 152,
+        "height": 152
+      }
+    },
+    {
+      "index": 68,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        450,
+        510,
+        483,
+        546
+      ],
+      "importance_geom": 0.3672,
+      "importance_rank": 41,
+      "cutout_path": "cutouts/full/00068-hound.webp",
+      "thumb_path": "cutouts/thumb/00068-hound.webp",
+      "crop_px": {
+        "left": 1519,
+        "top": 1180,
+        "width": 135,
+        "height": 103
+      }
+    },
+    {
+      "index": 69,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        450,
+        570,
+        487,
+        613
+      ],
+      "importance_geom": 0.3596,
+      "importance_rank": 49,
+      "cutout_path": "cutouts/full/00069-hound.webp",
+      "thumb_path": "cutouts/thumb/00069-hound.webp",
+      "crop_px": {
+        "left": 1517,
+        "top": 1319,
+        "width": 152,
+        "height": 121
+      }
+    },
+    {
+      "index": 70,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        566,
+        450,
+        613,
+        489
+      ],
+      "importance_geom": 0.3429,
+      "importance_rank": 67,
+      "cutout_path": "cutouts/full/00070-hound.webp",
+      "thumb_path": "cutouts/thumb/00070-hound.webp",
+      "crop_px": {
+        "left": 1908,
+        "top": 1040,
+        "width": 193,
+        "height": 110
+      }
+    },
+    {
+      "index": 71,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        610,
+        450,
+        657,
+        483
+      ],
+      "importance_geom": 0.3262,
+      "importance_rank": 81,
+      "cutout_path": "cutouts/full/00071-hound.webp",
+      "thumb_path": "cutouts/thumb/00071-hound.webp",
+      "crop_px": {
+        "left": 2058,
+        "top": 1041,
+        "width": 192,
+        "height": 94
+      }
+    },
+    {
+      "index": 72,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        651,
+        450,
+        698,
+        487
+      ],
+      "importance_geom": 0.3132,
+      "importance_rank": 94,
+      "cutout_path": "cutouts/full/00072-hound.webp",
+      "thumb_path": "cutouts/thumb/00072-hound.webp",
+      "crop_px": {
+        "left": 2197,
+        "top": 1040,
+        "width": 193,
+        "height": 105
+      }
+    },
+    {
+      "index": 73,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        714,
+        450,
+        767,
+        473
+      ],
+      "importance_geom": 0.2867,
+      "importance_rank": 115,
+      "cutout_path": "cutouts/full/00073-hound.webp",
+      "thumb_path": "cutouts/thumb/00073-hound.webp",
+      "crop_px": {
+        "left": 2409,
+        "top": 1043,
+        "width": 217,
+        "height": 67
+      }
+    },
+    {
+      "index": 74,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        838,
+        453,
+        886,
+        494
+      ],
+      "importance_geom": 0.2491,
+      "importance_rank": 145,
+      "cutout_path": "cutouts/full/00074-hound.webp",
+      "thumb_path": "cutouts/thumb/00074-hound.webp",
+      "crop_px": {
+        "left": 2833,
+        "top": 1046,
+        "width": 196,
+        "height": 117
+      }
+    },
+    {
+      "index": 75,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        494,
+        579,
+        549,
+        621
+      ],
+      "importance_geom": 0.3614,
+      "importance_rank": 46,
+      "cutout_path": "cutouts/full/00075-hound.webp",
+      "thumb_path": "cutouts/thumb/00075-hound.webp",
+      "crop_px": {
+        "left": 1660,
+        "top": 1340,
+        "width": 226,
+        "height": 119
+      }
+    },
+    {
+      "index": 76,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        555,
+        569,
+        606,
+        607
+      ],
+      "importance_geom": 0.3523,
+      "importance_rank": 57,
+      "cutout_path": "cutouts/full/00076-hound.webp",
+      "thumb_path": "cutouts/thumb/00076-hound.webp",
+      "crop_px": {
+        "left": 1870,
+        "top": 1317,
+        "width": 208,
+        "height": 108
+      }
+    },
+    {
+      "index": 77,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        560,
+        598,
+        593,
+        626
+      ],
+      "importance_geom": 0.3461,
+      "importance_rank": 64,
+      "cutout_path": "cutouts/full/00077-hound.webp",
+      "thumb_path": "cutouts/thumb/00077-hound.webp",
+      "crop_px": {
+        "left": 1893,
+        "top": 1387,
+        "width": 135,
+        "height": 80
+      }
+    },
+    {
+      "index": 78,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        580,
+        577,
+        637,
+        629
+      ],
+      "importance_geom": 0.347,
+      "importance_rank": 61,
+      "cutout_path": "cutouts/full/00078-hound.webp",
+      "thumb_path": "cutouts/thumb/00078-hound.webp",
+      "crop_px": {
+        "left": 1951,
+        "top": 1333,
+        "width": 235,
+        "height": 146
+      }
+    },
+    {
+      "index": 79,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        647,
+        585,
+        683,
+        629
+      ],
+      "importance_geom": 0.3266,
+      "importance_rank": 80,
+      "cutout_path": "cutouts/full/00079-hound.webp",
+      "thumb_path": "cutouts/thumb/00079-hound.webp",
+      "crop_px": {
+        "left": 2187,
+        "top": 1354,
+        "width": 148,
+        "height": 123
+      }
+    },
+    {
+      "index": 80,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        656,
+        531,
+        699,
+        576
+      ],
+      "importance_geom": 0.3238,
+      "importance_rank": 83,
+      "cutout_path": "cutouts/full/00080-hound.webp",
+      "thumb_path": "cutouts/thumb/00080-hound.webp",
+      "crop_px": {
+        "left": 2215,
+        "top": 1227,
+        "width": 177,
+        "height": 128
+      }
+    },
+    {
+      "index": 81,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        693,
+        573,
+        740,
+        641
+      ],
+      "importance_geom": 0.3157,
+      "importance_rank": 91,
+      "cutout_path": "cutouts/full/00081-hound.webp",
+      "thumb_path": "cutouts/thumb/00081-hound.webp",
+      "crop_px": {
+        "left": 2340,
+        "top": 1320,
+        "width": 192,
+        "height": 191
+      }
+    },
+    {
+      "index": 82,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        755,
+        595,
+        795,
+        631
+      ],
+      "importance_geom": 0.2913,
+      "importance_rank": 112,
+      "cutout_path": "cutouts/full/00082-hound.webp",
+      "thumb_path": "cutouts/thumb/00082-hound.webp",
+      "crop_px": {
+        "left": 2553,
+        "top": 1378,
+        "width": 164,
+        "height": 103
+      }
+    },
+    {
+      "index": 83,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        652,
+        639,
+        710,
+        688
+      ],
+      "importance_geom": 0.3224,
+      "importance_rank": 87,
+      "cutout_path": "cutouts/full/00083-hound.webp",
+      "thumb_path": "cutouts/thumb/00083-hound.webp",
+      "crop_px": {
+        "left": 2196,
+        "top": 1478,
+        "width": 238,
+        "height": 139
+      }
+    },
+    {
+      "index": 84,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        723,
+        633,
+        783,
+        665
+      ],
+      "importance_geom": 0.2998,
+      "importance_rank": 108,
+      "cutout_path": "cutouts/full/00084-hound.webp",
+      "thumb_path": "cutouts/thumb/00084-hound.webp",
+      "crop_px": {
+        "left": 2437,
+        "top": 1468,
+        "width": 247,
+        "height": 91
+      }
+    },
+    {
+      "index": 85,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        783,
+        626,
+        834,
+        671
+      ],
+      "importance_geom": 0.2837,
+      "importance_rank": 119,
+      "cutout_path": "cutouts/full/00085-hound.webp",
+      "thumb_path": "cutouts/thumb/00085-hound.webp",
+      "crop_px": {
+        "left": 2645,
+        "top": 1448,
+        "width": 208,
+        "height": 128
+      }
+    },
+    {
+      "index": 86,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        626,
+        716,
+        666,
+        754
+      ],
+      "importance_geom": 0.3172,
+      "importance_rank": 90,
+      "cutout_path": "cutouts/full/00086-hound.webp",
+      "thumb_path": "cutouts/thumb/00086-hound.webp",
+      "crop_px": {
+        "left": 2114,
+        "top": 1660,
+        "width": 165,
+        "height": 108
+      }
+    },
+    {
+      "index": 87,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        637,
+        779,
+        685,
+        815
+      ],
+      "importance_geom": 0.3057,
+      "importance_rank": 102,
+      "cutout_path": "cutouts/full/00087-hound.webp",
+      "thumb_path": "cutouts/thumb/00087-hound.webp",
+      "crop_px": {
+        "left": 2149,
+        "top": 1807,
+        "width": 196,
+        "height": 103
+      }
+    },
+    {
+      "index": 88,
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        702,
+        717,
+        724,
+        735
+      ],
+      "importance_geom": 0.2982,
+      "importance_rank": 109,
+      "cutout_path": "cutouts/full/00088-hound.webp",
+      "thumb_path": "cutouts/thumb/00088-hound.webp",
+      "crop_px": {
+        "left": 2378,
+        "top": 1668,
+        "width": 92,
+        "height": 51
+      }
+    },
+    {
+      "index": 89,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        65,
+        186,
+        83,
+        258
+      ],
+      "importance_geom": 0.1955,
+      "importance_rank": 163,
+      "cutout_path": "cutouts/full/00089-hunter.webp",
+      "thumb_path": "cutouts/thumb/00089-hunter.webp",
+      "crop_px": {
+        "left": 215,
+        "top": 416,
+        "width": 74,
+        "height": 203
+      }
+    },
+    {
+      "index": 90,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        28,
+        228,
+        52,
+        280
+      ],
+      "importance_geom": 0.1955,
+      "importance_rank": 162,
+      "cutout_path": "cutouts/full/00090-hunter.webp",
+      "thumb_path": "cutouts/thumb/00090-hunter.webp",
+      "crop_px": {
+        "left": 87,
+        "top": 519,
+        "width": 98,
+        "height": 146
+      }
+    },
+    {
+      "index": 91,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        128,
+        236,
+        147,
+        311
+      ],
+      "importance_geom": 0.2325,
+      "importance_rank": 149,
+      "cutout_path": "cutouts/full/00091-hunter.webp",
+      "thumb_path": "cutouts/thumb/00091-hunter.webp",
+      "crop_px": {
+        "left": 428,
+        "top": 532,
+        "width": 79,
+        "height": 212
+      }
+    },
+    {
+      "index": 92,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        178,
+        245,
+        231,
+        291
+      ],
+      "importance_geom": 0.2535,
+      "importance_rank": 140,
+      "cutout_path": "cutouts/full/00092-hunter.webp",
+      "thumb_path": "cutouts/thumb/00092-hunter.webp",
+      "crop_px": {
+        "left": 587,
+        "top": 560,
+        "width": 217,
+        "height": 130
+      }
+    },
+    {
+      "index": 93,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        290,
+        201,
+        320,
+        256
+      ],
+      "importance_geom": 0.2595,
+      "importance_rank": 137,
+      "cutout_path": "cutouts/full/00093-hunter.webp",
+      "thumb_path": "cutouts/thumb/00093-hunter.webp",
+      "crop_px": {
+        "left": 975,
+        "top": 455,
+        "width": 123,
+        "height": 155
+      }
+    },
+    {
+      "index": 94,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        319,
+        228,
+        341,
+        291
+      ],
+      "importance_geom": 0.2772,
+      "importance_rank": 124,
+      "cutout_path": "cutouts/full/00094-hunter.webp",
+      "thumb_path": "cutouts/thumb/00094-hunter.webp",
+      "crop_px": {
+        "left": 1076,
+        "top": 516,
+        "width": 92,
+        "height": 178
+      }
+    },
+    {
+      "index": 95,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        454,
+        327,
+        481,
+        412
+      ],
+      "importance_geom": 0.3535,
+      "importance_rank": 54,
+      "cutout_path": "cutouts/full/00095-hunter.webp",
+      "thumb_path": "cutouts/thumb/00095-hunter.webp",
+      "crop_px": {
+        "left": 1534,
+        "top": 742,
+        "width": 111,
+        "height": 239
+      }
+    },
+    {
+      "index": 96,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        382,
+        406,
+        430,
+        492
+      ],
+      "importance_geom": 0.3801,
+      "importance_rank": 34,
+      "cutout_path": "cutouts/full/00096-hunter.webp",
+      "thumb_path": "cutouts/thumb/00096-hunter.webp",
+      "crop_px": {
+        "left": 1282,
+        "top": 926,
+        "width": 196,
+        "height": 242
+      }
+    },
+    {
+      "index": 97,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        125,
+        400,
+        157,
+        456
+      ],
+      "importance_geom": 0.2787,
+      "importance_rank": 121,
+      "cutout_path": "cutouts/full/00097-hunter.webp",
+      "thumb_path": "cutouts/thumb/00097-hunter.webp",
+      "crop_px": {
+        "left": 414,
+        "top": 919,
+        "width": 131,
+        "height": 158
+      }
+    },
+    {
+      "index": 98,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        8,
+        488,
+        41,
+        550
+      ],
+      "importance_geom": 0.2544,
+      "importance_rank": 139,
+      "cutout_path": "cutouts/full/00098-hunter.webp",
+      "thumb_path": "cutouts/thumb/00098-hunter.webp",
+      "crop_px": {
+        "left": 16,
+        "top": 1123,
+        "width": 135,
+        "height": 175
+      }
+    },
+    {
+      "index": 99,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        36,
+        487,
+        91,
+        550
+      ],
+      "importance_geom": 0.2722,
+      "importance_rank": 126,
+      "cutout_path": "cutouts/full/00099-hunter.webp",
+      "thumb_path": "cutouts/thumb/00099-hunter.webp",
+      "crop_px": {
+        "left": 103,
+        "top": 1120,
+        "width": 226,
+        "height": 178
+      }
+    },
+    {
+      "index": 100,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        845,
+        147,
+        878,
+        202
+      ],
+      "importance_geom": 0.1982,
+      "importance_rank": 161,
+      "cutout_path": "cutouts/full/00100-hunter.webp",
+      "thumb_path": "cutouts/thumb/00100-hunter.webp",
+      "crop_px": {
+        "left": 2862,
+        "top": 329,
+        "width": 135,
+        "height": 156
+      }
+    },
+    {
+      "index": 101,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        788,
+        151,
+        824,
+        225
+      ],
+      "importance_geom": 0.2204,
+      "importance_rank": 154,
+      "cutout_path": "cutouts/full/00101-hunter.webp",
+      "thumb_path": "cutouts/thumb/00101-hunter.webp",
+      "crop_px": {
+        "left": 2667,
+        "top": 335,
+        "width": 147,
+        "height": 207
+      }
+    },
+    {
+      "index": 102,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        693,
+        152,
+        721,
+        218
+      ],
+      "importance_geom": 0.2386,
+      "importance_rank": 148,
+      "cutout_path": "cutouts/full/00102-hunter.webp",
+      "thumb_path": "cutouts/thumb/00102-hunter.webp",
+      "crop_px": {
+        "left": 2346,
+        "top": 338,
+        "width": 116,
+        "height": 187
+      }
+    },
+    {
+      "index": 103,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        450,
+        322,
+        489,
+        412
+      ],
+      "importance_geom": 0.3558,
+      "importance_rank": 52,
+      "cutout_path": "cutouts/full/00103-hunter.webp",
+      "thumb_path": "cutouts/thumb/00103-hunter.webp",
+      "crop_px": {
+        "left": 1517,
+        "top": 729,
+        "width": 159,
+        "height": 253
+      }
+    },
+    {
+      "index": 104,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        542,
+        314,
+        564,
+        391
+      ],
+      "importance_geom": 0.3411,
+      "importance_rank": 70,
+      "cutout_path": "cutouts/full/00104-hunter.webp",
+      "thumb_path": "cutouts/thumb/00104-hunter.webp",
+      "crop_px": {
+        "left": 1834,
+        "top": 714,
+        "width": 92,
+        "height": 216
+      }
+    },
+    {
+      "index": 105,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        610,
+        371,
+        648,
+        456
+      ],
+      "importance_geom": 0.3554,
+      "importance_rank": 53,
+      "cutout_path": "cutouts/full/00105-hunter.webp",
+      "thumb_path": "cutouts/thumb/00105-hunter.webp",
+      "crop_px": {
+        "left": 2061,
+        "top": 845,
+        "width": 156,
+        "height": 239
+      }
+    },
+    {
+      "index": 106,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        808,
+        459,
+        846,
+        533
+      ],
+      "importance_geom": 0.306,
+      "importance_rank": 101,
+      "cutout_path": "cutouts/full/00106-hunter.webp",
+      "thumb_path": "cutouts/thumb/00106-hunter.webp",
+      "crop_px": {
+        "left": 2734,
+        "top": 1053,
+        "width": 156,
+        "height": 207
+      }
+    },
+    {
+      "index": 107,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        911,
+        406,
+        944,
+        488
+      ],
+      "importance_geom": 0.2616,
+      "importance_rank": 134,
+      "cutout_path": "cutouts/full/00107-hunter.webp",
+      "thumb_path": "cutouts/thumb/00107-hunter.webp",
+      "crop_px": {
+        "left": 3086,
+        "top": 927,
+        "width": 135,
+        "height": 231
+      }
+    },
+    {
+      "index": 108,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        406,
+        450,
+        442,
+        493
+      ],
+      "importance_geom": 0.3851,
+      "importance_rank": 33,
+      "cutout_path": "cutouts/full/00108-hunter.webp",
+      "thumb_path": "cutouts/thumb/00108-hunter.webp",
+      "crop_px": {
+        "left": 1368,
+        "top": 1039,
+        "width": 147,
+        "height": 121
+      }
+    },
+    {
+      "index": 109,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        8,
+        488,
+        44,
+        587
+      ],
+      "importance_geom": 0.2617,
+      "importance_rank": 133,
+      "cutout_path": "cutouts/full/00109-hunter.webp",
+      "thumb_path": "cutouts/thumb/00109-hunter.webp",
+      "crop_px": {
+        "left": 15,
+        "top": 1115,
+        "width": 147,
+        "height": 277
+      }
+    },
+    {
+      "index": 110,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        33,
+        486,
+        94,
+        574
+      ],
+      "importance_geom": 0.2781,
+      "importance_rank": 122,
+      "cutout_path": "cutouts/full/00110-hunter.webp",
+      "thumb_path": "cutouts/thumb/00110-hunter.webp",
+      "crop_px": {
+        "left": 91,
+        "top": 1112,
+        "width": 250,
+        "height": 248
+      }
+    },
+    {
+      "index": 111,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        89,
+        645,
+        151,
+        777
+      ],
+      "importance_geom": 0.3114,
+      "importance_rank": 97,
+      "cutout_path": "cutouts/full/00111-hunter.webp",
+      "thumb_path": "cutouts/thumb/00111-hunter.webp",
+      "crop_px": {
+        "left": 281,
+        "top": 1473,
+        "width": 254,
+        "height": 370
+      }
+    },
+    {
+      "index": 112,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        45,
+        680,
+        85,
+        774
+      ],
+      "importance_geom": 0.2852,
+      "importance_rank": 118,
+      "cutout_path": "cutouts/full/00112-hunter.webp",
+      "thumb_path": "cutouts/thumb/00112-hunter.webp",
+      "crop_px": {
+        "left": 139,
+        "top": 1563,
+        "width": 164,
+        "height": 264
+      }
+    },
+    {
+      "index": 113,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        223,
+        763,
+        283,
+        981
+      ],
+      "importance_geom": 0.3385,
+      "importance_rank": 72,
+      "cutout_path": "cutouts/full/00113-hunter.webp",
+      "thumb_path": "cutouts/thumb/00113-hunter.webp",
+      "crop_px": {
+        "left": 737,
+        "top": 1728,
+        "width": 247,
+        "height": 604
+      }
+    },
+    {
+      "index": 114,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        309,
+        769,
+        363,
+        981
+      ],
+      "importance_geom": 0.3499,
+      "importance_rank": 58,
+      "cutout_path": "cutouts/full/00114-hunter.webp",
+      "thumb_path": "cutouts/thumb/00114-hunter.webp",
+      "crop_px": {
+        "left": 1031,
+        "top": 1743,
+        "width": 223,
+        "height": 589
+      }
+    },
+    {
+      "index": 115,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        177,
+        817,
+        223,
+        920
+      ],
+      "importance_geom": 0.3142,
+      "importance_rank": 92,
+      "cutout_path": "cutouts/full/00115-hunter.webp",
+      "thumb_path": "cutouts/thumb/00115-hunter.webp",
+      "crop_px": {
+        "left": 585,
+        "top": 1881,
+        "width": 190,
+        "height": 289
+      }
+    },
+    {
+      "index": 116,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        527,
+        788,
+        550,
+        978
+      ],
+      "importance_geom": 0.3475,
+      "importance_rank": 60,
+      "cutout_path": "cutouts/full/00116-hunter.webp",
+      "thumb_path": "cutouts/thumb/00116-hunter.webp",
+      "crop_px": {
+        "left": 1783,
+        "top": 1793,
+        "width": 96,
+        "height": 532
+      }
+    },
+    {
+      "index": 117,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        809,
+        465,
+        839,
+        568
+      ],
+      "importance_geom": 0.3107,
+      "importance_rank": 98,
+      "cutout_path": "cutouts/full/00117-hunter.webp",
+      "thumb_path": "cutouts/thumb/00117-hunter.webp",
+      "crop_px": {
+        "left": 2740,
+        "top": 1060,
+        "width": 123,
+        "height": 289
+      }
+    },
+    {
+      "index": 118,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        913,
+        450,
+        948,
+        491
+      ],
+      "importance_geom": 0.2606,
+      "importance_rank": 135,
+      "cutout_path": "cutouts/full/00118-hunter.webp",
+      "thumb_path": "cutouts/thumb/00118-hunter.webp",
+      "crop_px": {
+        "left": 3092,
+        "top": 1039,
+        "width": 144,
+        "height": 117
+      }
+    },
+    {
+      "index": 119,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        893,
+        585,
+        942,
+        695
+      ],
+      "importance_geom": 0.2936,
+      "importance_rank": 111,
+      "cutout_path": "cutouts/full/00119-hunter.webp",
+      "thumb_path": "cutouts/thumb/00119-hunter.webp",
+      "crop_px": {
+        "left": 3019,
+        "top": 1338,
+        "width": 201,
+        "height": 309
+      }
+    },
+    {
+      "index": 120,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        530,
+        788,
+        588,
+        992
+      ],
+      "importance_geom": 0.3579,
+      "importance_rank": 51,
+      "cutout_path": "cutouts/full/00120-hunter.webp",
+      "thumb_path": "cutouts/thumb/00120-hunter.webp",
+      "crop_px": {
+        "left": 1782,
+        "top": 1789,
+        "width": 238,
+        "height": 543
+      }
+    },
+    {
+      "index": 121,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        610,
+        805,
+        662,
+        986
+      ],
+      "importance_geom": 0.3468,
+      "importance_rank": 62,
+      "cutout_path": "cutouts/full/00121-hunter.webp",
+      "thumb_path": "cutouts/thumb/00121-hunter.webp",
+      "crop_px": {
+        "left": 2056,
+        "top": 1835,
+        "width": 213,
+        "height": 497
+      }
+    },
+    {
+      "index": 122,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        790,
+        755,
+        850,
+        931
+      ],
+      "importance_geom": 0.3227,
+      "importance_rank": 86,
+      "cutout_path": "cutouts/full/00122-hunter.webp",
+      "thumb_path": "cutouts/thumb/00122-hunter.webp",
+      "crop_px": {
+        "left": 2666,
+        "top": 1719,
+        "width": 244,
+        "height": 494
+      }
+    },
+    {
+      "index": 123,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        941,
+        575,
+        992,
+        689
+      ],
+      "importance_geom": 0.2775,
+      "importance_rank": 123,
+      "cutout_path": "cutouts/full/00123-hunter.webp",
+      "thumb_path": "cutouts/thumb/00123-hunter.webp",
+      "crop_px": {
+        "left": 3182,
+        "top": 1313,
+        "width": 208,
+        "height": 321
+      }
+    },
+    {
+      "index": 124,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        845,
+        761,
+        882,
+        928
+      ],
+      "importance_geom": 0.3045,
+      "importance_rank": 103,
+      "cutout_path": "cutouts/full/00124-hunter.webp",
+      "thumb_path": "cutouts/thumb/00124-hunter.webp",
+      "crop_px": {
+        "left": 2860,
+        "top": 1735,
+        "width": 152,
+        "height": 469
+      }
+    },
+    {
+      "index": 125,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        748,
+        810,
+        806,
+        923
+      ],
+      "importance_geom": 0.3231,
+      "importance_rank": 85,
+      "cutout_path": "cutouts/full/00125-hunter.webp",
+      "thumb_path": "cutouts/thumb/00125-hunter.webp",
+      "crop_px": {
+        "left": 2523,
+        "top": 1861,
+        "width": 238,
+        "height": 319
+      }
+    },
+    {
+      "index": 126,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        891,
+        827,
+        948,
+        928
+      ],
+      "importance_geom": 0.2861,
+      "importance_rank": 117,
+      "cutout_path": "cutouts/full/00126-hunter.webp",
+      "thumb_path": "cutouts/thumb/00126-hunter.webp",
+      "crop_px": {
+        "left": 3009,
+        "top": 1904,
+        "width": 235,
+        "height": 285
+      }
+    },
+    {
+      "index": 127,
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        931,
+        585,
+        948,
+        615
+      ],
+      "importance_geom": 0.2687,
+      "importance_rank": 127,
+      "cutout_path": "cutouts/full/00127-hunter.webp",
+      "thumb_path": "cutouts/thumb/00127-hunter.webp",
+      "crop_px": {
+        "left": 3159,
+        "top": 1357,
+        "width": 71,
+        "height": 85
+      }
+    },
+    {
+      "index": 128,
+      "label": "noble",
+      "type": "person",
+      "box_2d": [
+        25,
+        228,
+        54,
+        311
+      ],
+      "importance_geom": 0.2509,
+      "importance_rank": 142,
+      "cutout_path": "cutouts/full/00128-noble.webp",
+      "thumb_path": "cutouts/thumb/00128-noble.webp",
+      "crop_px": {
+        "left": 75,
+        "top": 511,
+        "width": 119,
+        "height": 235
+      }
+    },
+    {
+      "index": 129,
+      "label": "noble",
+      "type": "person",
+      "box_2d": [
+        316,
+        225,
+        345,
+        311
+      ],
+      "importance_geom": 0.3314,
+      "importance_rank": 76,
+      "cutout_path": "cutouts/full/00129-noble.webp",
+      "thumb_path": "cutouts/thumb/00129-noble.webp",
+      "crop_px": {
+        "left": 1064,
+        "top": 504,
+        "width": 119,
+        "height": 242
+      }
+    },
+    {
+      "index": 130,
+      "label": "noble",
+      "type": "person",
+      "box_2d": [
+        0,
+        484,
+        37,
+        550
+      ],
+      "importance_geom": 0.2999,
+      "importance_rank": 107,
+      "cutout_path": "cutouts/full/00130-noble.webp",
+      "thumb_path": "cutouts/thumb/00130-noble.webp",
+      "crop_px": {
+        "left": 0,
+        "top": 1112,
+        "width": 139,
+        "height": 187
+      }
+    },
+    {
+      "index": 131,
+      "label": "noble",
+      "type": "person",
+      "box_2d": [
+        788,
+        148,
+        832,
+        212
+      ],
+      "importance_geom": 0.2632,
+      "importance_rank": 132,
+      "cutout_path": "cutouts/full/00131-noble.webp",
+      "thumb_path": "cutouts/thumb/00131-noble.webp",
+      "crop_px": {
+        "left": 2664,
+        "top": 330,
+        "width": 180,
+        "height": 180
+      }
+    },
+    {
+      "index": 132,
+      "label": "noble",
+      "type": "person",
+      "box_2d": [
+        610,
+        371,
+        637,
+        423
+      ],
+      "importance_geom": 0.3918,
+      "importance_rank": 28,
+      "cutout_path": "cutouts/full/00132-noble.webp",
+      "thumb_path": "cutouts/thumb/00132-noble.webp",
+      "crop_px": {
+        "left": 2065,
+        "top": 853,
+        "width": 110,
+        "height": 146
+      }
+    },
+    {
+      "index": 133,
+      "label": "noble",
+      "type": "person",
+      "box_2d": [
+        805,
+        459,
+        838,
+        528
+      ],
+      "importance_geom": 0.3525,
+      "importance_rank": 56,
+      "cutout_path": "cutouts/full/00133-noble.webp",
+      "thumb_path": "cutouts/thumb/00133-noble.webp",
+      "crop_px": {
+        "left": 2726,
+        "top": 1054,
+        "width": 135,
+        "height": 194
+      }
+    },
+    {
+      "index": 134,
+      "label": "noble",
+      "type": "person",
+      "box_2d": [
+        802,
+        464,
+        838,
+        565
+      ],
+      "importance_geom": 0.3598,
+      "importance_rank": 47,
+      "cutout_path": "cutouts/full/00134-noble.webp",
+      "thumb_path": "cutouts/thumb/00134-noble.webp",
+      "crop_px": {
+        "left": 2714,
+        "top": 1058,
+        "width": 148,
+        "height": 284
+      }
+    },
+    {
+      "index": 135,
+      "label": "noble",
+      "type": "person",
+      "box_2d": [
+        937,
+        585,
+        953,
+        612
+      ],
+      "importance_geom": 0.3127,
+      "importance_rank": 96,
+      "cutout_path": "cutouts/full/00135-noble.webp",
+      "thumb_path": "cutouts/thumb/00135-noble.webp",
+      "crop_px": {
+        "left": 3179,
+        "top": 1358,
+        "width": 68,
+        "height": 76
+      }
+    },
+    {
+      "index": 136,
+      "label": "noble",
+      "type": "person",
+      "box_2d": [
+        967,
+        571,
+        986,
+        593
+      ],
+      "importance_geom": 0.3003,
+      "importance_rank": 106,
+      "cutout_path": "cutouts/full/00136-noble.webp",
+      "thumb_path": "cutouts/thumb/00136-noble.webp",
+      "crop_px": {
+        "left": 3280,
+        "top": 1326,
+        "width": 80,
+        "height": 62
+      }
+    },
+    {
+      "index": 137,
+      "label": "noble",
+      "type": "person",
+      "box_2d": [
+        978,
+        579,
+        997,
+        626
+      ],
+      "importance_geom": 0.3011,
+      "importance_rank": 105,
+      "cutout_path": "cutouts/full/00137-noble.webp",
+      "thumb_path": "cutouts/thumb/00137-noble.webp",
+      "crop_px": {
+        "left": 3318,
+        "top": 1339,
+        "width": 79,
+        "height": 132
+      }
+    },
+    {
+      "index": 138,
+      "label": "noble",
+      "type": "person",
+      "box_2d": [
+        840,
+        761,
+        879,
+        928
+      ],
+      "importance_geom": 0.3527,
+      "importance_rank": 55,
+      "cutout_path": "cutouts/full/00138-noble.webp",
+      "thumb_path": "cutouts/thumb/00138-noble.webp",
+      "crop_px": {
+        "left": 2843,
+        "top": 1735,
+        "width": 159,
+        "height": 469
+      }
+    },
+    {
+      "index": 139,
+      "label": "boar",
+      "type": "animal",
+      "box_2d": [
+        618,
+        205,
+        666,
+        250
+      ],
+      "importance_geom": 0.3737,
+      "importance_rank": 36,
+      "cutout_path": "cutouts/full/00139-boar.webp",
+      "thumb_path": "cutouts/thumb/00139-boar.webp",
+      "crop_px": {
+        "left": 2085,
+        "top": 467,
+        "width": 196,
+        "height": 127
+      }
+    },
+    {
+      "index": 140,
+      "label": "bear",
+      "type": "animal",
+      "box_2d": [
+        187,
+        197,
+        232,
+        239
+      ],
+      "importance_geom": 0.3369,
+      "importance_rank": 73,
+      "cutout_path": "cutouts/full/00140-bear.webp",
+      "thumb_path": "cutouts/thumb/00140-bear.webp",
+      "crop_px": {
+        "left": 620,
+        "top": 449,
+        "width": 184,
+        "height": 119
+      }
+    },
+    {
+      "index": 141,
+      "label": "horse",
+      "type": "animal",
+      "box_2d": [
+        8,
+        264,
+        62,
+        331
+      ],
+      "importance_geom": 0.264,
+      "importance_rank": 131,
+      "cutout_path": "cutouts/full/00141-horse.webp",
+      "thumb_path": "cutouts/thumb/00141-horse.webp",
+      "crop_px": {
+        "left": 9,
+        "top": 599,
+        "width": 220,
+        "height": 189
+      }
+    },
+    {
+      "index": 142,
+      "label": "horse",
+      "type": "animal",
+      "box_2d": [
+        296,
+        272,
+        367,
+        322
+      ],
+      "importance_geom": 0.3498,
+      "importance_rank": 59,
+      "cutout_path": "cutouts/full/00142-horse.webp",
+      "thumb_path": "cutouts/thumb/00142-horse.webp",
+      "crop_px": {
+        "left": 982,
+        "top": 622,
+        "width": 290,
+        "height": 141
+      }
+    },
+    {
+      "index": 143,
+      "label": "horse",
+      "type": "animal",
+      "box_2d": [
+        431,
+        371,
+        505,
+        437
+      ],
+      "importance_geom": 0.4265,
+      "importance_rank": 16,
+      "cutout_path": "cutouts/full/00143-horse.webp",
+      "thumb_path": "cutouts/thumb/00143-horse.webp",
+      "crop_px": {
+        "left": 1440,
+        "top": 849,
+        "width": 302,
+        "height": 187
+      }
+    },
+    {
+      "index": 144,
+      "label": "horse",
+      "type": "animal",
+      "box_2d": [
+        774,
+        176,
+        821,
+        223
+      ],
+      "importance_geom": 0.2752,
+      "importance_rank": 125,
+      "cutout_path": "cutouts/full/00144-horse.webp",
+      "thumb_path": "cutouts/thumb/00144-horse.webp",
+      "crop_px": {
+        "left": 2615,
+        "top": 399,
+        "width": 193,
+        "height": 133
+      }
+    },
+    {
+      "index": 145,
+      "label": "horse",
+      "type": "animal",
+      "box_2d": [
+        450,
+        357,
+        504,
+        429
+      ],
+      "importance_geom": 0.4197,
+      "importance_rank": 20,
+      "cutout_path": "cutouts/full/00145-horse.webp",
+      "thumb_path": "cutouts/thumb/00145-horse.webp",
+      "crop_px": {
+        "left": 1512,
+        "top": 815,
+        "width": 220,
+        "height": 203
+      }
+    },
+    {
+      "index": 146,
+      "label": "horse",
+      "type": "animal",
+      "box_2d": [
+        578,
+        401,
+        634,
+        478
+      ],
+      "importance_geom": 0.4232,
+      "importance_rank": 18,
+      "cutout_path": "cutouts/full/00146-horse.webp",
+      "thumb_path": "cutouts/thumb/00146-horse.webp",
+      "crop_px": {
+        "left": 1946,
+        "top": 917,
+        "width": 229,
+        "height": 216
+      }
+    },
+    {
+      "index": 147,
+      "label": "horse",
+      "type": "animal",
+      "box_2d": [
+        781,
+        502,
+        880,
+        550
+      ],
+      "importance_geom": 0.3631,
+      "importance_rank": 44,
+      "cutout_path": "cutouts/full/00147-horse.webp",
+      "thumb_path": "cutouts/thumb/00147-horse.webp",
+      "crop_px": {
+        "left": 2621,
+        "top": 1159,
+        "width": 405,
+        "height": 135
+      }
+    },
+    {
+      "index": 148,
+      "label": "castle",
+      "type": "building",
+      "box_2d": [
+        428,
+        53,
+        582,
+        162
+      ],
+      "importance_geom": 0.4182,
+      "importance_rank": 21,
+      "cutout_path": "cutouts/full/00148-castle.webp",
+      "thumb_path": "cutouts/thumb/00148-castle.webp",
+      "crop_px": {
+        "left": 1403,
+        "top": 97,
+        "width": 628,
+        "height": 307
+      }
+    },
+    {
+      "index": 149,
+      "label": "town",
+      "type": "building",
+      "box_2d": [
+        358,
+        52,
+        598,
+        175
+      ],
+      "importance_geom": 0.4336,
+      "importance_rank": 13,
+      "cutout_path": "cutouts/full/00149-town.webp",
+      "thumb_path": "cutouts/thumb/00149-town.webp",
+      "crop_px": {
+        "left": 1135,
+        "top": 92,
+        "width": 981,
+        "height": 346
+      }
+    },
+    {
+      "index": 150,
+      "label": "boat",
+      "type": "vehicle",
+      "box_2d": [
+        712,
+        758,
+        964,
+        955
+      ],
+      "importance_geom": 0.5314,
+      "importance_rank": 4,
+      "cutout_path": "cutouts/full/00150-boat.webp",
+      "thumb_path": "cutouts/thumb/00150-boat.webp",
+      "crop_px": {
+        "left": 2334,
+        "top": 1721,
+        "width": 1030,
+        "height": 553
+      }
+    },
+    {
+      "index": 151,
+      "label": "river",
+      "type": "landscape",
+      "box_2d": [
+        125,
+        445,
+        580,
+        880
+      ],
+      "importance_geom": 0.6415,
+      "importance_rank": 1,
+      "cutout_path": "cutouts/full/00151-river.webp",
+      "thumb_path": "cutouts/thumb/00151-river.webp",
+      "crop_px": {
+        "left": 270,
+        "top": 935,
+        "width": 1857,
+        "height": 1220
+      }
+    },
+    {
+      "index": 152,
+      "label": "river",
+      "type": "landscape",
+      "box_2d": [
+        580,
+        680,
+        1000,
+        960
+      ],
+      "importance_geom": 0.5595,
+      "importance_rank": 3,
+      "cutout_path": "cutouts/full/00152-river.webp",
+      "thumb_path": "cutouts/thumb/00152-river.webp",
+      "crop_px": {
+        "left": 1828,
+        "top": 1520,
+        "width": 1572,
+        "height": 784
+      }
+    },
+    {
+      "index": 153,
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        0,
+        0,
+        390,
+        490
+      ],
+      "importance_geom": 0.4734,
+      "importance_rank": 6,
+      "cutout_path": "cutouts/full/00153-tree.webp",
+      "thumb_path": "cutouts/thumb/00153-tree.webp",
+      "crop_px": {
+        "left": 0,
+        "top": 0,
+        "width": 1459,
+        "height": 1257
+      }
+    },
+    {
+      "index": 154,
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        610,
+        0,
+        1000,
+        430
+      ],
+      "importance_geom": 0.4536,
+      "importance_rank": 9,
+      "cutout_path": "cutouts/full/00154-tree.webp",
+      "thumb_path": "cutouts/thumb/00154-tree.webp",
+      "crop_px": {
+        "left": 1941,
+        "top": 0,
+        "width": 1459,
+        "height": 1103
+      }
+    },
+    {
+      "index": 155,
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        0,
+        530,
+        490,
+        1000
+      ],
+      "importance_geom": 0.5747,
+      "importance_rank": 2,
+      "cutout_path": "cutouts/full/00155-tree.webp",
+      "thumb_path": "cutouts/thumb/00155-tree.webp",
+      "crop_px": {
+        "left": 0,
+        "top": 1125,
+        "width": 1833,
+        "height": 1207
+      }
+    },
+    {
+      "index": 156,
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        800,
+        480,
+        1000,
+        800
+      ],
+      "importance_geom": 0.4681,
+      "importance_rank": 7,
+      "cutout_path": "cutouts/full/00156-tree.webp",
+      "thumb_path": "cutouts/thumb/00156-tree.webp",
+      "crop_px": {
+        "left": 2652,
+        "top": 1044,
+        "width": 748,
+        "height": 897
+      }
+    },
+    {
+      "index": 157,
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        370,
+        150,
+        630,
+        390
+      ],
+      "importance_geom": 0.4802,
+      "importance_rank": 5,
+      "cutout_path": "cutouts/full/00157-tree.webp",
+      "thumb_path": "cutouts/thumb/00157-tree.webp",
+      "crop_px": {
+        "left": 1170,
+        "top": 293,
+        "width": 1060,
+        "height": 673
+      }
+    },
+    {
+      "index": 158,
+      "label": "crossbow",
+      "type": "object",
+      "box_2d": [
+        29,
+        230,
+        64,
+        245
+      ],
+      "importance_geom": 0.2663,
+      "importance_rank": 129,
+      "cutout_path": "cutouts/full/00158-crossbow.webp",
+      "thumb_path": "cutouts/thumb/00158-crossbow.webp",
+      "crop_px": {
+        "left": 86,
+        "top": 532,
+        "width": 144,
+        "height": 44
+      }
+    },
+    {
+      "index": 159,
+      "label": "crossbow",
+      "type": "object",
+      "box_2d": [
+        45,
+        505,
+        101,
+        527
+      ],
+      "importance_geom": 0.346,
+      "importance_rank": 65,
+      "cutout_path": "cutouts/full/00159-crossbow.webp",
+      "thumb_path": "cutouts/thumb/00159-crossbow.webp",
+      "crop_px": {
+        "left": 134,
+        "top": 1172,
+        "width": 229,
+        "height": 62
+      }
+    },
+    {
+      "index": 160,
+      "label": "crossbow",
+      "type": "object",
+      "box_2d": [
+        25,
+        502,
+        102,
+        532
+      ],
+      "importance_geom": 0.3466,
+      "importance_rank": 63,
+      "cutout_path": "cutouts/full/00160-crossbow.webp",
+      "thumb_path": "cutouts/thumb/00160-crossbow.webp",
+      "crop_px": {
+        "left": 59,
+        "top": 1163,
+        "width": 314,
+        "height": 85
+      }
+    },
+    {
+      "index": 161,
+      "label": "crossbow",
+      "type": "object",
+      "box_2d": [
+        124,
+        655,
+        163,
+        735
+      ],
+      "importance_geom": 0.3864,
+      "importance_rank": 31,
+      "cutout_path": "cutouts/full/00161-crossbow.webp",
+      "thumb_path": "cutouts/thumb/00161-crossbow.webp",
+      "crop_px": {
+        "left": 408,
+        "top": 1508,
+        "width": 160,
+        "height": 226
+      }
+    },
+    {
+      "index": 162,
+      "label": "crossbow",
+      "type": "object",
+      "box_2d": [
+        342,
+        750,
+        374,
+        848
+      ],
+      "importance_geom": 0.4287,
+      "importance_rank": 15,
+      "cutout_path": "cutouts/full/00162-crossbow.webp",
+      "thumb_path": "cutouts/thumb/00162-crossbow.webp",
+      "crop_px": {
+        "left": 1151,
+        "top": 1726,
+        "width": 132,
+        "height": 275
+      }
+    },
+    {
+      "index": 163,
+      "label": "crossbow",
+      "type": "object",
+      "box_2d": [
+        215,
+        807,
+        259,
+        898
+      ],
+      "importance_geom": 0.4005,
+      "importance_rank": 26,
+      "cutout_path": "cutouts/full/00163-crossbow.webp",
+      "thumb_path": "cutouts/thumb/00163-crossbow.webp",
+      "crop_px": {
+        "left": 716,
+        "top": 1860,
+        "width": 180,
+        "height": 256
+      }
+    },
+    {
+      "index": 164,
+      "label": "crossbow",
+      "type": "object",
+      "box_2d": [
+        525,
+        774,
+        550,
+        846
+      ],
+      "importance_geom": 0.4329,
+      "importance_rank": 14,
+      "cutout_path": "cutouts/full/00164-crossbow.webp",
+      "thumb_path": "cutouts/thumb/00164-crossbow.webp",
+      "crop_px": {
+        "left": 1776,
+        "top": 1787,
+        "width": 104,
+        "height": 203
+      }
+    },
+    {
+      "index": 165,
+      "label": "crossbow",
+      "type": "object",
+      "box_2d": [
+        885,
+        601,
+        937,
+        653
+      ],
+      "importance_geom": 0.3667,
+      "importance_rank": 42,
+      "cutout_path": "cutouts/full/00165-crossbow.webp",
+      "thumb_path": "cutouts/thumb/00165-crossbow.webp",
+      "crop_px": {
+        "left": 2991,
+        "top": 1389,
+        "width": 213,
+        "height": 146
+      }
+    },
+    {
+      "index": 166,
+      "label": "spear",
+      "type": "object",
+      "box_2d": [
+        84,
+        124,
+        91,
+        256
+      ],
+      "importance_geom": 0.2602,
+      "importance_rank": 136,
+      "cutout_path": "cutouts/full/00166-spear.webp",
+      "thumb_path": "cutouts/thumb/00166-spear.webp",
+      "crop_px": {
+        "left": 282,
+        "top": 258,
+        "width": 31,
+        "height": 370
+      }
+    },
+    {
+      "index": 167,
+      "label": "spear",
+      "type": "object",
+      "box_2d": [
+        125,
+        186,
+        130,
+        309
+      ],
+      "importance_geom": 0.2905,
+      "importance_rank": 113,
+      "cutout_path": "cutouts/full/00167-spear.webp",
+      "thumb_path": "cutouts/thumb/00167-spear.webp",
+      "crop_px": {
+        "left": 423,
+        "top": 404,
+        "width": 21,
+        "height": 346
+      }
+    },
+    {
+      "index": 168,
+      "label": "spear",
+      "type": "object",
+      "box_2d": [
+        230,
+        232,
+        294,
+        245
+      ],
+      "importance_geom": 0.3244,
+      "importance_rank": 82,
+      "cutout_path": "cutouts/full/00168-spear.webp",
+      "thumb_path": "cutouts/thumb/00168-spear.webp",
+      "crop_px": {
+        "left": 760,
+        "top": 538,
+        "width": 262,
+        "height": 37
+      }
+    },
+    {
+      "index": 169,
+      "label": "spear",
+      "type": "object",
+      "box_2d": [
+        123,
+        344,
+        130,
+        456
+      ],
+      "importance_geom": 0.3367,
+      "importance_rank": 75,
+      "cutout_path": "cutouts/full/00169-spear.webp",
+      "thumb_path": "cutouts/thumb/00169-spear.webp",
+      "crop_px": {
+        "left": 416,
+        "top": 776,
+        "width": 28,
+        "height": 314
+      }
+    },
+    {
+      "index": 170,
+      "label": "spear",
+      "type": "object",
+      "box_2d": [
+        391,
+        426,
+        476,
+        473
+      ],
+      "importance_geom": 0.4619,
+      "importance_rank": 8,
+      "cutout_path": "cutouts/full/00170-spear.webp",
+      "thumb_path": "cutouts/thumb/00170-spear.webp",
+      "crop_px": {
+        "left": 1300,
+        "top": 982,
+        "width": 348,
+        "height": 133
+      }
+    },
+    {
+      "index": 171,
+      "label": "spear",
+      "type": "object",
+      "box_2d": [
+        656,
+        139,
+        748,
+        173
+      ],
+      "importance_geom": 0.3042,
+      "importance_rank": 104,
+      "cutout_path": "cutouts/full/00171-spear.webp",
+      "thumb_path": "cutouts/thumb/00171-spear.webp",
+      "crop_px": {
+        "left": 2199,
+        "top": 316,
+        "width": 376,
+        "height": 96
+      }
+    },
+    {
+      "index": 172,
+      "label": "spear",
+      "type": "object",
+      "box_2d": [
+        843,
+        154,
+        894,
+        184
+      ],
+      "importance_geom": 0.267,
+      "importance_rank": 128,
+      "cutout_path": "cutouts/full/00172-spear.webp",
+      "thumb_path": "cutouts/thumb/00172-spear.webp",
+      "crop_px": {
+        "left": 2849,
+        "top": 352,
+        "width": 208,
+        "height": 85
+      }
+    },
+    {
+      "index": 173,
+      "label": "spear",
+      "type": "object",
+      "box_2d": [
+        552,
+        305,
+        556,
+        377
+      ],
+      "importance_geom": 0.4019,
+      "importance_rank": 24,
+      "cutout_path": "cutouts/full/00173-spear.webp",
+      "thumb_path": "cutouts/thumb/00173-spear.webp",
+      "crop_px": {
+        "left": 1874,
+        "top": 694,
+        "width": 19,
+        "height": 203
+      }
+    },
+    {
+      "index": 174,
+      "label": "spear",
+      "type": "object",
+      "box_2d": [
+        787,
+        681,
+        810,
+        931
+      ],
+      "importance_geom": 0.3975,
+      "importance_rank": 27,
+      "cutout_path": "cutouts/full/00174-spear.webp",
+      "thumb_path": "cutouts/thumb/00174-spear.webp",
+      "crop_px": {
+        "left": 2667,
+        "top": 1530,
+        "width": 95,
+        "height": 700
+      }
+    }
+  ]
+}

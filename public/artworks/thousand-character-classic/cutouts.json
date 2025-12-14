@@ -1,0 +1,493 @@
+{
+  "version": 1,
+  "image_path": "public/artworks/thousand-character-classic/image.jpg",
+  "image_width": 4000,
+  "image_height": 2304,
+  "generated_at": "2025-12-14T14:15:49.181Z",
+  "count": 23,
+  "entries": [
+    {
+      "index": 0,
+      "label": "bamboo stalk",
+      "type": "plant",
+      "box_2d": [
+        318,
+        875,
+        430,
+        976
+      ],
+      "importance_geom": 0.3722,
+      "importance_rank": 7,
+      "cutout_path": "cutouts/full/00000-bamboo-stalk.webp",
+      "thumb_path": "cutouts/thumb/00000-bamboo-stalk.webp",
+      "crop_px": {
+        "left": 1227,
+        "top": 1993,
+        "width": 538,
+        "height": 279
+      }
+    },
+    {
+      "index": 1,
+      "label": "bamboo stalk",
+      "type": "plant",
+      "box_2d": [
+        430,
+        725,
+        530,
+        875
+      ],
+      "importance_geom": 0.4088,
+      "importance_rank": 5,
+      "cutout_path": "cutouts/full/00001-bamboo-stalk.webp",
+      "thumb_path": "cutouts/thumb/00001-bamboo-stalk.webp",
+      "crop_px": {
+        "left": 1680,
+        "top": 1635,
+        "width": 480,
+        "height": 416
+      }
+    },
+    {
+      "index": 2,
+      "label": "bamboo stalk",
+      "type": "plant",
+      "box_2d": [
+        545,
+        580,
+        585,
+        724
+      ],
+      "importance_geom": 0.4205,
+      "importance_rank": 3,
+      "cutout_path": "cutouts/full/00002-bamboo-stalk.webp",
+      "thumb_path": "cutouts/thumb/00002-bamboo-stalk.webp",
+      "crop_px": {
+        "left": 2164,
+        "top": 1303,
+        "width": 192,
+        "height": 399
+      }
+    },
+    {
+      "index": 3,
+      "label": "bamboo stalk",
+      "type": "plant",
+      "box_2d": [
+        588,
+        468,
+        612,
+        600
+      ],
+      "importance_geom": 0.418,
+      "importance_rank": 4,
+      "cutout_path": "cutouts/full/00003-bamboo-stalk.webp",
+      "thumb_path": "cutouts/thumb/00003-bamboo-stalk.webp",
+      "crop_px": {
+        "left": 2342,
+        "top": 1047,
+        "width": 116,
+        "height": 367
+      }
+    },
+    {
+      "index": 4,
+      "label": "bamboo stalk",
+      "type": "plant",
+      "box_2d": [
+        580,
+        360,
+        615,
+        468
+      ],
+      "importance_geom": 0.393,
+      "importance_rank": 6,
+      "cutout_path": "cutouts/full/00004-bamboo-stalk.webp",
+      "thumb_path": "cutouts/thumb/00004-bamboo-stalk.webp",
+      "crop_px": {
+        "left": 2306,
+        "top": 804,
+        "width": 168,
+        "height": 300
+      }
+    },
+    {
+      "index": 5,
+      "label": "bamboo stalk",
+      "type": "plant",
+      "box_2d": [
+        530,
+        150,
+        600,
+        360
+      ],
+      "importance_geom": 0.3434,
+      "importance_rank": 8,
+      "cutout_path": "cutouts/full/00005-bamboo-stalk.webp",
+      "thumb_path": "cutouts/thumb/00005-bamboo-stalk.webp",
+      "crop_px": {
+        "left": 2092,
+        "top": 296,
+        "width": 336,
+        "height": 583
+      }
+    },
+    {
+      "index": 6,
+      "label": "bamboo leaf",
+      "type": "plant",
+      "box_2d": [
+        405,
+        45,
+        870,
+        470
+      ],
+      "importance_geom": 0.4852,
+      "importance_rank": 2,
+      "cutout_path": "cutouts/full/00006-bamboo-leaf.webp",
+      "thumb_path": "cutouts/thumb/00006-bamboo-leaf.webp",
+      "crop_px": {
+        "left": 1434,
+        "top": 5,
+        "width": 2232,
+        "height": 1176
+      }
+    },
+    {
+      "index": 7,
+      "label": "bamboo leaf",
+      "type": "plant",
+      "box_2d": [
+        400,
+        480,
+        840,
+        920
+      ],
+      "importance_geom": 0.5663,
+      "importance_rank": 1,
+      "cutout_path": "cutouts/full/00007-bamboo-leaf.webp",
+      "thumb_path": "cutouts/thumb/00007-bamboo-leaf.webp",
+      "crop_px": {
+        "left": 1424,
+        "top": 1003,
+        "width": 2112,
+        "height": 1219
+      }
+    },
+    {
+      "index": 8,
+      "label": "calligraphy",
+      "type": "writing",
+      "box_2d": [
+        50,
+        115,
+        95,
+        295
+      ],
+      "importance_geom": 0.3204,
+      "importance_rank": 12,
+      "cutout_path": "cutouts/full/00008-calligraphy.webp",
+      "thumb_path": "cutouts/thumb/00008-calligraphy.webp",
+      "crop_px": {
+        "left": 182,
+        "top": 222,
+        "width": 216,
+        "height": 500
+      }
+    },
+    {
+      "index": 9,
+      "label": "calligraphy",
+      "type": "writing",
+      "box_2d": [
+        930,
+        70,
+        985,
+        380
+      ],
+      "importance_geom": 0.3305,
+      "importance_rank": 9,
+      "cutout_path": "cutouts/full/00009-calligraphy.webp",
+      "thumb_path": "cutouts/thumb/00009-calligraphy.webp",
+      "crop_px": {
+        "left": 3698,
+        "top": 89,
+        "width": 264,
+        "height": 859
+      }
+    },
+    {
+      "index": 10,
+      "label": "seal",
+      "type": "symbol",
+      "box_2d": [
+        136,
+        102,
+        177,
+        176
+      ],
+      "importance_geom": 0.1766,
+      "importance_rank": 23,
+      "cutout_path": "cutouts/full/00010-seal.webp",
+      "thumb_path": "cutouts/thumb/00010-seal.webp",
+      "crop_px": {
+        "left": 528,
+        "top": 218,
+        "width": 196,
+        "height": 205
+      }
+    },
+    {
+      "index": 11,
+      "label": "seal",
+      "type": "symbol",
+      "box_2d": [
+        54,
+        340,
+        89,
+        477
+      ],
+      "importance_geom": 0.2426,
+      "importance_rank": 21,
+      "cutout_path": "cutouts/full/00011-seal.webp",
+      "thumb_path": "cutouts/thumb/00011-seal.webp",
+      "crop_px": {
+        "left": 202,
+        "top": 751,
+        "width": 168,
+        "height": 381
+      }
+    },
+    {
+      "index": 12,
+      "label": "seal",
+      "type": "symbol",
+      "box_2d": [
+        52,
+        450,
+        83,
+        478
+      ],
+      "importance_geom": 0.2404,
+      "importance_rank": 22,
+      "cutout_path": "cutouts/full/00012-seal.webp",
+      "thumb_path": "cutouts/thumb/00012-seal.webp",
+      "crop_px": {
+        "left": 196,
+        "top": 1029,
+        "width": 148,
+        "height": 80
+      }
+    },
+    {
+      "index": 13,
+      "label": "seal",
+      "type": "symbol",
+      "box_2d": [
+        59,
+        746,
+        77,
+        794
+      ],
+      "importance_geom": 0.2596,
+      "importance_rank": 17,
+      "cutout_path": "cutouts/full/00013-seal.webp",
+      "thumb_path": "cutouts/thumb/00013-seal.webp",
+      "crop_px": {
+        "left": 229,
+        "top": 1707,
+        "width": 86,
+        "height": 134
+      }
+    },
+    {
+      "index": 14,
+      "label": "seal",
+      "type": "symbol",
+      "box_2d": [
+        128,
+        807,
+        154,
+        879
+      ],
+      "importance_geom": 0.2793,
+      "importance_rank": 13,
+      "cutout_path": "cutouts/full/00014-seal.webp",
+      "thumb_path": "cutouts/thumb/00014-seal.webp",
+      "crop_px": {
+        "left": 502,
+        "top": 1842,
+        "width": 124,
+        "height": 201
+      }
+    },
+    {
+      "index": 15,
+      "label": "seal",
+      "type": "symbol",
+      "box_2d": [
+        44,
+        838,
+        89,
+        912
+      ],
+      "importance_geom": 0.2613,
+      "importance_rank": 16,
+      "cutout_path": "cutouts/full/00015-seal.webp",
+      "thumb_path": "cutouts/thumb/00015-seal.webp",
+      "crop_px": {
+        "left": 158,
+        "top": 1913,
+        "width": 216,
+        "height": 206
+      }
+    },
+    {
+      "index": 16,
+      "label": "seal",
+      "type": "symbol",
+      "box_2d": [
+        128,
+        904,
+        160,
+        953
+      ],
+      "importance_geom": 0.2696,
+      "importance_rank": 14,
+      "cutout_path": "cutouts/full/00016-seal.webp",
+      "thumb_path": "cutouts/thumb/00016-seal.webp",
+      "crop_px": {
+        "left": 499,
+        "top": 2071,
+        "width": 154,
+        "height": 136
+      }
+    },
+    {
+      "index": 17,
+      "label": "seal",
+      "type": "symbol",
+      "box_2d": [
+        931,
+        447,
+        987,
+        540
+      ],
+      "importance_geom": 0.2488,
+      "importance_rank": 18,
+      "cutout_path": "cutouts/full/00017-seal.webp",
+      "thumb_path": "cutouts/thumb/00017-seal.webp",
+      "crop_px": {
+        "left": 3702,
+        "top": 1007,
+        "width": 268,
+        "height": 260
+      }
+    },
+    {
+      "index": 18,
+      "label": "seal",
+      "type": "symbol",
+      "box_2d": [
+        930,
+        640,
+        985,
+        735
+      ],
+      "importance_geom": 0.2654,
+      "importance_rank": 15,
+      "cutout_path": "cutouts/full/00018-seal.webp",
+      "thumb_path": "cutouts/thumb/00018-seal.webp",
+      "crop_px": {
+        "left": 3698,
+        "top": 1452,
+        "width": 264,
+        "height": 264
+      }
+    },
+    {
+      "index": 19,
+      "label": "seal",
+      "type": "symbol",
+      "box_2d": [
+        955,
+        825,
+        973,
+        873
+      ],
+      "importance_geom": 0.2463,
+      "importance_rank": 19,
+      "cutout_path": "cutouts/full/00019-seal.webp",
+      "thumb_path": "cutouts/thumb/00019-seal.webp",
+      "crop_px": {
+        "left": 3813,
+        "top": 1889,
+        "width": 86,
+        "height": 134
+      }
+    },
+    {
+      "index": 20,
+      "label": "seal",
+      "type": "symbol",
+      "box_2d": [
+        952,
+        887,
+        979,
+        935
+      ],
+      "importance_geom": 0.2433,
+      "importance_rank": 20,
+      "cutout_path": "cutouts/full/00020-seal.webp",
+      "thumb_path": "cutouts/thumb/00020-seal.webp",
+      "crop_px": {
+        "left": 3797,
+        "top": 2032,
+        "width": 130,
+        "height": 134
+      }
+    },
+    {
+      "index": 21,
+      "label": "line",
+      "type": "object",
+      "box_2d": [
+        55,
+        115,
+        95,
+        300
+      ],
+      "importance_geom": 0.3208,
+      "importance_rank": 11,
+      "cutout_path": "cutouts/full/00021-line.webp",
+      "thumb_path": "cutouts/thumb/00021-line.webp",
+      "crop_px": {
+        "left": 204,
+        "top": 221,
+        "width": 192,
+        "height": 514
+      }
+    },
+    {
+      "index": 22,
+      "label": "line",
+      "type": "object",
+      "box_2d": [
+        935,
+        65,
+        980,
+        380
+      ],
+      "importance_geom": 0.3262,
+      "importance_rank": 10,
+      "cutout_path": "cutouts/full/00022-line.webp",
+      "thumb_path": "cutouts/thumb/00022-line.webp",
+      "crop_px": {
+        "left": 3722,
+        "top": 76,
+        "width": 216,
+        "height": 873
+      }
+    }
+  ]
+}

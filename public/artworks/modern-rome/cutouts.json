@@ -1,0 +1,4840 @@
+{
+  "version": 1,
+  "image_path": "public/artworks/modern-rome/image.jpg",
+  "image_width": 3811,
+  "image_height": 2946,
+  "generated_at": "2025-12-14T16:04:10.454Z",
+  "count": 230,
+  "entries": [
+    {
+      "index": 0,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        91,
+        107,
+        238,
+        231
+      ],
+      "importance_geom": 0.2024,
+      "importance_rank": 223,
+      "cutout_path": "cutouts/full/00000-painting.webp",
+      "thumb_path": "cutouts/thumb/00000-painting.webp",
+      "crop_px": {
+        "left": 290,
+        "top": 278,
+        "width": 674,
+        "height": 440
+      }
+    },
+    {
+      "index": 1,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        260,
+        82,
+        307,
+        230
+      ],
+      "importance_geom": 0.2079,
+      "importance_rank": 220,
+      "cutout_path": "cutouts/full/00001-painting.webp",
+      "thumb_path": "cutouts/thumb/00001-painting.webp",
+      "crop_px": {
+        "left": 972,
+        "top": 197,
+        "width": 216,
+        "height": 525
+      }
+    },
+    {
+      "index": 2,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        95,
+        287,
+        242,
+        428
+      ],
+      "importance_geom": 0.2724,
+      "importance_rank": 187,
+      "cutout_path": "cutouts/full/00002-painting.webp",
+      "thumb_path": "cutouts/thumb/00002-painting.webp",
+      "crop_px": {
+        "left": 306,
+        "top": 803,
+        "width": 673,
+        "height": 500
+      }
+    },
+    {
+      "index": 3,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        98,
+        434,
+        243,
+        550
+      ],
+      "importance_geom": 0.2994,
+      "importance_rank": 163,
+      "cutout_path": "cutouts/full/00003-painting.webp",
+      "thumb_path": "cutouts/thumb/00003-painting.webp",
+      "crop_px": {
+        "left": 318,
+        "top": 1244,
+        "width": 664,
+        "height": 411
+      }
+    },
+    {
+      "index": 4,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        62,
+        267,
+        92,
+        382
+      ],
+      "importance_geom": 0.2076,
+      "importance_rank": 221,
+      "cutout_path": "cutouts/full/00004-painting.webp",
+      "thumb_path": "cutouts/thumb/00004-painting.webp",
+      "crop_px": {
+        "left": 224,
+        "top": 752,
+        "width": 139,
+        "height": 408
+      }
+    },
+    {
+      "index": 5,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        33,
+        385,
+        93,
+        550
+      ],
+      "importance_geom": 0.2482,
+      "importance_rank": 204,
+      "cutout_path": "cutouts/full/00005-painting.webp",
+      "thumb_path": "cutouts/thumb/00005-painting.webp",
+      "crop_px": {
+        "left": 102,
+        "top": 1085,
+        "width": 276,
+        "height": 585
+      }
+    },
+    {
+      "index": 6,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        520,
+        509,
+        550,
+        550
+      ],
+      "importance_geom": 0.377,
+      "importance_rank": 50,
+      "cutout_path": "cutouts/full/00006-painting.webp",
+      "thumb_path": "cutouts/thumb/00006-painting.webp",
+      "crop_px": {
+        "left": 1969,
+        "top": 1487,
+        "width": 140,
+        "height": 146
+      }
+    },
+    {
+      "index": 7,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        283,
+        267,
+        308,
+        308
+      ],
+      "importance_geom": 0.2517,
+      "importance_rank": 202,
+      "cutout_path": "cutouts/full/00007-painting.webp",
+      "thumb_path": "cutouts/thumb/00007-painting.webp",
+      "crop_px": {
+        "left": 1068,
+        "top": 774,
+        "width": 116,
+        "height": 146
+      }
+    },
+    {
+      "index": 8,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        450,
+        48,
+        571,
+        217
+      ],
+      "importance_geom": 0.236,
+      "importance_rank": 208,
+      "cutout_path": "cutouts/full/00008-painting.webp",
+      "thumb_path": "cutouts/thumb/00008-painting.webp",
+      "crop_px": {
+        "left": 1668,
+        "top": 91,
+        "width": 555,
+        "height": 599
+      }
+    },
+    {
+      "index": 9,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        689,
+        77,
+        736,
+        232
+      ],
+      "importance_geom": 0.2086,
+      "importance_rank": 219,
+      "cutout_path": "cutouts/full/00009-painting.webp",
+      "thumb_path": "cutouts/thumb/00009-painting.webp",
+      "crop_px": {
+        "left": 2607,
+        "top": 180,
+        "width": 216,
+        "height": 550
+      }
+    },
+    {
+      "index": 10,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        689,
+        236,
+        731,
+        415
+      ],
+      "importance_geom": 0.2815,
+      "importance_rank": 177,
+      "cutout_path": "cutouts/full/00010-painting.webp",
+      "thumb_path": "cutouts/thumb/00010-painting.webp",
+      "crop_px": {
+        "left": 2609,
+        "top": 642,
+        "width": 193,
+        "height": 634
+      }
+    },
+    {
+      "index": 11,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        689,
+        421,
+        731,
+        528
+      ],
+      "importance_geom": 0.3197,
+      "importance_rank": 137,
+      "cutout_path": "cutouts/full/00011-painting.webp",
+      "thumb_path": "cutouts/thumb/00011-painting.webp",
+      "crop_px": {
+        "left": 2609,
+        "top": 1208,
+        "width": 193,
+        "height": 380
+      }
+    },
+    {
+      "index": 12,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        692,
+        531,
+        731,
+        550
+      ],
+      "importance_geom": 0.3163,
+      "importance_rank": 143,
+      "cutout_path": "cutouts/full/00012-painting.webp",
+      "thumb_path": "cutouts/thumb/00012-painting.webp",
+      "crop_px": {
+        "left": 2622,
+        "top": 1558,
+        "width": 179,
+        "height": 69
+      }
+    },
+    {
+      "index": 13,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        761,
+        52,
+        893,
+        234
+      ],
+      "importance_geom": 0.2,
+      "importance_rank": 224,
+      "cutout_path": "cutouts/full/00013-painting.webp",
+      "thumb_path": "cutouts/thumb/00013-painting.webp",
+      "crop_px": {
+        "left": 2850,
+        "top": 99,
+        "width": 604,
+        "height": 645
+      }
+    },
+    {
+      "index": 14,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        751,
+        280,
+        893,
+        421
+      ],
+      "importance_geom": 0.2727,
+      "importance_rank": 184,
+      "cutout_path": "cutouts/full/00014-painting.webp",
+      "thumb_path": "cutouts/thumb/00014-painting.webp",
+      "crop_px": {
+        "left": 2808,
+        "top": 782,
+        "width": 650,
+        "height": 501
+      }
+    },
+    {
+      "index": 15,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        752,
+        426,
+        893,
+        550
+      ],
+      "importance_geom": 0.302,
+      "importance_rank": 160,
+      "cutout_path": "cutouts/full/00015-painting.webp",
+      "thumb_path": "cutouts/thumb/00015-painting.webp",
+      "crop_px": {
+        "left": 2811,
+        "top": 1217,
+        "width": 647,
+        "height": 441
+      }
+    },
+    {
+      "index": 16,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        895,
+        16,
+        986,
+        198
+      ],
+      "importance_geom": 0.1491,
+      "importance_rank": 230,
+      "cutout_path": "cutouts/full/00016-painting.webp",
+      "thumb_path": "cutouts/thumb/00016-painting.webp",
+      "crop_px": {
+        "left": 3375,
+        "top": 0,
+        "width": 418,
+        "height": 638
+      }
+    },
+    {
+      "index": 17,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        895,
+        209,
+        981,
+        410
+      ],
+      "importance_geom": 0.2202,
+      "importance_rank": 215,
+      "cutout_path": "cutouts/full/00017-painting.webp",
+      "thumb_path": "cutouts/thumb/00017-painting.webp",
+      "crop_px": {
+        "left": 3377,
+        "top": 556,
+        "width": 395,
+        "height": 711
+      }
+    },
+    {
+      "index": 18,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        895,
+        415,
+        981,
+        550
+      ],
+      "importance_geom": 0.2529,
+      "importance_rank": 201,
+      "cutout_path": "cutouts/full/00018-painting.webp",
+      "thumb_path": "cutouts/thumb/00018-painting.webp",
+      "crop_px": {
+        "left": 3377,
+        "top": 1182,
+        "width": 395,
+        "height": 479
+      }
+    },
+    {
+      "index": 19,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        576,
+        305,
+        653,
+        429
+      ],
+      "importance_geom": 0.3255,
+      "importance_rank": 128,
+      "cutout_path": "cutouts/full/00019-painting.webp",
+      "thumb_path": "cutouts/thumb/00019-painting.webp",
+      "crop_px": {
+        "left": 2166,
+        "top": 861,
+        "width": 352,
+        "height": 440
+      }
+    },
+    {
+      "index": 20,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        576,
+        467,
+        652,
+        542
+      ],
+      "importance_geom": 0.3612,
+      "importance_rank": 78,
+      "cutout_path": "cutouts/full/00020-painting.webp",
+      "thumb_path": "cutouts/thumb/00020-painting.webp",
+      "crop_px": {
+        "left": 2166,
+        "top": 1353,
+        "width": 348,
+        "height": 266
+      }
+    },
+    {
+      "index": 21,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        541,
+        333,
+        568,
+        429
+      ],
+      "importance_geom": 0.3293,
+      "importance_rank": 125,
+      "cutout_path": "cutouts/full/00021-painting.webp",
+      "thumb_path": "cutouts/thumb/00021-painting.webp",
+      "crop_px": {
+        "left": 2051,
+        "top": 953,
+        "width": 124,
+        "height": 339
+      }
+    },
+    {
+      "index": 22,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        541,
+        487,
+        568,
+        550
+      ],
+      "importance_geom": 0.373,
+      "importance_rank": 56,
+      "cutout_path": "cutouts/full/00022-painting.webp",
+      "thumb_path": "cutouts/thumb/00022-painting.webp",
+      "crop_px": {
+        "left": 2051,
+        "top": 1415,
+        "width": 124,
+        "height": 225
+      }
+    },
+    {
+      "index": 23,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        508,
+        520,
+        526,
+        550
+      ],
+      "importance_geom": 0.3767,
+      "importance_rank": 51,
+      "cutout_path": "cutouts/full/00023-painting.webp",
+      "thumb_path": "cutouts/thumb/00023-painting.webp",
+      "crop_px": {
+        "left": 1928,
+        "top": 1522,
+        "width": 84,
+        "height": 108
+      }
+    },
+    {
+      "index": 24,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        475,
+        451,
+        493,
+        514
+      ],
+      "importance_geom": 0.3773,
+      "importance_rank": 49,
+      "cutout_path": "cutouts/full/00024-painting.webp",
+      "thumb_path": "cutouts/thumb/00024-painting.webp",
+      "crop_px": {
+        "left": 1803,
+        "top": 1309,
+        "width": 83,
+        "height": 225
+      }
+    },
+    {
+      "index": 25,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        506,
+        332,
+        526,
+        428
+      ],
+      "importance_geom": 0.3305,
+      "importance_rank": 124,
+      "cutout_path": "cutouts/full/00025-painting.webp",
+      "thumb_path": "cutouts/thumb/00025-painting.webp",
+      "crop_px": {
+        "left": 1920,
+        "top": 950,
+        "width": 93,
+        "height": 339
+      }
+    },
+    {
+      "index": 26,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        30,
+        450,
+        246,
+        564
+      ],
+      "importance_geom": 0.2983,
+      "importance_rank": 164,
+      "cutout_path": "cutouts/full/00026-painting.webp",
+      "thumb_path": "cutouts/thumb/00026-painting.webp",
+      "crop_px": {
+        "left": 32,
+        "top": 1291,
+        "width": 988,
+        "height": 405
+      }
+    },
+    {
+      "index": 27,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        32,
+        566,
+        153,
+        924
+      ],
+      "importance_geom": 0.3093,
+      "importance_rank": 150,
+      "cutout_path": "cutouts/full/00027-painting.webp",
+      "thumb_path": "cutouts/thumb/00027-painting.webp",
+      "crop_px": {
+        "left": 75,
+        "top": 1561,
+        "width": 555,
+        "height": 1268
+      }
+    },
+    {
+      "index": 28,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        147,
+        548,
+        268,
+        686
+      ],
+      "importance_geom": 0.3231,
+      "importance_rank": 133,
+      "cutout_path": "cutouts/full/00028-painting.webp",
+      "thumb_path": "cutouts/thumb/00028-painting.webp",
+      "crop_px": {
+        "left": 514,
+        "top": 1573,
+        "width": 554,
+        "height": 489
+      }
+    },
+    {
+      "index": 29,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        169,
+        684,
+        272,
+        824
+      ],
+      "importance_geom": 0.3188,
+      "importance_rank": 139,
+      "cutout_path": "cutouts/full/00029-painting.webp",
+      "thumb_path": "cutouts/thumb/00029-painting.webp",
+      "crop_px": {
+        "left": 605,
+        "top": 1974,
+        "width": 471,
+        "height": 495
+      }
+    },
+    {
+      "index": 30,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        139,
+        758,
+        223,
+        945
+      ],
+      "importance_geom": 0.3007,
+      "importance_rank": 161,
+      "cutout_path": "cutouts/full/00030-painting.webp",
+      "thumb_path": "cutouts/thumb/00030-painting.webp",
+      "crop_px": {
+        "left": 497,
+        "top": 2178,
+        "width": 385,
+        "height": 661
+      }
+    },
+    {
+      "index": 31,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        493,
+        519,
+        519,
+        554
+      ],
+      "importance_geom": 0.3796,
+      "importance_rank": 45,
+      "cutout_path": "cutouts/full/00031-painting.webp",
+      "thumb_path": "cutouts/thumb/00031-painting.webp",
+      "crop_px": {
+        "left": 1868,
+        "top": 1517,
+        "width": 120,
+        "height": 127
+      }
+    },
+    {
+      "index": 32,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        493,
+        558,
+        519,
+        593
+      ],
+      "importance_geom": 0.3718,
+      "importance_rank": 58,
+      "cutout_path": "cutouts/full/00032-painting.webp",
+      "thumb_path": "cutouts/thumb/00032-painting.webp",
+      "crop_px": {
+        "left": 1868,
+        "top": 1633,
+        "width": 120,
+        "height": 124
+      }
+    },
+    {
+      "index": 33,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        493,
+        596,
+        519,
+        631
+      ],
+      "importance_geom": 0.3641,
+      "importance_rank": 72,
+      "cutout_path": "cutouts/full/00033-painting.webp",
+      "thumb_path": "cutouts/thumb/00033-painting.webp",
+      "crop_px": {
+        "left": 1868,
+        "top": 1745,
+        "width": 120,
+        "height": 124
+      }
+    },
+    {
+      "index": 34,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        493,
+        635,
+        519,
+        670
+      ],
+      "importance_geom": 0.3562,
+      "importance_rank": 91,
+      "cutout_path": "cutouts/full/00034-painting.webp",
+      "thumb_path": "cutouts/thumb/00034-painting.webp",
+      "crop_px": {
+        "left": 1868,
+        "top": 1860,
+        "width": 120,
+        "height": 124
+      }
+    },
+    {
+      "index": 35,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        469,
+        571,
+        488,
+        604
+      ],
+      "importance_geom": 0.367,
+      "importance_rank": 66,
+      "cutout_path": "cutouts/full/00035-painting.webp",
+      "thumb_path": "cutouts/thumb/00035-painting.webp",
+      "crop_px": {
+        "left": 1780,
+        "top": 1672,
+        "width": 87,
+        "height": 118
+      }
+    },
+    {
+      "index": 36,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        469,
+        609,
+        488,
+        642
+      ],
+      "importance_geom": 0.3595,
+      "importance_rank": 81,
+      "cutout_path": "cutouts/full/00036-painting.webp",
+      "thumb_path": "cutouts/thumb/00036-painting.webp",
+      "crop_px": {
+        "left": 1780,
+        "top": 1784,
+        "width": 87,
+        "height": 118
+      }
+    },
+    {
+      "index": 37,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        469,
+        648,
+        488,
+        681
+      ],
+      "importance_geom": 0.3517,
+      "importance_rank": 99,
+      "cutout_path": "cutouts/full/00037-painting.webp",
+      "thumb_path": "cutouts/thumb/00037-painting.webp",
+      "crop_px": {
+        "left": 1780,
+        "top": 1899,
+        "width": 87,
+        "height": 118
+      }
+    },
+    {
+      "index": 38,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        440,
+        593,
+        459,
+        623
+      ],
+      "importance_geom": 0.3594,
+      "importance_rank": 82,
+      "cutout_path": "cutouts/full/00038-painting.webp",
+      "thumb_path": "cutouts/thumb/00038-painting.webp",
+      "crop_px": {
+        "left": 1669,
+        "top": 1737,
+        "width": 88,
+        "height": 108
+      }
+    },
+    {
+      "index": 39,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        440,
+        626,
+        459,
+        656
+      ],
+      "importance_geom": 0.3536,
+      "importance_rank": 98,
+      "cutout_path": "cutouts/full/00039-painting.webp",
+      "thumb_path": "cutouts/thumb/00039-painting.webp",
+      "crop_px": {
+        "left": 1669,
+        "top": 1835,
+        "width": 88,
+        "height": 107
+      }
+    },
+    {
+      "index": 40,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        440,
+        571,
+        459,
+        593
+      ],
+      "importance_geom": 0.3626,
+      "importance_rank": 73,
+      "cutout_path": "cutouts/full/00040-painting.webp",
+      "thumb_path": "cutouts/thumb/00040-painting.webp",
+      "crop_px": {
+        "left": 1669,
+        "top": 1675,
+        "width": 88,
+        "height": 79
+      }
+    },
+    {
+      "index": 41,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        440,
+        645,
+        459,
+        667
+      ],
+      "importance_geom": 0.3498,
+      "importance_rank": 102,
+      "cutout_path": "cutouts/full/00041-painting.webp",
+      "thumb_path": "cutouts/thumb/00041-painting.webp",
+      "crop_px": {
+        "left": 1669,
+        "top": 1893,
+        "width": 88,
+        "height": 79
+      }
+    },
+    {
+      "index": 42,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        467,
+        670,
+        487,
+        692
+      ],
+      "importance_geom": 0.3471,
+      "importance_rank": 107,
+      "cutout_path": "cutouts/full/00042-painting.webp",
+      "thumb_path": "cutouts/thumb/00042-painting.webp",
+      "crop_px": {
+        "left": 1771,
+        "top": 1966,
+        "width": 93,
+        "height": 80
+      }
+    },
+    {
+      "index": 43,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        899,
+        450,
+        981,
+        582
+      ],
+      "importance_geom": 0.2561,
+      "importance_rank": 199,
+      "cutout_path": "cutouts/full/00043-painting.webp",
+      "thumb_path": "cutouts/thumb/00043-painting.webp",
+      "crop_px": {
+        "left": 3395,
+        "top": 1286,
+        "width": 375,
+        "height": 468
+      }
+    },
+    {
+      "index": 44,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        691,
+        450,
+        731,
+        530
+      ],
+      "importance_geom": 0.319,
+      "importance_rank": 138,
+      "cutout_path": "cutouts/full/00044-painting.webp",
+      "thumb_path": "cutouts/thumb/00044-painting.webp",
+      "crop_px": {
+        "left": 2618,
+        "top": 1301,
+        "width": 183,
+        "height": 285
+      }
+    },
+    {
+      "index": 45,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        541,
+        517,
+        565,
+        555
+      ],
+      "importance_geom": 0.37,
+      "importance_rank": 61,
+      "cutout_path": "cutouts/full/00045-painting.webp",
+      "thumb_path": "cutouts/thumb/00045-painting.webp",
+      "crop_px": {
+        "left": 2052,
+        "top": 1512,
+        "width": 111,
+        "height": 135
+      }
+    },
+    {
+      "index": 46,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        509,
+        537,
+        526,
+        564
+      ],
+      "importance_geom": 0.3733,
+      "importance_rank": 54,
+      "cutout_path": "cutouts/full/00046-painting.webp",
+      "thumb_path": "cutouts/thumb/00046-painting.webp",
+      "crop_px": {
+        "left": 1932,
+        "top": 1574,
+        "width": 80,
+        "height": 96
+      }
+    },
+    {
+      "index": 47,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        477,
+        560,
+        491,
+        587
+      ],
+      "importance_geom": 0.3685,
+      "importance_rank": 63,
+      "cutout_path": "cutouts/full/00047-painting.webp",
+      "thumb_path": "cutouts/thumb/00047-painting.webp",
+      "crop_px": {
+        "left": 1811,
+        "top": 1641,
+        "width": 67,
+        "height": 97
+      }
+    },
+    {
+      "index": 48,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        691,
+        532,
+        731,
+        648
+      ],
+      "importance_geom": 0.331,
+      "importance_rank": 123,
+      "cutout_path": "cutouts/full/00048-painting.webp",
+      "thumb_path": "cutouts/thumb/00048-painting.webp",
+      "crop_px": {
+        "left": 2618,
+        "top": 1533,
+        "width": 183,
+        "height": 411
+      }
+    },
+    {
+      "index": 49,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        577,
+        548,
+        652,
+        614
+      ],
+      "importance_geom": 0.3619,
+      "importance_rank": 76,
+      "cutout_path": "cutouts/full/00049-painting.webp",
+      "thumb_path": "cutouts/thumb/00049-painting.webp",
+      "crop_px": {
+        "left": 2169,
+        "top": 1594,
+        "width": 345,
+        "height": 235
+      }
+    },
+    {
+      "index": 50,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        541,
+        557,
+        565,
+        590
+      ],
+      "importance_geom": 0.3656,
+      "importance_rank": 68,
+      "cutout_path": "cutouts/full/00050-painting.webp",
+      "thumb_path": "cutouts/thumb/00050-painting.webp",
+      "crop_px": {
+        "left": 2052,
+        "top": 1630,
+        "width": 111,
+        "height": 119
+      }
+    },
+    {
+      "index": 51,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        509,
+        565,
+        526,
+        593
+      ],
+      "importance_geom": 0.368,
+      "importance_rank": 65,
+      "cutout_path": "cutouts/full/00051-painting.webp",
+      "thumb_path": "cutouts/thumb/00051-painting.webp",
+      "crop_px": {
+        "left": 1932,
+        "top": 1656,
+        "width": 80,
+        "height": 99
+      }
+    },
+    {
+      "index": 52,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        477,
+        590,
+        491,
+        618
+      ],
+      "importance_geom": 0.3625,
+      "importance_rank": 74,
+      "cutout_path": "cutouts/full/00052-painting.webp",
+      "thumb_path": "cutouts/thumb/00052-painting.webp",
+      "crop_px": {
+        "left": 1811,
+        "top": 1730,
+        "width": 67,
+        "height": 99
+      }
+    },
+    {
+      "index": 53,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        758,
+        559,
+        890,
+        675
+      ],
+      "importance_geom": 0.3111,
+      "importance_rank": 149,
+      "cutout_path": "cutouts/full/00053-painting.webp",
+      "thumb_path": "cutouts/thumb/00053-painting.webp",
+      "crop_px": {
+        "left": 2838,
+        "top": 1612,
+        "width": 604,
+        "height": 411
+      }
+    },
+    {
+      "index": 54,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        887,
+        585,
+        981,
+        799
+      ],
+      "importance_geom": 0.2818,
+      "importance_rank": 175,
+      "cutout_path": "cutouts/full/00054-painting.webp",
+      "thumb_path": "cutouts/thumb/00054-painting.webp",
+      "crop_px": {
+        "left": 3344,
+        "top": 1660,
+        "width": 431,
+        "height": 757
+      }
+    },
+    {
+      "index": 55,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        577,
+        616,
+        652,
+        669
+      ],
+      "importance_geom": 0.3539,
+      "importance_rank": 97,
+      "cutout_path": "cutouts/full/00055-painting.webp",
+      "thumb_path": "cutouts/thumb/00055-painting.webp",
+      "crop_px": {
+        "left": 2169,
+        "top": 1798,
+        "width": 345,
+        "height": 189
+      }
+    },
+    {
+      "index": 56,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        541,
+        592,
+        565,
+        627
+      ],
+      "importance_geom": 0.3603,
+      "importance_rank": 80,
+      "cutout_path": "cutouts/full/00056-painting.webp",
+      "thumb_path": "cutouts/thumb/00056-painting.webp",
+      "crop_px": {
+        "left": 2052,
+        "top": 1734,
+        "width": 111,
+        "height": 124
+      }
+    },
+    {
+      "index": 57,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        509,
+        594,
+        526,
+        621
+      ],
+      "importance_geom": 0.3622,
+      "importance_rank": 75,
+      "cutout_path": "cutouts/full/00057-painting.webp",
+      "thumb_path": "cutouts/thumb/00057-painting.webp",
+      "crop_px": {
+        "left": 1932,
+        "top": 1741,
+        "width": 80,
+        "height": 97
+      }
+    },
+    {
+      "index": 58,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        477,
+        620,
+        491,
+        648
+      ],
+      "importance_geom": 0.3565,
+      "importance_rank": 87,
+      "cutout_path": "cutouts/full/00058-painting.webp",
+      "thumb_path": "cutouts/thumb/00058-painting.webp",
+      "crop_px": {
+        "left": 1811,
+        "top": 1818,
+        "width": 67,
+        "height": 100
+      }
+    },
+    {
+      "index": 59,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        719,
+        631,
+        784,
+        807
+      ],
+      "importance_geom": 0.3252,
+      "importance_rank": 129,
+      "cutout_path": "cutouts/full/00059-painting.webp",
+      "thumb_path": "cutouts/thumb/00059-painting.webp",
+      "crop_px": {
+        "left": 2715,
+        "top": 1806,
+        "width": 298,
+        "height": 624
+      }
+    },
+    {
+      "index": 60,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        691,
+        651,
+        728,
+        739
+      ],
+      "importance_geom": 0.3234,
+      "importance_rank": 132,
+      "cutout_path": "cutouts/full/00060-painting.webp",
+      "thumb_path": "cutouts/thumb/00060-painting.webp",
+      "crop_px": {
+        "left": 2619,
+        "top": 1891,
+        "width": 170,
+        "height": 313
+      }
+    },
+    {
+      "index": 61,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        541,
+        629,
+        565,
+        667
+      ],
+      "importance_geom": 0.3539,
+      "importance_rank": 96,
+      "cutout_path": "cutouts/full/00061-painting.webp",
+      "thumb_path": "cutouts/thumb/00061-painting.webp",
+      "crop_px": {
+        "left": 2052,
+        "top": 1842,
+        "width": 111,
+        "height": 134
+      }
+    },
+    {
+      "index": 62,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        509,
+        623,
+        526,
+        651
+      ],
+      "importance_geom": 0.3565,
+      "importance_rank": 89,
+      "cutout_path": "cutouts/full/00062-painting.webp",
+      "thumb_path": "cutouts/thumb/00062-painting.webp",
+      "crop_px": {
+        "left": 1932,
+        "top": 1827,
+        "width": 80,
+        "height": 99
+      }
+    },
+    {
+      "index": 63,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        477,
+        651,
+        491,
+        678
+      ],
+      "importance_geom": 0.3503,
+      "importance_rank": 101,
+      "cutout_path": "cutouts/full/00063-painting.webp",
+      "thumb_path": "cutouts/thumb/00063-painting.webp",
+      "crop_px": {
+        "left": 1811,
+        "top": 1909,
+        "width": 67,
+        "height": 97
+      }
+    },
+    {
+      "index": 64,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        577,
+        672,
+        652,
+        770
+      ],
+      "importance_geom": 0.3491,
+      "importance_rank": 103,
+      "cutout_path": "cutouts/full/00064-painting.webp",
+      "thumb_path": "cutouts/thumb/00064-painting.webp",
+      "crop_px": {
+        "left": 2169,
+        "top": 1950,
+        "width": 345,
+        "height": 348
+      }
+    },
+    {
+      "index": 65,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        780,
+        679,
+        887,
+        794
+      ],
+      "importance_geom": 0.3024,
+      "importance_rank": 159,
+      "cutout_path": "cutouts/full/00065-painting.webp",
+      "thumb_path": "cutouts/thumb/00065-painting.webp",
+      "crop_px": {
+        "left": 2931,
+        "top": 1966,
+        "width": 491,
+        "height": 408
+      }
+    },
+    {
+      "index": 66,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        541,
+        669,
+        565,
+        709
+      ],
+      "importance_geom": 0.3464,
+      "importance_rank": 108,
+      "cutout_path": "cutouts/full/00066-painting.webp",
+      "thumb_path": "cutouts/thumb/00066-painting.webp",
+      "crop_px": {
+        "left": 2052,
+        "top": 1958,
+        "width": 111,
+        "height": 143
+      }
+    },
+    {
+      "index": 67,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        509,
+        652,
+        526,
+        680
+      ],
+      "importance_geom": 0.3506,
+      "importance_rank": 100,
+      "cutout_path": "cutouts/full/00067-painting.webp",
+      "thumb_path": "cutouts/thumb/00067-painting.webp",
+      "crop_px": {
+        "left": 1932,
+        "top": 1912,
+        "width": 80,
+        "height": 100
+      }
+    },
+    {
+      "index": 68,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        477,
+        681,
+        491,
+        708
+      ],
+      "importance_geom": 0.3442,
+      "importance_rank": 111,
+      "cutout_path": "cutouts/full/00068-painting.webp",
+      "thumb_path": "cutouts/thumb/00068-painting.webp",
+      "crop_px": {
+        "left": 1811,
+        "top": 1998,
+        "width": 67,
+        "height": 96
+      }
+    },
+    {
+      "index": 69,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        541,
+        711,
+        565,
+        755
+      ],
+      "importance_geom": 0.3384,
+      "importance_rank": 117,
+      "cutout_path": "cutouts/full/00069-painting.webp",
+      "thumb_path": "cutouts/thumb/00069-painting.webp",
+      "crop_px": {
+        "left": 2052,
+        "top": 2081,
+        "width": 111,
+        "height": 157
+      }
+    },
+    {
+      "index": 70,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        509,
+        681,
+        526,
+        708
+      ],
+      "importance_geom": 0.3448,
+      "importance_rank": 110,
+      "cutout_path": "cutouts/full/00070-painting.webp",
+      "thumb_path": "cutouts/thumb/00070-painting.webp",
+      "crop_px": {
+        "left": 1932,
+        "top": 1998,
+        "width": 80,
+        "height": 96
+      }
+    },
+    {
+      "index": 71,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        691,
+        740,
+        722,
+        805
+      ],
+      "importance_geom": 0.3117,
+      "importance_rank": 148,
+      "cutout_path": "cutouts/full/00071-painting.webp",
+      "thumb_path": "cutouts/thumb/00071-painting.webp",
+      "crop_px": {
+        "left": 2621,
+        "top": 2161,
+        "width": 143,
+        "height": 230
+      }
+    },
+    {
+      "index": 72,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        530,
+        772,
+        564,
+        854
+      ],
+      "importance_geom": 0.3291,
+      "importance_rank": 126,
+      "cutout_path": "cutouts/full/00072-painting.webp",
+      "thumb_path": "cutouts/thumb/00072-painting.webp",
+      "crop_px": {
+        "left": 2006,
+        "top": 2250,
+        "width": 157,
+        "height": 290
+      }
+    },
+    {
+      "index": 73,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        773,
+        784,
+        941,
+        960
+      ],
+      "importance_geom": 0.3033,
+      "importance_rank": 156,
+      "cutout_path": "cutouts/full/00073-painting.webp",
+      "thumb_path": "cutouts/thumb/00073-painting.webp",
+      "crop_px": {
+        "left": 2881,
+        "top": 2257,
+        "width": 770,
+        "height": 624
+      }
+    },
+    {
+      "index": 74,
+      "label": "painting",
+      "type": "object",
+      "box_2d": [
+        652,
+        805,
+        775,
+        953
+      ],
+      "importance_geom": 0.3217,
+      "importance_rank": 134,
+      "cutout_path": "cutouts/full/00074-painting.webp",
+      "thumb_path": "cutouts/thumb/00074-painting.webp",
+      "crop_px": {
+        "left": 2437,
+        "top": 2327,
+        "width": 564,
+        "height": 525
+      }
+    },
+    {
+      "index": 75,
+      "label": "person",
+      "type": "person",
+      "box_2d": [
+        211,
+        834,
+        304,
+        980
+      ],
+      "importance_geom": 0.4389,
+      "importance_rank": 25,
+      "cutout_path": "cutouts/full/00075-person.webp",
+      "thumb_path": "cutouts/thumb/00075-person.webp",
+      "crop_px": {
+        "left": 768,
+        "top": 2413,
+        "width": 427,
+        "height": 518
+      }
+    },
+    {
+      "index": 76,
+      "label": "person",
+      "type": "person",
+      "box_2d": [
+        257,
+        820,
+        300,
+        882
+      ],
+      "importance_geom": 0.4318,
+      "importance_rank": 28,
+      "cutout_path": "cutouts/full/00076-person.webp",
+      "thumb_path": "cutouts/thumb/00076-person.webp",
+      "crop_px": {
+        "left": 962,
+        "top": 2397,
+        "width": 199,
+        "height": 220
+      }
+    },
+    {
+      "index": 77,
+      "label": "person",
+      "type": "person",
+      "box_2d": [
+        282,
+        737,
+        351,
+        893
+      ],
+      "importance_geom": 0.4599,
+      "importance_rank": 16,
+      "cutout_path": "cutouts/full/00077-person.webp",
+      "thumb_path": "cutouts/thumb/00077-person.webp",
+      "crop_px": {
+        "left": 1048,
+        "top": 2125,
+        "width": 316,
+        "height": 552
+      }
+    },
+    {
+      "index": 78,
+      "label": "person",
+      "type": "person",
+      "box_2d": [
+        337,
+        718,
+        370,
+        835
+      ],
+      "importance_geom": 0.4599,
+      "importance_rank": 17,
+      "cutout_path": "cutouts/full/00078-person.webp",
+      "thumb_path": "cutouts/thumb/00078-person.webp",
+      "crop_px": {
+        "left": 1271,
+        "top": 2080,
+        "width": 153,
+        "height": 415
+      }
+    },
+    {
+      "index": 79,
+      "label": "person",
+      "type": "person",
+      "box_2d": [
+        342,
+        722,
+        397,
+        893
+      ],
+      "importance_geom": 0.4675,
+      "importance_rank": 11,
+      "cutout_path": "cutouts/full/00079-person.webp",
+      "thumb_path": "cutouts/thumb/00079-person.webp",
+      "crop_px": {
+        "left": 1282,
+        "top": 2077,
+        "width": 252,
+        "height": 604
+      }
+    },
+    {
+      "index": 80,
+      "label": "person",
+      "type": "person",
+      "box_2d": [
+        392,
+        818,
+        469,
+        930
+      ],
+      "importance_geom": 0.4598,
+      "importance_rank": 18,
+      "cutout_path": "cutouts/full/00080-person.webp",
+      "thumb_path": "cutouts/thumb/00080-person.webp",
+      "crop_px": {
+        "left": 1463,
+        "top": 2376,
+        "width": 355,
+        "height": 397
+      }
+    },
+    {
+      "index": 81,
+      "label": "person",
+      "type": "person",
+      "box_2d": [
+        322,
+        722,
+        349,
+        807
+      ],
+      "importance_geom": 0.4543,
+      "importance_rank": 22,
+      "cutout_path": "cutouts/full/00081-person.webp",
+      "thumb_path": "cutouts/thumb/00081-person.webp",
+      "crop_px": {
+        "left": 1217,
+        "top": 2102,
+        "width": 124,
+        "height": 301
+      }
+    },
+    {
+      "index": 82,
+      "label": "statue",
+      "type": "object",
+      "box_2d": [
+        464,
+        653,
+        532,
+        815
+      ],
+      "importance_geom": 0.4621,
+      "importance_rank": 15,
+      "cutout_path": "cutouts/full/00082-statue.webp",
+      "thumb_path": "cutouts/thumb/00082-statue.webp",
+      "crop_px": {
+        "left": 1742,
+        "top": 1875,
+        "width": 312,
+        "height": 574
+      }
+    },
+    {
+      "index": 83,
+      "label": "statue",
+      "type": "object",
+      "box_2d": [
+        563,
+        824,
+        656,
+        924
+      ],
+      "importance_geom": 0.4254,
+      "importance_rank": 30,
+      "cutout_path": "cutouts/full/00083-statue.webp",
+      "thumb_path": "cutouts/thumb/00083-statue.webp",
+      "crop_px": {
+        "left": 2109,
+        "top": 2397,
+        "width": 428,
+        "height": 356
+      }
+    },
+    {
+      "index": 84,
+      "label": "statue",
+      "type": "object",
+      "box_2d": [
+        417,
+        668,
+        452,
+        765
+      ],
+      "importance_geom": 0.4482,
+      "importance_rank": 23,
+      "cutout_path": "cutouts/full/00084-statue.webp",
+      "thumb_path": "cutouts/thumb/00084-statue.webp",
+      "crop_px": {
+        "left": 1576,
+        "top": 1938,
+        "width": 160,
+        "height": 345
+      }
+    },
+    {
+      "index": 85,
+      "label": "statue",
+      "type": "object",
+      "box_2d": [
+        378,
+        660,
+        408,
+        715
+      ],
+      "importance_geom": 0.4422,
+      "importance_rank": 24,
+      "cutout_path": "cutouts/full/00085-statue.webp",
+      "thumb_path": "cutouts/thumb/00085-statue.webp",
+      "crop_px": {
+        "left": 1428,
+        "top": 1928,
+        "width": 139,
+        "height": 195
+      }
+    },
+    {
+      "index": 86,
+      "label": "column",
+      "type": "architecture",
+      "box_2d": [
+        638,
+        318,
+        695,
+        795
+      ],
+      "importance_geom": 0.4788,
+      "importance_rank": 10,
+      "cutout_path": "cutouts/full/00086-column.webp",
+      "thumb_path": "cutouts/thumb/00086-column.webp",
+      "crop_px": {
+        "left": 2409,
+        "top": 795,
+        "width": 262,
+        "height": 1689
+      }
+    },
+    {
+      "index": 87,
+      "label": "column",
+      "type": "architecture",
+      "box_2d": [
+        298,
+        315,
+        355,
+        680
+      ],
+      "importance_geom": 0.4645,
+      "importance_rank": 13,
+      "cutout_path": "cutouts/full/00087-column.webp",
+      "thumb_path": "cutouts/thumb/00087-column.webp",
+      "crop_px": {
+        "left": 1113,
+        "top": 819,
+        "width": 262,
+        "height": 1293
+      }
+    },
+    {
+      "index": 88,
+      "label": "column",
+      "type": "architecture",
+      "box_2d": [
+        518,
+        485,
+        552,
+        740
+      ],
+      "importance_geom": 0.4861,
+      "importance_rank": 8,
+      "cutout_path": "cutouts/full/00088-column.webp",
+      "thumb_path": "cutouts/thumb/00088-column.webp",
+      "crop_px": {
+        "left": 1961,
+        "top": 1353,
+        "width": 156,
+        "height": 903
+      }
+    },
+    {
+      "index": 89,
+      "label": "column",
+      "type": "architecture",
+      "box_2d": [
+        418,
+        490,
+        452,
+        660
+      ],
+      "importance_geom": 0.4819,
+      "importance_rank": 9,
+      "cutout_path": "cutouts/full/00089-column.webp",
+      "thumb_path": "cutouts/thumb/00089-column.webp",
+      "crop_px": {
+        "left": 1579,
+        "top": 1393,
+        "width": 157,
+        "height": 602
+      }
+    },
+    {
+      "index": 90,
+      "label": "curtain",
+      "type": "object",
+      "box_2d": [
+        0,
+        0,
+        130,
+        995
+      ],
+      "importance_geom": 0.4196,
+      "importance_rank": 32,
+      "cutout_path": "cutouts/full/00090-curtain.webp",
+      "thumb_path": "cutouts/thumb/00090-curtain.webp",
+      "crop_px": {
+        "left": 0,
+        "top": 0,
+        "width": 546,
+        "height": 2946
+      }
+    },
+    {
+      "index": 91,
+      "label": "curtain",
+      "type": "object",
+      "box_2d": [
+        0,
+        0,
+        360,
+        140
+      ],
+      "importance_geom": 0.2792,
+      "importance_rank": 178,
+      "cutout_path": "cutouts/full/00091-curtain.webp",
+      "thumb_path": "cutouts/thumb/00091-curtain.webp",
+      "crop_px": {
+        "left": 0,
+        "top": 0,
+        "width": 1509,
+        "height": 454
+      }
+    },
+    {
+      "index": 92,
+      "label": "curtain",
+      "type": "object",
+      "box_2d": [
+        345,
+        48,
+        625,
+        215
+      ],
+      "importance_geom": 0.345,
+      "importance_rank": 109,
+      "cutout_path": "cutouts/full/00092-curtain.webp",
+      "thumb_path": "cutouts/thumb/00092-curtain.webp",
+      "crop_px": {
+        "left": 1207,
+        "top": 92,
+        "width": 1282,
+        "height": 591
+      }
+    },
+    {
+      "index": 93,
+      "label": "curtain",
+      "type": "object",
+      "box_2d": [
+        263,
+        338,
+        345,
+        730
+      ],
+      "importance_geom": 0.4544,
+      "importance_rank": 21,
+      "cutout_path": "cutouts/full/00093-curtain.webp",
+      "thumb_path": "cutouts/thumb/00093-curtain.webp",
+      "crop_px": {
+        "left": 971,
+        "top": 879,
+        "width": 375,
+        "height": 1388
+      }
+    },
+    {
+      "index": 94,
+      "label": "curtain",
+      "type": "object",
+      "box_2d": [
+        368,
+        448,
+        442,
+        475
+      ],
+      "importance_geom": 0.4372,
+      "importance_rank": 26,
+      "cutout_path": "cutouts/full/00094-curtain.webp",
+      "thumb_path": "cutouts/thumb/00094-curtain.webp",
+      "crop_px": {
+        "left": 1374,
+        "top": 1311,
+        "width": 339,
+        "height": 97
+      }
+    },
+    {
+      "index": 95,
+      "label": "curtain",
+      "type": "object",
+      "box_2d": [
+        780,
+        808,
+        992,
+        992
+      ],
+      "importance_geom": 0.3886,
+      "importance_rank": 41,
+      "cutout_path": "cutouts/full/00095-curtain.webp",
+      "thumb_path": "cutouts/thumb/00095-curtain.webp",
+      "crop_px": {
+        "left": 2891,
+        "top": 2326,
+        "width": 920,
+        "height": 620
+      }
+    },
+    {
+      "index": 96,
+      "label": "lion sculpture",
+      "type": "object",
+      "box_2d": [
+        566,
+        827,
+        667,
+        928
+      ],
+      "importance_geom": 0.4591,
+      "importance_rank": 19,
+      "cutout_path": "cutouts/full/00096-lion-sculpture.webp",
+      "thumb_path": "cutouts/thumb/00096-lion-sculpture.webp",
+      "crop_px": {
+        "left": 2118,
+        "top": 2406,
+        "width": 463,
+        "height": 358
+      }
+    },
+    {
+      "index": 97,
+      "label": "fresco",
+      "type": "painting",
+      "box_2d": [
+        353,
+        63,
+        588,
+        220
+      ],
+      "importance_geom": 0.4635,
+      "importance_rank": 14,
+      "cutout_path": "cutouts/full/00097-fresco.webp",
+      "thumb_path": "cutouts/thumb/00097-fresco.webp",
+      "crop_px": {
+        "left": 1255,
+        "top": 139,
+        "width": 1076,
+        "height": 556
+      }
+    },
+    {
+      "index": 98,
+      "label": "stucco figure",
+      "type": "sculpture",
+      "box_2d": [
+        234,
+        87,
+        262,
+        154
+      ],
+      "importance_geom": 0.2786,
+      "importance_rank": 180,
+      "cutout_path": "cutouts/full/00098-stucco-figure.webp",
+      "thumb_path": "cutouts/thumb/00098-stucco-figure.webp",
+      "crop_px": {
+        "left": 880,
+        "top": 236,
+        "width": 130,
+        "height": 238
+      }
+    },
+    {
+      "index": 99,
+      "label": "stucco figure",
+      "type": "sculpture",
+      "box_2d": [
+        304,
+        80,
+        333,
+        151
+      ],
+      "importance_geom": 0.2892,
+      "importance_rank": 172,
+      "cutout_path": "cutouts/full/00099-stucco-figure.webp",
+      "thumb_path": "cutouts/thumb/00099-stucco-figure.webp",
+      "crop_px": {
+        "left": 1147,
+        "top": 214,
+        "width": 134,
+        "height": 252
+      }
+    },
+    {
+      "index": 100,
+      "label": "stucco figure",
+      "type": "sculpture",
+      "box_2d": [
+        392,
+        234,
+        431,
+        279
+      ],
+      "importance_geom": 0.3681,
+      "importance_rank": 64,
+      "cutout_path": "cutouts/full/00100-stucco-figure.webp",
+      "thumb_path": "cutouts/thumb/00100-stucco-figure.webp",
+      "crop_px": {
+        "left": 1478,
+        "top": 676,
+        "width": 180,
+        "height": 159
+      }
+    },
+    {
+      "index": 101,
+      "label": "stucco figure",
+      "type": "sculpture",
+      "box_2d": [
+        431,
+        234,
+        469,
+        279
+      ],
+      "importance_geom": 0.3716,
+      "importance_rank": 60,
+      "cutout_path": "cutouts/full/00101-stucco-figure.webp",
+      "thumb_path": "cutouts/thumb/00101-stucco-figure.webp",
+      "crop_px": {
+        "left": 1627,
+        "top": 676,
+        "width": 176,
+        "height": 159
+      }
+    },
+    {
+      "index": 102,
+      "label": "stucco figure",
+      "type": "sculpture",
+      "box_2d": [
+        511,
+        264,
+        549,
+        368
+      ],
+      "importance_geom": 0.409,
+      "importance_rank": 34,
+      "cutout_path": "cutouts/full/00102-stucco-figure.webp",
+      "thumb_path": "cutouts/thumb/00102-stucco-figure.webp",
+      "crop_px": {
+        "left": 1932,
+        "top": 746,
+        "width": 176,
+        "height": 370
+      }
+    },
+    {
+      "index": 103,
+      "label": "stucco figure",
+      "type": "sculpture",
+      "box_2d": [
+        310,
+        315,
+        335,
+        348
+      ],
+      "importance_geom": 0.3804,
+      "importance_rank": 44,
+      "cutout_path": "cutouts/full/00103-stucco-figure.webp",
+      "thumb_path": "cutouts/thumb/00103-stucco-figure.webp",
+      "crop_px": {
+        "left": 1171,
+        "top": 917,
+        "width": 116,
+        "height": 119
+      }
+    },
+    {
+      "index": 104,
+      "label": "stucco figure",
+      "type": "sculpture",
+      "box_2d": [
+        383,
+        387,
+        407,
+        425
+      ],
+      "importance_geom": 0.4287,
+      "importance_rank": 29,
+      "cutout_path": "cutouts/full/00104-stucco-figure.webp",
+      "thumb_path": "cutouts/thumb/00104-stucco-figure.webp",
+      "crop_px": {
+        "left": 1450,
+        "top": 1129,
+        "width": 111,
+        "height": 135
+      }
+    },
+    {
+      "index": 105,
+      "label": "stucco figure",
+      "type": "sculpture",
+      "box_2d": [
+        407,
+        387,
+        431,
+        425
+      ],
+      "importance_geom": 0.4347,
+      "importance_rank": 27,
+      "cutout_path": "cutouts/full/00105-stucco-figure.webp",
+      "thumb_path": "cutouts/thumb/00105-stucco-figure.webp",
+      "crop_px": {
+        "left": 1542,
+        "top": 1129,
+        "width": 110,
+        "height": 135
+      }
+    },
+    {
+      "index": 106,
+      "label": "stucco figure",
+      "type": "sculpture",
+      "box_2d": [
+        460,
+        414,
+        480,
+        460
+      ],
+      "importance_geom": 0.4586,
+      "importance_rank": 20,
+      "cutout_path": "cutouts/full/00106-stucco-figure.webp",
+      "thumb_path": "cutouts/thumb/00106-stucco-figure.webp",
+      "crop_px": {
+        "left": 1745,
+        "top": 1205,
+        "width": 93,
+        "height": 165
+      }
+    },
+    {
+      "index": 107,
+      "label": "stucco figure",
+      "type": "sculpture",
+      "box_2d": [
+        643,
+        14,
+        695,
+        236
+      ],
+      "importance_geom": 0.3142,
+      "importance_rank": 145,
+      "cutout_path": "cutouts/full/00107-stucco-figure.webp",
+      "thumb_path": "cutouts/thumb/00107-stucco-figure.webp",
+      "crop_px": {
+        "left": 2430,
+        "top": 0,
+        "width": 239,
+        "height": 762
+      }
+    },
+    {
+      "index": 108,
+      "label": "stucco figure",
+      "type": "sculpture",
+      "box_2d": [
+        719,
+        14,
+        766,
+        236
+      ],
+      "importance_geom": 0.3001,
+      "importance_rank": 162,
+      "cutout_path": "cutouts/full/00108-stucco-figure.webp",
+      "thumb_path": "cutouts/thumb/00108-stucco-figure.webp",
+      "crop_px": {
+        "left": 2722,
+        "top": 0,
+        "width": 216,
+        "height": 762
+      }
+    },
+    {
+      "index": 109,
+      "label": "stucco figure",
+      "type": "sculpture",
+      "box_2d": [
+        559,
+        258,
+        597,
+        371
+      ],
+      "importance_geom": 0.4043,
+      "importance_rank": 37,
+      "cutout_path": "cutouts/full/00109-stucco-figure.webp",
+      "thumb_path": "cutouts/thumb/00109-stucco-figure.webp",
+      "crop_px": {
+        "left": 2115,
+        "top": 727,
+        "width": 176,
+        "height": 399
+      }
+    },
+    {
+      "index": 110,
+      "label": "arch",
+      "type": "architecture",
+      "box_2d": [
+        0,
+        0,
+        1000,
+        360
+      ],
+      "importance_geom": 0.5018,
+      "importance_rank": 7,
+      "cutout_path": "cutouts/full/00110-arch.webp",
+      "thumb_path": "cutouts/thumb/00110-arch.webp",
+      "crop_px": {
+        "left": 0,
+        "top": 0,
+        "width": 3811,
+        "height": 1167
+      }
+    },
+    {
+      "index": 111,
+      "label": "arch",
+      "type": "architecture",
+      "box_2d": [
+        0,
+        150,
+        350,
+        1000
+      ],
+      "importance_geom": 0.5399,
+      "importance_rank": 3,
+      "cutout_path": "cutouts/full/00111-arch.webp",
+      "thumb_path": "cutouts/thumb/00111-arch.webp",
+      "crop_px": {
+        "left": 0,
+        "top": 190,
+        "width": 1467,
+        "height": 2756
+      }
+    },
+    {
+      "index": 112,
+      "label": "arch",
+      "type": "architecture",
+      "box_2d": [
+        640,
+        150,
+        1000,
+        1000
+      ],
+      "importance_geom": 0.544,
+      "importance_rank": 2,
+      "cutout_path": "cutouts/full/00112-arch.webp",
+      "thumb_path": "cutouts/thumb/00112-arch.webp",
+      "crop_px": {
+        "left": 2302,
+        "top": 190,
+        "width": 1509,
+        "height": 2756
+      }
+    },
+    {
+      "index": 113,
+      "label": "arch",
+      "type": "architecture",
+      "box_2d": [
+        350,
+        250,
+        640,
+        800
+      ],
+      "importance_geom": 0.5975,
+      "importance_rank": 1,
+      "cutout_path": "cutouts/full/00113-arch.webp",
+      "thumb_path": "cutouts/thumb/00113-arch.webp",
+      "crop_px": {
+        "left": 1222,
+        "top": 574,
+        "width": 1329,
+        "height": 1945
+      }
+    },
+    {
+      "index": 114,
+      "label": "portfolio",
+      "type": "object",
+      "box_2d": [
+        360,
+        788,
+        388,
+        818
+      ],
+      "importance_geom": 0.404,
+      "importance_rank": 38,
+      "cutout_path": "cutouts/full/00114-portfolio.webp",
+      "thumb_path": "cutouts/thumb/00114-portfolio.webp",
+      "crop_px": {
+        "left": 1360,
+        "top": 2312,
+        "width": 130,
+        "height": 107
+      }
+    },
+    {
+      "index": 115,
+      "label": "portfolio",
+      "type": "object",
+      "box_2d": [
+        452,
+        855,
+        543,
+        981
+      ],
+      "importance_geom": 0.4129,
+      "importance_rank": 33,
+      "cutout_path": "cutouts/full/00115-portfolio.webp",
+      "thumb_path": "cutouts/thumb/00115-portfolio.webp",
+      "crop_px": {
+        "left": 1687,
+        "top": 2481,
+        "width": 418,
+        "height": 447
+      }
+    },
+    {
+      "index": 116,
+      "label": "portfolio",
+      "type": "object",
+      "box_2d": [
+        303,
+        930,
+        365,
+        963
+      ],
+      "importance_geom": 0.378,
+      "importance_rank": 46,
+      "cutout_path": "cutouts/full/00116-portfolio.webp",
+      "thumb_path": "cutouts/thumb/00116-portfolio.webp",
+      "crop_px": {
+        "left": 1130,
+        "top": 2729,
+        "width": 286,
+        "height": 118
+      }
+    },
+    {
+      "index": 117,
+      "label": "portfolio",
+      "type": "object",
+      "box_2d": [
+        301,
+        949,
+        373,
+        980
+      ],
+      "importance_geom": 0.3756,
+      "importance_rank": 53,
+      "cutout_path": "cutouts/full/00117-portfolio.webp",
+      "thumb_path": "cutouts/thumb/00117-portfolio.webp",
+      "crop_px": {
+        "left": 1119,
+        "top": 2786,
+        "width": 331,
+        "height": 111
+      }
+    },
+    {
+      "index": 118,
+      "label": "portfolio",
+      "type": "object",
+      "box_2d": [
+        146,
+        936,
+        214,
+        986
+      ],
+      "importance_geom": 0.3541,
+      "importance_rank": 94,
+      "cutout_path": "cutouts/full/00118-portfolio.webp",
+      "thumb_path": "cutouts/thumb/00118-portfolio.webp",
+      "crop_px": {
+        "left": 530,
+        "top": 2742,
+        "width": 312,
+        "height": 178
+      }
+    },
+    {
+      "index": 119,
+      "label": "portfolio",
+      "type": "object",
+      "box_2d": [
+        261,
+        882,
+        308,
+        920
+      ],
+      "importance_geom": 0.3777,
+      "importance_rank": 47,
+      "cutout_path": "cutouts/full/00119-portfolio.webp",
+      "thumb_path": "cutouts/thumb/00119-portfolio.webp",
+      "crop_px": {
+        "left": 976,
+        "top": 2587,
+        "width": 216,
+        "height": 135
+      }
+    },
+    {
+      "index": 120,
+      "label": "book",
+      "type": "object",
+      "box_2d": [
+        316,
+        928,
+        360,
+        958
+      ],
+      "importance_geom": 0.4076,
+      "importance_rank": 35,
+      "cutout_path": "cutouts/full/00120-book.webp",
+      "thumb_path": "cutouts/thumb/00120-book.webp",
+      "crop_px": {
+        "left": 1187,
+        "top": 2724,
+        "width": 202,
+        "height": 108
+      }
+    },
+    {
+      "index": 121,
+      "label": "book",
+      "type": "object",
+      "box_2d": [
+        319,
+        958,
+        373,
+        978
+      ],
+      "importance_geom": 0.4028,
+      "importance_rank": 39,
+      "cutout_path": "cutouts/full/00121-book.webp",
+      "thumb_path": "cutouts/thumb/00121-book.webp",
+      "crop_px": {
+        "left": 1194,
+        "top": 2816,
+        "width": 249,
+        "height": 72
+      }
+    },
+    {
+      "index": 122,
+      "label": "vase",
+      "type": "object",
+      "box_2d": [
+        572,
+        732,
+        598,
+        761
+      ],
+      "importance_geom": 0.4649,
+      "importance_rank": 12,
+      "cutout_path": "cutouts/full/00122-vase.webp",
+      "thumb_path": "cutouts/thumb/00122-vase.webp",
+      "crop_px": {
+        "left": 2169,
+        "top": 2147,
+        "width": 120,
+        "height": 104
+      }
+    },
+    {
+      "index": 123,
+      "label": "flower",
+      "type": "plant",
+      "box_2d": [
+        580,
+        733,
+        591,
+        744
+      ],
+      "importance_geom": 0.5363,
+      "importance_rank": 4,
+      "cutout_path": "cutouts/full/00123-flower.webp",
+      "thumb_path": "cutouts/thumb/00123-flower.webp",
+      "crop_px": {
+        "left": 2206,
+        "top": 2156,
+        "width": 51,
+        "height": 39
+      }
+    },
+    {
+      "index": 124,
+      "label": "console table",
+      "type": "furniture",
+      "box_2d": [
+        561,
+        771,
+        651,
+        851
+      ],
+      "importance_geom": 0.5353,
+      "importance_rank": 5,
+      "cutout_path": "cutouts/full/00124-console-table.webp",
+      "thumb_path": "cutouts/thumb/00124-console-table.webp",
+      "crop_px": {
+        "left": 2103,
+        "top": 2247,
+        "width": 412,
+        "height": 285
+      }
+    },
+    {
+      "index": 125,
+      "label": "chair",
+      "type": "furniture",
+      "box_2d": [
+        268,
+        711,
+        351,
+        883
+      ],
+      "importance_geom": 0.535,
+      "importance_rank": 6,
+      "cutout_path": "cutouts/full/00125-chair.webp",
+      "thumb_path": "cutouts/thumb/00125-chair.webp",
+      "crop_px": {
+        "left": 989,
+        "top": 2043,
+        "width": 381,
+        "height": 610
+      }
+    },
+    {
+      "index": 126,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        117,
+        112,
+        234,
+        223
+      ],
+      "importance_geom": 0.1998,
+      "importance_rank": 225,
+      "cutout_path": "cutouts/full/00126-building.webp",
+      "thumb_path": "cutouts/thumb/00126-building.webp",
+      "crop_px": {
+        "left": 400,
+        "top": 296,
+        "width": 537,
+        "height": 394
+      }
+    },
+    {
+      "index": 127,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        136,
+        300,
+        233,
+        412
+      ],
+      "importance_geom": 0.2668,
+      "importance_rank": 190,
+      "cutout_path": "cutouts/full/00127-building.webp",
+      "thumb_path": "cutouts/thumb/00127-building.webp",
+      "crop_px": {
+        "left": 481,
+        "top": 850,
+        "width": 444,
+        "height": 397
+      }
+    },
+    {
+      "index": 128,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        139,
+        467,
+        186,
+        528
+      ],
+      "importance_geom": 0.2761,
+      "importance_rank": 181,
+      "cutout_path": "cutouts/full/00128-building.webp",
+      "thumb_path": "cutouts/thumb/00128-building.webp",
+      "crop_px": {
+        "left": 511,
+        "top": 1357,
+        "width": 216,
+        "height": 217
+      }
+    },
+    {
+      "index": 129,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        186,
+        488,
+        235,
+        531
+      ],
+      "importance_geom": 0.2925,
+      "importance_rank": 171,
+      "cutout_path": "cutouts/full/00129-building.webp",
+      "thumb_path": "cutouts/thumb/00129-building.webp",
+      "crop_px": {
+        "left": 689,
+        "top": 1424,
+        "width": 226,
+        "height": 154
+      }
+    },
+    {
+      "index": 130,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        263,
+        85,
+        302,
+        223
+      ],
+      "importance_geom": 0.2053,
+      "importance_rank": 222,
+      "cutout_path": "cutouts/full/00130-building.webp",
+      "thumb_path": "cutouts/thumb/00130-building.webp",
+      "crop_px": {
+        "left": 987,
+        "top": 209,
+        "width": 179,
+        "height": 489
+      }
+    },
+    {
+      "index": 131,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        63,
+        275,
+        92,
+        379
+      ],
+      "importance_geom": 0.2088,
+      "importance_rank": 218,
+      "cutout_path": "cutouts/full/00131-building.webp",
+      "thumb_path": "cutouts/thumb/00131-building.webp",
+      "crop_px": {
+        "left": 229,
+        "top": 779,
+        "width": 133,
+        "height": 369
+      }
+    },
+    {
+      "index": 132,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        63,
+        379,
+        92,
+        473
+      ],
+      "importance_geom": 0.2326,
+      "importance_rank": 212,
+      "cutout_path": "cutouts/full/00132-building.webp",
+      "thumb_path": "cutouts/thumb/00132-building.webp",
+      "crop_px": {
+        "left": 229,
+        "top": 1088,
+        "width": 133,
+        "height": 334
+      }
+    },
+    {
+      "index": 133,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        63,
+        478,
+        92,
+        544
+      ],
+      "importance_geom": 0.2451,
+      "importance_rank": 205,
+      "cutout_path": "cutouts/full/00133-building.webp",
+      "thumb_path": "cutouts/thumb/00133-building.webp",
+      "crop_px": {
+        "left": 229,
+        "top": 1388,
+        "width": 133,
+        "height": 235
+      }
+    },
+    {
+      "index": 134,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        102,
+        484,
+        139,
+        522
+      ],
+      "importance_geom": 0.2573,
+      "importance_rank": 196,
+      "cutout_path": "cutouts/full/00134-building.webp",
+      "thumb_path": "cutouts/thumb/00134-building.webp",
+      "crop_px": {
+        "left": 374,
+        "top": 1414,
+        "width": 170,
+        "height": 135
+      }
+    },
+    {
+      "index": 135,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        104,
+        173,
+        126,
+        217
+      ],
+      "importance_geom": 0.1697,
+      "importance_rank": 228,
+      "cutout_path": "cutouts/full/00135-building.webp",
+      "thumb_path": "cutouts/thumb/00135-building.webp",
+      "crop_px": {
+        "left": 387,
+        "top": 496,
+        "width": 103,
+        "height": 157
+      }
+    },
+    {
+      "index": 136,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        129,
+        338,
+        151,
+        388
+      ],
+      "importance_geom": 0.2329,
+      "importance_rank": 211,
+      "cutout_path": "cutouts/full/00136-building.webp",
+      "thumb_path": "cutouts/thumb/00136-building.webp",
+      "crop_px": {
+        "left": 482,
+        "top": 980,
+        "width": 103,
+        "height": 179
+      }
+    },
+    {
+      "index": 137,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        717,
+        118,
+        731,
+        217
+      ],
+      "importance_geom": 0.1993,
+      "importance_rank": 226,
+      "cutout_path": "cutouts/full/00137-building.webp",
+      "thumb_path": "cutouts/thumb/00137-building.webp",
+      "crop_px": {
+        "left": 2727,
+        "top": 318,
+        "width": 64,
+        "height": 351
+      }
+    },
+    {
+      "index": 138,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        692,
+        181,
+        717,
+        214
+      ],
+      "importance_geom": 0.2139,
+      "importance_rank": 216,
+      "cutout_path": "cutouts/full/00138-building.webp",
+      "thumb_path": "cutouts/thumb/00138-building.webp",
+      "crop_px": {
+        "left": 2627,
+        "top": 523,
+        "width": 116,
+        "height": 118
+      }
+    },
+    {
+      "index": 139,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        787,
+        297,
+        873,
+        407
+      ],
+      "importance_geom": 0.2588,
+      "importance_rank": 194,
+      "cutout_path": "cutouts/full/00139-building.webp",
+      "thumb_path": "cutouts/thumb/00139-building.webp",
+      "crop_px": {
+        "left": 2966,
+        "top": 841,
+        "width": 395,
+        "height": 392
+      }
+    },
+    {
+      "index": 140,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        873,
+        294,
+        890,
+        412
+      ],
+      "importance_geom": 0.2266,
+      "importance_rank": 214,
+      "cutout_path": "cutouts/full/00140-building.webp",
+      "thumb_path": "cutouts/thumb/00140-building.webp",
+      "crop_px": {
+        "left": 3320,
+        "top": 831,
+        "width": 79,
+        "height": 418
+      }
+    },
+    {
+      "index": 141,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        760,
+        432,
+        832,
+        531
+      ],
+      "importance_geom": 0.2974,
+      "importance_rank": 165,
+      "cutout_path": "cutouts/full/00141-building.webp",
+      "thumb_path": "cutouts/thumb/00141-building.webp",
+      "crop_px": {
+        "left": 2868,
+        "top": 1243,
+        "width": 331,
+        "height": 351
+      }
+    },
+    {
+      "index": 142,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        908,
+        231,
+        975,
+        525
+      ],
+      "importance_geom": 0.2416,
+      "importance_rank": 207,
+      "cutout_path": "cutouts/full/00142-building.webp",
+      "thumb_path": "cutouts/thumb/00142-building.webp",
+      "crop_px": {
+        "left": 3434,
+        "top": 593,
+        "width": 308,
+        "height": 1041
+      }
+    },
+    {
+      "index": 143,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        903,
+        418,
+        975,
+        547
+      ],
+      "importance_geom": 0.2507,
+      "importance_rank": 203,
+      "cutout_path": "cutouts/full/00143-building.webp",
+      "thumb_path": "cutouts/thumb/00143-building.webp",
+      "crop_px": {
+        "left": 3413,
+        "top": 1193,
+        "width": 331,
+        "height": 457
+      }
+    },
+    {
+      "index": 144,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        587,
+        330,
+        651,
+        423
+      ],
+      "importance_geom": 0.3237,
+      "importance_rank": 131,
+      "cutout_path": "cutouts/full/00144-building.webp",
+      "thumb_path": "cutouts/thumb/00144-building.webp",
+      "crop_px": {
+        "left": 2213,
+        "top": 944,
+        "width": 292,
+        "height": 331
+      }
+    },
+    {
+      "index": 145,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        629,
+        484,
+        652,
+        536
+      ],
+      "importance_geom": 0.3418,
+      "importance_rank": 115,
+      "cutout_path": "cutouts/full/00145-building.webp",
+      "thumb_path": "cutouts/thumb/00145-building.webp",
+      "crop_px": {
+        "left": 2388,
+        "top": 1409,
+        "width": 106,
+        "height": 187
+      }
+    },
+    {
+      "index": 146,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        582,
+        500,
+        631,
+        536
+      ],
+      "importance_geom": 0.3568,
+      "importance_rank": 86,
+      "cutout_path": "cutouts/full/00146-building.webp",
+      "thumb_path": "cutouts/thumb/00146-building.webp",
+      "crop_px": {
+        "left": 2199,
+        "top": 1462,
+        "width": 225,
+        "height": 129
+      }
+    },
+    {
+      "index": 147,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        686,
+        341,
+        730,
+        426
+      ],
+      "importance_geom": 0.2963,
+      "importance_rank": 168,
+      "cutout_path": "cutouts/full/00147-building.webp",
+      "thumb_path": "cutouts/thumb/00147-building.webp",
+      "crop_px": {
+        "left": 2597,
+        "top": 979,
+        "width": 203,
+        "height": 301
+      }
+    },
+    {
+      "index": 148,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        697,
+        440,
+        730,
+        522
+      ],
+      "importance_geom": 0.3167,
+      "importance_rank": 141,
+      "cutout_path": "cutouts/full/00148-building.webp",
+      "thumb_path": "cutouts/thumb/00148-building.webp",
+      "crop_px": {
+        "left": 2643,
+        "top": 1272,
+        "width": 153,
+        "height": 290
+      }
+    },
+    {
+      "index": 149,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        541,
+        495,
+        565,
+        544
+      ],
+      "importance_geom": 0.373,
+      "importance_rank": 57,
+      "cutout_path": "cutouts/full/00149-building.webp",
+      "thumb_path": "cutouts/thumb/00149-building.webp",
+      "crop_px": {
+        "left": 2052,
+        "top": 1443,
+        "width": 111,
+        "height": 175
+      }
+    },
+    {
+      "index": 150,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        868,
+        484,
+        884,
+        522
+      ],
+      "importance_geom": 0.2546,
+      "importance_rank": 200,
+      "cutout_path": "cutouts/full/00150-building.webp",
+      "thumb_path": "cutouts/thumb/00150-building.webp",
+      "crop_px": {
+        "left": 3301,
+        "top": 1414,
+        "width": 74,
+        "height": 135
+      }
+    },
+    {
+      "index": 151,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        539,
+        357,
+        564,
+        429
+      ],
+      "importance_geom": 0.3344,
+      "importance_rank": 121,
+      "cutout_path": "cutouts/full/00151-building.webp",
+      "thumb_path": "cutouts/thumb/00151-building.webp",
+      "crop_px": {
+        "left": 2044,
+        "top": 1030,
+        "width": 116,
+        "height": 255
+      }
+    },
+    {
+      "index": 152,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        539,
+        451,
+        564,
+        495
+      ],
+      "importance_geom": 0.3651,
+      "importance_rank": 70,
+      "cutout_path": "cutouts/full/00152-building.webp",
+      "thumb_path": "cutouts/thumb/00152-building.webp",
+      "crop_px": {
+        "left": 2044,
+        "top": 1315,
+        "width": 116,
+        "height": 157
+      }
+    },
+    {
+      "index": 153,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        475,
+        357,
+        516,
+        429
+      ],
+      "importance_geom": 0.3421,
+      "importance_rank": 112,
+      "cutout_path": "cutouts/full/00153-building.webp",
+      "thumb_path": "cutouts/thumb/00153-building.webp",
+      "crop_px": {
+        "left": 1794,
+        "top": 1030,
+        "width": 189,
+        "height": 255
+      }
+    },
+    {
+      "index": 154,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        477,
+        506,
+        521,
+        550
+      ],
+      "importance_geom": 0.3872,
+      "importance_rank": 42,
+      "cutout_path": "cutouts/full/00154-building.webp",
+      "thumb_path": "cutouts/thumb/00154-building.webp",
+      "crop_px": {
+        "left": 1800,
+        "top": 1477,
+        "width": 203,
+        "height": 157
+      }
+    },
+    {
+      "index": 155,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        827,
+        146,
+        854,
+        168
+      ],
+      "importance_geom": 0.1647,
+      "importance_rank": 229,
+      "cutout_path": "cutouts/full/00155-building.webp",
+      "thumb_path": "cutouts/thumb/00155-building.webp",
+      "crop_px": {
+        "left": 3141,
+        "top": 423,
+        "width": 124,
+        "height": 79
+      }
+    },
+    {
+      "index": 156,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        895,
+        302,
+        906,
+        385
+      ],
+      "importance_geom": 0.2133,
+      "importance_rank": 217,
+      "cutout_path": "cutouts/full/00156-building.webp",
+      "thumb_path": "cutouts/thumb/00156-building.webp",
+      "crop_px": {
+        "left": 3406,
+        "top": 864,
+        "width": 51,
+        "height": 296
+      }
+    },
+    {
+      "index": 157,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        752,
+        357,
+        785,
+        412
+      ],
+      "importance_geom": 0.2718,
+      "importance_rank": 188,
+      "cutout_path": "cutouts/full/00157-building.webp",
+      "thumb_path": "cutouts/thumb/00157-building.webp",
+      "crop_px": {
+        "left": 2852,
+        "top": 1035,
+        "width": 153,
+        "height": 195
+      }
+    },
+    {
+      "index": 158,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        139,
+        473,
+        184,
+        532
+      ],
+      "importance_geom": 0.2759,
+      "importance_rank": 182,
+      "cutout_path": "cutouts/full/00158-building.webp",
+      "thumb_path": "cutouts/thumb/00158-building.webp",
+      "crop_px": {
+        "left": 512,
+        "top": 1375,
+        "width": 207,
+        "height": 211
+      }
+    },
+    {
+      "index": 159,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        184,
+        491,
+        236,
+        535
+      ],
+      "importance_geom": 0.2934,
+      "importance_rank": 169,
+      "cutout_path": "cutouts/full/00159-building.webp",
+      "thumb_path": "cutouts/thumb/00159-building.webp",
+      "crop_px": {
+        "left": 681,
+        "top": 1433,
+        "width": 239,
+        "height": 157
+      }
+    },
+    {
+      "index": 160,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        38,
+        605,
+        117,
+        774
+      ],
+      "importance_geom": 0.2791,
+      "importance_rank": 179,
+      "cutout_path": "cutouts/full/00160-building.webp",
+      "thumb_path": "cutouts/thumb/00160-building.webp",
+      "crop_px": {
+        "left": 114,
+        "top": 1732,
+        "width": 362,
+        "height": 599
+      }
+    },
+    {
+      "index": 161,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        99,
+        620,
+        121,
+        780
+      ],
+      "importance_geom": 0.2726,
+      "importance_rank": 186,
+      "cutout_path": "cutouts/full/00161-building.webp",
+      "thumb_path": "cutouts/thumb/00161-building.webp",
+      "crop_px": {
+        "left": 368,
+        "top": 1779,
+        "width": 103,
+        "height": 566
+      }
+    },
+    {
+      "index": 162,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        121,
+        681,
+        148,
+        758
+      ],
+      "importance_geom": 0.2756,
+      "importance_rank": 183,
+      "cutout_path": "cutouts/full/00162-building.webp",
+      "thumb_path": "cutouts/thumb/00162-building.webp",
+      "crop_px": {
+        "left": 451,
+        "top": 1983,
+        "width": 124,
+        "height": 274
+      }
+    },
+    {
+      "index": 163,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        158,
+        566,
+        249,
+        663
+      ],
+      "importance_geom": 0.3127,
+      "importance_rank": 147,
+      "cutout_path": "cutouts/full/00163-building.webp",
+      "thumb_path": "cutouts/thumb/00163-building.webp",
+      "crop_px": {
+        "left": 567,
+        "top": 1638,
+        "width": 417,
+        "height": 345
+      }
+    },
+    {
+      "index": 164,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        187,
+        695,
+        214,
+        747
+      ],
+      "importance_geom": 0.2925,
+      "importance_rank": 170,
+      "cutout_path": "cutouts/full/00164-building.webp",
+      "thumb_path": "cutouts/thumb/00164-building.webp",
+      "crop_px": {
+        "left": 702,
+        "top": 2032,
+        "width": 124,
+        "height": 184
+      }
+    },
+    {
+      "index": 165,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        173,
+        719,
+        192,
+        758
+      ],
+      "importance_geom": 0.2833,
+      "importance_rank": 174,
+      "cutout_path": "cutouts/full/00165-building.webp",
+      "thumb_path": "cutouts/thumb/00165-building.webp",
+      "crop_px": {
+        "left": 652,
+        "top": 2106,
+        "width": 87,
+        "height": 140
+      }
+    },
+    {
+      "index": 166,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        242,
+        719,
+        264,
+        758
+      ],
+      "importance_geom": 0.3029,
+      "importance_rank": 157,
+      "cutout_path": "cutouts/full/00166-building.webp",
+      "thumb_path": "cutouts/thumb/00166-building.webp",
+      "crop_px": {
+        "left": 913,
+        "top": 2106,
+        "width": 103,
+        "height": 140
+      }
+    },
+    {
+      "index": 167,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        349,
+        461,
+        456,
+        714
+      ],
+      "importance_geom": 0.3959,
+      "importance_rank": 40,
+      "cutout_path": "cutouts/full/00167-building.webp",
+      "thumb_path": "cutouts/thumb/00167-building.webp",
+      "crop_px": {
+        "left": 1289,
+        "top": 1283,
+        "width": 490,
+        "height": 896
+      }
+    },
+    {
+      "index": 168,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        0,
+        475,
+        52,
+        557
+      ],
+      "importance_geom": 0.234,
+      "importance_rank": 210,
+      "cutout_path": "cutouts/full/00168-building.webp",
+      "thumb_path": "cutouts/thumb/00168-building.webp",
+      "crop_px": {
+        "left": 0,
+        "top": 1375,
+        "width": 219,
+        "height": 290
+      }
+    },
+    {
+      "index": 169,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        102,
+        483,
+        135,
+        552
+      ],
+      "importance_geom": 0.2616,
+      "importance_rank": 192,
+      "cutout_path": "cutouts/full/00169-building.webp",
+      "thumb_path": "cutouts/thumb/00169-building.webp",
+      "crop_px": {
+        "left": 375,
+        "top": 1401,
+        "width": 153,
+        "height": 247
+      }
+    },
+    {
+      "index": 170,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        154,
+        450,
+        247,
+        554
+      ],
+      "importance_geom": 0.3036,
+      "importance_rank": 154,
+      "cutout_path": "cutouts/full/00170-building.webp",
+      "thumb_path": "cutouts/thumb/00170-building.webp",
+      "crop_px": {
+        "left": 550,
+        "top": 1294,
+        "width": 428,
+        "height": 370
+      }
+    },
+    {
+      "index": 171,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        154,
+        763,
+        214,
+        807
+      ],
+      "importance_geom": 0.2874,
+      "importance_rank": 173,
+      "cutout_path": "cutouts/full/00171-building.webp",
+      "thumb_path": "cutouts/thumb/00171-building.webp",
+      "crop_px": {
+        "left": 563,
+        "top": 2234,
+        "width": 276,
+        "height": 157
+      }
+    },
+    {
+      "index": 172,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        55,
+        802,
+        132,
+        862
+      ],
+      "importance_geom": 0.2644,
+      "importance_rank": 191,
+      "cutout_path": "cutouts/full/00172-building.webp",
+      "thumb_path": "cutouts/thumb/00172-building.webp",
+      "crop_px": {
+        "left": 179,
+        "top": 2344,
+        "width": 355,
+        "height": 214
+      }
+    },
+    {
+      "index": 173,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        275,
+        714,
+        341,
+        769
+      ],
+      "importance_geom": 0.325,
+      "importance_rank": 130,
+      "cutout_path": "cutouts/full/00173-building.webp",
+      "thumb_path": "cutouts/thumb/00173-building.webp",
+      "crop_px": {
+        "left": 1023,
+        "top": 2087,
+        "width": 302,
+        "height": 195
+      }
+    },
+    {
+      "index": 174,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        256,
+        560,
+        267,
+        659
+      ],
+      "importance_geom": 0.3133,
+      "importance_rank": 146,
+      "cutout_path": "cutouts/full/00174-building.webp",
+      "thumb_path": "cutouts/thumb/00174-building.webp",
+      "crop_px": {
+        "left": 971,
+        "top": 1620,
+        "width": 51,
+        "height": 351
+      }
+    },
+    {
+      "index": 175,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        901,
+        461,
+        978,
+        582
+      ],
+      "importance_geom": 0.2563,
+      "importance_rank": 198,
+      "cutout_path": "cutouts/full/00175-building.webp",
+      "thumb_path": "cutouts/thumb/00175-building.webp",
+      "crop_px": {
+        "left": 3403,
+        "top": 1322,
+        "width": 355,
+        "height": 429
+      }
+    },
+    {
+      "index": 176,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        758,
+        472,
+        835,
+        538
+      ],
+      "importance_geom": 0.297,
+      "importance_rank": 166,
+      "cutout_path": "cutouts/full/00176-building.webp",
+      "thumb_path": "cutouts/thumb/00176-building.webp",
+      "crop_px": {
+        "left": 2858,
+        "top": 1370,
+        "width": 355,
+        "height": 235
+      }
+    },
+    {
+      "index": 177,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        857,
+        494,
+        887,
+        535
+      ],
+      "importance_geom": 0.2608,
+      "importance_rank": 193,
+      "cutout_path": "cutouts/full/00177-building.webp",
+      "thumb_path": "cutouts/thumb/00177-building.webp",
+      "crop_px": {
+        "left": 3254,
+        "top": 1443,
+        "width": 139,
+        "height": 146
+      }
+    },
+    {
+      "index": 178,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        761,
+        565,
+        796,
+        662
+      ],
+      "importance_geom": 0.3079,
+      "importance_rank": 152,
+      "cutout_path": "cutouts/full/00178-building.webp",
+      "thumb_path": "cutouts/thumb/00178-building.webp",
+      "crop_px": {
+        "left": 2887,
+        "top": 1635,
+        "width": 160,
+        "height": 345
+      }
+    },
+    {
+      "index": 179,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        835,
+        598,
+        884,
+        667
+      ],
+      "importance_geom": 0.2816,
+      "importance_rank": 176,
+      "cutout_path": "cutouts/full/00179-building.webp",
+      "thumb_path": "cutouts/thumb/00179-building.webp",
+      "crop_px": {
+        "left": 3163,
+        "top": 1741,
+        "width": 225,
+        "height": 244
+      }
+    },
+    {
+      "index": 180,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        893,
+        648,
+        978,
+        785
+      ],
+      "importance_geom": 0.2726,
+      "importance_rank": 185,
+      "cutout_path": "cutouts/full/00180-building.webp",
+      "thumb_path": "cutouts/thumb/00180-building.webp",
+      "crop_px": {
+        "left": 3370,
+        "top": 1869,
+        "width": 391,
+        "height": 484
+      }
+    },
+    {
+      "index": 181,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        783,
+        796,
+        923,
+        937
+      ],
+      "importance_geom": 0.2969,
+      "importance_rank": 167,
+      "cutout_path": "cutouts/full/00181-building.webp",
+      "thumb_path": "cutouts/thumb/00181-building.webp",
+      "crop_px": {
+        "left": 2931,
+        "top": 2303,
+        "width": 640,
+        "height": 500
+      }
+    },
+    {
+      "index": 182,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        662,
+        818,
+        769,
+        906
+      ],
+      "importance_geom": 0.3142,
+      "importance_rank": 144,
+      "cutout_path": "cutouts/full/00182-building.webp",
+      "thumb_path": "cutouts/thumb/00182-building.webp",
+      "crop_px": {
+        "left": 2481,
+        "top": 2383,
+        "width": 491,
+        "height": 313
+      }
+    },
+    {
+      "index": 183,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        585,
+        499,
+        651,
+        538
+      ],
+      "importance_geom": 0.3555,
+      "importance_rank": 92,
+      "cutout_path": "cutouts/full/00183-building.webp",
+      "thumb_path": "cutouts/thumb/00183-building.webp",
+      "crop_px": {
+        "left": 2204,
+        "top": 1458,
+        "width": 302,
+        "height": 139
+      }
+    },
+    {
+      "index": 184,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        585,
+        563,
+        651,
+        607
+      ],
+      "importance_geom": 0.3572,
+      "importance_rank": 85,
+      "cutout_path": "cutouts/full/00184-building.webp",
+      "thumb_path": "cutouts/thumb/00184-building.webp",
+      "crop_px": {
+        "left": 2204,
+        "top": 1645,
+        "width": 302,
+        "height": 157
+      }
+    },
+    {
+      "index": 185,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        590,
+        623,
+        648,
+        656
+      ],
+      "importance_geom": 0.349,
+      "importance_rank": 104,
+      "cutout_path": "cutouts/full/00185-building.webp",
+      "thumb_path": "cutouts/thumb/00185-building.webp",
+      "crop_px": {
+        "left": 2226,
+        "top": 1825,
+        "width": 266,
+        "height": 118
+      }
+    },
+    {
+      "index": 186,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        596,
+        681,
+        645,
+        747
+      ],
+      "importance_geom": 0.3421,
+      "importance_rank": 113,
+      "cutout_path": "cutouts/full/00186-building.webp",
+      "thumb_path": "cutouts/thumb/00186-building.webp",
+      "crop_px": {
+        "left": 2252,
+        "top": 1986,
+        "width": 226,
+        "height": 235
+      }
+    },
+    {
+      "index": 187,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        519,
+        510,
+        571,
+        535
+      ],
+      "importance_geom": 0.3761,
+      "importance_rank": 52,
+      "cutout_path": "cutouts/full/00187-building.webp",
+      "thumb_path": "cutouts/thumb/00187-building.webp",
+      "crop_px": {
+        "left": 1957,
+        "top": 1494,
+        "width": 240,
+        "height": 91
+      }
+    },
+    {
+      "index": 188,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        521,
+        541,
+        568,
+        565
+      ],
+      "importance_geom": 0.3733,
+      "importance_rank": 55,
+      "cutout_path": "cutouts/full/00188-building.webp",
+      "thumb_path": "cutouts/thumb/00188-building.webp",
+      "crop_px": {
+        "left": 1967,
+        "top": 1586,
+        "width": 216,
+        "height": 86
+      }
+    },
+    {
+      "index": 189,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        521,
+        571,
+        568,
+        596
+      ],
+      "importance_geom": 0.3691,
+      "importance_rank": 62,
+      "cutout_path": "cutouts/full/00189-building.webp",
+      "thumb_path": "cutouts/thumb/00189-building.webp",
+      "crop_px": {
+        "left": 1967,
+        "top": 1675,
+        "width": 216,
+        "height": 88
+      }
+    },
+    {
+      "index": 190,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        477,
+        510,
+        516,
+        535
+      ],
+      "importance_geom": 0.3844,
+      "importance_rank": 43,
+      "cutout_path": "cutouts/full/00190-building.webp",
+      "thumb_path": "cutouts/thumb/00190-building.webp",
+      "crop_px": {
+        "left": 1802,
+        "top": 1494,
+        "width": 180,
+        "height": 91
+      }
+    },
+    {
+      "index": 191,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        480,
+        541,
+        513,
+        565
+      ],
+      "importance_geom": 0.3773,
+      "importance_rank": 48,
+      "cutout_path": "cutouts/full/00191-building.webp",
+      "thumb_path": "cutouts/thumb/00191-building.webp",
+      "crop_px": {
+        "left": 1816,
+        "top": 1586,
+        "width": 153,
+        "height": 86
+      }
+    },
+    {
+      "index": 192,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        574,
+        510,
+        626,
+        535
+      ],
+      "importance_geom": 0.3577,
+      "importance_rank": 84,
+      "cutout_path": "cutouts/full/00192-building.webp",
+      "thumb_path": "cutouts/thumb/00192-building.webp",
+      "crop_px": {
+        "left": 2167,
+        "top": 1494,
+        "width": 239,
+        "height": 91
+      }
+    },
+    {
+      "index": 193,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        576,
+        541,
+        623,
+        565
+      ],
+      "importance_geom": 0.3579,
+      "importance_rank": 83,
+      "cutout_path": "cutouts/full/00193-building.webp",
+      "thumb_path": "cutouts/thumb/00193-building.webp",
+      "crop_px": {
+        "left": 2177,
+        "top": 1586,
+        "width": 216,
+        "height": 86
+      }
+    },
+    {
+      "index": 194,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        629,
+        510,
+        708,
+        535
+      ],
+      "importance_geom": 0.3363,
+      "importance_rank": 119,
+      "cutout_path": "cutouts/full/00194-building.webp",
+      "thumb_path": "cutouts/thumb/00194-building.webp",
+      "crop_px": {
+        "left": 2367,
+        "top": 1494,
+        "width": 362,
+        "height": 91
+      }
+    },
+    {
+      "index": 195,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        631,
+        543,
+        703,
+        565
+      ],
+      "importance_geom": 0.3377,
+      "importance_rank": 118,
+      "cutout_path": "cutouts/full/00195-building.webp",
+      "thumb_path": "cutouts/thumb/00195-building.webp",
+      "crop_px": {
+        "left": 2376,
+        "top": 1592,
+        "width": 332,
+        "height": 80
+      }
+    },
+    {
+      "index": 196,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        695,
+        461,
+        752,
+        538
+      ],
+      "importance_geom": 0.3205,
+      "importance_rank": 136,
+      "cutout_path": "cutouts/full/00196-building.webp",
+      "thumb_path": "cutouts/thumb/00196-building.webp",
+      "crop_px": {
+        "left": 2626,
+        "top": 1335,
+        "width": 262,
+        "height": 273
+      }
+    },
+    {
+      "index": 197,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        695,
+        543,
+        752,
+        615
+      ],
+      "importance_geom": 0.327,
+      "importance_rank": 127,
+      "cutout_path": "cutouts/full/00197-building.webp",
+      "thumb_path": "cutouts/thumb/00197-building.webp",
+      "crop_px": {
+        "left": 2626,
+        "top": 1578,
+        "width": 262,
+        "height": 255
+      }
+    },
+    {
+      "index": 198,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        695,
+        659,
+        730,
+        725
+      ],
+      "importance_geom": 0.3217,
+      "importance_rank": 135,
+      "cutout_path": "cutouts/full/00198-building.webp",
+      "thumb_path": "cutouts/thumb/00198-building.webp",
+      "crop_px": {
+        "left": 2634,
+        "top": 1921,
+        "width": 163,
+        "height": 235
+      }
+    },
+    {
+      "index": 199,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        521,
+        697,
+        576,
+        752
+      ],
+      "importance_geom": 0.3487,
+      "importance_rank": 105,
+      "cutout_path": "cutouts/full/00199-building.webp",
+      "thumb_path": "cutouts/thumb/00199-building.webp",
+      "crop_px": {
+        "left": 1964,
+        "top": 2037,
+        "width": 253,
+        "height": 195
+      }
+    },
+    {
+      "index": 200,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        695,
+        725,
+        760,
+        791
+      ],
+      "importance_geom": 0.3165,
+      "importance_rank": 142,
+      "cutout_path": "cutouts/full/00200-building.webp",
+      "thumb_path": "cutouts/thumb/00200-building.webp",
+      "crop_px": {
+        "left": 2623,
+        "top": 2115,
+        "width": 299,
+        "height": 236
+      }
+    },
+    {
+      "index": 201,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        783,
+        667,
+        887,
+        791
+      ],
+      "importance_geom": 0.3047,
+      "importance_rank": 153,
+      "cutout_path": "cutouts/full/00201-building.webp",
+      "thumb_path": "cutouts/thumb/00201-building.webp",
+      "crop_px": {
+        "left": 2944,
+        "top": 1927,
+        "width": 477,
+        "height": 441
+      }
+    },
+    {
+      "index": 202,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        539,
+        648,
+        576,
+        696
+      ],
+      "importance_geom": 0.3541,
+      "importance_rank": 95,
+      "cutout_path": "cutouts/full/00202-building.webp",
+      "thumb_path": "cutouts/thumb/00202-building.webp",
+      "crop_px": {
+        "left": 2040,
+        "top": 1895,
+        "width": 170,
+        "height": 170
+      }
+    },
+    {
+      "index": 203,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        834,
+        493,
+        856,
+        537
+      ],
+      "importance_geom": 0.2692,
+      "importance_rank": 189,
+      "cutout_path": "cutouts/full/00203-building.webp",
+      "thumb_path": "cutouts/thumb/00203-building.webp",
+      "crop_px": {
+        "left": 3169,
+        "top": 1439,
+        "width": 103,
+        "height": 157
+      }
+    },
+    {
+      "index": 204,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        578,
+        689,
+        595,
+        744
+      ],
+      "importance_geom": 0.339,
+      "importance_rank": 116,
+      "cutout_path": "cutouts/full/00204-building.webp",
+      "thumb_path": "cutouts/thumb/00204-building.webp",
+      "crop_px": {
+        "left": 2195,
+        "top": 2013,
+        "width": 80,
+        "height": 195
+      }
+    },
+    {
+      "index": 205,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        579,
+        626,
+        589,
+        659
+      ],
+      "importance_geom": 0.3481,
+      "importance_rank": 106,
+      "cutout_path": "cutouts/full/00205-building.webp",
+      "thumb_path": "cutouts/thumb/00205-building.webp",
+      "crop_px": {
+        "left": 2202,
+        "top": 1834,
+        "width": 47,
+        "height": 118
+      }
+    },
+    {
+      "index": 206,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        574,
+        571,
+        583,
+        604
+      ],
+      "importance_geom": 0.3565,
+      "importance_rank": 88,
+      "cutout_path": "cutouts/full/00206-building.webp",
+      "thumb_path": "cutouts/thumb/00206-building.webp",
+      "crop_px": {
+        "left": 2183,
+        "top": 1672,
+        "width": 43,
+        "height": 118
+      }
+    },
+    {
+      "index": 207,
+      "label": "building",
+      "type": "architecture",
+      "box_2d": [
+        524,
+        752,
+        563,
+        807
+      ],
+      "importance_geom": 0.3355,
+      "importance_rank": 120,
+      "cutout_path": "cutouts/full/00207-building.webp",
+      "thumb_path": "cutouts/thumb/00207-building.webp",
+      "crop_px": {
+        "left": 1981,
+        "top": 2199,
+        "width": 180,
+        "height": 195
+      }
+    },
+    {
+      "index": 208,
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        129,
+        154,
+        158,
+        218
+      ],
+      "importance_geom": 0.227,
+      "importance_rank": 213,
+      "cutout_path": "cutouts/full/00208-fountain.webp",
+      "thumb_path": "cutouts/thumb/00208-fountain.webp",
+      "crop_px": {
+        "left": 480,
+        "top": 434,
+        "width": 134,
+        "height": 228
+      }
+    },
+    {
+      "index": 209,
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        205,
+        511,
+        215,
+        525
+      ],
+      "importance_geom": 0.3327,
+      "importance_rank": 122,
+      "cutout_path": "cutouts/full/00209-fountain.webp",
+      "thumb_path": "cutouts/thumb/00209-fountain.webp",
+      "crop_px": {
+        "left": 777,
+        "top": 1501,
+        "width": 47,
+        "height": 50
+      }
+    },
+    {
+      "index": 210,
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        131,
+        510,
+        144,
+        527
+      ],
+      "importance_geom": 0.308,
+      "importance_rank": 151,
+      "cutout_path": "cutouts/full/00210-fountain.webp",
+      "thumb_path": "cutouts/thumb/00210-fountain.webp",
+      "crop_px": {
+        "left": 494,
+        "top": 1497,
+        "width": 60,
+        "height": 61
+      }
+    },
+    {
+      "index": 211,
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        294,
+        397,
+        303,
+        422
+      ],
+      "importance_geom": 0.342,
+      "importance_rank": 114,
+      "cutout_path": "cutouts/full/00211-fountain.webp",
+      "thumb_path": "cutouts/thumb/00211-fountain.webp",
+      "crop_px": {
+        "left": 1116,
+        "top": 1161,
+        "width": 43,
+        "height": 91
+      }
+    },
+    {
+      "index": 212,
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        793,
+        178,
+        854,
+        218
+      ],
+      "importance_geom": 0.2422,
+      "importance_rank": 206,
+      "cutout_path": "cutouts/full/00212-fountain.webp",
+      "thumb_path": "cutouts/thumb/00212-fountain.webp",
+      "crop_px": {
+        "left": 2999,
+        "top": 512,
+        "width": 279,
+        "height": 143
+      }
+    },
+    {
+      "index": 213,
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        912,
+        88,
+        961,
+        165
+      ],
+      "importance_geom": 0.1884,
+      "importance_rank": 227,
+      "cutout_path": "cutouts/full/00213-fountain.webp",
+      "thumb_path": "cutouts/thumb/00213-fountain.webp",
+      "crop_px": {
+        "left": 3456,
+        "top": 236,
+        "width": 226,
+        "height": 274
+      }
+    },
+    {
+      "index": 214,
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        703,
+        484,
+        725,
+        517
+      ],
+      "importance_geom": 0.3616,
+      "importance_rank": 77,
+      "cutout_path": "cutouts/full/00214-fountain.webp",
+      "thumb_path": "cutouts/thumb/00214-fountain.webp",
+      "crop_px": {
+        "left": 2671,
+        "top": 1415,
+        "width": 100,
+        "height": 119
+      }
+    },
+    {
+      "index": 215,
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        593,
+        344,
+        637,
+        404
+      ],
+      "importance_geom": 0.3653,
+      "importance_rank": 69,
+      "cutout_path": "cutouts/full/00215-fountain.webp",
+      "thumb_path": "cutouts/thumb/00215-fountain.webp",
+      "crop_px": {
+        "left": 2242,
+        "top": 995,
+        "width": 203,
+        "height": 214
+      }
+    },
+    {
+      "index": 216,
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        908,
+        245,
+        926,
+        294
+      ],
+      "importance_geom": 0.235,
+      "importance_rank": 209,
+      "cutout_path": "cutouts/full/00216-fountain.webp",
+      "thumb_path": "cutouts/thumb/00216-fountain.webp",
+      "crop_px": {
+        "left": 3453,
+        "top": 706,
+        "width": 83,
+        "height": 176
+      }
+    },
+    {
+      "index": 217,
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        478,
+        461,
+        489,
+        500
+      ],
+      "importance_geom": 0.4234,
+      "importance_rank": 31,
+      "cutout_path": "cutouts/full/00217-fountain.webp",
+      "thumb_path": "cutouts/thumb/00217-fountain.webp",
+      "crop_px": {
+        "left": 1817,
+        "top": 1346,
+        "width": 51,
+        "height": 139
+      }
+    },
+    {
+      "index": 218,
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        867,
+        514,
+        878,
+        521
+      ],
+      "importance_geom": 0.3026,
+      "importance_rank": 158,
+      "cutout_path": "cutouts/full/00218-fountain.webp",
+      "thumb_path": "cutouts/thumb/00218-fountain.webp",
+      "crop_px": {
+        "left": 3300,
+        "top": 1512,
+        "width": 51,
+        "height": 25
+      }
+    },
+    {
+      "index": 219,
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        937,
+        400,
+        949,
+        409
+      ],
+      "importance_geom": 0.2577,
+      "importance_rank": 195,
+      "cutout_path": "cutouts/full/00219-fountain.webp",
+      "thumb_path": "cutouts/thumb/00219-fountain.webp",
+      "crop_px": {
+        "left": 3565,
+        "top": 1175,
+        "width": 57,
+        "height": 33
+      }
+    },
+    {
+      "index": 220,
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        645,
+        815,
+        656,
+        828
+      ],
+      "importance_geom": 0.3554,
+      "importance_rank": 93,
+      "cutout_path": "cutouts/full/00220-fountain.webp",
+      "thumb_path": "cutouts/thumb/00220-fountain.webp",
+      "crop_px": {
+        "left": 2454,
+        "top": 2396,
+        "width": 51,
+        "height": 48
+      }
+    },
+    {
+      "index": 221,
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        722,
+        729,
+        796,
+        773
+      ],
+      "importance_geom": 0.3564,
+      "importance_rank": 90,
+      "cutout_path": "cutouts/full/00221-fountain.webp",
+      "thumb_path": "cutouts/thumb/00221-fountain.webp",
+      "crop_px": {
+        "left": 2723,
+        "top": 2134,
+        "width": 339,
+        "height": 157
+      }
+    },
+    {
+      "index": 222,
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        903,
+        476,
+        975,
+        579
+      ],
+      "importance_geom": 0.3036,
+      "importance_rank": 155,
+      "cutout_path": "cutouts/full/00222-fountain.webp",
+      "thumb_path": "cutouts/thumb/00222-fountain.webp",
+      "crop_px": {
+        "left": 3413,
+        "top": 1372,
+        "width": 331,
+        "height": 364
+      }
+    },
+    {
+      "index": 223,
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        698,
+        460,
+        722,
+        521
+      ],
+      "importance_geom": 0.3649,
+      "importance_rank": 71,
+      "cutout_path": "cutouts/full/00223-fountain.webp",
+      "thumb_path": "cutouts/thumb/00223-fountain.webp",
+      "crop_px": {
+        "left": 2651,
+        "top": 1337,
+        "width": 110,
+        "height": 216
+      }
+    },
+    {
+      "index": 224,
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        689,
+        747,
+        717,
+        791
+      ],
+      "importance_geom": 0.3609,
+      "importance_rank": 79,
+      "cutout_path": "cutouts/full/00224-fountain.webp",
+      "thumb_path": "cutouts/thumb/00224-fountain.webp",
+      "crop_px": {
+        "left": 2614,
+        "top": 2187,
+        "width": 130,
+        "height": 157
+      }
+    },
+    {
+      "index": 225,
+      "label": "fountain",
+      "type": "object",
+      "box_2d": [
+        609,
+        755,
+        632,
+        768
+      ],
+      "importance_geom": 0.3718,
+      "importance_rank": 59,
+      "cutout_path": "cutouts/full/00225-fountain.webp",
+      "thumb_path": "cutouts/thumb/00225-fountain.webp",
+      "crop_px": {
+        "left": 2311,
+        "top": 2220,
+        "width": 107,
+        "height": 47
+      }
+    },
+    {
+      "index": 226,
+      "label": "obelisk",
+      "type": "object",
+      "box_2d": [
+        37,
+        392,
+        51,
+        492
+      ],
+      "importance_geom": 0.3182,
+      "importance_rank": 140,
+      "cutout_path": "cutouts/full/00226-obelisk.webp",
+      "thumb_path": "cutouts/thumb/00226-obelisk.webp",
+      "crop_px": {
+        "left": 136,
+        "top": 1124,
+        "width": 64,
+        "height": 356
+      }
+    },
+    {
+      "index": 227,
+      "label": "obelisk",
+      "type": "object",
+      "box_2d": [
+        166,
+        476,
+        170,
+        531
+      ],
+      "importance_geom": 0.3658,
+      "importance_rank": 67,
+      "cutout_path": "cutouts/full/00227-obelisk.webp",
+      "thumb_path": "cutouts/thumb/00227-obelisk.webp",
+      "crop_px": {
+        "left": 630,
+        "top": 1386,
+        "width": 20,
+        "height": 195
+      }
+    },
+    {
+      "index": 228,
+      "label": "obelisk",
+      "type": "object",
+      "box_2d": [
+        140,
+        129,
+        145,
+        184
+      ],
+      "importance_geom": 0.2564,
+      "importance_rank": 197,
+      "cutout_path": "cutouts/full/00228-obelisk.webp",
+      "thumb_path": "cutouts/thumb/00228-obelisk.webp",
+      "crop_px": {
+        "left": 531,
+        "top": 364,
+        "width": 24,
+        "height": 195
+      }
+    },
+    {
+      "index": 229,
+      "label": "obelisk",
+      "type": "object",
+      "box_2d": [
+        707,
+        448,
+        713,
+        503
+      ],
+      "importance_geom": 0.4052,
+      "importance_rank": 36,
+      "cutout_path": "cutouts/full/00229-obelisk.webp",
+      "thumb_path": "cutouts/thumb/00229-obelisk.webp",
+      "crop_px": {
+        "left": 2692,
+        "top": 1303,
+        "width": 28,
+        "height": 195
+      }
+    }
+  ]
+}

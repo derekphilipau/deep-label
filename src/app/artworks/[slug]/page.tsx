@@ -140,7 +140,7 @@ export default async function ArtworkPage({
               {topObjects.length ? (
                 <div>
                   <div className="text-xs font-semibold">Top objects</div>
-                  <div className="mt-2 space-y-2">
+                  <div className="mt-2 max-h-[280px] overflow-y-auto space-y-2 pr-1">
                     {topObjects.map((o) => (
                       <div key={o.index} className="flex items-start gap-2 text-xs">
                         <div className="mt-[2px] w-8 shrink-0 text-muted-foreground">

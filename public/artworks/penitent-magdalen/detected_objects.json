@@ -1,0 +1,417 @@
+{
+  "strategy": "hybrid-detect-verify",
+  "image_path": "public/artworks/penitent-magdalen/image.jpg",
+  "model_name": "gemini-3-pro-preview",
+  "description_model_name": "gemini-3-pro-preview",
+  "max_kinds": 50,
+  "verify_rounds": 2,
+  "tile_threshold": 12,
+  "cutouts": {
+    "enabled": true,
+    "format": "webp",
+    "thumb_size": 256,
+    "max": null,
+    "concurrency": 8,
+    "index_path": "cutouts.json",
+    "directory_path": "cutouts",
+    "count": 18
+  },
+  "kinds": [
+    {
+      "kind": "woman",
+      "type": "person",
+      "estimated_count": "few",
+      "estimated_size": "giant",
+      "segmentation": "individual",
+      "importance": "primary"
+    },
+    {
+      "kind": "skull",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "primary"
+    },
+    {
+      "kind": "mirror",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "medium",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "candle",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "tiny",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "flame",
+      "type": "element",
+      "estimated_count": "few",
+      "estimated_size": "tiny",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "candlestick",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "pearl necklace",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "scourge",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "basket",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "background"
+    },
+    {
+      "kind": "blouse",
+      "type": "clothing",
+      "estimated_count": "few",
+      "estimated_size": "large",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "robe",
+      "type": "clothing",
+      "estimated_count": "few",
+      "estimated_size": "large",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "hair",
+      "type": "body_part",
+      "estimated_count": "few",
+      "estimated_size": "medium",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "hands",
+      "type": "body_part",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "shoe",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "reflection",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "frame",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "medium",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "table",
+      "type": "furniture",
+      "estimated_count": "few",
+      "estimated_size": "medium",
+      "segmentation": "region",
+      "importance": "background"
+    },
+    {
+      "kind": "floor",
+      "type": "building",
+      "estimated_count": "few",
+      "estimated_size": "medium",
+      "segmentation": "region",
+      "importance": "background"
+    },
+    {
+      "kind": "sash",
+      "type": "clothing",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "secondary"
+    }
+  ],
+  "objects": [
+    {
+      "label": "woman",
+      "type": "person",
+      "box_2d": [
+        125,
+        78,
+        905,
+        855
+      ],
+      "importance_geom": 0.7699,
+      "importance": 0.7699,
+      "importance_rank": 1
+    },
+    {
+      "label": "skull",
+      "type": "object",
+      "box_2d": [
+        472,
+        435,
+        641,
+        513
+      ],
+      "importance_geom": 0.5021,
+      "importance": 0.5021,
+      "importance_rank": 6
+    },
+    {
+      "label": "mirror",
+      "type": "object",
+      "box_2d": [
+        550,
+        223,
+        853,
+        473
+      ],
+      "aliases": [
+        "frame"
+      ],
+      "importance_geom": 0.4641,
+      "importance": 0.4641,
+      "importance_rank": 7
+    },
+    {
+      "label": "candle",
+      "type": "object",
+      "box_2d": [
+        688,
+        267,
+        719,
+        397
+      ],
+      "importance_geom": 0.3941,
+      "importance": 0.3941,
+      "importance_rank": 13
+    },
+    {
+      "label": "flame",
+      "type": "element",
+      "box_2d": [
+        692,
+        300,
+        708,
+        355
+      ],
+      "importance_geom": 0.444,
+      "importance": 0.444,
+      "importance_rank": 8
+    },
+    {
+      "label": "candlestick",
+      "type": "object",
+      "box_2d": [
+        655,
+        395,
+        748,
+        496
+      ],
+      "importance_geom": 0.4406,
+      "importance": 0.4406,
+      "importance_rank": 9
+    },
+    {
+      "label": "pearl necklace",
+      "type": "object",
+      "box_2d": [
+        659,
+        462,
+        928,
+        503
+      ],
+      "importance_geom": 0.3909,
+      "importance": 0.3909,
+      "importance_rank": 14
+    },
+    {
+      "label": "pearl necklace",
+      "type": "object",
+      "box_2d": [
+        733,
+        480,
+        920,
+        500
+      ],
+      "importance_geom": 0.3673,
+      "importance": 0.3673,
+      "importance_rank": 17
+    },
+    {
+      "label": "scourge",
+      "type": "object",
+      "box_2d": [
+        595,
+        867,
+        892,
+        925
+      ],
+      "importance_geom": 0.4279,
+      "importance": 0.4279,
+      "importance_rank": 11
+    },
+    {
+      "label": "basket",
+      "type": "object",
+      "box_2d": [
+        860,
+        363,
+        906,
+        470
+      ],
+      "importance_geom": 0.3635,
+      "importance": 0.3635,
+      "importance_rank": 18
+    },
+    {
+      "label": "blouse",
+      "type": "clothing",
+      "box_2d": [
+        124,
+        225,
+        480,
+        536
+      ],
+      "importance_geom": 0.5545,
+      "importance": 0.5545,
+      "importance_rank": 3
+    },
+    {
+      "label": "hair",
+      "type": "body_part",
+      "box_2d": [
+        190,
+        78,
+        395,
+        330
+      ],
+      "importance_geom": 0.4366,
+      "importance": 0.4366,
+      "importance_rank": 10
+    },
+    {
+      "label": "hands",
+      "type": "body_part",
+      "box_2d": [
+        450,
+        393,
+        571,
+        454
+      ],
+      "importance_geom": 0.5276,
+      "importance": 0.5276,
+      "importance_rank": 4
+    },
+    {
+      "label": "shoe",
+      "type": "object",
+      "box_2d": [
+        758,
+        769,
+        857,
+        838
+      ],
+      "importance_geom": 0.3836,
+      "importance": 0.3836,
+      "importance_rank": 15
+    },
+    {
+      "label": "shoe",
+      "type": "object",
+      "box_2d": [
+        809,
+        771,
+        908,
+        836
+      ],
+      "importance_geom": 0.3695,
+      "importance": 0.3695,
+      "importance_rank": 16
+    },
+    {
+      "label": "reflection",
+      "type": "object",
+      "box_2d": [
+        652,
+        276,
+        677,
+        431
+      ],
+      "importance_geom": 0.4123,
+      "importance": 0.4123,
+      "importance_rank": 12
+    },
+    {
+      "label": "table",
+      "type": "furniture",
+      "box_2d": [
+        540,
+        465,
+        925,
+        525
+      ],
+      "importance_geom": 0.517,
+      "importance": 0.517,
+      "importance_rank": 5
+    },
+    {
+      "label": "floor",
+      "type": "building",
+      "box_2d": [
+        0,
+        835,
+        1000,
+        1000
+      ],
+      "importance_geom": 0.5913,
+      "importance": 0.5913,
+      "importance_rank": 2
+    }
+  ],
+  "descriptions": {
+    "alt_text": "A seated woman holds a skull on her lap facing a lit candle and mirror in darkness",
+    "long_description": "This painting depicts a woman seated in profile facing right, dramatically illuminated against a deep, dark background. Her long, dark hair falls straight down her back, and she wears a loose white blouse with billowing sleeves tucked into a voluminous red skirt. Her hands are gently clasped together, resting atop a smooth, beige human skull positioned on her lap. To her right, on a table surface, a single lit candle stands in a dark candlestick. Behind the candle is a rectangular mirror with an ornate gold frame, which clearly reflects the bright, vertical flame. A string of white pearls lies coiled on the table near the base of the mirror, and a woven basket is faintly visible in the shadows behind it. At the bottom right, the tips of the woman’s red shoes emerge from beneath the hem of her skirt. On the floor in the foreground, a knotted scourge, or whip, lies in the dim light."
+  },
+  "generated_at": "2025-12-14T05:07:40.231Z"
+}

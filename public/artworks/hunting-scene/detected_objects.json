@@ -1,0 +1,2442 @@
+{
+  "strategy": "hybrid-detect-verify",
+  "image_path": "public/artworks/hunting-scene/image.jpg",
+  "model_name": "gemini-3-pro-preview",
+  "description_model_name": "gemini-3-pro-preview",
+  "max_kinds": 50,
+  "verify_rounds": 2,
+  "tile_threshold": 12,
+  "cutouts": {
+    "enabled": true,
+    "format": "webp",
+    "thumb_size": 256,
+    "max": null,
+    "concurrency": 8,
+    "index_path": "cutouts.json",
+    "directory_path": "cutouts",
+    "count": 175
+  },
+  "kinds": [
+    {
+      "kind": "stag",
+      "type": "animal",
+      "estimated_count": "many",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "primary"
+    },
+    {
+      "kind": "hound",
+      "type": "animal",
+      "estimated_count": "very_many",
+      "estimated_size": "tiny",
+      "segmentation": "individual",
+      "importance": "primary"
+    },
+    {
+      "kind": "hunter",
+      "type": "person",
+      "estimated_count": "many",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "primary"
+    },
+    {
+      "kind": "noble",
+      "type": "person",
+      "estimated_count": "moderate",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "primary"
+    },
+    {
+      "kind": "boar",
+      "type": "animal",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "primary"
+    },
+    {
+      "kind": "bear",
+      "type": "animal",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "primary"
+    },
+    {
+      "kind": "horse",
+      "type": "animal",
+      "estimated_count": "moderate",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "castle",
+      "type": "building",
+      "estimated_count": "few",
+      "estimated_size": "medium",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "town",
+      "type": "building",
+      "estimated_count": "few",
+      "estimated_size": "small",
+      "segmentation": "region",
+      "importance": "background"
+    },
+    {
+      "kind": "boat",
+      "type": "vehicle",
+      "estimated_count": "few",
+      "estimated_size": "medium",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "river",
+      "type": "landscape",
+      "estimated_count": "few",
+      "estimated_size": "large",
+      "segmentation": "region",
+      "importance": "background"
+    },
+    {
+      "kind": "tree",
+      "type": "plant",
+      "estimated_count": "very_many",
+      "estimated_size": "medium",
+      "segmentation": "region",
+      "importance": "background"
+    },
+    {
+      "kind": "crossbow",
+      "type": "object",
+      "estimated_count": "moderate",
+      "estimated_size": "tiny",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "spear",
+      "type": "object",
+      "estimated_count": "moderate",
+      "estimated_size": "tiny",
+      "segmentation": "individual",
+      "importance": "secondary"
+    }
+  ],
+  "objects": [
+    {
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        618,
+        382,
+        692,
+        473
+      ],
+      "importance_geom": 0.3873,
+      "importance": 0.3873,
+      "importance_rank": 30
+    },
+    {
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        190,
+        481,
+        292,
+        574
+      ],
+      "importance_geom": 0.3753,
+      "importance": 0.3753,
+      "importance_rank": 35
+    },
+    {
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        272,
+        524,
+        371,
+        623
+      ],
+      "importance_geom": 0.4065,
+      "importance": 0.4065,
+      "importance_rank": 23
+    },
+    {
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        355,
+        499,
+        437,
+        670
+      ],
+      "importance_geom": 0.4349,
+      "importance": 0.4349,
+      "importance_rank": 12
+    },
+    {
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        241,
+        538,
+        298,
+        660
+      ],
+      "importance_geom": 0.3852,
+      "importance": 0.3852,
+      "importance_rank": 32
+    },
+    {
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        385,
+        604,
+        451,
+        741
+      ],
+      "importance_geom": 0.4209,
+      "importance": 0.4209,
+      "importance_rank": 19
+    },
+    {
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        440,
+        604,
+        501,
+        736
+      ],
+      "importance_geom": 0.4255,
+      "importance": 0.4255,
+      "importance_rank": 17
+    },
+    {
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        479,
+        538,
+        550,
+        626
+      ],
+      "importance_geom": 0.4406,
+      "importance": 0.4406,
+      "importance_rank": 11
+    },
+    {
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        10,
+        747,
+        88,
+        890
+      ],
+      "importance_geom": 0.3183,
+      "importance": 0.3183,
+      "importance_rank": 89
+    },
+    {
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        478,
+        521,
+        626,
+        620
+      ],
+      "importance_geom": 0.45,
+      "importance": 0.45,
+      "importance_rank": 10
+    },
+    {
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        648,
+        538,
+        758,
+        642
+      ],
+      "importance_geom": 0.4011,
+      "importance": 0.4011,
+      "importance_rank": 25
+    },
+    {
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        450,
+        642,
+        491,
+        733
+      ],
+      "importance_geom": 0.4134,
+      "importance": 0.4134,
+      "importance_rank": 22
+    },
+    {
+      "label": "stag",
+      "type": "animal",
+      "box_2d": [
+        674,
+        659,
+        786,
+        769
+      ],
+      "importance_geom": 0.3884,
+      "importance": 0.3884,
+      "importance_rank": 29
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        15,
+        191,
+        45,
+        214
+      ],
+      "importance_geom": 0.1347,
+      "importance": 0.1347,
+      "importance_rank": 175
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        58,
+        226,
+        96,
+        254
+      ],
+      "importance_geom": 0.1633,
+      "importance": 0.1633,
+      "importance_rank": 169
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        67,
+        264,
+        91,
+        307
+      ],
+      "importance_geom": 0.1785,
+      "importance": 0.1785,
+      "importance_rank": 166
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        87,
+        258,
+        115,
+        302
+      ],
+      "importance_geom": 0.1845,
+      "importance": 0.1845,
+      "importance_rank": 165
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        146,
+        270,
+        180,
+        311
+      ],
+      "importance_geom": 0.2076,
+      "importance": 0.2076,
+      "importance_rank": 157
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        173,
+        278,
+        217,
+        313
+      ],
+      "importance_geom": 0.2194,
+      "importance": 0.2194,
+      "importance_rank": 155
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        150,
+        209,
+        188,
+        245
+      ],
+      "importance_geom": 0.1866,
+      "importance": 0.1866,
+      "importance_rank": 164
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        197,
+        225,
+        239,
+        253
+      ],
+      "importance_geom": 0.2034,
+      "importance": 0.2034,
+      "importance_rank": 159
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        225,
+        267,
+        269,
+        300
+      ],
+      "importance_geom": 0.2293,
+      "importance": 0.2293,
+      "importance_rank": 151
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        267,
+        247,
+        298,
+        275
+      ],
+      "importance_geom": 0.2268,
+      "importance": 0.2268,
+      "importance_rank": 152
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        149,
+        446,
+        166,
+        490
+      ],
+      "importance_geom": 0.2499,
+      "importance": 0.2499,
+      "importance_rank": 144
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        294,
+        451,
+        344,
+        517
+      ],
+      "importance_geom": 0.3187,
+      "importance": 0.3187,
+      "importance_rank": 88
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        318,
+        470,
+        378,
+        522
+      ],
+      "importance_geom": 0.3305,
+      "importance": 0.3305,
+      "importance_rank": 77
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        355,
+        503,
+        413,
+        545
+      ],
+      "importance_geom": 0.3446,
+      "importance": 0.3446,
+      "importance_rank": 66
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        430,
+        509,
+        483,
+        547
+      ],
+      "importance_geom": 0.3675,
+      "importance": 0.3675,
+      "importance_rank": 39
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        439,
+        461,
+        491,
+        509
+      ],
+      "importance_geom": 0.3674,
+      "importance": 0.3674,
+      "importance_rank": 40
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        520,
+        415,
+        550,
+        450
+      ],
+      "importance_geom": 0.3408,
+      "importance": 0.3408,
+      "importance_rank": 71
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        523,
+        371,
+        550,
+        391
+      ],
+      "importance_geom": 0.3132,
+      "importance": 0.3132,
+      "importance_rank": 93
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        571,
+        445,
+        643,
+        478
+      ],
+      "importance_geom": 0.3367,
+      "importance": 0.3367,
+      "importance_rank": 74
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        643,
+        423,
+        698,
+        462
+      ],
+      "importance_geom": 0.3098,
+      "importance": 0.3098,
+      "importance_rank": 100
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        643,
+        374,
+        703,
+        418
+      ],
+      "importance_geom": 0.2966,
+      "importance": 0.2966,
+      "importance_rank": 110
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        681,
+        346,
+        714,
+        401
+      ],
+      "importance_geom": 0.279,
+      "importance": 0.279,
+      "importance_rank": 120
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        648,
+        173,
+        681,
+        198
+      ],
+      "importance_geom": 0.2041,
+      "importance": 0.2041,
+      "importance_rank": 158
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        665,
+        231,
+        698,
+        269
+      ],
+      "importance_geom": 0.232,
+      "importance": 0.232,
+      "importance_rank": 150
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        692,
+        220,
+        736,
+        242
+      ],
+      "importance_geom": 0.2156,
+      "importance": 0.2156,
+      "importance_rank": 156
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        797,
+        225,
+        851,
+        269
+      ],
+      "importance_geom": 0.1994,
+      "importance": 0.1994,
+      "importance_rank": 160
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        835,
+        198,
+        868,
+        231
+      ],
+      "importance_geom": 0.1751,
+      "importance": 0.1751,
+      "importance_rank": 167
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        879,
+        159,
+        923,
+        187
+      ],
+      "importance_geom": 0.1466,
+      "importance": 0.1466,
+      "importance_rank": 172
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        890,
+        126,
+        934,
+        165
+      ],
+      "importance_geom": 0.1352,
+      "importance": 0.1352,
+      "importance_rank": 174
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        901,
+        198,
+        940,
+        225
+      ],
+      "importance_geom": 0.1543,
+      "importance": 0.1543,
+      "importance_rank": 171
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        520,
+        414,
+        567,
+        449
+      ],
+      "importance_geom": 0.3413,
+      "importance": 0.3413,
+      "importance_rank": 69
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        450,
+        509,
+        492,
+        541
+      ],
+      "importance_geom": 0.3693,
+      "importance": 0.3693,
+      "importance_rank": 38
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        603,
+        203,
+        634,
+        231
+      ],
+      "importance_geom": 0.226,
+      "importance": 0.226,
+      "importance_rank": 153
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        733,
+        388,
+        780,
+        412
+      ],
+      "importance_geom": 0.2658,
+      "importance": 0.2658,
+      "importance_rank": 130
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        717,
+        437,
+        766,
+        470
+      ],
+      "importance_geom": 0.2862,
+      "importance": 0.2862,
+      "importance_rank": 116
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        794,
+        407,
+        835,
+        440
+      ],
+      "importance_geom": 0.2532,
+      "importance": 0.2532,
+      "importance_rank": 141
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        838,
+        448,
+        885,
+        489
+      ],
+      "importance_geom": 0.2483,
+      "importance": 0.2483,
+      "importance_rank": 146
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        758,
+        121,
+        791,
+        143
+      ],
+      "importance_geom": 0.1587,
+      "importance": 0.1587,
+      "importance_rank": 170
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        816,
+        121,
+        849,
+        143
+      ],
+      "importance_geom": 0.1456,
+      "importance": 0.1456,
+      "importance_rank": 173
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        918,
+        247,
+        959,
+        275
+      ],
+      "importance_geom": 0.1659,
+      "importance": 0.1659,
+      "importance_rank": 168
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        124,
+        461,
+        149,
+        498
+      ],
+      "importance_geom": 0.2454,
+      "importance": 0.2454,
+      "importance_rank": 147
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        147,
+        450,
+        165,
+        492
+      ],
+      "importance_geom": 0.2499,
+      "importance": 0.2499,
+      "importance_rank": 143
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        293,
+        469,
+        330,
+        517
+      ],
+      "importance_geom": 0.313,
+      "importance": 0.313,
+      "importance_rank": 95
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        316,
+        477,
+        377,
+        524
+      ],
+      "importance_geom": 0.33,
+      "importance": 0.33,
+      "importance_rank": 78
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        353,
+        514,
+        409,
+        544
+      ],
+      "importance_geom": 0.3414,
+      "importance": 0.3414,
+      "importance_rank": 68
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        438,
+        466,
+        493,
+        514
+      ],
+      "importance_geom": 0.3693,
+      "importance": 0.3693,
+      "importance_rank": 37
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        439,
+        570,
+        483,
+        615
+      ],
+      "importance_geom": 0.3598,
+      "importance": 0.3598,
+      "importance_rank": 48
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        492,
+        574,
+        545,
+        620
+      ],
+      "importance_geom": 0.3626,
+      "importance": 0.3626,
+      "importance_rank": 45
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        204,
+        591,
+        235,
+        623
+      ],
+      "importance_geom": 0.2875,
+      "importance": 0.2875,
+      "importance_rank": 114
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        389,
+        679,
+        420,
+        706
+      ],
+      "importance_geom": 0.3297,
+      "importance": 0.3297,
+      "importance_rank": 79
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        387,
+        713,
+        415,
+        747
+      ],
+      "importance_geom": 0.3233,
+      "importance": 0.3233,
+      "importance_rank": 84
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        417,
+        800,
+        444,
+        837
+      ],
+      "importance_geom": 0.3101,
+      "importance": 0.3101,
+      "importance_rank": 99
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        173,
+        916,
+        213,
+        977
+      ],
+      "importance_geom": 0.2583,
+      "importance": 0.2583,
+      "importance_rank": 138
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        456,
+        576,
+        492,
+        612
+      ],
+      "importance_geom": 0.3585,
+      "importance": 0.3585,
+      "importance_rank": 50
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        450,
+        455,
+        487,
+        509
+      ],
+      "importance_geom": 0.366,
+      "importance": 0.366,
+      "importance_rank": 43
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        450,
+        510,
+        483,
+        546
+      ],
+      "importance_geom": 0.3672,
+      "importance": 0.3672,
+      "importance_rank": 41
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        450,
+        570,
+        487,
+        613
+      ],
+      "importance_geom": 0.3596,
+      "importance": 0.3596,
+      "importance_rank": 49
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        566,
+        450,
+        613,
+        489
+      ],
+      "importance_geom": 0.3429,
+      "importance": 0.3429,
+      "importance_rank": 67
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        610,
+        450,
+        657,
+        483
+      ],
+      "importance_geom": 0.3262,
+      "importance": 0.3262,
+      "importance_rank": 81
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        651,
+        450,
+        698,
+        487
+      ],
+      "importance_geom": 0.3132,
+      "importance": 0.3132,
+      "importance_rank": 94
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        714,
+        450,
+        767,
+        473
+      ],
+      "importance_geom": 0.2867,
+      "importance": 0.2867,
+      "importance_rank": 115
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        838,
+        453,
+        886,
+        494
+      ],
+      "importance_geom": 0.2491,
+      "importance": 0.2491,
+      "importance_rank": 145
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        494,
+        579,
+        549,
+        621
+      ],
+      "importance_geom": 0.3614,
+      "importance": 0.3614,
+      "importance_rank": 46
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        555,
+        569,
+        606,
+        607
+      ],
+      "importance_geom": 0.3523,
+      "importance": 0.3523,
+      "importance_rank": 57
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        560,
+        598,
+        593,
+        626
+      ],
+      "importance_geom": 0.3461,
+      "importance": 0.3461,
+      "importance_rank": 64
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        580,
+        577,
+        637,
+        629
+      ],
+      "importance_geom": 0.347,
+      "importance": 0.347,
+      "importance_rank": 61
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        647,
+        585,
+        683,
+        629
+      ],
+      "importance_geom": 0.3266,
+      "importance": 0.3266,
+      "importance_rank": 80
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        656,
+        531,
+        699,
+        576
+      ],
+      "importance_geom": 0.3238,
+      "importance": 0.3238,
+      "importance_rank": 83
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        693,
+        573,
+        740,
+        641
+      ],
+      "importance_geom": 0.3157,
+      "importance": 0.3157,
+      "importance_rank": 91
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        755,
+        595,
+        795,
+        631
+      ],
+      "importance_geom": 0.2913,
+      "importance": 0.2913,
+      "importance_rank": 112
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        652,
+        639,
+        710,
+        688
+      ],
+      "importance_geom": 0.3224,
+      "importance": 0.3224,
+      "importance_rank": 87
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        723,
+        633,
+        783,
+        665
+      ],
+      "importance_geom": 0.2998,
+      "importance": 0.2998,
+      "importance_rank": 108
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        783,
+        626,
+        834,
+        671
+      ],
+      "importance_geom": 0.2837,
+      "importance": 0.2837,
+      "importance_rank": 119
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        626,
+        716,
+        666,
+        754
+      ],
+      "importance_geom": 0.3172,
+      "importance": 0.3172,
+      "importance_rank": 90
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        637,
+        779,
+        685,
+        815
+      ],
+      "importance_geom": 0.3057,
+      "importance": 0.3057,
+      "importance_rank": 102
+    },
+    {
+      "label": "hound",
+      "type": "animal",
+      "box_2d": [
+        702,
+        717,
+        724,
+        735
+      ],
+      "importance_geom": 0.2982,
+      "importance": 0.2982,
+      "importance_rank": 109
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        65,
+        186,
+        83,
+        258
+      ],
+      "importance_geom": 0.1955,
+      "importance": 0.1955,
+      "importance_rank": 163
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        28,
+        228,
+        52,
+        280
+      ],
+      "importance_geom": 0.1955,
+      "importance": 0.1955,
+      "importance_rank": 162
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        128,
+        236,
+        147,
+        311
+      ],
+      "importance_geom": 0.2325,
+      "importance": 0.2325,
+      "importance_rank": 149
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        178,
+        245,
+        231,
+        291
+      ],
+      "importance_geom": 0.2535,
+      "importance": 0.2535,
+      "importance_rank": 140
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        290,
+        201,
+        320,
+        256
+      ],
+      "importance_geom": 0.2595,
+      "importance": 0.2595,
+      "importance_rank": 137
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        319,
+        228,
+        341,
+        291
+      ],
+      "importance_geom": 0.2772,
+      "importance": 0.2772,
+      "importance_rank": 124
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        454,
+        327,
+        481,
+        412
+      ],
+      "aliases": [
+        "noble"
+      ],
+      "importance_geom": 0.3535,
+      "importance": 0.3535,
+      "importance_rank": 54
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        382,
+        406,
+        430,
+        492
+      ],
+      "importance_geom": 0.3801,
+      "importance": 0.3801,
+      "importance_rank": 34
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        125,
+        400,
+        157,
+        456
+      ],
+      "importance_geom": 0.2787,
+      "importance": 0.2787,
+      "importance_rank": 121
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        8,
+        488,
+        41,
+        550
+      ],
+      "importance_geom": 0.2544,
+      "importance": 0.2544,
+      "importance_rank": 139
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        36,
+        487,
+        91,
+        550
+      ],
+      "aliases": [
+        "noble"
+      ],
+      "importance_geom": 0.2722,
+      "importance": 0.2722,
+      "importance_rank": 126
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        845,
+        147,
+        878,
+        202
+      ],
+      "importance_geom": 0.1982,
+      "importance": 0.1982,
+      "importance_rank": 161
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        788,
+        151,
+        824,
+        225
+      ],
+      "importance_geom": 0.2204,
+      "importance": 0.2204,
+      "importance_rank": 154
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        693,
+        152,
+        721,
+        218
+      ],
+      "importance_geom": 0.2386,
+      "importance": 0.2386,
+      "importance_rank": 148
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        450,
+        322,
+        489,
+        412
+      ],
+      "importance_geom": 0.3558,
+      "importance": 0.3558,
+      "importance_rank": 52
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        542,
+        314,
+        564,
+        391
+      ],
+      "importance_geom": 0.3411,
+      "importance": 0.3411,
+      "importance_rank": 70
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        610,
+        371,
+        648,
+        456
+      ],
+      "importance_geom": 0.3554,
+      "importance": 0.3554,
+      "importance_rank": 53
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        808,
+        459,
+        846,
+        533
+      ],
+      "importance_geom": 0.306,
+      "importance": 0.306,
+      "importance_rank": 101
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        911,
+        406,
+        944,
+        488
+      ],
+      "importance_geom": 0.2616,
+      "importance": 0.2616,
+      "importance_rank": 134
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        406,
+        450,
+        442,
+        493
+      ],
+      "importance_geom": 0.3851,
+      "importance": 0.3851,
+      "importance_rank": 33
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        8,
+        488,
+        44,
+        587
+      ],
+      "importance_geom": 0.2617,
+      "importance": 0.2617,
+      "importance_rank": 133
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        33,
+        486,
+        94,
+        574
+      ],
+      "importance_geom": 0.2781,
+      "importance": 0.2781,
+      "importance_rank": 122
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        89,
+        645,
+        151,
+        777
+      ],
+      "importance_geom": 0.3114,
+      "importance": 0.3114,
+      "importance_rank": 97
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        45,
+        680,
+        85,
+        774
+      ],
+      "importance_geom": 0.2852,
+      "importance": 0.2852,
+      "importance_rank": 118
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        223,
+        763,
+        283,
+        981
+      ],
+      "importance_geom": 0.3385,
+      "importance": 0.3385,
+      "importance_rank": 72
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        309,
+        769,
+        363,
+        981
+      ],
+      "importance_geom": 0.3499,
+      "importance": 0.3499,
+      "importance_rank": 58
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        177,
+        817,
+        223,
+        920
+      ],
+      "importance_geom": 0.3142,
+      "importance": 0.3142,
+      "importance_rank": 92
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        527,
+        788,
+        550,
+        978
+      ],
+      "importance_geom": 0.3475,
+      "importance": 0.3475,
+      "importance_rank": 60
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        809,
+        465,
+        839,
+        568
+      ],
+      "importance_geom": 0.3107,
+      "importance": 0.3107,
+      "importance_rank": 98
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        913,
+        450,
+        948,
+        491
+      ],
+      "importance_geom": 0.2606,
+      "importance": 0.2606,
+      "importance_rank": 135
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        893,
+        585,
+        942,
+        695
+      ],
+      "aliases": [
+        "noble"
+      ],
+      "importance_geom": 0.2936,
+      "importance": 0.2936,
+      "importance_rank": 111
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        530,
+        788,
+        588,
+        992
+      ],
+      "aliases": [
+        "noble"
+      ],
+      "importance_geom": 0.3579,
+      "importance": 0.3579,
+      "importance_rank": 51
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        610,
+        805,
+        662,
+        986
+      ],
+      "aliases": [
+        "noble"
+      ],
+      "importance_geom": 0.3468,
+      "importance": 0.3468,
+      "importance_rank": 62
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        790,
+        755,
+        850,
+        931
+      ],
+      "aliases": [
+        "noble"
+      ],
+      "importance_geom": 0.3227,
+      "importance": 0.3227,
+      "importance_rank": 86
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        941,
+        575,
+        992,
+        689
+      ],
+      "aliases": [
+        "noble"
+      ],
+      "importance_geom": 0.2775,
+      "importance": 0.2775,
+      "importance_rank": 123
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        845,
+        761,
+        882,
+        928
+      ],
+      "importance_geom": 0.3045,
+      "importance": 0.3045,
+      "importance_rank": 103
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        748,
+        810,
+        806,
+        923
+      ],
+      "aliases": [
+        "noble"
+      ],
+      "importance_geom": 0.3231,
+      "importance": 0.3231,
+      "importance_rank": 85
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        891,
+        827,
+        948,
+        928
+      ],
+      "aliases": [
+        "noble"
+      ],
+      "importance_geom": 0.2861,
+      "importance": 0.2861,
+      "importance_rank": 117
+    },
+    {
+      "label": "hunter",
+      "type": "person",
+      "box_2d": [
+        931,
+        585,
+        948,
+        615
+      ],
+      "importance_geom": 0.2687,
+      "importance": 0.2687,
+      "importance_rank": 127
+    },
+    {
+      "label": "noble",
+      "type": "person",
+      "box_2d": [
+        25,
+        228,
+        54,
+        311
+      ],
+      "importance_geom": 0.2509,
+      "importance": 0.2509,
+      "importance_rank": 142
+    },
+    {
+      "label": "noble",
+      "type": "person",
+      "box_2d": [
+        316,
+        225,
+        345,
+        311
+      ],
+      "importance_geom": 0.3314,
+      "importance": 0.3314,
+      "importance_rank": 76
+    },
+    {
+      "label": "noble",
+      "type": "person",
+      "box_2d": [
+        0,
+        484,
+        37,
+        550
+      ],
+      "importance_geom": 0.2999,
+      "importance": 0.2999,
+      "importance_rank": 107
+    },
+    {
+      "label": "noble",
+      "type": "person",
+      "box_2d": [
+        788,
+        148,
+        832,
+        212
+      ],
+      "importance_geom": 0.2632,
+      "importance": 0.2632,
+      "importance_rank": 132
+    },
+    {
+      "label": "noble",
+      "type": "person",
+      "box_2d": [
+        610,
+        371,
+        637,
+        423
+      ],
+      "importance_geom": 0.3918,
+      "importance": 0.3918,
+      "importance_rank": 28
+    },
+    {
+      "label": "noble",
+      "type": "person",
+      "box_2d": [
+        805,
+        459,
+        838,
+        528
+      ],
+      "importance_geom": 0.3525,
+      "importance": 0.3525,
+      "importance_rank": 56
+    },
+    {
+      "label": "noble",
+      "type": "person",
+      "box_2d": [
+        802,
+        464,
+        838,
+        565
+      ],
+      "importance_geom": 0.3598,
+      "importance": 0.3598,
+      "importance_rank": 47
+    },
+    {
+      "label": "noble",
+      "type": "person",
+      "box_2d": [
+        937,
+        585,
+        953,
+        612
+      ],
+      "importance_geom": 0.3127,
+      "importance": 0.3127,
+      "importance_rank": 96
+    },
+    {
+      "label": "noble",
+      "type": "person",
+      "box_2d": [
+        967,
+        571,
+        986,
+        593
+      ],
+      "importance_geom": 0.3003,
+      "importance": 0.3003,
+      "importance_rank": 106
+    },
+    {
+      "label": "noble",
+      "type": "person",
+      "box_2d": [
+        978,
+        579,
+        997,
+        626
+      ],
+      "importance_geom": 0.3011,
+      "importance": 0.3011,
+      "importance_rank": 105
+    },
+    {
+      "label": "noble",
+      "type": "person",
+      "box_2d": [
+        840,
+        761,
+        879,
+        928
+      ],
+      "importance_geom": 0.3527,
+      "importance": 0.3527,
+      "importance_rank": 55
+    },
+    {
+      "label": "boar",
+      "type": "animal",
+      "box_2d": [
+        618,
+        205,
+        666,
+        250
+      ],
+      "importance_geom": 0.3737,
+      "importance": 0.3737,
+      "importance_rank": 36
+    },
+    {
+      "label": "bear",
+      "type": "animal",
+      "box_2d": [
+        187,
+        197,
+        232,
+        239
+      ],
+      "importance_geom": 0.3369,
+      "importance": 0.3369,
+      "importance_rank": 73
+    },
+    {
+      "label": "horse",
+      "type": "animal",
+      "box_2d": [
+        8,
+        264,
+        62,
+        331
+      ],
+      "importance_geom": 0.264,
+      "importance": 0.264,
+      "importance_rank": 131
+    },
+    {
+      "label": "horse",
+      "type": "animal",
+      "box_2d": [
+        296,
+        272,
+        367,
+        322
+      ],
+      "importance_geom": 0.3498,
+      "importance": 0.3498,
+      "importance_rank": 59
+    },
+    {
+      "label": "horse",
+      "type": "animal",
+      "box_2d": [
+        431,
+        371,
+        505,
+        437
+      ],
+      "importance_geom": 0.4265,
+      "importance": 0.4265,
+      "importance_rank": 16
+    },
+    {
+      "label": "horse",
+      "type": "animal",
+      "box_2d": [
+        774,
+        176,
+        821,
+        223
+      ],
+      "importance_geom": 0.2752,
+      "importance": 0.2752,
+      "importance_rank": 125
+    },
+    {
+      "label": "horse",
+      "type": "animal",
+      "box_2d": [
+        450,
+        357,
+        504,
+        429
+      ],
+      "importance_geom": 0.4197,
+      "importance": 0.4197,
+      "importance_rank": 20
+    },
+    {
+      "label": "horse",
+      "type": "animal",
+      "box_2d": [
+        578,
+        401,
+        634,
+        478
+      ],
+      "importance_geom": 0.4232,
+      "importance": 0.4232,
+      "importance_rank": 18
+    },
+    {
+      "label": "horse",
+      "type": "animal",
+      "box_2d": [
+        781,
+        502,
+        880,
+        550
+      ],
+      "importance_geom": 0.3631,
+      "importance": 0.3631,
+      "importance_rank": 44
+    },
+    {
+      "label": "castle",
+      "type": "building",
+      "box_2d": [
+        428,
+        53,
+        582,
+        162
+      ],
+      "importance_geom": 0.4182,
+      "importance": 0.4182,
+      "importance_rank": 21
+    },
+    {
+      "label": "town",
+      "type": "building",
+      "box_2d": [
+        358,
+        52,
+        598,
+        175
+      ],
+      "importance_geom": 0.4336,
+      "importance": 0.4336,
+      "importance_rank": 13
+    },
+    {
+      "label": "boat",
+      "type": "vehicle",
+      "box_2d": [
+        712,
+        758,
+        964,
+        955
+      ],
+      "importance_geom": 0.5314,
+      "importance": 0.5314,
+      "importance_rank": 4
+    },
+    {
+      "label": "river",
+      "type": "landscape",
+      "box_2d": [
+        125,
+        445,
+        580,
+        880
+      ],
+      "importance_geom": 0.6415,
+      "importance": 0.6415,
+      "importance_rank": 1
+    },
+    {
+      "label": "river",
+      "type": "landscape",
+      "box_2d": [
+        580,
+        680,
+        1000,
+        960
+      ],
+      "importance_geom": 0.5595,
+      "importance": 0.5595,
+      "importance_rank": 3
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        0,
+        0,
+        390,
+        490
+      ],
+      "importance_geom": 0.4734,
+      "importance": 0.4734,
+      "importance_rank": 6
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        610,
+        0,
+        1000,
+        430
+      ],
+      "importance_geom": 0.4536,
+      "importance": 0.4536,
+      "importance_rank": 9
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        0,
+        530,
+        490,
+        1000
+      ],
+      "importance_geom": 0.5747,
+      "importance": 0.5747,
+      "importance_rank": 2
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        800,
+        480,
+        1000,
+        800
+      ],
+      "importance_geom": 0.4681,
+      "importance": 0.4681,
+      "importance_rank": 7
+    },
+    {
+      "label": "tree",
+      "type": "plant",
+      "box_2d": [
+        370,
+        150,
+        630,
+        390
+      ],
+      "importance_geom": 0.4802,
+      "importance": 0.4802,
+      "importance_rank": 5
+    },
+    {
+      "label": "crossbow",
+      "type": "object",
+      "box_2d": [
+        29,
+        230,
+        64,
+        245
+      ],
+      "importance_geom": 0.2663,
+      "importance": 0.2663,
+      "importance_rank": 129
+    },
+    {
+      "label": "crossbow",
+      "type": "object",
+      "box_2d": [
+        45,
+        505,
+        101,
+        527
+      ],
+      "importance_geom": 0.346,
+      "importance": 0.346,
+      "importance_rank": 65
+    },
+    {
+      "label": "crossbow",
+      "type": "object",
+      "box_2d": [
+        25,
+        502,
+        102,
+        532
+      ],
+      "importance_geom": 0.3466,
+      "importance": 0.3466,
+      "importance_rank": 63
+    },
+    {
+      "label": "crossbow",
+      "type": "object",
+      "box_2d": [
+        124,
+        655,
+        163,
+        735
+      ],
+      "importance_geom": 0.3864,
+      "importance": 0.3864,
+      "importance_rank": 31
+    },
+    {
+      "label": "crossbow",
+      "type": "object",
+      "box_2d": [
+        342,
+        750,
+        374,
+        848
+      ],
+      "importance_geom": 0.4287,
+      "importance": 0.4287,
+      "importance_rank": 15
+    },
+    {
+      "label": "crossbow",
+      "type": "object",
+      "box_2d": [
+        215,
+        807,
+        259,
+        898
+      ],
+      "importance_geom": 0.4005,
+      "importance": 0.4005,
+      "importance_rank": 26
+    },
+    {
+      "label": "crossbow",
+      "type": "object",
+      "box_2d": [
+        525,
+        774,
+        550,
+        846
+      ],
+      "importance_geom": 0.4329,
+      "importance": 0.4329,
+      "importance_rank": 14
+    },
+    {
+      "label": "crossbow",
+      "type": "object",
+      "box_2d": [
+        885,
+        601,
+        937,
+        653
+      ],
+      "importance_geom": 0.3667,
+      "importance": 0.3667,
+      "importance_rank": 42
+    },
+    {
+      "label": "spear",
+      "type": "object",
+      "box_2d": [
+        84,
+        124,
+        91,
+        256
+      ],
+      "importance_geom": 0.2602,
+      "importance": 0.2602,
+      "importance_rank": 136
+    },
+    {
+      "label": "spear",
+      "type": "object",
+      "box_2d": [
+        125,
+        186,
+        130,
+        309
+      ],
+      "importance_geom": 0.2905,
+      "importance": 0.2905,
+      "importance_rank": 113
+    },
+    {
+      "label": "spear",
+      "type": "object",
+      "box_2d": [
+        230,
+        232,
+        294,
+        245
+      ],
+      "importance_geom": 0.3244,
+      "importance": 0.3244,
+      "importance_rank": 82
+    },
+    {
+      "label": "spear",
+      "type": "object",
+      "box_2d": [
+        123,
+        344,
+        130,
+        456
+      ],
+      "importance_geom": 0.3367,
+      "importance": 0.3367,
+      "importance_rank": 75
+    },
+    {
+      "label": "spear",
+      "type": "object",
+      "box_2d": [
+        391,
+        426,
+        476,
+        473
+      ],
+      "importance_geom": 0.4619,
+      "importance": 0.4619,
+      "importance_rank": 8
+    },
+    {
+      "label": "spear",
+      "type": "object",
+      "box_2d": [
+        656,
+        139,
+        748,
+        173
+      ],
+      "importance_geom": 0.3042,
+      "importance": 0.3042,
+      "importance_rank": 104
+    },
+    {
+      "label": "spear",
+      "type": "object",
+      "box_2d": [
+        843,
+        154,
+        894,
+        184
+      ],
+      "importance_geom": 0.267,
+      "importance": 0.267,
+      "importance_rank": 128
+    },
+    {
+      "label": "spear",
+      "type": "object",
+      "box_2d": [
+        552,
+        305,
+        556,
+        377
+      ],
+      "importance_geom": 0.4019,
+      "importance": 0.4019,
+      "importance_rank": 24
+    },
+    {
+      "label": "spear",
+      "type": "object",
+      "box_2d": [
+        787,
+        681,
+        810,
+        931
+      ],
+      "importance_geom": 0.3975,
+      "importance": 0.3975,
+      "importance_rank": 27
+    }
+  ],
+  "descriptions": {
+    "alt_text": "A detailed landscape filled with hunters, hounds, and nobles pursuing stags across a river and fields",
+    "long_description": "This panoramic painting depicts an elaborate hunt unfolding across a lush, green landscape featuring a winding river and dense forests. In the lower left, a group of hunters and nobles dressed in striped and colorful doublets stand ready with crossbows near the tree line. Moving toward the center, the river dominates the foreground, churning with activity as a herd of stags swims through the water, pursued closely by a pack of swimming hounds. On the lower right, a small boat carries elegantly dressed nobles, including women in fine gowns, observing the scene while other hunters stand on the bank. The hunt continues on the grassy banks in the midground. To the left, hunters on foot drive stags toward the river. In the center clearing, nobles on horseback and men with spears chase fleeing deer. Packs of hounds swarm the animals, biting at their heels and bringing them down. The background rises into dense woodlands. On the upper left, a separate group of hunters surrounds a bear near the trees. To the right, others pursue a wild boar. High in the center distance, a white castle sits atop a hill, overlooking a town and the sprawling hunting grounds below."
+  },
+  "generated_at": "2025-12-14T06:03:30.661Z"
+}

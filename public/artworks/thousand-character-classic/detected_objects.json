@@ -1,0 +1,367 @@
+{
+  "strategy": "hybrid-detect-verify",
+  "image_path": "public/artworks/thousand-character-classic/image.jpg",
+  "model_name": "gemini-3-pro-preview",
+  "description_model_name": "gemini-3-pro-preview",
+  "max_kinds": 50,
+  "verify_rounds": 2,
+  "tile_threshold": 12,
+  "cutouts": {
+    "enabled": true,
+    "format": "webp",
+    "thumb_size": 256,
+    "max": null,
+    "concurrency": 8,
+    "index_path": "cutouts.json",
+    "directory_path": "cutouts",
+    "count": 23
+  },
+  "kinds": [
+    {
+      "kind": "bamboo stalk",
+      "type": "plant",
+      "estimated_count": "few",
+      "estimated_size": "large",
+      "segmentation": "individual",
+      "importance": "primary"
+    },
+    {
+      "kind": "bamboo leaf",
+      "type": "plant",
+      "estimated_count": "many",
+      "estimated_size": "small",
+      "segmentation": "region",
+      "importance": "primary"
+    },
+    {
+      "kind": "calligraphy",
+      "type": "writing",
+      "estimated_count": "few",
+      "estimated_size": "medium",
+      "segmentation": "region",
+      "importance": "secondary"
+    },
+    {
+      "kind": "seal",
+      "type": "symbol",
+      "estimated_count": "moderate",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "secondary"
+    },
+    {
+      "kind": "line",
+      "type": "object",
+      "estimated_count": "few",
+      "estimated_size": "large",
+      "segmentation": "individual",
+      "importance": "background"
+    }
+  ],
+  "objects": [
+    {
+      "label": "bamboo stalk",
+      "type": "plant",
+      "box_2d": [
+        318,
+        875,
+        430,
+        976
+      ],
+      "importance_geom": 0.3722,
+      "importance": 0.3722,
+      "importance_rank": 7
+    },
+    {
+      "label": "bamboo stalk",
+      "type": "plant",
+      "box_2d": [
+        430,
+        725,
+        530,
+        875
+      ],
+      "importance_geom": 0.4088,
+      "importance": 0.4088,
+      "importance_rank": 5
+    },
+    {
+      "label": "bamboo stalk",
+      "type": "plant",
+      "box_2d": [
+        545,
+        580,
+        585,
+        724
+      ],
+      "importance_geom": 0.4205,
+      "importance": 0.4205,
+      "importance_rank": 3
+    },
+    {
+      "label": "bamboo stalk",
+      "type": "plant",
+      "box_2d": [
+        588,
+        468,
+        612,
+        600
+      ],
+      "importance_geom": 0.418,
+      "importance": 0.418,
+      "importance_rank": 4
+    },
+    {
+      "label": "bamboo stalk",
+      "type": "plant",
+      "box_2d": [
+        580,
+        360,
+        615,
+        468
+      ],
+      "importance_geom": 0.393,
+      "importance": 0.393,
+      "importance_rank": 6
+    },
+    {
+      "label": "bamboo stalk",
+      "type": "plant",
+      "box_2d": [
+        530,
+        150,
+        600,
+        360
+      ],
+      "importance_geom": 0.3434,
+      "importance": 0.3434,
+      "importance_rank": 8
+    },
+    {
+      "label": "bamboo leaf",
+      "type": "plant",
+      "box_2d": [
+        405,
+        45,
+        870,
+        470
+      ],
+      "importance_geom": 0.4852,
+      "importance": 0.4852,
+      "importance_rank": 2
+    },
+    {
+      "label": "bamboo leaf",
+      "type": "plant",
+      "box_2d": [
+        400,
+        480,
+        840,
+        920
+      ],
+      "importance_geom": 0.5663,
+      "importance": 0.5663,
+      "importance_rank": 1
+    },
+    {
+      "label": "calligraphy",
+      "type": "writing",
+      "box_2d": [
+        50,
+        115,
+        95,
+        295
+      ],
+      "importance_geom": 0.3204,
+      "importance": 0.3204,
+      "importance_rank": 12
+    },
+    {
+      "label": "calligraphy",
+      "type": "writing",
+      "box_2d": [
+        930,
+        70,
+        985,
+        380
+      ],
+      "importance_geom": 0.3305,
+      "importance": 0.3305,
+      "importance_rank": 9
+    },
+    {
+      "label": "seal",
+      "type": "symbol",
+      "box_2d": [
+        136,
+        102,
+        177,
+        176
+      ],
+      "importance_geom": 0.1766,
+      "importance": 0.1766,
+      "importance_rank": 23
+    },
+    {
+      "label": "seal",
+      "type": "symbol",
+      "box_2d": [
+        54,
+        340,
+        89,
+        477
+      ],
+      "importance_geom": 0.2426,
+      "importance": 0.2426,
+      "importance_rank": 21
+    },
+    {
+      "label": "seal",
+      "type": "symbol",
+      "box_2d": [
+        52,
+        450,
+        83,
+        478
+      ],
+      "importance_geom": 0.2404,
+      "importance": 0.2404,
+      "importance_rank": 22
+    },
+    {
+      "label": "seal",
+      "type": "symbol",
+      "box_2d": [
+        59,
+        746,
+        77,
+        794
+      ],
+      "importance_geom": 0.2596,
+      "importance": 0.2596,
+      "importance_rank": 17
+    },
+    {
+      "label": "seal",
+      "type": "symbol",
+      "box_2d": [
+        128,
+        807,
+        154,
+        879
+      ],
+      "importance_geom": 0.2793,
+      "importance": 0.2793,
+      "importance_rank": 13
+    },
+    {
+      "label": "seal",
+      "type": "symbol",
+      "box_2d": [
+        44,
+        838,
+        89,
+        912
+      ],
+      "importance_geom": 0.2613,
+      "importance": 0.2613,
+      "importance_rank": 16
+    },
+    {
+      "label": "seal",
+      "type": "symbol",
+      "box_2d": [
+        128,
+        904,
+        160,
+        953
+      ],
+      "importance_geom": 0.2696,
+      "importance": 0.2696,
+      "importance_rank": 14
+    },
+    {
+      "label": "seal",
+      "type": "symbol",
+      "box_2d": [
+        931,
+        447,
+        987,
+        540
+      ],
+      "importance_geom": 0.2488,
+      "importance": 0.2488,
+      "importance_rank": 18
+    },
+    {
+      "label": "seal",
+      "type": "symbol",
+      "box_2d": [
+        930,
+        640,
+        985,
+        735
+      ],
+      "importance_geom": 0.2654,
+      "importance": 0.2654,
+      "importance_rank": 15
+    },
+    {
+      "label": "seal",
+      "type": "symbol",
+      "box_2d": [
+        955,
+        825,
+        973,
+        873
+      ],
+      "importance_geom": 0.2463,
+      "importance": 0.2463,
+      "importance_rank": 19
+    },
+    {
+      "label": "seal",
+      "type": "symbol",
+      "box_2d": [
+        952,
+        887,
+        979,
+        935
+      ],
+      "importance_geom": 0.2433,
+      "importance": 0.2433,
+      "importance_rank": 20
+    },
+    {
+      "label": "line",
+      "type": "object",
+      "box_2d": [
+        55,
+        115,
+        95,
+        300
+      ],
+      "importance_geom": 0.3208,
+      "importance": 0.3208,
+      "importance_rank": 11
+    },
+    {
+      "label": "line",
+      "type": "object",
+      "box_2d": [
+        935,
+        65,
+        980,
+        380
+      ],
+      "importance_geom": 0.3262,
+      "importance": 0.3262,
+      "importance_rank": 10
+    }
+  ],
+  "descriptions": {
+    "alt_text": "Ink painting of a bamboo branch with sharp leaves, flanked by calligraphy and red seals",
+    "long_description": "This horizontal ink painting features a central bamboo branch rendered in expressive black brushstrokes against a plain, aged beige paper background. On the far left, a thin vertical line defines a narrow margin containing a column of cursive black calligraphy and a distinctive gourd-shaped red seal. Just to the right of this line, additional red square seals are stamped near the top corner and stacked vertically near the bottom left.\n\nIn the center, the composition is dominated by a bamboo stalk that originates from the bottom edge, angling upward and slightly to the right. The main stalk divides into thinner, jointed segments that extend into the midground and upper background. These segments support dense clusters of sharp, lance-shaped bamboo leaves. The leaves are painted with varying concentrations of ink, ranging from deep black to slightly lighter gray, and taper to fine, needle-like points.\n\nOn the far right side, the composition is balanced by another column of flowing black calligraphy positioned near the top edge. Below this writing, a vertical arrangement of red square seals runs down the right margin, anchoring the space. The empty background emphasizes the stark contrast between the dark ink of the bamboo and the warm tone of the paper."
+  },
+  "generated_at": "2025-12-14T14:16:07.974Z"
+}
