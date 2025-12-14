@@ -6,14 +6,38 @@ import { Button } from '@/components/ui/button';
 import type { DetectedObject } from '@/lib/types';
 import type OpenSeadragonType from 'openseadragon';
 
+// Common type colors for consistency, plus dynamic generation for others
 const TYPE_COLORS: Record<string, string> = {
   person: '#e63946',
+  figure: '#e63946',
   animal: '#2ec4b6',
+  creature: '#2ec4b6',
   building: '#457b9d',
+  architecture: '#457b9d',
   landscape: '#f4a261',
   object: '#9b5de5',
-  other: '#ffc300',
+  plant: '#52b788',
+  vegetation: '#52b788',
+  vehicle: '#7678ed',
+  symbol: '#f72585',
+  text: '#4cc9f0',
 };
+
+// Generate a consistent color from any string using a hash
+function stringToColor(str: string): string {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    hash = str.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  // Use HSL for visually distinct, saturated colors
+  const h = Math.abs(hash) % 360;
+  return `hsl(${h}, 70%, 50%)`;
+}
+
+function getTypeColor(type: string): string {
+  const normalized = (type || 'other').trim().toLowerCase();
+  return TYPE_COLORS[normalized] ?? stringToColor(normalized);
+}
 
 function normalizeType(value: string) {
   return (value || 'other').trim().toLowerCase();
@@ -130,8 +154,7 @@ export default function ViewerClient({
 
       if (width <= 1 || height <= 1) continue;
 
-      const t = normalizeType(obj.type);
-      const stroke = TYPE_COLORS[t] || TYPE_COLORS.other;
+      const stroke = getTypeColor(obj.type);
       const isHovered = hoveredIndex === idx;
       ctx.strokeStyle = stroke;
       ctx.lineWidth = isHovered ? 4 : 2;

@@ -8,14 +8,57 @@ export type AnnotatedObject = {
   box_2d: Box2D;
 };
 
-const COLORS: Record<string, string> = {
+// Common type colors for consistency, plus dynamic generation for others
+const TYPE_COLORS: Record<string, string> = {
   person: '#e63946',
+  figure: '#e63946',
   animal: '#2ec4b6',
+  creature: '#2ec4b6',
   building: '#457b9d',
+  architecture: '#457b9d',
   landscape: '#f4a261',
   object: '#9b5de5',
-  other: '#ffc300',
+  plant: '#52b788',
+  vegetation: '#52b788',
+  vehicle: '#7678ed',
+  symbol: '#f72585',
+  text: '#4cc9f0',
 };
+
+// Generate a consistent color from any string using a hash
+function stringToColor(str: string): string {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    hash = str.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  // Use HSL for visually distinct, saturated colors
+  const h = Math.abs(hash) % 360;
+  const s = 70;
+  const l = 50;
+  // Convert HSL to hex for SVG compatibility
+  const hslToHex = (h: number, s: number, l: number): string => {
+    s /= 100;
+    l /= 100;
+    const c = (1 - Math.abs(2 * l - 1)) * s;
+    const x = c * (1 - Math.abs(((h / 60) % 2) - 1));
+    const m = l - c / 2;
+    let r = 0, g = 0, b = 0;
+    if (h < 60) { r = c; g = x; }
+    else if (h < 120) { r = x; g = c; }
+    else if (h < 180) { g = c; b = x; }
+    else if (h < 240) { g = x; b = c; }
+    else if (h < 300) { r = x; b = c; }
+    else { r = c; b = x; }
+    const toHex = (v: number) => Math.round((v + m) * 255).toString(16).padStart(2, '0');
+    return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+  };
+  return hslToHex(h, s, l);
+}
+
+function getColor(type: string): string {
+  const key = (type || 'other').trim().toLowerCase();
+  return TYPE_COLORS[key] ?? stringToColor(key);
+}
 
 function clamp(value: number, min: number, max: number) {
   return Math.min(max, Math.max(min, value));
@@ -39,11 +82,6 @@ function escapeXml(text: string) {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&apos;');
-}
-
-function getColor(type: string) {
-  const key = type.trim().toLowerCase();
-  return COLORS[key] || COLORS.other;
 }
 
 function buildSvg(

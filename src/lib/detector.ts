@@ -20,12 +20,24 @@ const BoundingBoxSchema = z.object({
 const CountEstimate = z.enum(['few', 'moderate', 'many', 'very_many']);
 type CountEstimateType = z.infer<typeof CountEstimate>;
 
+const SizeEstimate = z.enum(['tiny', 'small', 'medium', 'large', 'giant']);
+type SizeEstimateType = z.infer<typeof SizeEstimate>;
+
+const SegmentationStrategy = z.enum(['individual', 'representative', 'region']);
+type SegmentationStrategyType = z.infer<typeof SegmentationStrategy>;
+
+const ArtisticImportance = z.enum(['primary', 'secondary', 'background']);
+type ArtisticImportanceType = z.infer<typeof ArtisticImportance>;
+
 const KindSchema = z.object({
   kinds: z.array(
     z.object({
       kind: z.string().min(1),
-      type: z.enum(['person', 'animal', 'building', 'landscape', 'object', 'other']),
+      type: z.string().min(1).describe('Category for this kind'),
       estimated_count: CountEstimate,
+      estimated_size: SizeEstimate.describe('Typical size of each instance relative to image: tiny (<2%), small (2-10%), medium (10-30%), large (30-60%), giant (>60%)'),
+      segmentation: SegmentationStrategy.describe('How to detect: individual (each instance), representative (a few examples), or region (bounding area)'),
+      importance: ArtisticImportance.describe('Artistic importance: primary (main subject), secondary (supporting), background (contextual)'),
     })
   ),
 });
@@ -58,11 +70,38 @@ const VerifyResponseSchema = z.object({
     .describe('True if ALL visible instances are now correctly boxed'),
 });
 
+const RegionCountSchema = z.object({
+  estimated_count: CountEstimate,
+});
+
+// Quadrant names for spatial tracking
+const QuadrantName = z.enum(['top-left', 'top-right', 'bottom-left', 'bottom-right']);
+type QuadrantNameType = z.infer<typeof QuadrantName>;
+
+const ReconciliationSchema = z.object({
+  kinds: z.array(
+    z.object({
+      kind: z.string().min(1),
+      type: z.string().min(1),
+      is_real: z.boolean().describe('True if this object type actually exists in the image, false if it was a misidentification'),
+      quadrants: z.array(QuadrantName).describe('Which quadrants contain instances of this kind (empty if is_real=false)'),
+      estimated_count: CountEstimate,
+      estimated_size: SizeEstimate,
+      segmentation: SegmentationStrategy,
+      importance: ArtisticImportance,
+      detection_scale: z.enum(['full', 'quadrant']).describe('Whether to detect on full image or per-quadrant'),
+    })
+  ),
+});
+
+type ReconciledKind = z.infer<typeof ReconciliationSchema>['kinds'][number];
+
 // ==========================================
 // TYPES
 // ==========================================
 export type DetectedObject = z.infer<typeof BoundingBoxSchema>;
 export type Kind = z.infer<typeof KindSchema>['kinds'][number];
+
 export type StoredObject = DetectedObject & {
   importance?: number;
   importance_geom?: number;
@@ -82,6 +121,7 @@ export type DetectionConfig = {
   verifyRounds: number;
   tileThreshold: number;
   concurrency: number;
+  multiScaleDiscovery: boolean;
   cutouts: boolean;
   cutoutsFormat: 'webp' | 'png';
   cutoutsThumbSize: number;
@@ -120,7 +160,6 @@ export type OutputPayload = {
 };
 
 type Box2D = [number, number, number, number];
-type TileConfig = { rows: number; cols: number };
 type TileDefinition = {
   row: number;
   col: number;
@@ -129,6 +168,7 @@ type TileDefinition = {
   width: number;
   height: number;
   label: string;
+  depth?: number;
 };
 
 // ==========================================
@@ -369,6 +409,21 @@ function ensureDirSync(dirPath: string) {
   fs.mkdirSync(dirPath, { recursive: true });
 }
 
+// Generate quadrant definitions with safe bounds (55% size, 10% overlap)
+function getQuadrantDefs(imageWidth: number, imageHeight: number): Array<{ name: QuadrantNameType; left: number; top: number; width: number; height: number }> {
+  const halfW = Math.floor(imageWidth * 0.55);
+  const halfH = Math.floor(imageHeight * 0.55);
+  const offsetX = Math.floor(imageWidth * 0.45);
+  const offsetY = Math.floor(imageHeight * 0.45);
+
+  return [
+    { name: 'top-left', left: 0, top: 0, width: halfW, height: halfH },
+    { name: 'top-right', left: offsetX, top: 0, width: imageWidth - offsetX, height: halfH },
+    { name: 'bottom-left', left: 0, top: offsetY, width: halfW, height: imageHeight - offsetY },
+    { name: 'bottom-right', left: offsetX, top: offsetY, width: imageWidth - offsetX, height: imageHeight - offsetY },
+  ];
+}
+
 function sanitizeFilePart(value: string) {
   const trimmed = value.trim().toLowerCase();
   return trimmed
@@ -405,76 +460,6 @@ async function runWithConcurrency<T, R>(
 // ==========================================
 // TILING
 // ==========================================
-function estimateToNumber(estimate: CountEstimateType): number {
-  switch (estimate) {
-    case 'few': return 5;
-    case 'moderate': return 18;
-    case 'many': return 38;
-    case 'very_many': return 75;
-  }
-}
-
-function getTileConfig(instanceCount: number, threshold: number): TileConfig {
-  if (threshold === 0 || instanceCount <= threshold) return { rows: 1, cols: 1 };
-  const ratio = instanceCount / threshold;
-  if (ratio <= 2) return { rows: 1, cols: 2 };
-  if (ratio <= 4) return { rows: 2, cols: 2 };
-  if (ratio <= 6) return { rows: 2, cols: 3 };
-  return { rows: 3, cols: 3 };
-}
-
-const TILE_OVERLAP_PCT = 0.25;
-
-function generateTiles(
-  imageWidth: number,
-  imageHeight: number,
-  rows: number,
-  cols: number
-): TileDefinition[] {
-  if (rows === 1 && cols === 1) {
-    return [{
-      row: 0,
-      col: 0,
-      left: 0,
-      top: 0,
-      width: imageWidth,
-      height: imageHeight,
-      label: 'full',
-    }];
-  }
-
-  const tiles: TileDefinition[] = [];
-  const baseTileWidth = imageWidth / cols;
-  const baseTileHeight = imageHeight / rows;
-  const overlapX = Math.round(baseTileWidth * TILE_OVERLAP_PCT);
-  const overlapY = Math.round(baseTileHeight * TILE_OVERLAP_PCT);
-
-  for (let row = 0; row < rows; row++) {
-    for (let col = 0; col < cols; col++) {
-      let left = Math.round(col * baseTileWidth) - (col > 0 ? overlapX : 0);
-      let top = Math.round(row * baseTileHeight) - (row > 0 ? overlapY : 0);
-      let right = Math.round((col + 1) * baseTileWidth) + (col < cols - 1 ? overlapX : 0);
-      let bottom = Math.round((row + 1) * baseTileHeight) + (row < rows - 1 ? overlapY : 0);
-
-      left = Math.max(0, left);
-      top = Math.max(0, top);
-      right = Math.min(imageWidth, right);
-      bottom = Math.min(imageHeight, bottom);
-
-      tiles.push({
-        row,
-        col,
-        left,
-        top,
-        width: right - left,
-        height: bottom - top,
-        label: `r${row}c${col}`,
-      });
-    }
-  }
-
-  return tiles;
-}
 
 function mapTileBoxToFullImage(
   tileBox: Box2D,
@@ -526,6 +511,59 @@ function isBoxClippedAtTileBoundary(
   const touchesRight = xmax >= (1000 - edgeThreshold) && (tile.left + tile.width) < fullImageWidth;
   const touchesBottom = ymax >= (1000 - edgeThreshold) && (tile.top + tile.height) < fullImageHeight;
   return touchesLeft || touchesTop || touchesRight || touchesBottom;
+}
+
+// ==========================================
+// ADAPTIVE TILING
+// ==========================================
+const COUNT_LEVELS: Record<CountEstimateType, number> = {
+  few: 1,
+  moderate: 2,
+  many: 3,
+  very_many: 4,
+};
+
+function isCountAboveThreshold(count: CountEstimateType, threshold: CountEstimateType): boolean {
+  return COUNT_LEVELS[count] > COUNT_LEVELS[threshold];
+}
+
+const QUADRANT_OVERLAP_PCT = 0.15;
+
+function subdivideIntoQuadrants(
+  tile: TileDefinition,
+  fullImageWidth: number,
+  fullImageHeight: number
+): TileDefinition[] {
+  const { left, top, width, height, depth = 0 } = tile;
+  const halfW = Math.floor(width / 2);
+  const halfH = Math.floor(height / 2);
+  const overlapX = Math.round(halfW * QUADRANT_OVERLAP_PCT);
+  const overlapY = Math.round(halfH * QUADRANT_OVERLAP_PCT);
+
+  const quadrants: Array<{ row: number; col: number; l: number; t: number; r: number; b: number }> = [
+    { row: 0, col: 0, l: left, t: top, r: left + halfW + overlapX, b: top + halfH + overlapY },
+    { row: 0, col: 1, l: left + halfW - overlapX, t: top, r: left + width, b: top + halfH + overlapY },
+    { row: 1, col: 0, l: left, t: top + halfH - overlapY, r: left + halfW + overlapX, b: top + height },
+    { row: 1, col: 1, l: left + halfW - overlapX, t: top + halfH - overlapY, r: left + width, b: top + height },
+  ];
+
+  return quadrants.map((q) => {
+    const clampedLeft = Math.max(0, q.l);
+    const clampedTop = Math.max(0, q.t);
+    const clampedRight = Math.min(fullImageWidth, q.r);
+    const clampedBottom = Math.min(fullImageHeight, q.b);
+
+    return {
+      row: q.row,
+      col: q.col,
+      left: clampedLeft,
+      top: clampedTop,
+      width: clampedRight - clampedLeft,
+      height: clampedBottom - clampedTop,
+      label: `${tile.label}.q${q.row}${q.col}`,
+      depth: depth + 1,
+    };
+  });
 }
 
 // ==========================================
@@ -768,6 +806,112 @@ ${boxes}
 // ==========================================
 // AI FUNCTIONS
 // ==========================================
+
+async function estimateCountInRegion(options: {
+  pool: AIPool;
+  imageBuffer: Buffer;
+  kind: Kind;
+}): Promise<CountEstimateType> {
+  const { pool, imageBuffer, kind } = options;
+
+  const prompt = `
+You are counting instances of a specific object type in an image region.
+
+Task: Estimate how many "${kind.kind}" (${kind.type}) are clearly visible in this image.
+
+Count categories:
+- "few": 1-10 instances
+- "moderate": 11-25 instances
+- "many": 26-50 instances
+- "very_many": 50+ instances
+
+Rules:
+- Only count clearly visible instances of "${kind.kind}"
+- Do not count partial/obscured instances
+- Do not hallucinate from patterns in textures
+- If none visible, return "few"
+
+Output JSON only: {"estimated_count": "few|moderate|many|very_many"}
+`;
+
+  const result = await pool.generateObject({
+    schema: RegionCountSchema,
+    temperature: 0.1,
+    messages: [{ role: 'user', content: [{ type: 'text', text: prompt }, { type: 'image', image: imageBuffer }] }],
+  });
+
+  return result.estimated_count;
+}
+
+async function adaptiveSubdivide(options: {
+  pool: AIPool;
+  imageBuffer: Buffer;
+  imageWidth: number;
+  imageHeight: number;
+  kind: Kind;
+  threshold: CountEstimateType;
+  maxDepth: number;
+  logPrefix?: string;
+}): Promise<TileDefinition[]> {
+  const { pool, imageBuffer, imageWidth, imageHeight, kind, threshold, maxDepth, logPrefix = '' } = options;
+
+  const rootTile: TileDefinition = {
+    row: 0,
+    col: 0,
+    left: 0,
+    top: 0,
+    width: imageWidth,
+    height: imageHeight,
+    label: 'root',
+    depth: 0,
+  };
+
+  const pendingTiles: TileDefinition[] = [rootTile];
+  const finalTiles: TileDefinition[] = [];
+
+  while (pendingTiles.length > 0) {
+    const tile = pendingTiles.pop()!;
+    const depth = tile.depth ?? 0;
+    const tileLogPrefix = `${logPrefix}[${'  '.repeat(depth)}${tile.label}] `;
+
+    // Crop tile region
+    let tileBuffer: Buffer;
+    if (tile.left === 0 && tile.top === 0 && tile.width === imageWidth && tile.height === imageHeight) {
+      tileBuffer = imageBuffer;
+    } else {
+      tileBuffer = await cropTileBuffer(imageBuffer, tile);
+    }
+
+    // Estimate count in this region
+    let count: CountEstimateType;
+    try {
+      count = await estimateCountInRegion({ pool, imageBuffer: tileBuffer, kind });
+      console.log(`${tileLogPrefix}count: ${count}`);
+    } catch (error) {
+      logErrorDetails(`${tileLogPrefix}⚠️ Count estimation failed, using tile as-is. `, error);
+      finalTiles.push(tile);
+      continue;
+    }
+
+    // Decide: subdivide or keep
+    if (isCountAboveThreshold(count, threshold) && depth < maxDepth) {
+      const quadrants = subdivideIntoQuadrants(tile, imageWidth, imageHeight);
+      console.log(`${tileLogPrefix}→ subdividing into 4 quadrants`);
+      pendingTiles.push(...quadrants);
+    } else {
+      if (count === 'few' && depth === 0) {
+        // Full image with few objects - no tiling needed
+        console.log(`${tileLogPrefix}→ few objects, no tiling needed`);
+      } else {
+        console.log(`${tileLogPrefix}→ keeping tile (count=${count}, depth=${depth})`);
+      }
+      finalTiles.push({ ...tile, _estimatedCount: count } as TileDefinition & { _estimatedCount: CountEstimateType });
+    }
+  }
+
+  return finalTiles;
+}
+
 async function generateDescription(
   pool: AIPool,
   imageBuffer: Buffer,
@@ -815,48 +959,138 @@ Long description:
   });
 }
 
-function dedupeKinds(kinds: Kind[]) {
-  const seen = new Set<string>();
-  const out: Kind[] = [];
+// Size levels for comparison (smaller = needs more zoom)
+const SIZE_LEVELS: Record<SizeEstimateType, number> = {
+  tiny: 1,
+  small: 2,
+  medium: 3,
+  large: 4,
+  giant: 5,
+};
+
+function dedupeKinds(kinds: Kind[]): Kind[] {
+  const seen = new Map<string, Kind>();
   for (const k of kinds) {
     const normalizedKind = k.kind.trim().toLowerCase();
     const key = `${k.type}:${normalizedKind}`;
-    if (seen.has(key)) continue;
-    seen.add(key);
-    out.push({ kind: normalizedKind, type: k.type, estimated_count: k.estimated_count });
+    const existing = seen.get(key);
+
+    if (existing) {
+      // Keep higher count estimate
+      if (COUNT_LEVELS[k.estimated_count] > COUNT_LEVELS[existing.estimated_count]) {
+        existing.estimated_count = k.estimated_count;
+      }
+      // Keep smaller size estimate (more conservative - if any view thinks it's small, use tiling)
+      const existingSize = existing.estimated_size ?? 'medium';
+      const incomingSize = k.estimated_size ?? 'medium';
+      if (SIZE_LEVELS[incomingSize] < SIZE_LEVELS[existingSize]) {
+        existing.estimated_size = incomingSize;
+      }
+      continue;
+    }
+
+    seen.set(key, {
+      kind: normalizedKind,
+      type: k.type,
+      estimated_count: k.estimated_count,
+      estimated_size: k.estimated_size ?? 'medium',
+      segmentation: k.segmentation ?? 'individual',
+      importance: k.importance ?? 'secondary',
+    });
   }
-  return out;
+  return Array.from(seen.values());
 }
 
 async function discoverKinds(pool: AIPool, imageBuffer: Buffer, maxKinds: number): Promise<Kind[]> {
   const prompt = `
-You are labeling a complex artwork.
+You are labeling an artwork for accessibility and cataloging.
 
-Task: list the unique OBJECT KINDS that are clearly visible in this image, with estimated counts.
+Task: Identify the unique OBJECT KINDS visible in this image, considering their artistic importance, size, and how they should be detected.
 
-Definitions:
-- A "kind" is a noun phrase category (e.g., "hound", "crossbowman", "stag", "boat", "castle").
-- Each kind MUST correspond to at least one clearly visible instance.
+CRITICAL: Think about what makes this artwork meaningful. What are the SUBJECTS vs the CONTEXT?
 
-Label guidelines:
-- Use SINGULAR form (e.g., "demon" not "demons", "tree" not "trees").
-- Use lowercase (e.g., "hound" not "Hound").
-- Prefer concise noun phrases.
-- Specificity is good when visual (e.g., "crossbowman", "noblewoman", "stag", "hound").
-- Do NOT invent things from patterns in water/clouds/foliage.
+== DEFINITIONS ==
 
-Estimated count categories:
-- "few": 1-10 instances
-- "moderate": 11-25 instances
-- "many": 26-50 instances
-- "very_many": 50+ instances
+A "kind" is a noun phrase category (e.g., "hound", "hunter", "demon", "mountain", "forest").
+Each kind MUST correspond to at least one clearly visible element.
 
-Output JSON only:
-{"kinds":[{"kind":"","type":"","estimated_count":""}, ...]}
-- kind must be singular lowercase (e.g., "demon", "tree", "person")
-- type must be one of: person, animal, building, landscape, object, other
-- estimated_count must be one of: few, moderate, many, very_many
-- Keep the list <= ${maxKinds}.
+== LABEL GUIDELINES ==
+
+- Use SINGULAR form (e.g., "demon" not "demons")
+- Use lowercase (e.g., "hound" not "Hound")
+- Be specific when visually distinct (e.g., "crossbowman" not just "person")
+- Do NOT invent things from patterns in water/clouds/foliage
+
+== TYPE (category) ==
+
+Choose an appropriate category. Common types: person, animal, building, landscape, object, vehicle, plant, symbol, creature, figure
+For specialized subjects: angel, demon, deity, hero, specimen, etc.
+
+== ESTIMATED SIZE ==
+
+How large is a TYPICAL INSTANCE of this kind, relative to the full image?
+
+- "tiny": <2% of image area (distant birds, specks, tiny figures in vast landscape)
+- "small": 2-10% of image (horses in landscape, people in crowd, background figures)
+- "medium": 10-30% of image (group portrait subjects, main animals)
+- "large": 30-60% of image (primary portrait subject, dominant figure)
+- "giant": >60% of image (close-up face, single subject filling frame)
+
+IMPORTANT: Size is about the OBJECT relative to the IMAGE, not real-world size.
+A horse in a vast landscape might be "tiny" or "small", while a beetle in a specimen painting might be "large".
+
+== IMPORTANCE (artistic role) ==
+
+- "primary": Main subjects, focal points, narrative figures (people in a portrait, demons in a hellscape, the central action)
+- "secondary": Supporting elements that add meaning (specific animals, important objects, architectural details)
+- "background": Contextual/environmental elements (trees in a forest, clouds, rocks, grass, water)
+
+== SEGMENTATION (detection strategy) ==
+
+- "individual": Detect EVERY instance separately. Use for:
+  - Primary subjects (each person, each demon, each main animal)
+  - Elements where each instance is unique/interesting
+  - Countable narrative elements
+
+- "representative": Detect a FEW examples (3-8). Use for:
+  - Secondary elements with many similar instances
+  - Background elements worth noting but not exhaustively cataloging
+  - E.g., "a few representative trees" in a forest landscape
+
+- "region": Detect as area/mass, not instances. Use for:
+  - Masses of similar elements (forest, crowd, field of grass)
+  - Atmospheric elements (clouds, mist, sky)
+  - Textures/surfaces (water, snow, ground)
+
+== EXAMPLES ==
+
+Landscape painting (Bierstadt):
+- mountain: landscape, few, large, individual, primary
+- eagle: animal, few, small, individual, primary
+- horse: animal, few, tiny, individual, secondary (distant horses in vast landscape!)
+- rider: person, few, tiny, individual, secondary (distant figures)
+- forest: plant, few, large, region, background
+- cloud: landscape, many, medium, region, background
+
+Bosch-style hellscape:
+- demon: creature, very_many, small, individual, primary (EACH demon is interesting!)
+- sinner: person, many, small, individual, primary
+- flame: element, very_many, small, region, background
+
+Portrait:
+- nobleman: person, few, giant, individual, primary (fills most of frame)
+- ring: object, few, tiny, individual, secondary (small detail on hand)
+
+== ESTIMATED COUNT ==
+
+- "few": 1-10, "moderate": 11-25, "many": 26-50, "very_many": 50+
+
+== OUTPUT ==
+
+JSON only:
+{"kinds":[{"kind":"","type":"","estimated_count":"","estimated_size":"","segmentation":"","importance":""}, ...]}
+
+Keep the list <= ${maxKinds}. Prefer fewer, well-chosen kinds over exhaustive lists.
 `;
 
   const result = await pool.generateObject({
@@ -865,6 +1099,102 @@ Output JSON only:
   });
 
   return dedupeKinds(result.kinds).slice(0, maxKinds);
+}
+
+type QuadrantDiscovery = {
+  name: QuadrantNameType;
+  kinds: Kind[];
+};
+
+async function reconcileKinds(options: {
+  pool: AIPool;
+  imageBuffer: Buffer;
+  fullImageKinds: Kind[];
+  quadrantDiscoveries: QuadrantDiscovery[];
+  maxKinds: number;
+}): Promise<ReconciledKind[]> {
+  const { pool, imageBuffer, fullImageKinds, quadrantDiscoveries, maxKinds } = options;
+
+  // Build the context of what was found where
+  const fullKindsList = fullImageKinds.map(k => `- ${k.kind} (${k.type}): ${k.estimated_count}, ${k.estimated_size}, ${k.importance}`).join('\n');
+
+  const quadrantSections = quadrantDiscoveries.map(q => {
+    if (q.kinds.length === 0) return `${q.name.toUpperCase()}: (nothing found)`;
+    const kindsList = q.kinds.map(k => `- ${k.kind} (${k.type}): ${k.estimated_count}, ${k.estimated_size}`).join('\n');
+    return `${q.name.toUpperCase()}:\n${kindsList}`;
+  }).join('\n\n');
+
+  // Collect all unique kinds for reference
+  const allKinds = new Map<string, Kind>();
+  for (const k of fullImageKinds) {
+    const key = `${k.type}:${k.kind.toLowerCase()}`;
+    allKinds.set(key, k);
+  }
+  for (const q of quadrantDiscoveries) {
+    for (const k of q.kinds) {
+      const key = `${k.type}:${k.kind.toLowerCase()}`;
+      if (!allKinds.has(key)) {
+        allKinds.set(key, k);
+      }
+    }
+  }
+
+  const prompt = `
+You are reconciling object detection results from multiple views of an artwork.
+
+The image was analyzed at two scales:
+1. FULL IMAGE - seeing the complete artwork
+2. QUADRANTS - four overlapping 55% crops (top-left, top-right, bottom-left, bottom-right)
+
+Here's what was discovered:
+
+== FULL IMAGE ANALYSIS ==
+${fullKindsList || '(nothing found)'}
+
+== QUADRANT ANALYSIS ==
+${quadrantSections}
+
+== YOUR TASK ==
+
+Looking at the FULL IMAGE with complete context, reconcile these findings:
+
+1. **Filter Artifacts**: Some quadrant detections may be WRONG — textures misread as objects,
+   cloud shapes mistaken for animals, mountain ridges seen as figures, etc.
+   Mark these as is_real=false.
+
+2. **Confirm Real Objects**: For each REAL object kind, specify:
+   - Which quadrants actually contain instances of it
+   - Whether to detect at full image scale or quadrant scale
+
+3. **Spatial Attribution**: A kind found in "top-left" quadrant discovery should only have
+   "top-left" in its quadrants array IF instances actually exist there.
+
+== DETECTION SCALE GUIDANCE ==
+
+- detection_scale="full": Object is large enough to detect reliably on full image
+  (medium, large, giant size OR low count that doesn't need zoom)
+
+- detection_scale="quadrant": Object is small/tiny OR there are many instances,
+  requiring zoomed detection. Will only detect in specified quadrants.
+
+== OUTPUT ==
+
+Return ALL real object kinds with their spatial information.
+Keep the list <= ${maxKinds} kinds, prioritizing primary/secondary importance.
+
+JSON only:
+{"kinds":[{"kind":"","type":"","is_real":true/false,"quadrants":["top-left",...],"estimated_count":"","estimated_size":"","segmentation":"","importance":"","detection_scale":"full|quadrant"}, ...]}
+`;
+
+  const result = await pool.generateObject({
+    schema: ReconciliationSchema,
+    messages: [{ role: 'user', content: [{ type: 'text', text: prompt }, { type: 'image', image: imageBuffer }] }],
+  });
+
+  // Filter to only real kinds and limit
+  return result.kinds
+    .filter(k => k.is_real)
+    .slice(0, maxKinds);
 }
 
 async function detectInstancesForKind(options: { pool: AIPool; imageBuffer: Buffer; kind: Kind }): Promise<DetectedObject[]> {
@@ -908,24 +1238,27 @@ You are verifying bounding box annotations for: "${kind.kind}" (${kind.type})
 
 The image shows ${instanceCount} numbered box(es), labeled 0 to ${instanceCount - 1}.
 
+CRITICAL: Be skeptical. Some boxes may be on objects that are NOT "${kind.kind}" at all.
+
 Your tasks:
 
-1. WRONG BOXES (wrong_indices):
-   List indices of boxes that should be REMOVED because:
-   - They don't actually contain a "${kind.kind}"
-   - They are severely misplaced (box doesn't cover the object)
-   Only flag boxes that are clearly wrong.
+1. WRONG BOXES (wrong_indices) — CHECK THIS FIRST:
+   Remove boxes where:
+   - There is NO "${kind.kind}" in or near the box (hallucinated detection)
+   - The box is on a DIFFERENT object type (misidentification)
+   - The shape/texture was mistaken for "${kind.kind}" but isn't one
+   Be honest: if it's not clearly a "${kind.kind}", remove it.
 
 2. CORRECTIONS (corrections):
-   For boxes that exist but need POSITION ADJUSTMENT:
+   For boxes that ARE on a real "${kind.kind}" but are misaligned:
    - Provide the index and corrected [xmin, ymin, xmax, ymax] in 0-1000 coords
-   - Only correct if the box is notably off; minor imperfections are OK
+   - Only correct boxes that truly contain a "${kind.kind}"
 
 3. MISSING (missing):
-   Find any "${kind.kind}" instances that have NO box yet:
+   Find any CLEARLY VISIBLE "${kind.kind}" instances that have NO box yet:
    - Provide box coordinates [xmin, ymin, xmax, ymax] for each
-   - Be conservative — only add clearly visible instances
-   - Do NOT hallucinate from textures/patterns
+   - Be conservative — only add instances you're certain about
+   - Do NOT hallucinate from textures, patterns, shadows, or similar shapes
 
 4. COMPLETE (complete):
    Set true only if ALL visible "${kind.kind}" instances are now correctly boxed.
@@ -1045,26 +1378,50 @@ async function detectAndVerifyRegion(options: {
   return instances;
 }
 
-async function detectAndVerifyTiled(options: {
+async function detectAndVerifyAdaptive(options: {
   pool: AIPool;
   imageBuffer: Buffer;
   imageWidth: number;
   imageHeight: number;
   kind: Kind;
   maxVerifyRounds: number;
-  tileConfig: TileConfig;
+  maxDepth: number;
   logPrefix?: string;
 }): Promise<DetectedObject[]> {
-  const { pool, imageBuffer, imageWidth, imageHeight, kind, maxVerifyRounds, tileConfig, logPrefix = '' } = options;
+  const { pool, imageBuffer, imageWidth, imageHeight, kind, maxVerifyRounds, maxDepth, logPrefix = '' } = options;
 
-  const tiles = generateTiles(imageWidth, imageHeight, tileConfig.rows, tileConfig.cols);
-  const totalTiles = tiles.length;
+  // Phase 1: Adaptive subdivision based on count estimates
+  console.log(`${logPrefix}   🔲 Adaptive tiling (estimating counts)...`);
+  const tiles = await adaptiveSubdivide({
+    pool,
+    imageBuffer,
+    imageWidth,
+    imageHeight,
+    kind,
+    threshold: 'moderate', // Subdivide if count > moderate
+    maxDepth,
+    logPrefix: logPrefix + '   ',
+  });
 
-  console.log(`${logPrefix}   🔲 Tiled: ${tileConfig.rows}×${tileConfig.cols} = ${totalTiles} tiles`);
+  // If only root tile with few objects, detect on full image
+  if (tiles.length === 1 && tiles[0].label === 'root') {
+    console.log(`${logPrefix}   📍 Full image detect+verify...`);
+    return detectAndVerifyRegion({
+      pool,
+      regionBuffer: imageBuffer,
+      regionWidth: imageWidth,
+      regionHeight: imageHeight,
+      kind,
+      maxVerifyRounds,
+      logPrefix: logPrefix + '      ',
+    });
+  }
 
+  // Phase 2: Detect on each tile in parallel
+  console.log(`${logPrefix}   📍 Detecting on ${tiles.length} adaptive tile(s)...`);
   const tileResults = await Promise.all(
     tiles.map(async (tile, i) => {
-      const tileLabel = `${tile.label} (${i + 1}/${totalTiles})`;
+      const tileLabel = `${tile.label} (${i + 1}/${tiles.length})`;
       const tileLogPrefix = `${logPrefix}      [${tileLabel}] `;
 
       try {
@@ -1080,6 +1437,7 @@ async function detectAndVerifyTiled(options: {
           logPrefix: tileLogPrefix,
         });
 
+        // Map tile coords to full image coords and filter boundary-clipped boxes
         const mappedInstances: DetectedObject[] = [];
         let clippedCount = 0;
         for (const inst of tileInstances) {
@@ -1105,11 +1463,103 @@ async function detectAndVerifyTiled(options: {
     })
   );
 
+  // Phase 3: Merge and dedupe
   const allInstances = tileResults.flat();
   const beforeDedupe = allInstances.length;
   const deduped = dedupeObjectsByGeometry(allInstances) as DetectedObject[];
   if (deduped.length < beforeDedupe) {
     console.log(`${logPrefix}   🔄 Tile merge: ${beforeDedupe} → ${deduped.length} (removed ${beforeDedupe - deduped.length} duplicates)`);
+  }
+
+  return deduped;
+}
+
+// For tiny objects: skip adaptive subdivision, immediately detect on 4 quadrants
+async function detectOnQuadrants(options: {
+  pool: AIPool;
+  imageBuffer: Buffer;
+  imageWidth: number;
+  imageHeight: number;
+  kind: Kind;
+  maxVerifyRounds: number;
+  logPrefix?: string;
+}): Promise<DetectedObject[]> {
+  const { pool, imageBuffer, imageWidth, imageHeight, kind, maxVerifyRounds, logPrefix = '' } = options;
+
+  // Create 4 overlapping quadrants (55% size with 10% overlap in center)
+  const quadrantDefs = getQuadrantDefs(imageWidth, imageHeight);
+
+  console.log(`${logPrefix}   🔲 Detecting on 4 quadrants (skipping count estimation for tiny objects)...`);
+
+  const quadrantResults = await Promise.all(
+    quadrantDefs.map(async (q) => {
+      const quadrantLogPrefix = `${logPrefix}      [${q.name}] `;
+
+      try {
+        const quadrantBuffer = await sharp(imageBuffer)
+          .extract({ left: q.left, top: q.top, width: q.width, height: q.height })
+          .jpeg({ quality: 92 })
+          .toBuffer();
+
+        const instances = await detectAndVerifyRegion({
+          pool,
+          regionBuffer: quadrantBuffer,
+          regionWidth: q.width,
+          regionHeight: q.height,
+          kind,
+          maxVerifyRounds,
+          logPrefix: quadrantLogPrefix,
+        });
+
+        // Map quadrant coordinates back to full image
+        const mappedInstances: DetectedObject[] = [];
+        for (const inst of instances) {
+          const [xmin, ymin, xmax, ymax] = normalizeBox(inst.box_2d);
+
+          // Convert from quadrant's 0-1000 coords to pixel coords in quadrant
+          const pxXmin = (xmin / 1000) * q.width;
+          const pxYmin = (ymin / 1000) * q.height;
+          const pxXmax = (xmax / 1000) * q.width;
+          const pxYmax = (ymax / 1000) * q.height;
+
+          // Add quadrant offset to get full image pixel coords
+          const fullPxXmin = q.left + pxXmin;
+          const fullPxYmin = q.top + pxYmin;
+          const fullPxXmax = q.left + pxXmax;
+          const fullPxYmax = q.top + pxYmax;
+
+          // Convert back to 0-1000 normalized coords
+          const normXmin = Math.round((fullPxXmin / imageWidth) * 1000);
+          const normYmin = Math.round((fullPxYmin / imageHeight) * 1000);
+          const normXmax = Math.round((fullPxXmax / imageWidth) * 1000);
+          const normYmax = Math.round((fullPxYmax / imageHeight) * 1000);
+
+          mappedInstances.push({
+            ...inst,
+            box_2d: [
+              clamp(normXmin, 0, 1000),
+              clamp(normYmin, 0, 1000),
+              clamp(normXmax, 0, 1000),
+              clamp(normYmax, 0, 1000),
+            ],
+          });
+        }
+
+        console.log(`${quadrantLogPrefix}📦 ${mappedInstances.length} instance(s) → global`);
+        return mappedInstances;
+      } catch (error) {
+        logErrorDetails(`${quadrantLogPrefix}⚠️ Quadrant failed: `, error);
+        return [];
+      }
+    })
+  );
+
+  // Merge and dedupe
+  const allInstances = quadrantResults.flat();
+  const beforeDedupe = allInstances.length;
+  const deduped = dedupeObjectsByGeometry(allInstances) as DetectedObject[];
+  if (deduped.length < beforeDedupe) {
+    console.log(`${logPrefix}   🔄 Quadrant merge: ${beforeDedupe} → ${deduped.length} (removed ${beforeDedupe - deduped.length} duplicates)`);
   }
 
   return deduped;
@@ -1127,32 +1577,180 @@ async function detectAndVerifyKind(options: {
 }): Promise<DetectedObject[]> {
   const { pool, imageBuffer, imageWidth, imageHeight, kind, maxVerifyRounds, tileThreshold, logPrefix = '' } = options;
 
-  const estimatedCount = estimateToNumber(kind.estimated_count);
-  const tileConfig = getTileConfig(estimatedCount, tileThreshold);
+  const segmentation = kind.segmentation ?? 'individual';
+  const importance = kind.importance ?? 'secondary';
+  const estimatedSize = kind.estimated_size ?? 'medium';
 
-  if (tileConfig.rows > 1 || tileConfig.cols > 1) {
-    console.log(`${logPrefix}  📍 Tiled detect+verify (estimated: ${kind.estimated_count})...`);
-    return detectAndVerifyTiled({
+  // Handle different segmentation strategies
+  if (segmentation === 'region') {
+    // For regions, detect bounding areas (no individual instances)
+    console.log(`${logPrefix}  📍 Region detection (${importance})...`);
+    return detectRegions({
+      pool,
+      imageBuffer,
+      kind,
+      logPrefix: logPrefix + '     ',
+    });
+  }
+
+  if (segmentation === 'representative') {
+    // Detect a few representative examples (cap at 8)
+    console.log(`${logPrefix}  📍 Representative detection (max 8, ${importance})...`);
+    const instances = await detectAndVerifyRegion({
+      pool,
+      regionBuffer: imageBuffer,
+      regionWidth: imageWidth,
+      regionHeight: imageHeight,
+      kind,
+      maxVerifyRounds: Math.min(maxVerifyRounds, 1), // Fewer verify rounds for representative
+      logPrefix: logPrefix + '     ',
+    });
+    // Cap at 8 representative instances, preferring diverse positions
+    if (instances.length <= 8) return instances;
+    return selectRepresentativeInstances(instances, 8);
+  }
+
+  // segmentation === 'individual': detect every instance
+  // Use tiled detection when:
+  // 1. Objects are tiny - they MUST be zoomed, skip count estimation entirely
+  // 2. Objects are small - they need zoom but can use adaptive subdivision
+  // 3. High count (many/very_many) - too many to detect reliably at once
+  const isTinyObject = estimatedSize === 'tiny';
+  const isSmallObject = estimatedSize === 'small';
+  const isHighCount = isCountAboveThreshold(kind.estimated_count, 'moderate');
+
+  if (tileThreshold > 0 && isTinyObject) {
+    // Tiny objects: skip adaptive subdivision entirely, immediately split into quadrants
+    // Count estimation at full scale is unreliable for tiny objects
+    console.log(`${logPrefix}  📍 Quadrant detect+verify (size: tiny, ${importance})...`);
+    return detectOnQuadrants({
       pool,
       imageBuffer,
       imageWidth,
       imageHeight,
       kind,
       maxVerifyRounds,
-      tileConfig,
       logPrefix: logPrefix + '  ',
     });
-  } else {
-    console.log(`${logPrefix}  📍 Full image detect+verify (estimated: ${kind.estimated_count})...`);
-    return detectAndVerifyRegion({
+  }
+
+  if (tileThreshold > 0 && (isSmallObject || isHighCount)) {
+    const reason = isSmallObject
+      ? `size: ${estimatedSize}`
+      : `count: ${kind.estimated_count}`;
+    const maxDepth = isSmallObject && !isHighCount ? 2 : 3;
+    console.log(`${logPrefix}  📍 Adaptive tiled detect+verify (${reason}, ${importance})...`);
+    return detectAndVerifyAdaptive({
       pool,
-      regionBuffer: imageBuffer,
-      regionWidth: imageWidth,
-      regionHeight: imageHeight,
+      imageBuffer,
+      imageWidth,
+      imageHeight,
       kind,
       maxVerifyRounds,
-      logPrefix: logPrefix + '     ',
+      maxDepth,
+      logPrefix: logPrefix + '  ',
     });
+  }
+
+  console.log(`${logPrefix}  📍 Full image detect+verify (size: ${estimatedSize}, count: ${kind.estimated_count}, ${importance})...`);
+  return detectAndVerifyRegion({
+    pool,
+    regionBuffer: imageBuffer,
+    regionWidth: imageWidth,
+    regionHeight: imageHeight,
+    kind,
+    maxVerifyRounds,
+    logPrefix: logPrefix + '     ',
+  });
+}
+
+// Select spatially diverse representative instances
+function selectRepresentativeInstances(instances: DetectedObject[], count: number): DetectedObject[] {
+  if (instances.length <= count) return instances;
+
+  // Sort by area (larger first) as a proxy for importance
+  const sorted = [...instances].sort((a, b) => {
+    const areaA = (a.box_2d[2] - a.box_2d[0]) * (a.box_2d[3] - a.box_2d[1]);
+    const areaB = (b.box_2d[2] - b.box_2d[0]) * (b.box_2d[3] - b.box_2d[1]);
+    return areaB - areaA;
+  });
+
+  // Greedily select instances that are spatially diverse
+  const selected: DetectedObject[] = [sorted[0]];
+  const getCenter = (obj: DetectedObject) => ({
+    x: (obj.box_2d[0] + obj.box_2d[2]) / 2,
+    y: (obj.box_2d[1] + obj.box_2d[3]) / 2,
+  });
+
+  for (const candidate of sorted.slice(1)) {
+    if (selected.length >= count) break;
+    const candCenter = getCenter(candidate);
+    // Check minimum distance from already selected
+    const minDist = Math.min(
+      ...selected.map((s) => {
+        const sCenter = getCenter(s);
+        return Math.sqrt((candCenter.x - sCenter.x) ** 2 + (candCenter.y - sCenter.y) ** 2);
+      })
+    );
+    // Require some minimum separation (100 units in normalized coords)
+    if (minDist > 80 || selected.length < 3) {
+      selected.push(candidate);
+    }
+  }
+
+  // If we still need more, add remaining largest ones
+  for (const candidate of sorted) {
+    if (selected.length >= count) break;
+    if (!selected.includes(candidate)) {
+      selected.push(candidate);
+    }
+  }
+
+  return selected.slice(0, count);
+}
+
+// Detect regions/areas rather than individual instances
+async function detectRegions(options: {
+  pool: AIPool;
+  imageBuffer: Buffer;
+  kind: Kind;
+  logPrefix?: string;
+}): Promise<DetectedObject[]> {
+  const { pool, imageBuffer, kind, logPrefix = '' } = options;
+
+  const prompt = `
+You are detecting REGIONS/AREAS in an artwork, not individual instances.
+
+Task: Find the main AREAS where "${kind.kind}" (${kind.type}) appears in this image.
+
+Rules:
+- Draw bounding boxes around REGIONS/MASSES, not individual items
+- For a forest: one box around the forested area, not each tree
+- For clouds: boxes around cloud masses, not each cloud
+- For grass/fields: boxes around grassy areas
+- Typically 1-5 regions maximum
+- Boxes can be large and encompassing
+
+Output JSON only:
+{"objects":[{"label":"","type":"","box_2d":[xmin,ymin,xmax,ymax]}, ...]}
+box_2d is normalized 0-1000.
+`;
+
+  try {
+    const result = await pool.generateObject({
+      schema: InstancesSchema,
+      temperature: 0.15,
+      messages: [{ role: 'user', content: [{ type: 'text', text: prompt }, { type: 'image', image: imageBuffer }] }],
+    });
+
+    const regions = result.objects.map((o) =>
+      normalizeObject({ ...o, label: kind.kind, type: kind.type })
+    );
+    console.log(`${logPrefix}Found ${regions.length} region(s)`);
+    return regions;
+  } catch (error) {
+    logErrorDetails(`${logPrefix}⚠️ Region detection failed. `, error);
+    return [];
   }
 }
 
@@ -1161,7 +1759,7 @@ async function detectAndVerifyKind(options: {
 // ==========================================
 export async function runDetection(config: DetectionConfig): Promise<OutputPayload> {
   console.log(`   Model: ${config.modelName}`);
-  console.log(`   Verify rounds: ${config.verifyRounds} | Tile threshold: ${config.tileThreshold === 0 ? 'off' : `>${config.tileThreshold}`} | Concurrency: ${config.concurrency}`);
+  console.log(`   Verify rounds: ${config.verifyRounds} | Tile threshold: ${config.tileThreshold === 0 ? 'off' : `>${config.tileThreshold}`} | Multi-scale: ${config.multiScaleDiscovery ? 'on' : 'off'} | Concurrency: ${config.concurrency}`);
 
   if (!config.mock && !process.env.GOOGLE_GENERATIVE_AI_API_KEY) {
     throw new Error('GOOGLE_GENERATIVE_AI_API_KEY is missing. Add it to .env or set it in your environment.');
@@ -1200,57 +1798,241 @@ export async function runDetection(config: DetectionConfig): Promise<OutputPaylo
   console.log('PHASE 1: Discovering object kinds...');
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
 
-  const kinds: Kind[] = config.mock
-    ? [
-        { kind: 'Hound', type: 'animal', estimated_count: 'many' },
-        { kind: 'Stag', type: 'animal', estimated_count: 'moderate' },
-        { kind: 'Hunter', type: 'person', estimated_count: 'moderate' },
-      ]
-    : await discoverKinds(pool, imageBuffer, config.maxKinds);
+  let reconciledKinds: ReconciledKind[];
 
-  console.log(`\n🧭 Discovered ${kinds.length} kind(s):`);
-  for (const k of kinds.slice(0, 60)) {
-    console.log(`   • ${k.kind} (${k.type}) — ${k.estimated_count}`);
+  if (config.mock) {
+    reconciledKinds = [
+      { kind: 'hound', type: 'animal', is_real: true, quadrants: ['bottom-left', 'bottom-right'], estimated_count: 'many', estimated_size: 'small', segmentation: 'individual', importance: 'primary', detection_scale: 'quadrant' },
+      { kind: 'stag', type: 'animal', is_real: true, quadrants: ['bottom-right'], estimated_count: 'moderate', estimated_size: 'medium', segmentation: 'individual', importance: 'primary', detection_scale: 'full' },
+      { kind: 'hunter', type: 'person', is_real: true, quadrants: ['bottom-left', 'bottom-right'], estimated_count: 'moderate', estimated_size: 'small', segmentation: 'individual', importance: 'primary', detection_scale: 'quadrant' },
+    ];
+  } else {
+    // Step 1a: Full image discovery
+    console.log('\n🔍 Step 1a: Full image analysis...');
+    const fullImageKinds = await discoverKinds(pool, imageBuffer, config.maxKinds);
+    console.log(`   Found ${fullImageKinds.length} kind(s)`);
+
+    // Step 1b: Quadrant discovery (if multi-scale enabled)
+    let quadrantDiscoveries: QuadrantDiscovery[] = [];
+
+    if (config.multiScaleDiscovery) {
+      console.log('\n🔬 Step 1b: Quadrant analysis...');
+
+      const quadrantDefs = getQuadrantDefs(imageWidth, imageHeight);
+
+      quadrantDiscoveries = await Promise.all(
+        quadrantDefs.map(async (q): Promise<QuadrantDiscovery> => {
+          try {
+            const quadrantBuffer = await sharp(imageBuffer)
+              .extract({ left: q.left, top: q.top, width: q.width, height: q.height })
+              .jpeg({ quality: 92 })
+              .toBuffer();
+
+            const quadrantKinds = await discoverKinds(pool, quadrantBuffer, Math.ceil(config.maxKinds / 2));
+            console.log(`   [${q.name}] Found ${quadrantKinds.length} kind(s)`);
+            return { name: q.name, kinds: quadrantKinds };
+          } catch (error) {
+            console.warn(`   [${q.name}] ⚠️ Failed: ${error instanceof Error ? error.message : String(error)}`);
+            return { name: q.name, kinds: [] };
+          }
+        })
+      );
+
+      const totalQuadrantKinds = quadrantDiscoveries.reduce((sum, q) => sum + q.kinds.length, 0);
+      console.log(`   Total: ${totalQuadrantKinds} kind(s) from quadrants`);
+    }
+
+    // Step 1c: Reconciliation - filter artifacts and get spatial info
+    console.log('\n🔄 Step 1c: Reconciling discoveries with full image context...');
+    reconciledKinds = await reconcileKinds({
+      pool,
+      imageBuffer,
+      fullImageKinds,
+      quadrantDiscoveries,
+      maxKinds: config.maxKinds,
+    });
+    console.log(`   Reconciled to ${reconciledKinds.length} confirmed kind(s)`);
   }
-  if (kinds.length > 60) {
-    console.log(`   ... and ${kinds.length - 60} more`);
+
+  console.log(`\n🧭 Reconciled ${reconciledKinds.length} kind(s):`);
+  for (const k of reconciledKinds.slice(0, 60)) {
+    const seg = k.segmentation === 'individual' ? '⊡' : k.segmentation === 'representative' ? '◇' : '▢';
+    const imp = k.importance === 'primary' ? '★' : k.importance === 'secondary' ? '☆' : '·';
+    const size = k.estimated_size ?? 'medium';
+    const sizeIcon = size === 'tiny' ? '🔬' : size === 'small' ? '🔹' : size === 'large' ? '🔷' : size === 'giant' ? '⬛' : '';
+    const scale = k.detection_scale === 'quadrant' ? `[${k.quadrants.join(', ')}]` : '[full]';
+    console.log(`   ${imp} ${k.kind} (${k.type}) — ${k.estimated_count}, ${size} ${seg}${sizeIcon ? ' ' + sizeIcon : ''} ${scale}`);
   }
+  if (reconciledKinds.length > 60) {
+    console.log(`   ... and ${reconciledKinds.length - 60} more`);
+  }
+
+  // Convert to Kind array for payload (backwards compat)
+  const kinds: Kind[] = reconciledKinds.map(k => ({
+    kind: k.kind,
+    type: k.type,
+    estimated_count: k.estimated_count,
+    estimated_size: k.estimated_size,
+    segmentation: k.segmentation,
+    importance: k.importance,
+  }));
 
   // Phase 2: Detect + Verify each kind
   console.log('\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
   console.log('PHASE 2: Detecting and verifying instances per kind...');
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
 
-  let kindsToProcess = kinds;
+  let kindsToProcess = reconciledKinds;
   if (config.onlyKinds && config.onlyKinds.length > 0) {
-    kindsToProcess = kinds.filter((k) => config.onlyKinds!.includes(k.kind.toLowerCase()));
-    console.log(`\n⚠️  --only-kinds: processing ${kindsToProcess.length} of ${kinds.length} kinds: ${config.onlyKinds.join(', ')}`);
+    kindsToProcess = reconciledKinds.filter((k) => config.onlyKinds!.includes(k.kind.toLowerCase()));
+    console.log(`\n⚠️  --only-kinds: processing ${kindsToProcess.length} of ${reconciledKinds.length} kinds: ${config.onlyKinds.join(', ')}`);
   }
 
   let allObjects: StoredObject[] = [];
+
+  // Pre-compute quadrant buffers for reuse
+  const quadrantBuffers = new Map<QuadrantNameType, { buffer: Buffer; width: number; height: number; left: number; top: number }>();
+  const quadrantDefs = getQuadrantDefs(imageWidth, imageHeight);
 
   if (!config.mock) {
     const total = kindsToProcess.length;
     console.log(`\n🔀 Processing ${total} kinds (pool concurrency: ${config.concurrency})`);
 
     const results = await Promise.all(
-      kindsToProcess.map(async (kind, i) => {
-        const kindLabel = `[${i + 1}/${total}] ${kind.kind}`;
-        console.log(`\n${kindLabel} (${kind.type})`);
+      kindsToProcess.map(async (rKind, i) => {
+        const kindLabel = `[${i + 1}/${total}] ${rKind.kind}`;
+        const kind: Kind = {
+          kind: rKind.kind,
+          type: rKind.type,
+          estimated_count: rKind.estimated_count,
+          estimated_size: rKind.estimated_size,
+          segmentation: rKind.segmentation,
+          importance: rKind.importance,
+        };
 
-        const instances = await detectAndVerifyKind({
-          pool,
-          imageBuffer,
-          imageWidth,
-          imageHeight,
-          kind,
-          maxVerifyRounds: config.verifyRounds,
-          tileThreshold: config.tileThreshold,
-          logPrefix: `${kindLabel} `,
-        });
+        // Handle different segmentation strategies first
+        if (rKind.segmentation === 'region') {
+          console.log(`\n${kindLabel} (${kind.type}) → region detection`);
+          const regions = await detectRegions({ pool, imageBuffer, kind, logPrefix: `${kindLabel}   ` });
+          console.log(`${kindLabel}   📦 Result: ${regions.length} region(s)`);
+          return regions;
+        }
 
-        console.log(`${kindLabel}   📦 Result: ${instances.length} verified instance(s)`);
-        return instances;
+        if (rKind.segmentation === 'representative') {
+          console.log(`\n${kindLabel} (${kind.type}) → representative (max 8)`);
+          const instances = await detectAndVerifyRegion({
+            pool,
+            regionBuffer: imageBuffer,
+            regionWidth: imageWidth,
+            regionHeight: imageHeight,
+            kind,
+            maxVerifyRounds: Math.min(config.verifyRounds, 1),
+            logPrefix: `${kindLabel}   `,
+          });
+          const selected = instances.length <= 8 ? instances : selectRepresentativeInstances(instances, 8);
+          console.log(`${kindLabel}   📦 Result: ${selected.length} representative instance(s)`);
+          return selected;
+        }
+
+        // Individual detection - use detection_scale from reconciliation
+        if (rKind.detection_scale === 'full') {
+          console.log(`\n${kindLabel} (${kind.type}) → full image`);
+          const instances = await detectAndVerifyRegion({
+            pool,
+            regionBuffer: imageBuffer,
+            regionWidth: imageWidth,
+            regionHeight: imageHeight,
+            kind,
+            maxVerifyRounds: config.verifyRounds,
+            logPrefix: `${kindLabel}   `,
+          });
+          console.log(`${kindLabel}   📦 Result: ${instances.length} verified instance(s)`);
+          return instances;
+        }
+
+        // Quadrant-level detection
+        console.log(`\n${kindLabel} (${kind.type}) → quadrants: [${rKind.quadrants.join(', ')}]`);
+
+        if (rKind.quadrants.length === 0) {
+          console.log(`${kindLabel}   ⚠️ No quadrants specified, skipping`);
+          return [];
+        }
+
+        const quadrantResults = await Promise.all(
+          rKind.quadrants.map(async (qName) => {
+            const qDef = quadrantDefs.find(q => q.name === qName);
+            if (!qDef) return [];
+
+            const quadrantLogPrefix = `${kindLabel}   [${qName}] `;
+
+            try {
+              // Get or create quadrant buffer
+              let qData = quadrantBuffers.get(qName);
+              if (!qData) {
+                const buffer = await sharp(imageBuffer)
+                  .extract({ left: qDef.left, top: qDef.top, width: qDef.width, height: qDef.height })
+                  .jpeg({ quality: 92 })
+                  .toBuffer();
+                qData = { buffer, width: qDef.width, height: qDef.height, left: qDef.left, top: qDef.top };
+                quadrantBuffers.set(qName, qData);
+              }
+
+              const instances = await detectAndVerifyRegion({
+                pool,
+                regionBuffer: qData.buffer,
+                regionWidth: qData.width,
+                regionHeight: qData.height,
+                kind,
+                maxVerifyRounds: config.verifyRounds,
+                logPrefix: quadrantLogPrefix,
+              });
+
+              // Map quadrant coordinates back to full image
+              const mappedInstances: DetectedObject[] = instances.map(inst => {
+                const [xmin, ymin, xmax, ymax] = normalizeBox(inst.box_2d);
+
+                // Convert from quadrant's 0-1000 coords to pixel coords in quadrant
+                const pxXmin = (xmin / 1000) * qData!.width;
+                const pxYmin = (ymin / 1000) * qData!.height;
+                const pxXmax = (xmax / 1000) * qData!.width;
+                const pxYmax = (ymax / 1000) * qData!.height;
+
+                // Add quadrant offset to get full image pixel coords
+                const fullPxXmin = qData!.left + pxXmin;
+                const fullPxYmin = qData!.top + pxYmin;
+                const fullPxXmax = qData!.left + pxXmax;
+                const fullPxYmax = qData!.top + pxYmax;
+
+                // Convert back to 0-1000 normalized coords
+                return {
+                  ...inst,
+                  box_2d: [
+                    clamp(Math.round((fullPxXmin / imageWidth) * 1000), 0, 1000),
+                    clamp(Math.round((fullPxYmin / imageHeight) * 1000), 0, 1000),
+                    clamp(Math.round((fullPxXmax / imageWidth) * 1000), 0, 1000),
+                    clamp(Math.round((fullPxYmax / imageHeight) * 1000), 0, 1000),
+                  ] as [number, number, number, number],
+                };
+              });
+
+              console.log(`${quadrantLogPrefix}📦 ${mappedInstances.length} instance(s) → global`);
+              return mappedInstances;
+            } catch (error) {
+              logErrorDetails(`${quadrantLogPrefix}⚠️ Failed: `, error);
+              return [];
+            }
+          })
+        );
+
+        // Merge and dedupe across quadrants
+        const allInstances = quadrantResults.flat();
+        const beforeDedupe = allInstances.length;
+        const deduped = dedupeObjectsByGeometry(allInstances) as DetectedObject[];
+        if (deduped.length < beforeDedupe) {
+          console.log(`${kindLabel}   🔄 Quadrant merge: ${beforeDedupe} → ${deduped.length}`);
+        }
+        console.log(`${kindLabel}   📦 Result: ${deduped.length} verified instance(s)`);
+        return deduped;
       })
     );
 

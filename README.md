@@ -1,120 +1,118 @@
 # deep-label
 
-**deep-label** is an intelligent, agentic computer vision pipeline designed to analyze complex artwork with “obnoxiously exhaustive” detail.
+**deep-label** is an intelligent, agentic computer vision pipeline designed to analyze complex artwork with "obnoxiously exhaustive" detail.
 
-Unlike standard object detection models that only find the most obvious elements (e.g., "person," "dog"), this system uses a **recursive feedback loop** to force Large Language Models (LLMs) to look deeper, identifying specific background details, individual crowd members, and subtle narrative elements.
+Unlike standard object detection models that only find the most obvious elements (e.g., "person," "dog"), this system uses a **multi-scale discovery** and **reconciliation** approach to force Large Language Models (LLMs) to look deeper, identifying specific background details, individual crowd members, and subtle narrative elements.
 
 It then uses this exhaustive data as "Ground Truth" to generate high-quality, hallucination-free accessibility descriptions (Alt Text and Long Descriptions) for museum contexts.
 
 ---
 
-## 📖 Non-Technical Overview
+## The Problem
 
-Imagine asking a curator to list everything they see in a painting.
-1.  **First pass:** They list the main subjects—the castle, the king, the river.
-2.  **Second pass:** You hand them their own list and say, *"These are already labeled. What else do you see?"* They look closer and list the hunters, the boat, and the dogs.
-3.  **Third pass:** You repeat the process. Now they are squinting at the background, listing the tiny village, the birds in the trees, and the specific clothing of the servants.
+### 1. The Metadata Gap
+Museums index titles, not pixels. Search for "dog" and you get paintings *named* "dog" — not the thousands where a dog appears in the background. **Deep-label turns visual content into searchable data.**
 
-**deep-label** automates this process. It refuses to stop until it has "squeezed" every drop of visual information from the image.
+### 2. The Domain Shift Problem
+Standard vision models (YOLO, COCO) are trained on photographs. They see brushstrokes as noise and stylization as error. A Cubist face registers as not-a-face. **This pipeline focuses on structure over style** — recognizing a "person" whether rendered by Vermeer or Picasso.
 
-Once it has a massive list of verified facts, it passes that list to a "Writer" agent. Because the Writer has a verified list of facts, it doesn't make things up. It knows exactly how many dogs are in the pack and exactly where they are standing, resulting in a highly accurate visual description.
+### 3. Distant Viewing
+Art history is traditionally qualitative — a scholar manually studies hundreds of works in a career. **Automated labeling enables macro-analysis**: track how "hands" evolved from Medieval to Renaissance across 100,000 images.
 
----
+### 4. Accessibility at Scale
+Alt-text for museum collections is scarce and expensive to produce manually. **Deep-label generates rich, hierarchical descriptions automatically** — enabling screen readers, audio tours, and region-based exploration for visually impaired users.
 
-## 🔄 System Flow
+**In short:** Current AI sees art as broken photos. Current museum databases are blind to their own visual content. This project bridges both gaps.
 
-```mermaid
-graph TD
-    Input(Input Image)
+### Why Existing Tools Fail
 
-    subgraph Phase 1: Discovery
-    Kinds[Discover Object Kinds]
-    end
+Consider a [complex hunting scene](https://www.clevelandart.org/art/1958.425) with dozens of hounds. Here's what happens when you try existing approaches:
 
-    subgraph Phase 2: Detect + Verify
-    Detect[Detect Instances]
-    Overlay[Overlay Boxes on Image]
-    Verify[Verify & Correct]
-    Tile{High count?}
-    TileProcess[Split into Tiles]
-    end
+| Approach | Result |
+|----------|--------|
+| ![SAM 3 segmentation](docs/images/sam3.jpg) | **Segmentation models** like [Meta SAM 3](https://ai.meta.com/sam3/) excel at pixel-perfect boundaries but often lack the semantic flexibility for stylized art. They struggle to map specific iconography (e.g., "demon") to general classes they were trained on (e.g., "person"). While SAM 3 improves on this, it still suffers from low recall in dense scenes, identifying only 15 "hounds" here where dozens exist. |
+| ![NanoBanana segmentation](docs/images/nanobanana.jpg) | **Image generators** like [Nano Banana Pro](https://gemini.google/overview/image-generation/) can be asked to visually "highlight the hounds." While useful for general localization, generative models prioritize global image coherence over exhaustive extraction. As a result, it highlights the most obvious clusters but misses individual outlying instances. |
+| ![Gemini 3 direct prompting](docs/images/gemini3.jpg) | **VLM direct prompting**: Asking [Gemini 3](https://gemini.google.com/) for direct bounding box coordinates works well on simple photos but suffers from coordinate drift in complex art. The model correctly perceives the density (returning ~36 instances), but lacks the precision to ground them accurately, resulting in "floating" boxes that don't align with the pixels. |
 
-    subgraph Phase 3: Post-Processing
-    Dedupe[Global Deduplication]
-    Score[Importance Scoring]
-    end
-
-    subgraph Phase 4: Output
-    Describe[Generate Descriptions]
-    Cutouts[Generate Cutouts]
-    Annotate[Annotate Image]
-    end
-
-    Output(JSON + Cutouts + Annotated Image)
-
-    Input --> Kinds
-    Kinds --> Tile
-    Tile -- No --> Detect
-    Tile -- Yes --> TileProcess
-    TileProcess --> Detect
-    Detect --> Overlay
-    Overlay --> Verify
-    Verify --> Dedupe
-    Dedupe --> Score
-    Score --> Describe
-    Score --> Cutouts
-    Score --> Annotate
-    Describe --> Output
-    Cutouts --> Output
-    Annotate --> Output
-
-    style Input fill:#f9f,stroke:#333,stroke-width:2px
-    style Output fill:#9f9,stroke:#333,stroke-width:2px
-```
+**deep-label** solves this with multi-scale discovery, LLM-based reconciliation, and iterative verification to achieve exhaustive coverage without hallucination.
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
-### Phase 1: Kind Discovery
-The agent first asks Gemini to list the unique **kinds** of objects visible in the artwork (e.g., "Hound", "Stag", "Hunter", "Castle"), along with estimated counts.
+### Phase 1: Multi-Scale Discovery + Reconciliation
 
-### Phase 2: Detect + Verify (per kind)
-For each discovered kind:
-1. **Detection:** Find all instances of that kind with bounding boxes
-2. **Verification:** Show the model its own boxes overlaid on the image and ask it to:
-   - Remove incorrect boxes
-   - Correct misaligned boxes
-   - Add any missed instances
-3. **Tiled detection:** For high-count kinds (e.g., 50+ hounds), the image is split into overlapping tiles and each tile is processed independently, then merged with deduplication
+The agent analyzes the artwork at multiple scales, then reconciles findings with full-image context to filter hallucinations:
 
-All coordinates are normalized to `[0-1000]` integers. Schema enforcement via Zod ensures structured JSON output.
+**Step 1a: Full image analysis**
+- Identifies major elements visible at full scale
+
+**Step 1b: Quadrant analysis**
+- 4 overlapping quadrants at 55% size catch small details missed at full scale
+- Each quadrant is analyzed independently
+
+**Step 1c: Reconciliation (key innovation)**
+- All discoveries (full + quadrant) are sent back to the LLM with the full image
+- The LLM filters artifacts (textures mistaken for objects, cloud shapes, etc.)
+- For each confirmed kind, specifies which quadrants actually contain it
+- Decides whether full-image or quadrant-level detection is needed
+
+This prevents the common failure mode where the system detects "tipi" in every quadrant when tipis only exist in one corner.
+
+For each kind, the LLM provides:
+
+| Attribute | Values | Purpose |
+|-----------|--------|---------|
+| **count** | few, moderate, many, very_many | How many instances |
+| **size** | tiny, small, medium, large, giant | Size relative to image |
+| **segmentation** | individual, representative, region | Detection strategy |
+| **importance** | primary, secondary, background | Artistic role |
+| **quadrants** | [top-left, top-right, ...] | Where instances exist |
+| **detection_scale** | full, quadrant | Detection resolution |
+
+**Size scale:**
+- `tiny` (<2% of image) - distant birds, specks, tiny figures in vast landscapes
+- `small` (2-10%) - horses in landscape, crowd figures
+- `medium` (10-30%) - group portrait subjects
+- `large` (30-60%) - main portrait subject
+- `giant` (>60%) - close-up filling frame
+
+### Phase 2: Targeted Detection + Verification
+
+Each kind is processed according to its reconciled attributes:
+
+**By segmentation strategy:**
+- `individual` → detect every instance with bounding boxes
+- `representative` → detect 3-8 spatially diverse examples
+- `region` → detect bounding areas (e.g., "forest" as a mass, not each tree)
+
+**By detection scale (from reconciliation):**
+- `full` → detect on full image (medium/large objects, low counts)
+- `quadrant` → detect only in specified quadrants (tiny/small objects)
+
+**Verification loop:**
+For each detection region, the system:
+1. Detects all instances of the kind
+2. Overlays numbered boxes on the image
+3. Asks the LLM to verify: remove wrong boxes, correct positions, add missing instances
+4. Repeats until stable or max rounds reached
 
 ### Phase 3: Global Deduplication & Scoring
+
 After all kinds are processed:
-- Geometry-based deduplication merges overlapping boxes (alternate labels preserved as `aliases`)
+- Geometry-based deduplication merges overlapping boxes (IoU threshold)
+- Alternate labels preserved as `aliases`
 - Importance scoring ranks objects by size, centrality, and rarity
 
-### Phase 4: Description Generation
-The verified object list is passed to a "Writer" agent that generates:
-- **Alt text** (10-18 words): concise scene summary
-- **Long description** (150-200 words): detailed spatial walkthrough
+### Phase 4: Output Generation
 
-Because the writer has a verified list of facts, it doesn't hallucinate—it knows exactly how many dogs are in the pack and where they're standing.
-
----
-
-## 🛠️ Tech Stack
-
-*   **Runtime:** Node.js / TypeScript
-*   **AI Framework:** [Vercel AI SDK](https://sdk.vercel.ai/docs) (`generateObject`)
-*   **Model Provider:** Google Generative AI (Gemini)
-*   **Validation:** Zod (Schema validation)
-*   **Visualization:** `sharp` + SVG overlay (annotated output image)
+- **Descriptions**: Alt text (10-18 words) + long description (150-200 words) using verified object list as ground truth
+- **Cutouts**: Cropped images for each detected object with configurable padding
+- **Annotated image**: Bounding box overlay visualization
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Installation
 ```bash
@@ -131,53 +129,58 @@ GOOGLE_GENERATIVE_AI_API_KEY=your_api_key_here
 Create an artwork directory and add your image:
 ```bash
 mkdir -p public/artworks/my-painting
-cp path/to/image.jpg public/artworks/my-painting/
+cp path/to/image.jpg public/artworks/my-painting/image.jpg
 ```
 
-Optionally add metadata (`artwork.json`):
-```json
-{"title": "My Painting", "artist": "Jane Doe", "date": "1850", "medium": "Oil on canvas"}
-```
-
-Run the detection agent:
+Run detection:
 ```bash
-npx tsx scripts/agent.ts my-painting
+npx tsx scripts/detect.ts my-painting
 ```
 
-This generates all outputs in the artwork directory:
-- `detected_objects.json` - detection payload with objects and descriptions
-- `cutouts/` - cropped images for each detected object
+Outputs in the artwork directory:
+- `detected_objects.json` - full detection payload
+- `cutouts/` - cropped images per object
 - `cutouts.json` - cutout index
-- `annotated.png` - image with bounding box overlays
+- `annotated.png` - visualization with boxes
 
 ### 4. View Results
-Start the web viewer:
 ```bash
 npm run dev
 ```
-Open http://localhost:3000 to browse artworks with an interactive zoomable viewer.
-
-### CLI Options
-```
-npx tsx scripts/agent.ts <slug> [options]
-
-Options:
-  --force                  Overwrite existing outputs
-  --max-kinds <n>          Max object kinds to discover (default: 50)
-  --verify-rounds <n>      Verification rounds per kind (default: 2)
-  --tile-threshold <n>     Use tiled detection above this count (default: 12)
-  --kind-concurrency <n>   Parallel kind processing (default: 3)
-  --cutouts-padding <pct>  Padding around cutouts (default: 0.10)
-  --no-cutouts             Disable cutout generation
-  --model <name>           Override detection model
-  -h, --help               Show all options
-```
+Open http://localhost:3000 for an interactive zoomable viewer.
 
 ---
 
-## 📊 Data Format
+## CLI Reference
 
-The output `detected_objects.json` contains:
+```
+npx tsx scripts/detect.ts <slug> [options]
+npx tsx scripts/detect.ts -i <image> -o <output> [options]
+
+Options:
+  --force                  Overwrite existing outputs
+  --max-kinds <n>          Max kinds to discover (default: 50)
+  --verify-rounds <n>      Verification rounds per kind (default: 2)
+  --tile-threshold <n>     Enable tiling above this count (default: 12, 0=disable)
+  --concurrency <n>        Parallel API calls (default: 6)
+  --no-multi-scale         Disable quadrant discovery
+  --no-cutouts             Disable cutout generation
+  --cutouts-format <fmt>   webp or png (default: webp)
+  --cutouts-padding <pct>  Padding as decimal (default: 0.10)
+  --model <name>           Detection model (default: gemini-3-pro-preview)
+  --no-annotate            Skip annotated image
+  --only-kinds <list>      Process specific kinds (e.g., "hound,stag")
+  --mock                   Dry run without API calls
+  -h, --help               Show all options
+```
+
+**Environment variables:** All options have env var equivalents (e.g., `MAX_KINDS`, `VERIFY_ROUNDS`, `MULTI_SCALE`).
+
+---
+
+## Data Format
+
+Output `detected_objects.json`:
 
 ```json
 {
@@ -185,11 +188,26 @@ The output `detected_objects.json` contains:
   "image_path": "public/artworks/my-painting/image.jpg",
   "model_name": "gemini-3-pro-preview",
   "kinds": [
-    { "kind": "Hound", "type": "animal", "estimated_count": "many" }
+    {
+      "kind": "hound",
+      "type": "animal",
+      "estimated_count": "many",
+      "estimated_size": "small",
+      "segmentation": "individual",
+      "importance": "primary"
+    },
+    {
+      "kind": "forest",
+      "type": "plant",
+      "estimated_count": "few",
+      "estimated_size": "large",
+      "segmentation": "region",
+      "importance": "background"
+    }
   ],
   "objects": [
     {
-      "label": "Hound",
+      "label": "hound",
       "type": "animal",
       "box_2d": [80, 640, 155, 780],
       "importance": 0.42,
@@ -205,26 +223,29 @@ The output `detected_objects.json` contains:
 
 **Coordinates:** `box_2d` is `[xmin, ymin, xmax, ymax]` normalized to `[0, 1000]`.
 
-**Per-object fields:**
-* `importance`: 0–1 score based on size, centrality, and rarity
-* `importance_rank`: 1 = most important
-* `aliases`: alternate labels merged during deduplication
+---
+
+## Tech Stack
+
+- **Runtime:** Node.js / TypeScript
+- **AI Framework:** [Vercel AI SDK](https://sdk.vercel.ai/docs) (`generateObject`)
+- **Model Provider:** Google Generative AI (Gemini)
+- **Validation:** Zod schema enforcement
+- **Image Processing:** sharp (tiling, cutouts, SVG overlay)
+- **Web Viewer:** Next.js + OpenSeadragon
 
 ---
 
 ## Project Structure
 
 ```
-scripts/           # CLI tools
-  agent.ts         # detection agent
-  annotator.ts     # image annotation helper
-src/               # Next.js web viewer
-public/artworks/   # artwork data (per-slug directories)
+scripts/
+  detect.ts        # Main detection CLI
+src/
+  lib/
+    detector.ts    # Core detection pipeline
+    annotator.ts   # Image annotation
+    pool.ts        # AI request pooling
+  app/             # Next.js web viewer
+public/artworks/   # Artwork data (per-slug directories)
 ```
-
-## Notes
-
-* **Model overrides:** Use `--model <name>` or `MODEL_NAME` env var if Gemini model names change.
-* **Tiled detection:** For dense scenes (many instances of a kind), the agent automatically splits the image into tiles for better coverage.
-* **Importance scoring:** Objects are ranked by geometric importance (size, centrality, rarity) for UI prioritization.
-* **Cutout padding:** Configurable via `--cutouts-padding` (default 10%) to include context around detected objects.

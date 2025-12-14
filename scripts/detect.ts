@@ -22,6 +22,7 @@ const DEFAULT_CUTOUTS_MAX = Number(process.env.CUTOUTS_MAX || Infinity);
 const DEFAULT_CUTOUTS_CONCURRENCY = Number(process.env.CUTOUTS_CONCURRENCY || 8);
 const DEFAULT_CUTOUTS_PADDING = Number(process.env.CUTOUTS_PADDING || 0.10);
 const DEFAULT_CONCURRENCY = Number(process.env.CONCURRENCY || 6);
+const DEFAULT_MULTI_SCALE = process.env.MULTI_SCALE !== '0' && process.env.MULTI_SCALE !== 'false';
 const DEFAULT_MODEL_NAME = process.env.MODEL_NAME || 'gemini-3-pro-preview';
 const DEFAULT_DESCRIPTION_MODEL_NAME = process.env.DESCRIPTION_MODEL_NAME || 'gemini-3-pro-preview';
 
@@ -49,6 +50,7 @@ Options:
       --verify-rounds <n>         Verification rounds per kind (default: ${DEFAULT_VERIFY_ROUNDS})
       --tile-threshold <n>        Tiled detection threshold (default: ${DEFAULT_TILE_THRESHOLD}, 0=disable)
       --concurrency <n>           Max concurrent API calls (default: ${DEFAULT_CONCURRENCY})
+      --no-multi-scale            Disable multi-scale discovery (quadrant analysis)
       --no-cutouts                Disable cutout generation
       --cutouts-format <fmt>      Cutout format: webp|png (default: ${DEFAULT_CUTOUTS_FORMAT})
       --cutouts-thumb-size <n>    Thumbnail size (default: ${DEFAULT_CUTOUTS_THUMB_SIZE})
@@ -102,6 +104,7 @@ function parseArgs(): CLIConfig {
     verifyRounds: DEFAULT_VERIFY_ROUNDS,
     tileThreshold: DEFAULT_TILE_THRESHOLD,
     concurrency: DEFAULT_CONCURRENCY,
+    multiScaleDiscovery: DEFAULT_MULTI_SCALE,
     cutouts: DEFAULT_CUTOUTS,
     cutoutsFormat: DEFAULT_CUTOUTS_FORMAT as 'webp' | 'png',
     cutoutsThumbSize: DEFAULT_CUTOUTS_THUMB_SIZE,
@@ -183,6 +186,12 @@ function parseArgs(): CLIConfig {
         break;
       case '--no-cutouts':
         config.cutouts = false;
+        break;
+      case '--multi-scale':
+        config.multiScaleDiscovery = true;
+        break;
+      case '--no-multi-scale':
+        config.multiScaleDiscovery = false;
         break;
       case '--cutouts-format': {
         const value = requireValue(args, i, arg);
