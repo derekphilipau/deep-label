@@ -31,6 +31,7 @@
     "zod": "^4.1.13"
   },
   "devDependencies": {
+    "@types/node": "^22.0.0",
     "@types/openseadragon": "^5.0.1",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
