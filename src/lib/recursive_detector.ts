@@ -364,18 +364,44 @@ export class RecursiveDetector {
 You are analyzing a specific crop of a larger artwork.
 PARENT CONTEXT (What contains this crop): "${parentContext}"
 
-Task: Analyze THIS CROP. Identify objects and decide if we need to zoom in further.
+Task: Analyze THIS CROP. Identify ALL distinct object types and decide the appropriate action for each.
 
-HEURISTICS for 'action':
-- 'detect_here': Objects are clear, countable, and ARTISTICALLY RELEVANT.
-- 'zoom_in': Objects are too tiny/dense to separate, BUT are important enough to warrant zooming (e.g. crowds, dense clusters of figures, intricate narrative details).
-- 'ignore': Textures, noise, or background masses that don't need individual boxes (e.g. generic textures, empty space, repetitive background patterns).
+ACTION SELECTION GUIDE:
 
-CRITICAL:
-- Do NOT zoom in just to count repetitive texture elements (e.g. leaves, grass, individual brushstrokes, or background pattern repetition).
-- DO zoom in for distinct entities that contribute to the subject matter (e.g. people, animals, symbols, specific objects).
-- For abstract art, focus on distinct shapes or forms that act as subjects, ignoring general texture.
-- If you see a few distinct large figures, choose 'detect_here'.
+1. detect_individual - Use when you can ACCURATELY draw boxes around EVERY instance:
+   - Objects are large/medium size AND clearly separated
+   - Count is 'few' (2-5) or '1'
+   - You are CONFIDENT you can box ALL of them accurately at this resolution
+
+2. detect_representative - Use for many similar objects where exhaustive detection isn't needed:
+   - Background elements (trees in a forest, leaves, clouds)
+   - Secondary importance objects where 3-8 examples suffice
+   - NOT for narratively important objects like people, animals, figures
+
+3. detect_region - Use for masses/areas, not individual items:
+   - Bodies of water, sky areas, forest masses
+   - Crowds too dense to separate even when zoomed
+   - Atmospheric effects (fog, clouds as a mass)
+
+4. zoom_in - USE THIS LIBERALLY for important small objects:
+   - ANY time count is 'many' or 'crowd' AND objects are small/tiny but significant
+   - People, figures, animals that are too small to box accurately
+   - Dense narrative scenes with multiple subjects
+   - Weapons, tools, or other important small details
+   - When you're UNCERTAIN if you can accurately box everything
+   - PREFER zoom_in over detect_representative for narratively important objects
+
+5. ignore - Only for:
+   - Pure texture (brushstrokes, canvas texture)
+   - Empty space, sky gradients
+   - Artifacts or noise
+
+CRITICAL RULES:
+- For DENSE paintings with many figures/animals: PREFER zoom_in over detect_representative
+- If objects are 'tiny' or 'small' AND count is 'many' or 'crowd': USE zoom_in
+- People, animals, figures are ALWAYS narratively important - use zoom_in if small/numerous
+- It's better to zoom_in and detect accurately than to miss objects with detect_representative
+- Don't be conservative with zoom_in - thoroughness is more important than speed
 `;
 
     return this.pool.generateObject({
