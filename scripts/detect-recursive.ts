@@ -1,65 +1,61 @@
 #!/usr/bin/env npx tsx
 /**
- * CLI wrapper for artwork object detection
+ * CLI wrapper for recursive artwork object detection (v2)
  */
 import fs from 'fs';
 import path from 'path';
 import dotenv from 'dotenv';
-import { runDetection, DetectionConfig } from '../src/lib/detector-original';
+import { RecursiveDetector, RecursiveConfig } from '../src/lib/recursive_detector';
 
 dotenv.config();
 
 const ARTWORKS_DIR = 'public/artworks';
 
 // Defaults from environment
-const DEFAULT_MAX_KINDS = Number(process.env.MAX_KINDS || 50);
+const DEFAULT_MAX_DEPTH = Number(process.env.MAX_DEPTH || 3);
+const DEFAULT_MIN_TILE_SIZE = Number(process.env.MIN_TILE_SIZE || 256);
 const DEFAULT_VERIFY_ROUNDS = Number(process.env.VERIFY_ROUNDS || 2);
-const DEFAULT_TILE_THRESHOLD = Number(process.env.TILE_THRESHOLD || 12);
 const DEFAULT_CUTOUTS = process.env.CUTOUTS !== '0' && process.env.CUTOUTS !== 'false';
 const DEFAULT_CUTOUTS_FORMAT = (process.env.CUTOUTS_FORMAT || 'webp') === 'png' ? 'png' : 'webp';
 const DEFAULT_CUTOUTS_THUMB_SIZE = Number(process.env.CUTOUTS_THUMB_SIZE || 256);
-const DEFAULT_CUTOUTS_MAX = Number(process.env.CUTOUTS_MAX || Infinity);
+const DEFAULT_CUTOUTS_MAX = Number(process.env.CUTOUTS_MAX || 100);
 const DEFAULT_CUTOUTS_CONCURRENCY = Number(process.env.CUTOUTS_CONCURRENCY || 8);
 const DEFAULT_CUTOUTS_PADDING = Number(process.env.CUTOUTS_PADDING || 0.10);
 const DEFAULT_CONCURRENCY = Number(process.env.CONCURRENCY || 6);
-const DEFAULT_MULTI_SCALE = process.env.MULTI_SCALE !== '0' && process.env.MULTI_SCALE !== 'false';
 const DEFAULT_MODEL_NAME = process.env.MODEL_NAME || 'gemini-3-pro-preview';
 const DEFAULT_DESCRIPTION_MODEL_NAME = process.env.DESCRIPTION_MODEL_NAME || 'gemini-3-pro-preview';
 
 function printHelp() {
   console.log(`
-Usage: npx tsx scripts/detect.ts <artwork-slug> [options]
-       npx tsx scripts/detect.ts -i <image> -o <output> [options]
+Usage: npx tsx scripts/detect-recursive.ts <artwork-slug> [options]
+       npx tsx scripts/detect-recursive.ts -i <image> -o <output> [options]
+
+Recursive detector v2: True N-level recursive detection with verification.
 
 Artwork mode (recommended):
   Create a folder in ${ARTWORKS_DIR}/<slug>/ with an image.jpg, then run:
-    npx tsx scripts/detect.ts hunting-scene
-
-  This will generate all outputs in the artwork directory:
-    - detected_objects.json
-    - cutouts/
-    - cutouts.json
-    - annotated.png
+    npx tsx scripts/detect-recursive.ts hunting-scene
 
 Custom paths mode:
-  npx tsx scripts/detect.ts -i path/to/image.jpg -o path/to/output.json
+  npx tsx scripts/detect-recursive.ts -i path/to/image.jpg -o path/to/output.json
 
 Options:
-      --force                     Overwrite existing output files without warning
-      --max-kinds <n>             Max kinds to discover (default: ${DEFAULT_MAX_KINDS})
-      --verify-rounds <n>         Verification rounds per kind (default: ${DEFAULT_VERIFY_ROUNDS})
-      --tile-threshold <n>        Tiled detection threshold (default: ${DEFAULT_TILE_THRESHOLD}, 0=disable)
-      --concurrency <n>           Max concurrent API calls (default: ${DEFAULT_CONCURRENCY})
-      --no-multi-scale            Disable multi-scale discovery (quadrant analysis)
-      --no-cutouts                Disable cutout generation
-      --cutouts-format <fmt>      Cutout format: webp|png (default: ${DEFAULT_CUTOUTS_FORMAT})
-      --cutouts-thumb-size <n>    Thumbnail size (default: ${DEFAULT_CUTOUTS_THUMB_SIZE})
-      --cutouts-padding <pct>     Padding around cutouts as decimal (default: ${DEFAULT_CUTOUTS_PADDING})
-      --model <name>              Detection model (default: ${DEFAULT_MODEL_NAME})
-      --no-annotate               Skip annotated image
-      --only-kinds <list>         Only process these kinds (e.g., "Hound,Stag")
-      --mock                      Dry run without API calls
-  -h, --help                      Show help
+  -i, --image <path>          Input image path
+  -o, --output <path>         Output JSON path
+      --force                 Overwrite existing output files
+      --max-depth <n>         Maximum recursion depth (default: ${DEFAULT_MAX_DEPTH})
+      --min-tile-size <px>    Minimum tile size in pixels (default: ${DEFAULT_MIN_TILE_SIZE})
+      --verify-rounds <n>     Verification rounds per detection (default: ${DEFAULT_VERIFY_ROUNDS})
+      --concurrency <n>       Max concurrent API calls (default: ${DEFAULT_CONCURRENCY})
+      --no-cutouts            Disable cutout generation
+      --cutouts-format <fmt>  Cutout format: webp|png (default: ${DEFAULT_CUTOUTS_FORMAT})
+      --cutouts-thumb-size <n> Thumbnail height (default: ${DEFAULT_CUTOUTS_THUMB_SIZE})
+      --cutouts-padding <pct> Padding as decimal (default: ${DEFAULT_CUTOUTS_PADDING})
+      --cutouts-max <n>       Max cutouts to generate (default: ${DEFAULT_CUTOUTS_MAX})
+      --model <name>          Detection model (default: ${DEFAULT_MODEL_NAME})
+      --no-annotate           Skip annotated image generation
+      --no-descriptions       Skip description generation
+  -h, --help                  Show help
 `);
 }
 
@@ -91,7 +87,7 @@ function findArtworkImage(artworkDir: string): string | null {
   return null;
 }
 
-type CLIConfig = DetectionConfig & { slug: string | null; force: boolean };
+type CLIConfig = RecursiveConfig & { slug: string | null; force: boolean };
 
 function parseArgs(): CLIConfig {
   const args = process.argv.slice(2);
@@ -99,24 +95,22 @@ function parseArgs(): CLIConfig {
     slug: null,
     imagePath: '',
     outputFile: '',
-    annotatedOutput: '',
-    maxKinds: DEFAULT_MAX_KINDS,
+    maxDepth: DEFAULT_MAX_DEPTH,
+    minTileSize: DEFAULT_MIN_TILE_SIZE,
     verifyRounds: DEFAULT_VERIFY_ROUNDS,
-    tileThreshold: DEFAULT_TILE_THRESHOLD,
     concurrency: DEFAULT_CONCURRENCY,
-    multiScaleDiscovery: DEFAULT_MULTI_SCALE,
+    modelName: DEFAULT_MODEL_NAME,
+    annotate: true,
+    annotatedOutput: '',
+    generateDescriptions: true,
+    descriptionModelName: DEFAULT_DESCRIPTION_MODEL_NAME,
     cutouts: DEFAULT_CUTOUTS,
     cutoutsFormat: DEFAULT_CUTOUTS_FORMAT as 'webp' | 'png',
     cutoutsThumbSize: DEFAULT_CUTOUTS_THUMB_SIZE,
     cutoutsMax: DEFAULT_CUTOUTS_MAX,
     cutoutsConcurrency: DEFAULT_CUTOUTS_CONCURRENCY,
     cutoutsPadding: DEFAULT_CUTOUTS_PADDING,
-    modelName: DEFAULT_MODEL_NAME,
-    descriptionModelName: DEFAULT_DESCRIPTION_MODEL_NAME,
-    annotate: true,
-    mock: false,
     force: false,
-    onlyKinds: null,
   };
 
   const positionalArgs: string[] = [];
@@ -141,39 +135,39 @@ function parseArgs(): CLIConfig {
       case '--force':
         config.force = true;
         break;
-      case '--max-kinds': {
+      case '--max-depth': {
         const value = Number(requireValue(args, i, arg));
-        if (!Number.isFinite(value) || value <= 0 || value > 200) {
-          console.error(`❌ Invalid value for ${arg}: ${args[i + 1]}`);
+        if (!Number.isFinite(value) || value < 1 || value > 10) {
+          console.error(`❌ Invalid value for ${arg}: ${args[i + 1]} (must be 1-10)`);
           process.exit(1);
         }
-        config.maxKinds = value;
+        config.maxDepth = value;
+        i++;
+        break;
+      }
+      case '--min-tile-size': {
+        const value = Number(requireValue(args, i, arg));
+        if (!Number.isFinite(value) || value < 64 || value > 2048) {
+          console.error(`❌ Invalid value for ${arg}: ${args[i + 1]} (must be 64-2048)`);
+          process.exit(1);
+        }
+        config.minTileSize = value;
         i++;
         break;
       }
       case '--verify-rounds': {
         const value = Number(requireValue(args, i, arg));
         if (!Number.isFinite(value) || value < 0 || value > 10) {
-          console.error(`❌ Invalid value for ${arg}: ${args[i + 1]}`);
+          console.error(`❌ Invalid value for ${arg}: ${args[i + 1]} (must be 0-10)`);
           process.exit(1);
         }
         config.verifyRounds = value;
         i++;
         break;
       }
-      case '--tile-threshold': {
-        const value = Number(requireValue(args, i, arg));
-        if (!Number.isFinite(value) || value < 0) {
-          console.error(`❌ Invalid value for ${arg}: ${args[i + 1]}`);
-          process.exit(1);
-        }
-        config.tileThreshold = value;
-        i++;
-        break;
-      }
       case '--concurrency': {
         const value = Number(requireValue(args, i, arg));
-        if (!Number.isFinite(value) || value <= 0 || value > 20) {
+        if (!Number.isFinite(value) || value < 1 || value > 20) {
           console.error(`❌ Invalid value for ${arg}: ${args[i + 1]} (must be 1-20)`);
           process.exit(1);
         }
@@ -187,16 +181,10 @@ function parseArgs(): CLIConfig {
       case '--no-cutouts':
         config.cutouts = false;
         break;
-      case '--multi-scale':
-        config.multiScaleDiscovery = true;
-        break;
-      case '--no-multi-scale':
-        config.multiScaleDiscovery = false;
-        break;
       case '--cutouts-format': {
         const value = requireValue(args, i, arg);
         if (value !== 'webp' && value !== 'png') {
-          console.error(`❌ Invalid value for ${arg}: ${value}`);
+          console.error(`❌ Invalid value for ${arg}: ${value} (must be webp or png)`);
           process.exit(1);
         }
         config.cutoutsFormat = value;
@@ -215,21 +203,11 @@ function parseArgs(): CLIConfig {
       }
       case '--cutouts-max': {
         const value = Number(requireValue(args, i, arg));
-        if (!Number.isFinite(value) || value <= 0) {
+        if (!Number.isFinite(value) || value < 1) {
           console.error(`❌ Invalid value for ${arg}: ${args[i + 1]}`);
           process.exit(1);
         }
         config.cutoutsMax = value;
-        i++;
-        break;
-      }
-      case '--cutouts-concurrency': {
-        const value = Number(requireValue(args, i, arg));
-        if (!Number.isFinite(value) || value <= 0 || value > 64) {
-          console.error(`❌ Invalid value for ${arg}: ${args[i + 1]}`);
-          process.exit(1);
-        }
-        config.cutoutsConcurrency = value;
         i++;
         break;
       }
@@ -257,15 +235,12 @@ function parseArgs(): CLIConfig {
       case '--annotate':
         config.annotate = true;
         break;
-      case '--mock':
-        config.mock = true;
+      case '--no-descriptions':
+        config.generateDescriptions = false;
         break;
-      case '--only-kinds': {
-        const value = requireValue(args, i, arg);
-        config.onlyKinds = value.split(',').map((s) => s.trim().toLowerCase()).filter(Boolean);
-        i++;
+      case '--descriptions':
+        config.generateDescriptions = true;
         break;
-      }
       case '-h':
       case '--help':
         printHelp();
@@ -322,39 +297,49 @@ function parseArgs(): CLIConfig {
   // Validate required paths
   if (!config.imagePath) {
     console.error(`❌ No input specified.`);
-    console.error(`   Usage: npx tsx scripts/detect.ts <artwork-slug>`);
-    console.error(`   Or:    npx tsx scripts/detect.ts -i <image> -o <output>`);
+    console.error(`   Usage: npx tsx scripts/detect-recursive.ts <artwork-slug>`);
+    console.error(`   Or:    npx tsx scripts/detect-recursive.ts -i <image> -o <output>`);
     process.exit(1);
   }
 
-  // Set defaults
+  // Set defaults for output paths
   if (!config.outputFile) {
     config.outputFile = 'detected_objects.json';
   }
   if (!config.annotatedOutput) {
-    config.annotatedOutput = 'annotated_painting.png';
+    config.annotatedOutput = config.outputFile.replace(/\.json$/, '.annotated.png');
   }
 
   return config;
 }
 
 async function main() {
-  const config = parseArgs();
+  const cliConfig = parseArgs();
 
-  if (config.slug) {
-    console.log(`🎨 Processing artwork: ${config.slug}`);
-    console.log(`   Input:  ${config.imagePath}`);
-    console.log(`   Output: ${path.dirname(config.outputFile)}/`);
+  if (cliConfig.slug) {
+    console.log(`🎨 Processing artwork: ${cliConfig.slug}`);
+    console.log(`   Input:  ${cliConfig.imagePath}`);
+    console.log(`   Output: ${path.dirname(cliConfig.outputFile)}/`);
   } else {
-    console.log(`🚀 Starting detection...`);
-    console.log(`   Input:  ${config.imagePath}`);
-    console.log(`   Output: ${config.outputFile}`);
+    console.log(`🚀 Starting recursive detection...`);
+    console.log(`   Input:  ${cliConfig.imagePath}`);
+    console.log(`   Output: ${cliConfig.outputFile}`);
   }
 
+  console.log(`   Max Depth: ${cliConfig.maxDepth}, Min Tile: ${cliConfig.minTileSize}px, Verify Rounds: ${cliConfig.verifyRounds}`);
+
+  // Build RecursiveConfig (exclude CLI-only fields)
+  const { slug, force, ...config } = cliConfig;
+
   try {
-    await runDetection(config);
+    const detector = new RecursiveDetector(config);
+    await detector.run();
+    console.log(`\n🎉 Done!`);
   } catch (error) {
     console.error(`❌ ${error instanceof Error ? error.message : String(error)}`);
+    if (error instanceof Error && error.stack) {
+      console.error(error.stack);
+    }
     process.exit(1);
   }
 }

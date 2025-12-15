@@ -54,13 +54,19 @@ export class AIPool {
   private queue: QueuedTask<unknown>[] = [];
   private globalBackoffUntil = 0;
   private consecutiveRateLimits = 0;
+  private stats = {
+    totalCalls: 0,
+    totalPromptTokens: 0,
+    totalCompletionTokens: 0,
+    estimatedCost: 0,
+  };
 
   constructor(config: PoolConfig) {
     this.config = {
       maxConcurrency: config.maxConcurrency,
       model: config.model,
-      baseDelayMs: config.baseDelayMs ?? 1000,
-      maxRetries: config.maxRetries ?? 4,
+      baseDelayMs: config.baseDelayMs ?? 2000,
+      maxRetries: config.maxRetries ?? 6,
       debug: config.debug ?? false,
     };
   }
@@ -84,6 +90,13 @@ export class AIPool {
       maxConcurrency: this.config.maxConcurrency,
       backoffActive: Date.now() < this.globalBackoffUntil,
     };
+  }
+
+  /**
+   * Get usage statistics (calls, tokens, cost)
+   */
+  getUsageStats() {
+    return { ...this.stats };
   }
 
   // ============================================
@@ -169,6 +182,19 @@ export class AIPool {
           messages: options.messages,
           temperature: options.temperature ?? 0.2,
         });
+
+        // Track usage
+        this.stats.totalCalls++;
+        // Try to extract usage from various possible locations
+        const usage = result.usage || (result as any).response?.usage || (result as any).rawResponse?.usage;
+        if (usage) {
+          const promptTokens = usage.promptTokens || usage.prompt_tokens || usage.inputTokens || 0;
+          const completionTokens = usage.completionTokens || usage.completion_tokens || usage.outputTokens || 0;
+          this.stats.totalPromptTokens += promptTokens;
+          this.stats.totalCompletionTokens += completionTokens;
+          this.stats.estimatedCost += this.estimateCost(this.config.model, { promptTokens, completionTokens });
+        }
+
         return result.object as z.infer<T>;
       } catch (error) {
         lastError = error;
@@ -190,6 +216,25 @@ export class AIPool {
     }
 
     throw lastError;
+  }
+
+  private estimateCost(model: string, usage: { promptTokens: number; completionTokens: number }): number {
+    // Pricing per 1M tokens (approximate as of late 2024)
+    const pricing: Record<string, { input: number; output: number }> = {
+      'gemini-1.5-pro': { input: 3.50, output: 10.50 },
+      'gemini-1.5-flash': { input: 0.075, output: 0.30 },
+      // Assume Pro pricing for unknown models as a safe upper bound, or 0 if preview
+      'gemini-3-pro-preview': { input: 0, output: 0 }, 
+    };
+
+    // Normalize model name to find match
+    const modelKey = Object.keys(pricing).find(k => model.includes(k));
+    const price = modelKey ? pricing[modelKey] : { input: 0, output: 0 };
+
+    const inputCost = (usage.promptTokens / 1_000_000) * price.input;
+    const outputCost = (usage.completionTokens / 1_000_000) * price.output;
+    
+    return inputCost + outputCost;
   }
 
   private isRateLimitError(error: unknown): boolean {
@@ -217,7 +262,10 @@ export class AIPool {
         (status >= 500 && status < 600) ||
         error.message.includes('timeout') ||
         error.message.includes('ECONNRESET') ||
-        error.message.includes('ETIMEDOUT')
+        error.message.includes('ETIMEDOUT') ||
+        error.message.includes('other side closed') ||
+        error.message.includes('fetch failed') ||
+        error.message.includes('socket')
       );
     }
     return false;

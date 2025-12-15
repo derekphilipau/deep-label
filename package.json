@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "detect": "tsx scripts/detect.ts"
+    "detect": "tsx scripts/detect-recursive.ts",
+    "detect:original": "tsx scripts/detect.ts"
   },
   "keywords": [],
   "author": "",
